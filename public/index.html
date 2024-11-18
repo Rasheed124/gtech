@@ -6,8 +6,9 @@
     <link rel="stylesheet" href="./output.css" />
     <title>Home</title>
   </head>
-  <body>
-    <div>
+  <body class="">
+    <div class="relative">
+
       <main
         class="min-h-screen bg-cover bg-black/50 bg-blend-overlay bg-no-repeat bg-[40%] lg:bg-top w-full bg-[url('./images/auth-main-bg.png')] flex h-screen overflow-y-auto md:px-2"
       >
@@ -54,14 +55,14 @@
                 <div class="mt-6 p-4 sm:p-6 lg:p-8">
                   <div class="space-y-4 mb-6">
                     <a
-                     href="./signup.html"
+                      href="./signup.html"
                       class="block text-center w-full capitalize rounded-xl bg-deep-purple px-5 py-3 text-sm font-medium text-white"
                     >
                       Create account
                     </a>
 
                     <a
-                     href="./login.html"
+                      href="./login.html"
                       class="block text-center w-full capitalize rounded-xl bg-transparent border border-deep-purple px-5 py-3 text-sm font-medium text-deep-purple"
                     >
                       Sign in
@@ -86,6 +87,57 @@
           </div>
         </section>
       </main>
+
+      <!-- Account Created Popup -->
+      <!-- <div
+        class="absolute top-0 w-full h-screen min-h-screen bg-black/50 bg-blend-overlay flex justify-center items-center flex-col"
+      >
+        <div
+          class="bg-white w-[90%] md:w-full mx-auto md:mx-0 md:max-w-[500px] rounded-2xl p-5"
+        >
+          <div class="mx-auto max-w-lg">
+            <div class="flex justify-center items-center w-full">
+              <span class="block p-7 rounded-full bg-green-700 text-white text-xl">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  x-bind:width="size"
+                  x-bind:height="size"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  x-bind:stroke-width="stroke"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  width="30"
+                  height="30"
+                  stroke-width="2"
+                >
+                  <path d="M5 12l5 5l10 -10"></path>
+                </svg>
+              </span>
+            </div>
+            <div class="mt-6 p-4 sm:p-6 lg:p-8">
+              <h4 class="text-center text-2xl font-bold ">
+                Account Created
+              </h4>
+
+              <p class="mx-auto mt-3 max-w-md text-center text-gray-500">
+                Your account has been created successfully <br />
+                kindly verify your email to Continue
+              </p>
+
+              <div class="mt-3">
+                <a
+                  href="./signup.html"
+                  class="block text-center w-full capitalize rounded-xl bg-deep-purple px-5 py-3 text-sm font-medium text-white"
+                >
+                  Continue
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
     </div>
   </body>
 </html>
