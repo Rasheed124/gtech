@@ -4,112 +4,227 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./output.css" />
-    <title>Login</title>
+    <title>Dashboard - Home</title>
   </head>
   <body>
     <div>
-      <main
-        class="min-h-screen bg-cover bg-black/50 bg-blend-overlay bg-no-repeat bg-[40%] lg:bg-top w-full bg-[url('./images/auth-login-bg.png')] flex h-screen overflow-y-auto md:px-2"
-      >
-      <section class="w-full container mx-auto">
-          <div
-            class="md:flex grid md:gap-5 items-center h-full mt-auto md:mt-0 md:my-auto md:py-20 md:px-10 pb-5"
+      <main class="bg-white h-screen max-w-screen-lg mx-auto font-medium">
+        <div class="w-full flex">
+          <!-- Sided Menu -->
+          <header
+            class="fixed top-0 md:relative opacity-0 w-0 md:w-full md:max-w-[100px] opacity-100"
           >
-            <!-- Right Sided Form -->
             <div
-              class="md:flex-col gap-2 hidden md:flex mt-auto max-w-xs lg:max-w-sm text-white"
+              class="bg-white max-h-screen h-screeen overflow-y-auto py-8 text-left h-screen w-full max-w-0 md:max-w-[100px]"
             >
-              <h2 class="text-lg md:text-2xl lg:text-3xl font-bold">
-                Join the excitement of sports betting with BillPoint!
-              </h2>
-
-              <p>
-                Pay your electricity, internetn, and other utility bills quickly
-                and easily from the palm of your hand.
-              </p>
-            </div>
-
-            <!-- Left Sided Form -->
-            <div
-              class="md:flex bg-white w-[90%] md:w-full mx-auto md:mx-0 md:max-w-[500px] rounded-2xl p-4 py-8 md:p-8 flex flex-col gap-4 md:ml-auto pt-10 md:py-10 pb-8 mt-auto"
-            >
-              <div class="mx-auto max-w-lg">
-                <a
-                  href="./index.html"
-                  class="w-8 h-8 mb-3 flex justify-center items-center border rounded-lg border-[#828282] text-[#828282]"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="18"
-                    height="18"
-                    viewBox="0 0 18 18"
-                    fill="none"
-                    class="w-6 h-6 icon mx-auto"
-                  >
-                    <path
-                      d="M10.6996 14.2096L6.04867 9.55867C5.4994 9.0094 5.4994 8.1106 6.04867 7.56133L10.6996 2.9104"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                      stroke-miterlimit="10"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    ></path>
-                  </svg>
-                </a>
-                <h1 class="text-2xl font-bold">OTP Verification</h1>
-
-                <p class="text-gray-500 text-sm">
-                  Create an account so you can pay your bills and purchase
-                  top-ups faster.
-                </p>
-                <p class="text-gray-700 font-semibold mt-1 text-sm">
-                  toluatnewlife@gmail.com
-                </p>
-
-                <form action="./dashboard.html">
-                  <div class="mt-0">
-                    <div class="mt-9 w-full flex justify-around gap-2 md:gap-0">
-                      <input
-                        type="password"
-                        class="outline-none w-12 h-12 md:w-14 md:h-14 rounded-xl bg-gray-100 text-deep-purple focus:border-2 focus:border-deep-purple text-center items-center hide-caret otp-input my-auto text-8xl"
-                      />
-                      <input
-                        type="password"
-                        class="outline-none w-12 h-12 md:w-14 md:h-14 rounded-xl bg-gray-100 text-deep-purple focus:border-2 focus:border-deep-purple text-center items-center hide-caret otp-input my-auto text-8xl"
-                      />
-                      <input
-                        type="password"
-                        class="outline-none w-12 h-12 md:w-14 md:h-14 rounded-xl bg-gray-100 text-deep-purple focus:border-2 focus:border-deep-purple text-center items-center hide-caret otp-input my-auto text-8xl"
-                      />
-                      <input
-                        type="password"
-                        class="outline-none w-12 h-12 md:w-14 md:h-14 rounded-xl bg-gray-100 text-deep-purple focus:border-2 focus:border-deep-purple text-center items-center hide-caret otp-input my-auto text-8xl"
-                      />
-                    </div>
-                    <div class="w-full">
-                      <div class="mb-12 mt-1">
-                        <button
-                          type="submit"
-                          class="flex w-full items-center justify-center text-deep-purple underline"
-                        >
-                          Reset code
-                        </button>
-
-                        <!-- <p class=" text-center text-gray-500">Code sent. Resend code in 1:50</p> -->
-                      </div>
-                      <button
-                        type="submit"
-                        class="block w-full capitalize rounded-xl bg-deep-purple px-5 py-3 text-sm font-medium text-white"
-                      >
-                        Continue
-                      </button>
-                    </div>
+              <nav
+                class="text-gray-200 flex justify-between flex-col h-full px-2 pl-0 pr-0"
+              >
+                <!-- logo -->
+                <div>
+                  <div class="flex items-center gap-3 justify-center">
+                    <a href="" class="router-link-active router-link-exact-active">
+                      <img src="./images/dashboard-logo-1.png" class="max-w-[40px] mx-auto h-auto object-contain" alt="">
+                    </a>
+                    <button class="flex items-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="w-6 h-6 icon"><path d="M21 4.1V10.9C21 11.5934 20.8501 11.9494 20.6386 12.1483C20.4196 12.3544 20.0215 12.5 19.27 12.5H15.23C14.4785 12.5 14.0804 12.3544 13.8614 12.1483C13.6499 11.9494 13.5 11.5934 13.5 10.9V4.1C13.5 3.40657 13.6499 3.05057 13.8614 2.85167C14.0804 2.64556 14.4785 2.5 15.23 2.5H19.27C20.0215 2.5 20.4196 2.64556 20.6386 2.85167C20.8501 3.05057 21 3.40657 21 4.1Z" fill="#311503" stroke="#311503"></path><path d="M10.5 13.1V19.9C10.5 20.5934 10.3501 20.9494 10.1386 21.1483C9.91956 21.3544 9.52146 21.5 8.77 21.5H4.73C3.97854 21.5 3.58044 21.3544 3.36135 21.1483C3.14993 20.9494 3 20.5934 3 19.9V13.1C3 12.4066 3.14993 12.0506 3.36135 11.8517C3.58044 11.6456 3.97854 11.5 4.73 11.5H8.77C9.52146 11.5 9.91956 11.6456 10.1386 11.8517C10.3501 12.0506 10.5 12.4066 10.5 13.1Z" fill="#311503" stroke="#311503"></path><path d="M21.5 19.9V17.1C21.5 15.6 20.86 15 19.27 15H15.23C13.64 15 13 15.6 13 17.1V19.9C13 21.4 13.64 22 15.23 22H19.27C20.86 22 21.5 21.4 21.5 19.9Z" fill="#F66B03"></path><path d="M11 6.9V4.1C11 2.6 10.36 2 8.77 2H4.73C3.14 2 2.5 2.6 2.5 4.1V6.9C2.5 8.4 3.14 9 4.73 9H8.77C10.36 9 11 8.4 11 6.9Z" fill="#F66B03"></path></svg>
+                    </button>
                   </div>
-                </form>
-              </div>
+
+                  <div class="flex md:hidden items-center gap-3"></div>
+
+                  <ul class="flex flex-col space-y-2 mt-20 overflow-hidden">
+                    <li
+                      class="flex items-center gap-3 hover:text-grey-scale !duration-500 hover:translate-x-1"
+                    >
+                      <a
+                        href=""
+                        class="flex items-center py-3 px-4 w-full rounded-lg text-secondary justify-center"
+                      >
+                        <div class="flex items-center gap-3">
+                          <div
+                            class="w-10 h-10 rounded-full relative  flex items-center justify-center"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              class="size-6"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li
+                      class="flex items-center gap-3 hover:text-grey-scale !duration-500 hover:translate-x-1"
+                    >
+                      <a
+                        href=""
+                        class="flex items-center py-3 px-4 w-full rounded-lg text-secondary justify-center"
+                      >
+                        <div class="flex items-center gap-3">
+                          <div
+                            class="w-10 h-10 rounded-full relative  flex items-center justify-center"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="25"
+                              height="25"
+                              viewBox="0 0 25 25"
+                              fill="none"
+                              class="w-6 h-6 icon absolute top-0 left-0 right-0 bottom-0 m-auto"
+                            >
+                              <path
+                                d="M3.50977 11.72V16.21C3.50977 20.7 5.30977 22.5 9.79977 22.5H15.1898C19.6798 22.5 21.4798 20.7 21.4798 16.21V11.72"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path>
+                              <path
+                                d="M12.5005 12.5C14.3305 12.5 15.6805 11.01 15.5005 9.18L14.8405 2.5H10.1705L9.50048 9.18C9.32048 11.01 10.6705 12.5 12.5005 12.5Z"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path>
+                              <path
+                                d="M18.8108 12.5C20.8308 12.5 22.3108 10.86 22.1108 8.85L21.8308 6.1C21.4708 3.5 20.4708 2.5 17.8508 2.5H14.8008L15.5008 9.51C15.6708 11.16 17.1608 12.5 18.8108 12.5Z"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path>
+                              <path
+                                d="M6.14037 12.5C7.79037 12.5 9.28037 11.16 9.44037 9.51L9.66037 7.3L10.1404 2.5H7.09037C4.47037 2.5 3.47037 3.5 3.11037 6.1L2.84037 8.85C2.64037 10.86 4.12037 12.5 6.14037 12.5Z"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path>
+                              <path
+                                d="M12.5 17.5C10.83 17.5 10 18.33 10 20V22.5H15V20C15 18.33 14.17 17.5 12.5 17.5Z"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path>
+                            </svg>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li
+                      class="flex items-center gap-3 hover:text-grey-scale !duration-500 hover:translate-x-1"
+                    >
+                      <a
+                        href=""
+                        class="flex items-center py-3 px-4 w-full rounded-lg text-secondary justify-center"
+                      >
+                        <div class="flex items-center gap-3">
+                          <div
+                            class="w-10 h-10 rounded-full relative  flex items-center justify-center"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="25"
+                              height="25"
+                              viewBox="0 0 25 25"
+                              fill="none"
+                              class="w-6 h-6 icon absolute top-0 left-0 right-0 bottom-0 m-auto"
+                            >
+                              <path
+                                d="M2.83398 9.00488H22.834"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-miterlimit="10"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path>
+                              <path
+                                d="M6.83398 17.0049H8.83398"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-miterlimit="10"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path>
+                              <path
+                                d="M11.334 17.0049H15.334"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-miterlimit="10"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path>
+                              <path
+                                d="M7.27398 4.00488H18.384C21.944 4.00488 22.834 4.88488 22.834 8.39488V16.6049C22.834 20.1149 21.944 20.9949 18.394 20.9949H7.27398C3.72398 21.0049 2.83398 20.1249 2.83398 16.6149V8.39488C2.83398 4.88488 3.72398 4.00488 7.27398 4.00488Z"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path>
+                            </svg>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li
+                      class="flex items-center gap-3 hover:text-grey-scale !duration-500 hover:translate-x-1"
+                    >
+                      <a
+                        href=""
+                        class="flex items-center py-3 px-4 w-full rounded-lg text-secondary justify-center"
+                      >
+                        <div class="flex items-center gap-3">
+                          <div
+                            class="w-10 h-10 rounded-full relative  flex items-center justify-center"
+                          >
+                          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none" class="w-6 h-6 icon absolute top-0 left-0 right-0 bottom-0 m-auto"><path d="M12.6605 11.37C12.5605 11.36 12.4405 11.36 12.3305 11.37C9.95055 11.29 8.06055 9.34 8.06055 6.94C8.06055 4.49 10.0405 2.5 12.5005 2.5C14.9505 2.5 16.9405 4.49 16.9405 6.94C16.9305 9.34 15.0405 11.29 12.6605 11.37Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M7.6607 15.06C5.2407 16.68 5.2407 19.32 7.6607 20.93C10.4107 22.77 14.9207 22.77 17.6707 20.93C20.0907 19.31 20.0907 16.67 17.6707 15.06C14.9307 13.23 10.4207 13.23 7.6607 15.06Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li
+                      class="flex items-center gap-3 hover:text-grey-scale !duration-500 hover:translate-x-1"
+                    >
+                      <a
+                        href=""
+                        class="flex items-center py-3 px-4 w-full rounded-lg text-secondary justify-center"
+                      >
+                        <div class="flex items-center gap-3">
+                          <div
+                            class="w-10 h-10 rounded-full relative  flex items-center justify-center"
+                          >
+                          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none" class="w-6 h-6 icon absolute top-0 left-0 right-0 bottom-0 m-auto"><path d="M12.5 15.5C14.1569 15.5 15.5 14.1569 15.5 12.5C15.5 10.8431 14.1569 9.5 12.5 9.5C10.8431 9.5 9.5 10.8431 9.5 12.5C9.5 14.1569 10.8431 15.5 12.5 15.5Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path><path d="M2.5 13.3799V11.6199C2.5 10.5799 3.35 9.71994 4.4 9.71994C6.21 9.71994 6.95 8.43994 6.04 6.86994C5.52 5.96994 5.83 4.79994 6.74 4.27994L8.47 3.28994C9.26 2.81994 10.28 3.09994 10.75 3.88994L10.86 4.07994C11.76 5.64994 13.24 5.64994 14.15 4.07994L14.26 3.88994C14.73 3.09994 15.75 2.81994 16.54 3.28994L18.27 4.27994C19.18 4.79994 19.49 5.96994 18.97 6.86994C18.06 8.43994 18.8 9.71994 20.61 9.71994C21.65 9.71994 22.51 10.5699 22.51 11.6199V13.3799C22.51 14.4199 21.66 15.2799 20.61 15.2799C18.8 15.2799 18.06 16.5599 18.97 18.1299C19.49 19.0399 19.18 20.1999 18.27 20.7199L16.54 21.7099C15.75 22.1799 14.73 21.8999 14.26 21.1099L14.15 20.9199C13.25 19.3499 11.77 19.3499 10.86 20.9199L10.75 21.1099C10.28 21.8999 9.26 22.1799 8.47 21.7099L6.74 20.7199C5.83 20.1999 5.52 19.0299 6.04 18.1299C6.95 16.5599 6.21 15.2799 4.4 15.2799C3.35 15.2799 2.5 14.4199 2.5 13.3799Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <!--  Menu -->
+                <div
+                  class="flex justify-sytart items-start gap-3 px-2 justify-center"
+                ></div>
+              </nav>
             </div>
-          </div>
-        </section>
+          </header>
+
+          <!-- Main Dashboard Area -->
+          <div
+            class="w-full h-screen overflow-y-auto lg:overflow-y-hidden px-3 md:px-6 md:border-x border-l-2 flex flex-col gap-4"
+          ></div>
+        </div>
       </main>
     </div>
   </body>
