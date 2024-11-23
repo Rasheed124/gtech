@@ -1,0 +1,1887 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../output.css" />
+    <title>Dashboard - Profile Info</title>
+  </head>
+  <body>
+    <div>
+      <main class="bg-white h-screen container mx-auto xl:px-20 font-medium">
+        <div class="w-full flex">
+          <!-- Sided Menu -->
+          <header
+            class="fixed top-0 md:relative opacity-0 w-0 md:w-full md:max-w-[100px] md:opacity-100"
+          >
+            <div
+              class="bg-white max-h-screen h-screeen overflow-y-auto py-8 text-left h-screen w-full max-w-0 md:max-w-[100px]"
+            >
+            <nav
+            class="text-gray-200 flex justify-between flex-col h-full px-2 pl-0 pr-0"
+          >
+            <!-- Menu -->
+            <div>
+              <div class="flex items-center gap-3 justify-center">
+                <a href="" class="">
+                  <img
+                    src="../images/dashboard-logo-1.png"
+                    class="max-w-[40px] mx-auto h-auto object-contain"
+                    alt=""
+                  />
+                </a>
+                <button class="flex items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    class="w-6 h-6 icon"
+                  >
+                    <path
+                      d="M21 4.1V10.9C21 11.5934 20.8501 11.9494 20.6386 12.1483C20.4196 12.3544 20.0215 12.5 19.27 12.5H15.23C14.4785 12.5 14.0804 12.3544 13.8614 12.1483C13.6499 11.9494 13.5 11.5934 13.5 10.9V4.1C13.5 3.40657 13.6499 3.05057 13.8614 2.85167C14.0804 2.64556 14.4785 2.5 15.23 2.5H19.27C20.0215 2.5 20.4196 2.64556 20.6386 2.85167C20.8501 3.05057 21 3.40657 21 4.1Z"
+                      fill="#311503"
+                      stroke="#311503"
+                    ></path>
+                    <path
+                      d="M10.5 13.1V19.9C10.5 20.5934 10.3501 20.9494 10.1386 21.1483C9.91956 21.3544 9.52146 21.5 8.77 21.5H4.73C3.97854 21.5 3.58044 21.3544 3.36135 21.1483C3.14993 20.9494 3 20.5934 3 19.9V13.1C3 12.4066 3.14993 12.0506 3.36135 11.8517C3.58044 11.6456 3.97854 11.5 4.73 11.5H8.77C9.52146 11.5 9.91956 11.6456 10.1386 11.8517C10.3501 12.0506 10.5 12.4066 10.5 13.1Z"
+                      fill="#311503"
+                      stroke="#311503"
+                    ></path>
+                    <path
+                      d="M21.5 19.9V17.1C21.5 15.6 20.86 15 19.27 15H15.23C13.64 15 13 15.6 13 17.1V19.9C13 21.4 13.64 22 15.23 22H19.27C20.86 22 21.5 21.4 21.5 19.9Z"
+                      fill="#F66B03"
+                    ></path>
+                    <path
+                      d="M11 6.9V4.1C11 2.6 10.36 2 8.77 2H4.73C3.14 2 2.5 2.6 2.5 4.1V6.9C2.5 8.4 3.14 9 4.73 9H8.77C10.36 9 11 8.4 11 6.9Z"
+                      fill="#F66B03"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+
+              <!-- Menus -->
+              <ul class="flex flex-col space-y-2 mt-20 overflow-hidden">
+                <li
+                  class="flex items-center gap-3 hover:text-grey-scale !duration-500 hover:translate-x-1"
+                >
+                  <a
+                    href="../dashboard.html"
+                    class="flex items-center py-3 px-4 w-full rounded-lg justify-center"
+                  >
+                    <div class="flex items-center gap-3">
+                      <div
+                        class="w-10 h-10 hover:bg-deep-purple rounded-full relative flex items-center justify-center"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          class="size-6"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li
+                  class="flex items-center gap-3 hover:text-grey-scale !duration-500 hover:translate-x-1"
+                >
+                  <a
+                    href="./services.html"
+                    class="flex items-center py-3 px-4 w-full rounded-lg justify-center"
+                  >
+                    <div class="flex items-center gap-3">
+                      <div
+                        class="w-10 h-10 rounded-full relative flex items-center justify-center hover:bg-deep-purple"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="25"
+                          height="25"
+                          viewBox="0 0 25 25"
+                          fill="none"
+                          class="w-6 h-6 icon absolute top-0 left-0 right-0 bottom-0 m-auto"
+                        >
+                          <path
+                            d="M3.50977 11.72V16.21C3.50977 20.7 5.30977 22.5 9.79977 22.5H15.1898C19.6798 22.5 21.4798 20.7 21.4798 16.21V11.72"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                          <path
+                            d="M12.5005 12.5C14.3305 12.5 15.6805 11.01 15.5005 9.18L14.8405 2.5H10.1705L9.50048 9.18C9.32048 11.01 10.6705 12.5 12.5005 12.5Z"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                          <path
+                            d="M18.8108 12.5C20.8308 12.5 22.3108 10.86 22.1108 8.85L21.8308 6.1C21.4708 3.5 20.4708 2.5 17.8508 2.5H14.8008L15.5008 9.51C15.6708 11.16 17.1608 12.5 18.8108 12.5Z"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                          <path
+                            d="M6.14037 12.5C7.79037 12.5 9.28037 11.16 9.44037 9.51L9.66037 7.3L10.1404 2.5H7.09037C4.47037 2.5 3.47037 3.5 3.11037 6.1L2.84037 8.85C2.64037 10.86 4.12037 12.5 6.14037 12.5Z"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                          <path
+                            d="M12.5 17.5C10.83 17.5 10 18.33 10 20V22.5H15V20C15 18.33 14.17 17.5 12.5 17.5Z"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                        </svg>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li
+                  class="flex items-center gap-3 hover:text-grey-scale !duration-500 hover:translate-x-1"
+                >
+                  <a
+                    href="./wallet.html"
+                    class="flex items-center py-3 px-4 w-full rounded-lg justify-center"
+                  >
+                    <div class="flex items-center gap-3">
+                      <div
+                        class="w-10 h-10 rounded-full relative flex items-center justify-center hover:bg-deep-purple"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="25"
+                          height="25"
+                          viewBox="0 0 25 25"
+                          fill="none"
+                          class="w-6 h-6 icon absolute top-0 left-0 right-0 bottom-0 m-auto"
+                        >
+                          <path
+                            d="M2.83398 9.00488H22.834"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                          <path
+                            d="M6.83398 17.0049H8.83398"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                          <path
+                            d="M11.334 17.0049H15.334"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                          <path
+                            d="M7.27398 4.00488H18.384C21.944 4.00488 22.834 4.88488 22.834 8.39488V16.6049C22.834 20.1149 21.944 20.9949 18.394 20.9949H7.27398C3.72398 21.0049 2.83398 20.1249 2.83398 16.6149V8.39488C2.83398 4.88488 3.72398 4.00488 7.27398 4.00488Z"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                        </svg>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li
+                  class="flex items-center gap-3 hover:text-grey-scale !duration-500 hover:translate-x-1"
+                >
+                  <a
+                    href="./profile-info.html"
+                    class="flex items-center py-3 px-4 w-full rounded-lg justify-center"
+                  >
+                    <div class="flex items-center gap-3">
+                      <div
+                        class="w-10 h-10 rounded-full relative flex items-center justify-center hover:bg-deep-purple"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="25"
+                          height="25"
+                          viewBox="0 0 25 25"
+                          fill="none"
+                          class="w-6 h-6 icon absolute top-0 left-0 right-0 bottom-0 m-auto"
+                        >
+                          <path
+                            d="M12.6605 11.37C12.5605 11.36 12.4405 11.36 12.3305 11.37C9.95055 11.29 8.06055 9.34 8.06055 6.94C8.06055 4.49 10.0405 2.5 12.5005 2.5C14.9505 2.5 16.9405 4.49 16.9405 6.94C16.9305 9.34 15.0405 11.29 12.6605 11.37Z"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                          <path
+                            d="M7.6607 15.06C5.2407 16.68 5.2407 19.32 7.6607 20.93C10.4107 22.77 14.9207 22.77 17.6707 20.93C20.0907 19.31 20.0907 16.67 17.6707 15.06C14.9307 13.23 10.4207 13.23 7.6607 15.06Z"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                        </svg>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li
+                  class="flex items-center gap-3 hover:text-grey-scale !duration-500 hover:translate-x-1"
+                >
+                  <a
+                    href="./settings.html"
+                    class="flex items-center py-3 px-4 w-full rounded-lg justify-center"
+                  >
+                    <div class="flex items-center gap-3">
+                      <div
+                        class="w-10 h-10 rounded-full relative flex items-center justify-center hover:bg-deep-purple"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="25"
+                          height="25"
+                          viewBox="0 0 25 25"
+                          fill="none"
+                          class="w-6 h-6 icon absolute top-0 left-0 right-0 bottom-0 m-auto"
+                        >
+                          <path
+                            d="M12.5 15.5C14.1569 15.5 15.5 14.1569 15.5 12.5C15.5 10.8431 14.1569 9.5 12.5 9.5C10.8431 9.5 9.5 10.8431 9.5 12.5C9.5 14.1569 10.8431 15.5 12.5 15.5Z"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                          <path
+                            d="M2.5 13.3799V11.6199C2.5 10.5799 3.35 9.71994 4.4 9.71994C6.21 9.71994 6.95 8.43994 6.04 6.86994C5.52 5.96994 5.83 4.79994 6.74 4.27994L8.47 3.28994C9.26 2.81994 10.28 3.09994 10.75 3.88994L10.86 4.07994C11.76 5.64994 13.24 5.64994 14.15 4.07994L14.26 3.88994C14.73 3.09994 15.75 2.81994 16.54 3.28994L18.27 4.27994C19.18 4.79994 19.49 5.96994 18.97 6.86994C18.06 8.43994 18.8 9.71994 20.61 9.71994C21.65 9.71994 22.51 10.5699 22.51 11.6199V13.3799C22.51 14.4199 21.66 15.2799 20.61 15.2799C18.8 15.2799 18.06 16.5599 18.97 18.1299C19.49 19.0399 19.18 20.1999 18.27 20.7199L16.54 21.7099C15.75 22.1799 14.73 21.8999 14.26 21.1099L14.15 20.9199C13.25 19.3499 11.77 19.3499 10.86 20.9199L10.75 21.1099C10.28 21.8999 9.26 22.1799 8.47 21.7099L6.74 20.7199C5.83 20.1999 5.52 19.0299 6.04 18.1299C6.95 16.5599 6.21 15.2799 4.4 15.2799C3.35 15.2799 2.5 14.4199 2.5 13.3799Z"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                        </svg>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <!--  Logout  -->
+            <div
+              class="flex justify-sytart items-start gap-3 px-2 justify-center"
+            >
+              <button class="flex text-black items-start">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="25"
+                  height="25"
+                  viewBox="0 0 25 25"
+                  fill="none"
+                  class="w-6 h-6 icon"
+                >
+                  <path
+                    d="M17.3 2.5H14.7C11.5 2.5 9.5 4.5 9.5 7.7V11.75H15.75C16.16 11.75 16.5 12.09 16.5 12.5C16.5 12.91 16.16 13.25 15.75 13.25H9.5V17.3C9.5 20.5 11.5 22.5 14.7 22.5H17.29C20.49 22.5 22.49 20.5 22.49 17.3V7.7C22.5 4.5 20.5 2.5 17.3 2.5Z"
+                    fill="currentColor"
+                  ></path>
+                  <path
+                    d="M5.06043 11.7498L7.13043 9.67984C7.28043 9.52984 7.35043 9.33984 7.35043 9.14984C7.35043 8.95984 7.28043 8.75984 7.13043 8.61984C6.84043 8.32984 6.36043 8.32984 6.07043 8.61984L2.72043 11.9698C2.43043 12.2598 2.43043 12.7398 2.72043 13.0298L6.07043 16.3798C6.36043 16.6698 6.84043 16.6698 7.13043 16.3798C7.42043 16.0898 7.42043 15.6098 7.13043 15.3198L5.06043 13.2498H9.50043V11.7498H5.06043V11.7498Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </nav>
+            </div>
+          </header>
+
+          <!-- Main Dashboard Area -->
+          <div
+            class="w-full h-screen overflow-y-auto lg:overflow-y-hidden px-3 md:px-6 md:border-x md:border-l-2 flex flex-col gap-4 py-8"
+          >
+            <header class="flex justify-between w-full">
+              <div class="">
+                <button class="border p-2 rounded-lg mb-2 md:hidden">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    class="w-6 h-6 icon"
+                  >
+                    <path
+                      d="M21 4.1V10.9C21 11.5934 20.8501 11.9494 20.6386 12.1483C20.4196 12.3544 20.0215 12.5 19.27 12.5H15.23C14.4785 12.5 14.0804 12.3544 13.8614 12.1483C13.6499 11.9494 13.5 11.5934 13.5 10.9V4.1C13.5 3.40657 13.6499 3.05057 13.8614 2.85167C14.0804 2.64556 14.4785 2.5 15.23 2.5H19.27C20.0215 2.5 20.4196 2.64556 20.6386 2.85167C20.8501 3.05057 21 3.40657 21 4.1Z"
+                      fill="#311503"
+                      stroke="#311503"
+                    ></path>
+                    <path
+                      d="M10.5 13.1V19.9C10.5 20.5934 10.3501 20.9494 10.1386 21.1483C9.91956 21.3544 9.52146 21.5 8.77 21.5H4.73C3.97854 21.5 3.58044 21.3544 3.36135 21.1483C3.14993 20.9494 3 20.5934 3 19.9V13.1C3 12.4066 3.14993 12.0506 3.36135 11.8517C3.58044 11.6456 3.97854 11.5 4.73 11.5H8.77C9.52146 11.5 9.91956 11.6456 10.1386 11.8517C10.3501 12.0506 10.5 12.4066 10.5 13.1Z"
+                      fill="#311503"
+                      stroke="#311503"
+                    ></path>
+                    <path
+                      d="M21.5 19.9V17.1C21.5 15.6 20.86 15 19.27 15H15.23C13.64 15 13 15.6 13 17.1V19.9C13 21.4 13.64 22 15.23 22H19.27C20.86 22 21.5 21.4 21.5 19.9Z"
+                      fill="#F66B03"
+                    ></path>
+                    <path
+                      d="M11 6.9V4.1C11 2.6 10.36 2 8.77 2H4.73C3.14 2 2.5 2.6 2.5 4.1V6.9C2.5 8.4 3.14 9 4.73 9H8.77C10.36 9 11 8.4 11 6.9Z"
+                      fill="#F66B03"
+                    ></path>
+                  </svg>
+                </button>
+
+                <h2 class="text-black text-2xl mb-1">Profile</h2>
+                <p class="text-xs text-gray-500">
+                  Your central hub for managing your funds, and track your
+                  wallet history
+                </p>
+              </div>
+
+              <img
+                class="w-10 h-10"
+                src="../images/auth-login-pin-profile.png"
+                alt=""
+              />
+            </header>
+
+            <div>
+              <div class="mx-auto md:mt-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <section
+                    class="md:pr-8 md:border-r md:block hidden md:max-h-[84vh] lg:h-screen scrollbar overflow-y-auto"
+                  >
+                    <div>
+                      <ul class="flex flex-col gap-4 pb-8">
+                        <li
+                          class="bg-transparent group flex items-center gap-3 hover:bg-deep-purple rounded-xl !duration-500 hover:translate-x-1"
+                        >
+                          <a
+                            href=""
+                            class="flex justify-between items-center py-3 px-4 w-full rounded-lg text-deep-purple"
+                          >
+                            <div class="flex items-center gap-3">
+                              <div
+                                class="bg-deep-purple group-hover:bg-white rounded-full p-3"
+                              >
+                                <svg
+                                  width="24"
+                                  height="24"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  class="h-6 w-6"
+                                >
+                                  <path
+                                    d="M12 2C9.38 2 7.25 4.13 7.25 6.75C7.25 9.32 9.26 11.4 11.88 11.49C11.96 11.48 12.04 11.48 12.1 11.49C12.12 11.49 12.13 11.49 12.15 11.49C12.16 11.49 12.16 11.49 12.17 11.49C14.73 11.4 16.74 9.32 16.75 6.75C16.75 4.13 14.62 2 12 2Z"
+                                    fill="#F66B03"
+                                  ></path>
+                                  <path
+                                    d="M17.08 14.1509C14.29 12.2909 9.73996 12.2909 6.92996 14.1509C5.65996 15.0009 4.95996 16.1509 4.95996 17.3809C4.95996 18.6109 5.65996 19.7509 6.91996 20.5909C8.31996 21.5309 10.16 22.0009 12 22.0009C13.84 22.0009 15.68 21.5309 17.08 20.5909C18.34 19.7409 19.04 18.6009 19.04 17.3609C19.03 16.1309 18.34 14.9909 17.08 14.1509Z"
+                                    fill="#F66B03"
+                                  ></path>
+                                </svg>
+                              </div>
+
+                              <span>
+                                <p class="text-gray-700 group-hover:text-white">
+                                  Personal Information
+                                </p>
+                                <p
+                                  class="text-sm text-gray-600 group-hover:text-white"
+                                >
+                                  Edit your information
+                                </p>
+                              </span>
+                            </div>
+
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              class="size-6 group-hover:text-white"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                              />
+                            </svg>
+                          </a>
+                        </li>
+                        <li
+                          class="bg-transparent group flex items-center gap-3 hover:bg-deep-purple rounded-xl !duration-500 hover:translate-x-1"
+                        >
+                          <a
+                            href=""
+                            class="flex justify-between items-center py-3 px-4 w-full rounded-lg text-deep-purple"
+                          >
+                            <div class="flex items-center gap-3">
+                              <div
+                                class="bg-deep-purple group-hover:bg-white rounded-full p-3"
+                              >
+                                <svg
+                                  width="24"
+                                  height="24"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  class="h-6 w-6"
+                                >
+                                  <path
+                                    d="M12 2C9.38 2 7.25 4.13 7.25 6.75C7.25 9.32 9.26 11.4 11.88 11.49C11.96 11.48 12.04 11.48 12.1 11.49C12.12 11.49 12.13 11.49 12.15 11.49C12.16 11.49 12.16 11.49 12.17 11.49C14.73 11.4 16.74 9.32 16.75 6.75C16.75 4.13 14.62 2 12 2Z"
+                                    fill="#F66B03"
+                                  ></path>
+                                  <path
+                                    d="M17.08 14.1509C14.29 12.2909 9.73996 12.2909 6.92996 14.1509C5.65996 15.0009 4.95996 16.1509 4.95996 17.3809C4.95996 18.6109 5.65996 19.7509 6.91996 20.5909C8.31996 21.5309 10.16 22.0009 12 22.0009C13.84 22.0009 15.68 21.5309 17.08 20.5909C18.34 19.7409 19.04 18.6009 19.04 17.3609C19.03 16.1309 18.34 14.9909 17.08 14.1509Z"
+                                    fill="#F66B03"
+                                  ></path>
+                                </svg>
+                              </div>
+
+                              <span>
+                                <p class="text-gray-700 group-hover:text-white">
+                                  Personal Information
+                                </p>
+                                <p
+                                  class="text-sm text-gray-600 group-hover:text-white"
+                                >
+                                  Edit your information
+                                </p>
+                              </span>
+                            </div>
+
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              class="size-6 group-hover:text-white"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                              />
+                            </svg>
+                          </a>
+                        </li>
+                        <li
+                          class="bg-transparent group flex items-center gap-3 hover:bg-deep-purple rounded-xl !duration-500 hover:translate-x-1"
+                        >
+                          <a
+                            href=""
+                            class="flex justify-between items-center py-3 px-4 w-full rounded-lg text-deep-purple"
+                          >
+                            <div class="flex items-center gap-3">
+                              <div
+                                class="bg-deep-purple group-hover:bg-white rounded-full p-3"
+                              >
+                                <svg
+                                  width="24"
+                                  height="24"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  class="h-6 w-6"
+                                >
+                                  <path
+                                    d="M12 2C9.38 2 7.25 4.13 7.25 6.75C7.25 9.32 9.26 11.4 11.88 11.49C11.96 11.48 12.04 11.48 12.1 11.49C12.12 11.49 12.13 11.49 12.15 11.49C12.16 11.49 12.16 11.49 12.17 11.49C14.73 11.4 16.74 9.32 16.75 6.75C16.75 4.13 14.62 2 12 2Z"
+                                    fill="#F66B03"
+                                  ></path>
+                                  <path
+                                    d="M17.08 14.1509C14.29 12.2909 9.73996 12.2909 6.92996 14.1509C5.65996 15.0009 4.95996 16.1509 4.95996 17.3809C4.95996 18.6109 5.65996 19.7509 6.91996 20.5909C8.31996 21.5309 10.16 22.0009 12 22.0009C13.84 22.0009 15.68 21.5309 17.08 20.5909C18.34 19.7409 19.04 18.6009 19.04 17.3609C19.03 16.1309 18.34 14.9909 17.08 14.1509Z"
+                                    fill="#F66B03"
+                                  ></path>
+                                </svg>
+                              </div>
+
+                              <span>
+                                <p class="text-gray-700 group-hover:text-white">
+                                  Personal Information
+                                </p>
+                                <p
+                                  class="text-sm text-gray-600 group-hover:text-white"
+                                >
+                                  Edit your information
+                                </p>
+                              </span>
+                            </div>
+
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              class="size-6 group-hover:text-white"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                              />
+                            </svg>
+                          </a>
+                        </li>
+                        <li
+                          class="bg-transparent group flex items-center gap-3 hover:bg-deep-purple rounded-xl !duration-500 hover:translate-x-1"
+                        >
+                          <a
+                            href=""
+                            class="flex justify-between items-center py-3 px-4 w-full rounded-lg text-deep-purple"
+                          >
+                            <div class="flex items-center gap-3">
+                              <div
+                                class="bg-deep-purple group-hover:bg-white rounded-full p-3"
+                              >
+                                <svg
+                                  width="24"
+                                  height="24"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  class="h-6 w-6"
+                                >
+                                  <path
+                                    d="M12 2C9.38 2 7.25 4.13 7.25 6.75C7.25 9.32 9.26 11.4 11.88 11.49C11.96 11.48 12.04 11.48 12.1 11.49C12.12 11.49 12.13 11.49 12.15 11.49C12.16 11.49 12.16 11.49 12.17 11.49C14.73 11.4 16.74 9.32 16.75 6.75C16.75 4.13 14.62 2 12 2Z"
+                                    fill="#F66B03"
+                                  ></path>
+                                  <path
+                                    d="M17.08 14.1509C14.29 12.2909 9.73996 12.2909 6.92996 14.1509C5.65996 15.0009 4.95996 16.1509 4.95996 17.3809C4.95996 18.6109 5.65996 19.7509 6.91996 20.5909C8.31996 21.5309 10.16 22.0009 12 22.0009C13.84 22.0009 15.68 21.5309 17.08 20.5909C18.34 19.7409 19.04 18.6009 19.04 17.3609C19.03 16.1309 18.34 14.9909 17.08 14.1509Z"
+                                    fill="#F66B03"
+                                  ></path>
+                                </svg>
+                              </div>
+
+                              <span>
+                                <p class="text-gray-700 group-hover:text-white">
+                                  Personal Information
+                                </p>
+                                <p
+                                  class="text-sm text-gray-600 group-hover:text-white"
+                                >
+                                  Edit your information
+                                </p>
+                              </span>
+                            </div>
+
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              class="size-6 group-hover:text-white"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                              />
+                            </svg>
+                          </a>
+                        </li>
+                        <li
+                          class="bg-transparent group flex items-center gap-3 hover:bg-deep-purple rounded-xl !duration-500 hover:translate-x-1"
+                        >
+                          <a
+                            href=""
+                            class="flex justify-between items-center py-3 px-4 w-full rounded-lg text-deep-purple"
+                          >
+                            <div class="flex items-center gap-3">
+                              <div
+                                class="bg-deep-purple group-hover:bg-white rounded-full p-3"
+                              >
+                                <svg
+                                  width="24"
+                                  height="24"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  class="h-6 w-6"
+                                >
+                                  <path
+                                    d="M12 2C9.38 2 7.25 4.13 7.25 6.75C7.25 9.32 9.26 11.4 11.88 11.49C11.96 11.48 12.04 11.48 12.1 11.49C12.12 11.49 12.13 11.49 12.15 11.49C12.16 11.49 12.16 11.49 12.17 11.49C14.73 11.4 16.74 9.32 16.75 6.75C16.75 4.13 14.62 2 12 2Z"
+                                    fill="#F66B03"
+                                  ></path>
+                                  <path
+                                    d="M17.08 14.1509C14.29 12.2909 9.73996 12.2909 6.92996 14.1509C5.65996 15.0009 4.95996 16.1509 4.95996 17.3809C4.95996 18.6109 5.65996 19.7509 6.91996 20.5909C8.31996 21.5309 10.16 22.0009 12 22.0009C13.84 22.0009 15.68 21.5309 17.08 20.5909C18.34 19.7409 19.04 18.6009 19.04 17.3609C19.03 16.1309 18.34 14.9909 17.08 14.1509Z"
+                                    fill="#F66B03"
+                                  ></path>
+                                </svg>
+                              </div>
+
+                              <span>
+                                <p class="text-gray-700 group-hover:text-white">
+                                  Personal Information
+                                </p>
+                                <p
+                                  class="text-sm text-gray-600 group-hover:text-white"
+                                >
+                                  Edit your information
+                                </p>
+                              </span>
+                            </div>
+
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              class="size-6 group-hover:text-white"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                              />
+                            </svg>
+                          </a>
+                        </li>
+                        <li
+                          class="bg-transparent group flex items-center gap-3 hover:bg-deep-purple rounded-xl !duration-500 hover:translate-x-1"
+                        >
+                          <a
+                            href=""
+                            class="flex justify-between items-center py-3 px-4 w-full rounded-lg text-deep-purple"
+                          >
+                            <div class="flex items-center gap-3">
+                              <div
+                                class="bg-deep-purple group-hover:bg-white rounded-full p-3"
+                              >
+                                <svg
+                                  width="24"
+                                  height="24"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  class="h-6 w-6"
+                                >
+                                  <path
+                                    d="M12 2C9.38 2 7.25 4.13 7.25 6.75C7.25 9.32 9.26 11.4 11.88 11.49C11.96 11.48 12.04 11.48 12.1 11.49C12.12 11.49 12.13 11.49 12.15 11.49C12.16 11.49 12.16 11.49 12.17 11.49C14.73 11.4 16.74 9.32 16.75 6.75C16.75 4.13 14.62 2 12 2Z"
+                                    fill="#F66B03"
+                                  ></path>
+                                  <path
+                                    d="M17.08 14.1509C14.29 12.2909 9.73996 12.2909 6.92996 14.1509C5.65996 15.0009 4.95996 16.1509 4.95996 17.3809C4.95996 18.6109 5.65996 19.7509 6.91996 20.5909C8.31996 21.5309 10.16 22.0009 12 22.0009C13.84 22.0009 15.68 21.5309 17.08 20.5909C18.34 19.7409 19.04 18.6009 19.04 17.3609C19.03 16.1309 18.34 14.9909 17.08 14.1509Z"
+                                    fill="#F66B03"
+                                  ></path>
+                                </svg>
+                              </div>
+
+                              <span>
+                                <p class="text-gray-700 group-hover:text-white">
+                                  Personal Information
+                                </p>
+                                <p
+                                  class="text-sm text-gray-600 group-hover:text-white"
+                                >
+                                  Edit your information
+                                </p>
+                              </span>
+                            </div>
+
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              class="size-6 group-hover:text-white"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                              />
+                            </svg>
+                          </a>
+                        </li>
+                        <li
+                          class="bg-transparent group flex items-center gap-3 hover:bg-deep-purple rounded-xl !duration-500 hover:translate-x-1"
+                        >
+                          <a
+                            href=""
+                            class="flex justify-between items-center py-3 px-4 w-full rounded-lg text-deep-purple"
+                          >
+                            <div class="flex items-center gap-3">
+                              <div
+                                class="bg-deep-purple group-hover:bg-white rounded-full p-3"
+                              >
+                                <svg
+                                  width="24"
+                                  height="24"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  class="h-6 w-6"
+                                >
+                                  <path
+                                    d="M12 2C9.38 2 7.25 4.13 7.25 6.75C7.25 9.32 9.26 11.4 11.88 11.49C11.96 11.48 12.04 11.48 12.1 11.49C12.12 11.49 12.13 11.49 12.15 11.49C12.16 11.49 12.16 11.49 12.17 11.49C14.73 11.4 16.74 9.32 16.75 6.75C16.75 4.13 14.62 2 12 2Z"
+                                    fill="#F66B03"
+                                  ></path>
+                                  <path
+                                    d="M17.08 14.1509C14.29 12.2909 9.73996 12.2909 6.92996 14.1509C5.65996 15.0009 4.95996 16.1509 4.95996 17.3809C4.95996 18.6109 5.65996 19.7509 6.91996 20.5909C8.31996 21.5309 10.16 22.0009 12 22.0009C13.84 22.0009 15.68 21.5309 17.08 20.5909C18.34 19.7409 19.04 18.6009 19.04 17.3609C19.03 16.1309 18.34 14.9909 17.08 14.1509Z"
+                                    fill="#F66B03"
+                                  ></path>
+                                </svg>
+                              </div>
+
+                              <span>
+                                <p class="text-gray-700 group-hover:text-white">
+                                  Personal Information
+                                </p>
+                                <p
+                                  class="text-sm text-gray-600 group-hover:text-white"
+                                >
+                                  Edit your information
+                                </p>
+                              </span>
+                            </div>
+
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              class="size-6 group-hover:text-white"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                              />
+                            </svg>
+                          </a>
+                        </li>
+                        <li
+                          class="bg-transparent group flex items-center gap-3 hover:bg-deep-purple rounded-xl !duration-500 hover:translate-x-1"
+                        >
+                          <a
+                            href=""
+                            class="flex justify-between items-center py-3 px-4 w-full rounded-lg text-deep-purple"
+                          >
+                            <div class="flex items-center gap-3">
+                              <div
+                                class="bg-deep-purple group-hover:bg-white rounded-full p-3"
+                              >
+                                <svg
+                                  width="24"
+                                  height="24"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  class="h-6 w-6"
+                                >
+                                  <path
+                                    d="M12 2C9.38 2 7.25 4.13 7.25 6.75C7.25 9.32 9.26 11.4 11.88 11.49C11.96 11.48 12.04 11.48 12.1 11.49C12.12 11.49 12.13 11.49 12.15 11.49C12.16 11.49 12.16 11.49 12.17 11.49C14.73 11.4 16.74 9.32 16.75 6.75C16.75 4.13 14.62 2 12 2Z"
+                                    fill="#F66B03"
+                                  ></path>
+                                  <path
+                                    d="M17.08 14.1509C14.29 12.2909 9.73996 12.2909 6.92996 14.1509C5.65996 15.0009 4.95996 16.1509 4.95996 17.3809C4.95996 18.6109 5.65996 19.7509 6.91996 20.5909C8.31996 21.5309 10.16 22.0009 12 22.0009C13.84 22.0009 15.68 21.5309 17.08 20.5909C18.34 19.7409 19.04 18.6009 19.04 17.3609C19.03 16.1309 18.34 14.9909 17.08 14.1509Z"
+                                    fill="#F66B03"
+                                  ></path>
+                                </svg>
+                              </div>
+
+                              <span>
+                                <p class="text-gray-700 group-hover:text-white">
+                                  Personal Information
+                                </p>
+                                <p
+                                  class="text-sm text-gray-600 group-hover:text-white"
+                                >
+                                  Edit your information
+                                </p>
+                              </span>
+                            </div>
+
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              class="size-6 group-hover:text-white"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                              />
+                            </svg>
+                          </a>
+                        </li>
+                        <li
+                          class="bg-transparent group flex items-center gap-3 hover:bg-deep-purple rounded-xl !duration-500 hover:translate-x-1"
+                        >
+                          <a
+                            href=""
+                            class="flex justify-between items-center py-3 px-4 w-full rounded-lg text-deep-purple"
+                          >
+                            <div class="flex items-center gap-3">
+                              <div
+                                class="bg-deep-purple group-hover:bg-white rounded-full p-3"
+                              >
+                                <svg
+                                  width="24"
+                                  height="24"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  class="h-6 w-6"
+                                >
+                                  <path
+                                    d="M12 2C9.38 2 7.25 4.13 7.25 6.75C7.25 9.32 9.26 11.4 11.88 11.49C11.96 11.48 12.04 11.48 12.1 11.49C12.12 11.49 12.13 11.49 12.15 11.49C12.16 11.49 12.16 11.49 12.17 11.49C14.73 11.4 16.74 9.32 16.75 6.75C16.75 4.13 14.62 2 12 2Z"
+                                    fill="#F66B03"
+                                  ></path>
+                                  <path
+                                    d="M17.08 14.1509C14.29 12.2909 9.73996 12.2909 6.92996 14.1509C5.65996 15.0009 4.95996 16.1509 4.95996 17.3809C4.95996 18.6109 5.65996 19.7509 6.91996 20.5909C8.31996 21.5309 10.16 22.0009 12 22.0009C13.84 22.0009 15.68 21.5309 17.08 20.5909C18.34 19.7409 19.04 18.6009 19.04 17.3609C19.03 16.1309 18.34 14.9909 17.08 14.1509Z"
+                                    fill="#F66B03"
+                                  ></path>
+                                </svg>
+                              </div>
+
+                              <span>
+                                <p class="text-gray-700 group-hover:text-white">
+                                  Personal Information
+                                </p>
+                                <p
+                                  class="text-sm text-gray-600 group-hover:text-white"
+                                >
+                                  Edit your information
+                                </p>
+                              </span>
+                            </div>
+
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              class="size-6 group-hover:text-white"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                              />
+                            </svg>
+                          </a>
+                        </li>
+                        <li
+                          class="bg-transparent group flex items-center gap-3 hover:bg-deep-purple rounded-xl !duration-500 hover:translate-x-1"
+                        >
+                          <a
+                            href=""
+                            class="flex justify-between items-center py-3 px-4 w-full rounded-lg text-deep-purple"
+                          >
+                            <div class="flex items-center gap-3">
+                              <div
+                                class="bg-deep-purple group-hover:bg-white rounded-full p-3"
+                              >
+                                <svg
+                                  width="24"
+                                  height="24"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  class="h-6 w-6"
+                                >
+                                  <path
+                                    d="M12 2C9.38 2 7.25 4.13 7.25 6.75C7.25 9.32 9.26 11.4 11.88 11.49C11.96 11.48 12.04 11.48 12.1 11.49C12.12 11.49 12.13 11.49 12.15 11.49C12.16 11.49 12.16 11.49 12.17 11.49C14.73 11.4 16.74 9.32 16.75 6.75C16.75 4.13 14.62 2 12 2Z"
+                                    fill="#F66B03"
+                                  ></path>
+                                  <path
+                                    d="M17.08 14.1509C14.29 12.2909 9.73996 12.2909 6.92996 14.1509C5.65996 15.0009 4.95996 16.1509 4.95996 17.3809C4.95996 18.6109 5.65996 19.7509 6.91996 20.5909C8.31996 21.5309 10.16 22.0009 12 22.0009C13.84 22.0009 15.68 21.5309 17.08 20.5909C18.34 19.7409 19.04 18.6009 19.04 17.3609C19.03 16.1309 18.34 14.9909 17.08 14.1509Z"
+                                    fill="#F66B03"
+                                  ></path>
+                                </svg>
+                              </div>
+
+                              <span>
+                                <p class="text-gray-700 group-hover:text-white">
+                                  Personal Information
+                                </p>
+                                <p
+                                  class="text-sm text-gray-600 group-hover:text-white"
+                                >
+                                  Edit your information
+                                </p>
+                              </span>
+                            </div>
+
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              class="size-6 group-hover:text-white"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                              />
+                            </svg>
+                          </a>
+                        </li>
+                        <li
+                          class="bg-transparent group flex items-center gap-3 hover:bg-deep-purple rounded-xl !duration-500 hover:translate-x-1"
+                        >
+                          <a
+                            href=""
+                            class="flex justify-between items-center py-3 px-4 w-full rounded-lg text-deep-purple"
+                          >
+                            <div class="flex items-center gap-3">
+                              <div
+                                class="bg-deep-purple group-hover:bg-white rounded-full p-3"
+                              >
+                                <svg
+                                  width="24"
+                                  height="24"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  class="h-6 w-6"
+                                >
+                                  <path
+                                    d="M12 2C9.38 2 7.25 4.13 7.25 6.75C7.25 9.32 9.26 11.4 11.88 11.49C11.96 11.48 12.04 11.48 12.1 11.49C12.12 11.49 12.13 11.49 12.15 11.49C12.16 11.49 12.16 11.49 12.17 11.49C14.73 11.4 16.74 9.32 16.75 6.75C16.75 4.13 14.62 2 12 2Z"
+                                    fill="#F66B03"
+                                  ></path>
+                                  <path
+                                    d="M17.08 14.1509C14.29 12.2909 9.73996 12.2909 6.92996 14.1509C5.65996 15.0009 4.95996 16.1509 4.95996 17.3809C4.95996 18.6109 5.65996 19.7509 6.91996 20.5909C8.31996 21.5309 10.16 22.0009 12 22.0009C13.84 22.0009 15.68 21.5309 17.08 20.5909C18.34 19.7409 19.04 18.6009 19.04 17.3609C19.03 16.1309 18.34 14.9909 17.08 14.1509Z"
+                                    fill="#F66B03"
+                                  ></path>
+                                </svg>
+                              </div>
+
+                              <span>
+                                <p class="text-gray-700 group-hover:text-white">
+                                  Personal Information
+                                </p>
+                                <p
+                                  class="text-sm text-gray-600 group-hover:text-white"
+                                >
+                                  Edit your information
+                                </p>
+                              </span>
+                            </div>
+
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              class="size-6 group-hover:text-white"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                              />
+                            </svg>
+                          </a>
+                        </li>
+                        <li
+                          class="bg-transparent group flex items-center gap-3 hover:bg-deep-purple rounded-xl !duration-500 hover:translate-x-1"
+                        >
+                          <a
+                            href=""
+                            class="flex justify-between items-center py-3 px-4 w-full rounded-lg text-deep-purple"
+                          >
+                            <div class="flex items-center gap-3">
+                              <div
+                                class="bg-deep-purple group-hover:bg-white rounded-full p-3"
+                              >
+                                <svg
+                                  width="24"
+                                  height="24"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  class="h-6 w-6"
+                                >
+                                  <path
+                                    d="M12 2C9.38 2 7.25 4.13 7.25 6.75C7.25 9.32 9.26 11.4 11.88 11.49C11.96 11.48 12.04 11.48 12.1 11.49C12.12 11.49 12.13 11.49 12.15 11.49C12.16 11.49 12.16 11.49 12.17 11.49C14.73 11.4 16.74 9.32 16.75 6.75C16.75 4.13 14.62 2 12 2Z"
+                                    fill="#F66B03"
+                                  ></path>
+                                  <path
+                                    d="M17.08 14.1509C14.29 12.2909 9.73996 12.2909 6.92996 14.1509C5.65996 15.0009 4.95996 16.1509 4.95996 17.3809C4.95996 18.6109 5.65996 19.7509 6.91996 20.5909C8.31996 21.5309 10.16 22.0009 12 22.0009C13.84 22.0009 15.68 21.5309 17.08 20.5909C18.34 19.7409 19.04 18.6009 19.04 17.3609C19.03 16.1309 18.34 14.9909 17.08 14.1509Z"
+                                    fill="#F66B03"
+                                  ></path>
+                                </svg>
+                              </div>
+
+                              <span>
+                                <p class="text-gray-700 group-hover:text-white">
+                                  Personal Information
+                                </p>
+                                <p
+                                  class="text-sm text-gray-600 group-hover:text-white"
+                                >
+                                  Edit your information
+                                </p>
+                              </span>
+                            </div>
+
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              class="size-6 group-hover:text-white"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                              />
+                            </svg>
+                          </a>
+                        </li>
+                        <li
+                          class="bg-transparent group flex items-center gap-3 hover:bg-deep-purple rounded-xl !duration-500 hover:translate-x-1"
+                        >
+                          <a
+                            href=""
+                            class="flex justify-between items-center py-3 px-4 w-full rounded-lg text-deep-purple"
+                          >
+                            <div class="flex items-center gap-3">
+                              <div
+                                class="bg-deep-purple group-hover:bg-white rounded-full p-3"
+                              >
+                                <svg
+                                  width="24"
+                                  height="24"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  class="h-6 w-6"
+                                >
+                                  <path
+                                    d="M12 2C9.38 2 7.25 4.13 7.25 6.75C7.25 9.32 9.26 11.4 11.88 11.49C11.96 11.48 12.04 11.48 12.1 11.49C12.12 11.49 12.13 11.49 12.15 11.49C12.16 11.49 12.16 11.49 12.17 11.49C14.73 11.4 16.74 9.32 16.75 6.75C16.75 4.13 14.62 2 12 2Z"
+                                    fill="#F66B03"
+                                  ></path>
+                                  <path
+                                    d="M17.08 14.1509C14.29 12.2909 9.73996 12.2909 6.92996 14.1509C5.65996 15.0009 4.95996 16.1509 4.95996 17.3809C4.95996 18.6109 5.65996 19.7509 6.91996 20.5909C8.31996 21.5309 10.16 22.0009 12 22.0009C13.84 22.0009 15.68 21.5309 17.08 20.5909C18.34 19.7409 19.04 18.6009 19.04 17.3609C19.03 16.1309 18.34 14.9909 17.08 14.1509Z"
+                                    fill="#F66B03"
+                                  ></path>
+                                </svg>
+                              </div>
+
+                              <span>
+                                <p class="text-gray-700 group-hover:text-white">
+                                  Personal Information
+                                </p>
+                                <p
+                                  class="text-sm text-gray-600 group-hover:text-white"
+                                >
+                                  Edit your information
+                                </p>
+                              </span>
+                            </div>
+
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              class="size-6 group-hover:text-white"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                              />
+                            </svg>
+                          </a>
+                        </li>
+                        <li
+                          class="bg-transparent group flex items-center gap-3 hover:bg-deep-purple rounded-xl !duration-500 hover:translate-x-1"
+                        >
+                          <a
+                            href=""
+                            class="flex justify-between items-center py-3 px-4 w-full rounded-lg text-deep-purple"
+                          >
+                            <div class="flex items-center gap-3">
+                              <div
+                                class="bg-deep-purple group-hover:bg-white rounded-full p-3"
+                              >
+                                <svg
+                                  width="24"
+                                  height="24"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  class="h-6 w-6"
+                                >
+                                  <path
+                                    d="M12 2C9.38 2 7.25 4.13 7.25 6.75C7.25 9.32 9.26 11.4 11.88 11.49C11.96 11.48 12.04 11.48 12.1 11.49C12.12 11.49 12.13 11.49 12.15 11.49C12.16 11.49 12.16 11.49 12.17 11.49C14.73 11.4 16.74 9.32 16.75 6.75C16.75 4.13 14.62 2 12 2Z"
+                                    fill="#F66B03"
+                                  ></path>
+                                  <path
+                                    d="M17.08 14.1509C14.29 12.2909 9.73996 12.2909 6.92996 14.1509C5.65996 15.0009 4.95996 16.1509 4.95996 17.3809C4.95996 18.6109 5.65996 19.7509 6.91996 20.5909C8.31996 21.5309 10.16 22.0009 12 22.0009C13.84 22.0009 15.68 21.5309 17.08 20.5909C18.34 19.7409 19.04 18.6009 19.04 17.3609C19.03 16.1309 18.34 14.9909 17.08 14.1509Z"
+                                    fill="#F66B03"
+                                  ></path>
+                                </svg>
+                              </div>
+
+                              <span>
+                                <p class="text-gray-700 group-hover:text-white">
+                                  Personal Information
+                                </p>
+                                <p
+                                  class="text-sm text-gray-600 group-hover:text-white"
+                                >
+                                  Edit your information
+                                </p>
+                              </span>
+                            </div>
+
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              class="size-6 group-hover:text-white"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                              />
+                            </svg>
+                          </a>
+                        </li>
+                        <li
+                          class="bg-transparent group flex items-center gap-3 hover:bg-deep-purple rounded-xl !duration-500 hover:translate-x-1"
+                        >
+                          <a
+                            href=""
+                            class="flex justify-between items-center py-3 px-4 w-full rounded-lg text-deep-purple"
+                          >
+                            <div class="flex items-center gap-3">
+                              <div
+                                class="bg-deep-purple group-hover:bg-white rounded-full p-3"
+                              >
+                                <svg
+                                  width="24"
+                                  height="24"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  class="h-6 w-6"
+                                >
+                                  <path
+                                    d="M12 2C9.38 2 7.25 4.13 7.25 6.75C7.25 9.32 9.26 11.4 11.88 11.49C11.96 11.48 12.04 11.48 12.1 11.49C12.12 11.49 12.13 11.49 12.15 11.49C12.16 11.49 12.16 11.49 12.17 11.49C14.73 11.4 16.74 9.32 16.75 6.75C16.75 4.13 14.62 2 12 2Z"
+                                    fill="#F66B03"
+                                  ></path>
+                                  <path
+                                    d="M17.08 14.1509C14.29 12.2909 9.73996 12.2909 6.92996 14.1509C5.65996 15.0009 4.95996 16.1509 4.95996 17.3809C4.95996 18.6109 5.65996 19.7509 6.91996 20.5909C8.31996 21.5309 10.16 22.0009 12 22.0009C13.84 22.0009 15.68 21.5309 17.08 20.5909C18.34 19.7409 19.04 18.6009 19.04 17.3609C19.03 16.1309 18.34 14.9909 17.08 14.1509Z"
+                                    fill="#F66B03"
+                                  ></path>
+                                </svg>
+                              </div>
+
+                              <span>
+                                <p class="text-gray-700 group-hover:text-white">
+                                  Personal Information
+                                </p>
+                                <p
+                                  class="text-sm text-gray-600 group-hover:text-white"
+                                >
+                                  Edit your information
+                                </p>
+                              </span>
+                            </div>
+
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              class="size-6 group-hover:text-white"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                              />
+                            </svg>
+                          </a>
+                        </li>
+                        <li
+                          class="bg-transparent group flex items-center gap-3 hover:bg-deep-purple rounded-xl !duration-500 hover:translate-x-1"
+                        >
+                          <a
+                            href=""
+                            class="flex justify-between items-center py-3 px-4 w-full rounded-lg text-deep-purple"
+                          >
+                            <div class="flex items-center gap-3">
+                              <div
+                                class="bg-deep-purple group-hover:bg-white rounded-full p-3"
+                              >
+                                <svg
+                                  width="24"
+                                  height="24"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  class="h-6 w-6"
+                                >
+                                  <path
+                                    d="M12 2C9.38 2 7.25 4.13 7.25 6.75C7.25 9.32 9.26 11.4 11.88 11.49C11.96 11.48 12.04 11.48 12.1 11.49C12.12 11.49 12.13 11.49 12.15 11.49C12.16 11.49 12.16 11.49 12.17 11.49C14.73 11.4 16.74 9.32 16.75 6.75C16.75 4.13 14.62 2 12 2Z"
+                                    fill="#F66B03"
+                                  ></path>
+                                  <path
+                                    d="M17.08 14.1509C14.29 12.2909 9.73996 12.2909 6.92996 14.1509C5.65996 15.0009 4.95996 16.1509 4.95996 17.3809C4.95996 18.6109 5.65996 19.7509 6.91996 20.5909C8.31996 21.5309 10.16 22.0009 12 22.0009C13.84 22.0009 15.68 21.5309 17.08 20.5909C18.34 19.7409 19.04 18.6009 19.04 17.3609C19.03 16.1309 18.34 14.9909 17.08 14.1509Z"
+                                    fill="#F66B03"
+                                  ></path>
+                                </svg>
+                              </div>
+
+                              <span>
+                                <p class="text-gray-700 group-hover:text-white">
+                                  Personal Information
+                                </p>
+                                <p
+                                  class="text-sm text-gray-600 group-hover:text-white"
+                                >
+                                  Edit your information
+                                </p>
+                              </span>
+                            </div>
+
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              class="size-6 group-hover:text-white"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                              />
+                            </svg>
+                          </a>
+                        </li>
+                        <li
+                          class="bg-transparent group flex items-center gap-3 hover:bg-deep-purple rounded-xl !duration-500 hover:translate-x-1"
+                        >
+                          <a
+                            href=""
+                            class="flex justify-between items-center py-3 px-4 w-full rounded-lg text-deep-purple"
+                          >
+                            <div class="flex items-center gap-3">
+                              <div
+                                class="bg-deep-purple group-hover:bg-white rounded-full p-3"
+                              >
+                                <svg
+                                  width="24"
+                                  height="24"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  class="h-6 w-6"
+                                >
+                                  <path
+                                    d="M12 2C9.38 2 7.25 4.13 7.25 6.75C7.25 9.32 9.26 11.4 11.88 11.49C11.96 11.48 12.04 11.48 12.1 11.49C12.12 11.49 12.13 11.49 12.15 11.49C12.16 11.49 12.16 11.49 12.17 11.49C14.73 11.4 16.74 9.32 16.75 6.75C16.75 4.13 14.62 2 12 2Z"
+                                    fill="#F66B03"
+                                  ></path>
+                                  <path
+                                    d="M17.08 14.1509C14.29 12.2909 9.73996 12.2909 6.92996 14.1509C5.65996 15.0009 4.95996 16.1509 4.95996 17.3809C4.95996 18.6109 5.65996 19.7509 6.91996 20.5909C8.31996 21.5309 10.16 22.0009 12 22.0009C13.84 22.0009 15.68 21.5309 17.08 20.5909C18.34 19.7409 19.04 18.6009 19.04 17.3609C19.03 16.1309 18.34 14.9909 17.08 14.1509Z"
+                                    fill="#F66B03"
+                                  ></path>
+                                </svg>
+                              </div>
+
+                              <span>
+                                <p class="text-gray-700 group-hover:text-white">
+                                  Personal Information
+                                </p>
+                                <p
+                                  class="text-sm text-gray-600 group-hover:text-white"
+                                >
+                                  Edit your information
+                                </p>
+                              </span>
+                            </div>
+
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              class="size-6 group-hover:text-white"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                              />
+                            </svg>
+                          </a>
+                        </li>
+                        <li
+                          class="bg-transparent group flex items-center gap-3 hover:bg-deep-purple rounded-xl !duration-500 hover:translate-x-1"
+                        >
+                          <a
+                            href=""
+                            class="flex justify-between items-center py-3 px-4 w-full rounded-lg text-deep-purple"
+                          >
+                            <div class="flex items-center gap-3">
+                              <div
+                                class="bg-deep-purple group-hover:bg-white rounded-full p-3"
+                              >
+                                <svg
+                                  width="24"
+                                  height="24"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  class="h-6 w-6"
+                                >
+                                  <path
+                                    d="M12 2C9.38 2 7.25 4.13 7.25 6.75C7.25 9.32 9.26 11.4 11.88 11.49C11.96 11.48 12.04 11.48 12.1 11.49C12.12 11.49 12.13 11.49 12.15 11.49C12.16 11.49 12.16 11.49 12.17 11.49C14.73 11.4 16.74 9.32 16.75 6.75C16.75 4.13 14.62 2 12 2Z"
+                                    fill="#F66B03"
+                                  ></path>
+                                  <path
+                                    d="M17.08 14.1509C14.29 12.2909 9.73996 12.2909 6.92996 14.1509C5.65996 15.0009 4.95996 16.1509 4.95996 17.3809C4.95996 18.6109 5.65996 19.7509 6.91996 20.5909C8.31996 21.5309 10.16 22.0009 12 22.0009C13.84 22.0009 15.68 21.5309 17.08 20.5909C18.34 19.7409 19.04 18.6009 19.04 17.3609C19.03 16.1309 18.34 14.9909 17.08 14.1509Z"
+                                    fill="#F66B03"
+                                  ></path>
+                                </svg>
+                              </div>
+
+                              <span>
+                                <p class="text-gray-700 group-hover:text-white">
+                                  Personal Information
+                                </p>
+                                <p
+                                  class="text-sm text-gray-600 group-hover:text-white"
+                                >
+                                  Edit your information
+                                </p>
+                              </span>
+                            </div>
+
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              class="size-6 group-hover:text-white"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                              />
+                            </svg>
+                          </a>
+                        </li>
+                        <li
+                          class="bg-transparent group flex items-center gap-3 hover:bg-deep-purple rounded-xl !duration-500 hover:translate-x-1"
+                        >
+                          <a
+                            href=""
+                            class="flex justify-between items-center py-3 px-4 w-full rounded-lg text-deep-purple"
+                          >
+                            <div class="flex items-center gap-3">
+                              <div
+                                class="bg-deep-purple group-hover:bg-white rounded-full p-3"
+                              >
+                                <svg
+                                  width="24"
+                                  height="24"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  class="h-6 w-6"
+                                >
+                                  <path
+                                    d="M12 2C9.38 2 7.25 4.13 7.25 6.75C7.25 9.32 9.26 11.4 11.88 11.49C11.96 11.48 12.04 11.48 12.1 11.49C12.12 11.49 12.13 11.49 12.15 11.49C12.16 11.49 12.16 11.49 12.17 11.49C14.73 11.4 16.74 9.32 16.75 6.75C16.75 4.13 14.62 2 12 2Z"
+                                    fill="#F66B03"
+                                  ></path>
+                                  <path
+                                    d="M17.08 14.1509C14.29 12.2909 9.73996 12.2909 6.92996 14.1509C5.65996 15.0009 4.95996 16.1509 4.95996 17.3809C4.95996 18.6109 5.65996 19.7509 6.91996 20.5909C8.31996 21.5309 10.16 22.0009 12 22.0009C13.84 22.0009 15.68 21.5309 17.08 20.5909C18.34 19.7409 19.04 18.6009 19.04 17.3609C19.03 16.1309 18.34 14.9909 17.08 14.1509Z"
+                                    fill="#F66B03"
+                                  ></path>
+                                </svg>
+                              </div>
+
+                              <span>
+                                <p class="text-gray-700 group-hover:text-white">
+                                  Personal Information
+                                </p>
+                                <p
+                                  class="text-sm text-gray-600 group-hover:text-white"
+                                >
+                                  Edit your information
+                                </p>
+                              </span>
+                            </div>
+
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              class="size-6 group-hover:text-white"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                              />
+                            </svg>
+                          </a>
+                        </li>
+                        <li
+                          class="bg-transparent group flex items-center gap-3 hover:bg-deep-purple rounded-xl !duration-500 hover:translate-x-1"
+                        >
+                          <a
+                            href=""
+                            class="flex justify-between items-center py-3 px-4 w-full rounded-lg text-deep-purple"
+                          >
+                            <div class="flex items-center gap-3">
+                              <div
+                                class="bg-deep-purple group-hover:bg-white rounded-full p-3"
+                              >
+                                <svg
+                                  width="24"
+                                  height="24"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  class="h-6 w-6"
+                                >
+                                  <path
+                                    d="M12 2C9.38 2 7.25 4.13 7.25 6.75C7.25 9.32 9.26 11.4 11.88 11.49C11.96 11.48 12.04 11.48 12.1 11.49C12.12 11.49 12.13 11.49 12.15 11.49C12.16 11.49 12.16 11.49 12.17 11.49C14.73 11.4 16.74 9.32 16.75 6.75C16.75 4.13 14.62 2 12 2Z"
+                                    fill="#F66B03"
+                                  ></path>
+                                  <path
+                                    d="M17.08 14.1509C14.29 12.2909 9.73996 12.2909 6.92996 14.1509C5.65996 15.0009 4.95996 16.1509 4.95996 17.3809C4.95996 18.6109 5.65996 19.7509 6.91996 20.5909C8.31996 21.5309 10.16 22.0009 12 22.0009C13.84 22.0009 15.68 21.5309 17.08 20.5909C18.34 19.7409 19.04 18.6009 19.04 17.3609C19.03 16.1309 18.34 14.9909 17.08 14.1509Z"
+                                    fill="#F66B03"
+                                  ></path>
+                                </svg>
+                              </div>
+
+                              <span>
+                                <p class="text-gray-700 group-hover:text-white">
+                                  Personal Information
+                                </p>
+                                <p
+                                  class="text-sm text-gray-600 group-hover:text-white"
+                                >
+                                  Edit your information
+                                </p>
+                              </span>
+                            </div>
+
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              class="size-6 group-hover:text-white"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                              />
+                            </svg>
+                          </a>
+                        </li>
+                        <li
+                          class="bg-transparent group flex items-center gap-3 hover:bg-deep-purple rounded-xl !duration-500 hover:translate-x-1"
+                        >
+                          <a
+                            href=""
+                            class="flex justify-between items-center py-3 px-4 w-full rounded-lg text-deep-purple"
+                          >
+                            <div class="flex items-center gap-3">
+                              <div
+                                class="bg-deep-purple group-hover:bg-white rounded-full p-3"
+                              >
+                                <svg
+                                  width="24"
+                                  height="24"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  class="h-6 w-6"
+                                >
+                                  <path
+                                    d="M12 2C9.38 2 7.25 4.13 7.25 6.75C7.25 9.32 9.26 11.4 11.88 11.49C11.96 11.48 12.04 11.48 12.1 11.49C12.12 11.49 12.13 11.49 12.15 11.49C12.16 11.49 12.16 11.49 12.17 11.49C14.73 11.4 16.74 9.32 16.75 6.75C16.75 4.13 14.62 2 12 2Z"
+                                    fill="#F66B03"
+                                  ></path>
+                                  <path
+                                    d="M17.08 14.1509C14.29 12.2909 9.73996 12.2909 6.92996 14.1509C5.65996 15.0009 4.95996 16.1509 4.95996 17.3809C4.95996 18.6109 5.65996 19.7509 6.91996 20.5909C8.31996 21.5309 10.16 22.0009 12 22.0009C13.84 22.0009 15.68 21.5309 17.08 20.5909C18.34 19.7409 19.04 18.6009 19.04 17.3609C19.03 16.1309 18.34 14.9909 17.08 14.1509Z"
+                                    fill="#F66B03"
+                                  ></path>
+                                </svg>
+                              </div>
+
+                              <span>
+                                <p class="text-gray-700 group-hover:text-white">
+                                  Personal Information
+                                </p>
+                                <p
+                                  class="text-sm text-gray-600 group-hover:text-white"
+                                >
+                                  Edit your information
+                                </p>
+                              </span>
+                            </div>
+
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              class="size-6 group-hover:text-white"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                              />
+                            </svg>
+                          </a>
+                        </li>
+                        <li
+                          class="bg-transparent group flex items-center gap-3 hover:bg-deep-purple rounded-xl !duration-500 hover:translate-x-1"
+                        >
+                          <a
+                            href=""
+                            class="flex justify-between items-center py-3 px-4 w-full rounded-lg text-deep-purple"
+                          >
+                            <div class="flex items-center gap-3">
+                              <div
+                                class="bg-deep-purple group-hover:bg-white rounded-full p-3"
+                              >
+                                <svg
+                                  width="24"
+                                  height="24"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  class="h-6 w-6"
+                                >
+                                  <path
+                                    d="M12 2C9.38 2 7.25 4.13 7.25 6.75C7.25 9.32 9.26 11.4 11.88 11.49C11.96 11.48 12.04 11.48 12.1 11.49C12.12 11.49 12.13 11.49 12.15 11.49C12.16 11.49 12.16 11.49 12.17 11.49C14.73 11.4 16.74 9.32 16.75 6.75C16.75 4.13 14.62 2 12 2Z"
+                                    fill="#F66B03"
+                                  ></path>
+                                  <path
+                                    d="M17.08 14.1509C14.29 12.2909 9.73996 12.2909 6.92996 14.1509C5.65996 15.0009 4.95996 16.1509 4.95996 17.3809C4.95996 18.6109 5.65996 19.7509 6.91996 20.5909C8.31996 21.5309 10.16 22.0009 12 22.0009C13.84 22.0009 15.68 21.5309 17.08 20.5909C18.34 19.7409 19.04 18.6009 19.04 17.3609C19.03 16.1309 18.34 14.9909 17.08 14.1509Z"
+                                    fill="#F66B03"
+                                  ></path>
+                                </svg>
+                              </div>
+
+                              <span>
+                                <p class="text-gray-700 group-hover:text-white">
+                                  Personal Information
+                                </p>
+                                <p
+                                  class="text-sm text-gray-600 group-hover:text-white"
+                                >
+                                  Edit your information
+                                </p>
+                              </span>
+                            </div>
+
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              class="size-6 group-hover:text-white"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                              />
+                            </svg>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </section>
+                  <section
+                    class="md:pl-4 w-full h-screen md:max-h-[84vh] "
+                  >
+                    <div
+                      class="flex md:hidden justify-between items-center mt-8"
+                    >
+                      <div class="flex flex-col gap-2">
+                        <h2 class="text-black font-medium text-xl md:text-lg">
+                          Personal Information
+                        </h2>
+                        <p>Edit your information</p>
+                      </div>
+
+                      <button type="button" class="cursor-pointer">
+                        <svg
+                          width="51"
+                          height="51"
+                          viewBox="0 0 51 51"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="text-dark"
+                        >
+                          <g clip-path="url(#clip0_2455_32417)">
+                            <path
+                              d="M19.7236 30.2765L31.2795 18.7207"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            ></path>
+                            <path
+                              d="M31.2795 30.2765L19.7236 18.7207"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            ></path>
+                          </g>
+                          <rect
+                            x="0.5"
+                            y="0.5"
+                            width="50"
+                            height="50"
+                            rx="14.5"
+                            stroke="currentColor"
+                          ></rect>
+                          <defs>
+                            <clipPath id="clip0_2455_32417">
+                              <rect
+                                width="51"
+                                height="51"
+                                rx="15"
+                                fill="white"
+                              ></rect>
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </button>
+                    </div>
+                    <div
+                      class="flex w-full flex-col gap-6 rounded-lg mt-8 md:mt-5"
+                    >
+                      <div
+                        class="flex w-full flex-col gap-6 rounded-lg mt-8 md:mt-5"
+                      >
+                        <div class="hidden md:flex flex-col gap-1">
+                          <div class="flex flex-col gap-2">
+                            <h2
+                              class="text-black font-medium text-xl md:text-lg"
+                            >
+                              Personal Information
+                            </h2>
+                            <p>Edit your information</p>
+                          </div>
+                        </div>
+                        <!-- Info 1 -->
+
+                        <div class="flex flex-row gap-5 items-center">
+                          <img
+                            src="../images/auth-login-pin-profile.png"
+                            alt="Profile Pic"
+                            class="h-[100px] object-cover w-[100px] rounded-full"
+                          /><button
+                            class="text-white flex gap-3 items-center whitespace-nowrap bg-deep-purple py-3 px-5 rounded-full font-[500] text-sm"
+                          >
+                            <span class="flex items-center gap-3"
+                              ><svg
+                                width="18"
+                                height="18"
+                                viewBox="0 0 18 18"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M5.06915 16.5H12.9291C14.9991 16.5 15.8241 15.2325 15.9216 13.6875L16.3116 7.4925C16.4166 5.8725 15.1266 4.5 13.4991 4.5C13.0416 4.5 12.6216 4.2375 12.4116 3.8325L11.8716 2.745C11.5266 2.0625 10.6266 1.5 9.86165 1.5H8.14415C7.37165 1.5 6.47165 2.0625 6.12665 2.745L5.58665 3.8325C5.37665 4.2375 4.95665 4.5 4.49915 4.5C2.87165 4.5 1.58165 5.8725 1.68665 7.4925L2.07665 13.6875C2.16665 15.2325 2.99915 16.5 5.06915 16.5Z"
+                                  stroke="#F66B03"
+                                  stroke-width="1.4"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                ></path>
+                                <path
+                                  d="M7.875 6H10.125"
+                                  stroke="#F66B03"
+                                  stroke-width="1.4"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                ></path>
+                                <path
+                                  d="M9.00098 13.5C10.3435 13.5 11.4385 12.405 11.4385 11.0625C11.4385 9.72 10.3435 8.625 9.00098 8.625C7.65848 8.625 6.56348 9.72 6.56348 11.0625C6.56348 12.405 7.65848 13.5 9.00098 13.5Z"
+                                  stroke="#F66B03"
+                                  stroke-width="1.0625"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                ></path>
+                              </svg>
+                              Update Photo
+                            </span></button
+                          ><input type="file" class="hidden" accept="image/*" />
+                        </div>
+
+                        <!-- Info 2 -->
+
+                        <div class="">
+                          <h2 class="text-dark font-[500] text-lg leading-[1]">
+                            dev
+                          </h2>
+                          <p
+                            class="text-gray1 mt-1 font-[400] text-sm leading-4"
+                          >
+                            tolexphysicist@gmail.com
+                          </p>
+                        </div>
+                      </div>
+
+                      <!-- Info 3 -->
+                      <form
+                        action=""
+                        class="flex flex-col gap-6 w-full mt-2 pb-10"
+                      >
+                        <div
+                          class="grid grid-cols-1 md:grid-cols-2 gap-3 w-full"
+                        >
+                          <div class="">
+                            <input
+                              type="text"
+                              placeholder="First Name"
+                              class="focus:border focus:border-deep-purple rounded-xl px-3 py-4 "
+                            />
+                          </div>
+                          <div class="">
+                            <input
+                              type="text"
+                              placeholder="Last Name"
+                              class="focus:border focus:border-deep-purple rounded-xl px-3 py-4"
+                            />
+                          </div>
+                        </div>
+                        <div class="relative">
+                          <input
+                            type="email"
+                            placeholder="Email Address"
+                            class="focus:border focus:border-deep-purple rounded-xl px-3 py-4 "
+                            disabled=""
+                          /><span
+                            class="absolute inset-y-0 right-0 flex items-center pr-3"
+                            ><svg
+                              width="76"
+                              height="21"
+                              viewBox="0 0 76 21"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M14.3372 8.43624L14.3373 8.43629L14.3432 8.43019C14.7689 7.98975 14.7774 7.28597 14.3372 6.8458C13.9003 6.40887 13.1837 6.40887 12.7468 6.8458L8.81699 10.7756L7.25388 9.21246C6.81695 8.77553 6.10037 8.77553 5.66344 9.21246C5.22651 9.64939 5.22651 10.366 5.66344 10.8029L6.01699 10.4493L5.66344 10.8029L8.02177 13.1612C8.23114 13.3706 8.51621 13.491 8.81699 13.491C9.11777 13.491 9.40285 13.3706 9.61221 13.1612L14.3372 8.43624ZM2.16699 9.99935C2.16699 5.68382 5.6848 2.16602 10.0003 2.16602C14.3159 2.16602 17.8337 5.68382 17.8337 9.99935C17.8337 14.3149 14.3159 17.8327 10.0003 17.8327C5.6848 17.8327 2.16699 14.3149 2.16699 9.99935Z"
+                                fill="#06C270"
+                                stroke="#06C270"
+                              ></path>
+                              <path
+                                d="M26.0085 5.81818L28.8423 14.1108H28.9567L31.7905 5.81818H33.451L29.7869 16H28.0121L24.348 5.81818H26.0085ZM37.3276 16.1541C36.5752 16.1541 35.9273 15.9934 35.3837 15.6719C34.8435 15.3471 34.4258 14.8913 34.1309 14.3047C33.8392 13.7147 33.6934 13.0237 33.6934 12.2315C33.6934 11.4493 33.8392 10.7599 34.1309 10.1634C34.4258 9.56676 34.8368 9.10109 35.3638 8.76633C35.8941 8.43158 36.5139 8.2642 37.2232 8.2642C37.6541 8.2642 38.0717 8.33546 38.476 8.47798C38.8804 8.6205 39.2433 8.84422 39.5648 9.14915C39.8863 9.45407 40.1399 9.85014 40.3255 10.3374C40.5111 10.8213 40.6039 11.4096 40.6039 12.1023V12.6293H34.5336V11.5156H39.1472C39.1472 11.1245 39.0676 10.7782 38.9086 10.4766C38.7495 10.1716 38.5257 9.93134 38.2374 9.75568C37.9524 9.58002 37.6176 9.49219 37.2331 9.49219C36.8155 9.49219 36.4509 9.59493 36.1394 9.80043C35.8311 10.0026 35.5925 10.2678 35.4235 10.5959C35.2578 10.9207 35.1749 11.2737 35.1749 11.6548V12.5249C35.1749 13.0353 35.2644 13.4695 35.4434 13.8274C35.6257 14.1854 35.8792 14.4588 36.204 14.6477C36.5288 14.8333 36.9083 14.9261 37.3425 14.9261C37.6242 14.9261 37.8811 14.8864 38.1131 14.8068C38.3451 14.724 38.5456 14.6013 38.7147 14.4389C38.8837 14.2765 39.013 14.076 39.1025 13.8374L40.5094 14.0909C40.3967 14.5052 40.1945 14.8681 39.9029 15.1797C39.6145 15.4879 39.2516 15.7282 38.8141 15.9006C38.3799 16.0696 37.8844 16.1541 37.3276 16.1541ZM42.2532 16V8.36364H43.69V9.5767H43.7695C43.9087 9.16572 44.154 8.84257 44.5053 8.60724C44.86 8.36861 45.261 8.24929 45.7085 8.24929C45.8013 8.24929 45.9106 8.2526 46.0366 8.25923C46.1658 8.26586 46.2669 8.27415 46.3398 8.28409V9.70597C46.2802 9.68939 46.1741 9.67116 46.0217 9.65128C45.8692 9.62808 45.7167 9.61648 45.5643 9.61648C45.213 9.61648 44.8997 9.69105 44.6246 9.8402C44.3529 9.98603 44.1374 10.1899 43.9783 10.4517C43.8192 10.7102 43.7397 11.0052 43.7397 11.3366V16H42.2532ZM47.6262 16V8.36364H49.1127V16H47.6262ZM48.377 7.18537C48.1184 7.18537 47.8964 7.09919 47.7108 6.92685C47.5285 6.75118 47.4373 6.54238 47.4373 6.30043C47.4373 6.05516 47.5285 5.84635 47.7108 5.67401C47.8964 5.49834 48.1184 5.41051 48.377 5.41051C48.6355 5.41051 48.8559 5.49834 49.0382 5.67401C49.2238 5.84635 49.3166 6.05516 49.3166 6.30043C49.3166 6.54238 49.2238 6.75118 49.0382 6.92685C48.8559 7.09919 48.6355 7.18537 48.377 7.18537ZM54.7468 8.36364V9.55682H50.4315V8.36364H54.7468ZM51.6147 16V7.47869C51.6147 7.00142 51.7191 6.60535 51.9279 6.29048C52.1367 5.9723 52.4135 5.73532 52.7582 5.57955C53.1029 5.42045 53.4774 5.34091 53.8817 5.34091C54.18 5.34091 54.4353 5.36577 54.6474 5.41548C54.8595 5.46188 55.0169 5.50497 55.1197 5.54474L54.7717 6.74787C54.7021 6.72798 54.6126 6.70478 54.5032 6.67827C54.3938 6.64844 54.2612 6.63352 54.1055 6.63352C53.7442 6.63352 53.4857 6.72301 53.3299 6.90199C53.1774 7.08097 53.1012 7.33949 53.1012 7.67756V16H51.6147ZM56.2805 16V8.36364H57.767V16H56.2805ZM57.0312 7.18537C56.7727 7.18537 56.5507 7.09919 56.3651 6.92685C56.1828 6.75118 56.0916 6.54238 56.0916 6.30043C56.0916 6.05516 56.1828 5.84635 56.3651 5.67401C56.5507 5.49834 56.7727 5.41051 57.0312 5.41051C57.2898 5.41051 57.5102 5.49834 57.6925 5.67401C57.8781 5.84635 57.9709 6.05516 57.9709 6.30043C57.9709 6.54238 57.8781 6.75118 57.6925 6.92685C57.5102 7.09919 57.2898 7.18537 57.0312 7.18537ZM63.0581 16.1541C62.3057 16.1541 61.6577 15.9934 61.1142 15.6719C60.5739 15.3471 60.1563 14.8913 59.8613 14.3047C59.5697 13.7147 59.4238 13.0237 59.4238 12.2315C59.4238 11.4493 59.5697 10.7599 59.8613 10.1634C60.1563 9.56676 60.5673 9.10109 61.0943 8.76633C61.6246 8.43158 62.2444 8.2642 62.9537 8.2642C63.3845 8.2642 63.8021 8.33546 64.2065 8.47798C64.6109 8.6205 64.9738 8.84422 65.2953 9.14915C65.6168 9.45407 65.8703 9.85014 66.0559 10.3374C66.2415 10.8213 66.3343 11.4096 66.3343 12.1023V12.6293H60.264V11.5156H64.8777C64.8777 11.1245 64.7981 10.7782 64.639 10.4766C64.4799 10.1716 64.2562 9.93134 63.9679 9.75568C63.6828 9.58002 63.3481 9.49219 62.9636 9.49219C62.546 9.49219 62.1814 9.59493 61.8699 9.80043C61.5616 10.0026 61.323 10.2678 61.1539 10.5959C60.9882 10.9207 60.9054 11.2737 60.9054 11.6548V12.5249C60.9054 13.0353 60.9949 13.4695 61.1738 13.8274C61.3561 14.1854 61.6097 14.4588 61.9345 14.6477C62.2593 14.8333 62.6388 14.9261 63.073 14.9261C63.3547 14.9261 63.6116 14.8864 63.8436 14.8068C64.0756 14.724 64.2761 14.6013 64.4451 14.4389C64.6142 14.2765 64.7434 14.076 64.8329 13.8374L66.2399 14.0909C66.1272 14.5052 65.925 14.8681 65.6333 15.1797C65.345 15.4879 64.9821 15.7282 64.5446 15.9006C64.1104 16.0696 63.6149 16.1541 63.0581 16.1541ZM70.8423 16.1491C70.2259 16.1491 69.6757 15.9917 69.1918 15.6768C68.7112 15.3587 68.3333 14.9062 68.0582 14.3196C67.7865 13.7296 67.6506 13.022 67.6506 12.1967C67.6506 11.3714 67.7881 10.6655 68.0632 10.0788C68.3416 9.49219 68.7228 9.04309 69.2067 8.73153C69.6906 8.41998 70.2391 8.2642 70.8523 8.2642C71.3262 8.2642 71.7074 8.34375 71.9957 8.50284C72.2874 8.65862 72.5128 8.84091 72.6719 9.04972C72.8343 9.25852 72.9602 9.44247 73.0497 9.60156H73.1392V5.81818H74.6257V16H73.174V14.8118H73.0497C72.9602 14.9742 72.831 15.1598 72.6619 15.3686C72.4962 15.5774 72.2675 15.7597 71.9759 15.9155C71.6842 16.0713 71.3063 16.1491 70.8423 16.1491ZM71.1705 14.8814C71.598 14.8814 71.9593 14.7687 72.2543 14.5433C72.5526 14.3146 72.7779 13.9981 72.9304 13.5938C73.0862 13.1894 73.1641 12.7187 73.1641 12.1818C73.1641 11.6515 73.0878 11.1875 72.9354 10.7898C72.7829 10.392 72.5592 10.0821 72.2642 9.86009C71.9692 9.63802 71.6046 9.52699 71.1705 9.52699C70.723 9.52699 70.3501 9.64299 70.0518 9.875C69.7536 10.107 69.5282 10.4235 69.3757 10.8246C69.2266 11.2256 69.152 11.678 69.152 12.1818C69.152 12.6922 69.2282 13.1513 69.3807 13.5589C69.5331 13.9666 69.7585 14.2898 70.0568 14.5284C70.3584 14.7637 70.7296 14.8814 71.1705 14.8814Z"
+                                fill="#06C270"
+                              ></path></svg></span
+                          >
+                        </div>
+                        <div class="relative">
+                          <input
+                            type="number"
+                            placeholder="Phone number"
+                            class="form-input px-3 py-4 border-primary"
+                            id="phoneNumber"
+                          /><span
+                            class="absolute inset-y-0 right-0 flex items-center pr-3"
+                            ><svg
+                              width="76"
+                              height="21"
+                              viewBox="0 0 76 21"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M14.3372 8.43624L14.3373 8.43629L14.3432 8.43019C14.7689 7.98975 14.7774 7.28597 14.3372 6.8458C13.9003 6.40887 13.1837 6.40887 12.7468 6.8458L8.81699 10.7756L7.25388 9.21246C6.81695 8.77553 6.10037 8.77553 5.66344 9.21246C5.22651 9.64939 5.22651 10.366 5.66344 10.8029L6.01699 10.4493L5.66344 10.8029L8.02177 13.1612C8.23114 13.3706 8.51621 13.491 8.81699 13.491C9.11777 13.491 9.40285 13.3706 9.61221 13.1612L14.3372 8.43624ZM2.16699 9.99935C2.16699 5.68382 5.6848 2.16602 10.0003 2.16602C14.3159 2.16602 17.8337 5.68382 17.8337 9.99935C17.8337 14.3149 14.3159 17.8327 10.0003 17.8327C5.6848 17.8327 2.16699 14.3149 2.16699 9.99935Z"
+                                fill="#06C270"
+                                stroke="#06C270"
+                              ></path>
+                              <path
+                                d="M26.0085 5.81818L28.8423 14.1108H28.9567L31.7905 5.81818H33.451L29.7869 16H28.0121L24.348 5.81818H26.0085ZM37.3276 16.1541C36.5752 16.1541 35.9273 15.9934 35.3837 15.6719C34.8435 15.3471 34.4258 14.8913 34.1309 14.3047C33.8392 13.7147 33.6934 13.0237 33.6934 12.2315C33.6934 11.4493 33.8392 10.7599 34.1309 10.1634C34.4258 9.56676 34.8368 9.10109 35.3638 8.76633C35.8941 8.43158 36.5139 8.2642 37.2232 8.2642C37.6541 8.2642 38.0717 8.33546 38.476 8.47798C38.8804 8.6205 39.2433 8.84422 39.5648 9.14915C39.8863 9.45407 40.1399 9.85014 40.3255 10.3374C40.5111 10.8213 40.6039 11.4096 40.6039 12.1023V12.6293H34.5336V11.5156H39.1472C39.1472 11.1245 39.0676 10.7782 38.9086 10.4766C38.7495 10.1716 38.5257 9.93134 38.2374 9.75568C37.9524 9.58002 37.6176 9.49219 37.2331 9.49219C36.8155 9.49219 36.4509 9.59493 36.1394 9.80043C35.8311 10.0026 35.5925 10.2678 35.4235 10.5959C35.2578 10.9207 35.1749 11.2737 35.1749 11.6548V12.5249C35.1749 13.0353 35.2644 13.4695 35.4434 13.8274C35.6257 14.1854 35.8792 14.4588 36.204 14.6477C36.5288 14.8333 36.9083 14.9261 37.3425 14.9261C37.6242 14.9261 37.8811 14.8864 38.1131 14.8068C38.3451 14.724 38.5456 14.6013 38.7147 14.4389C38.8837 14.2765 39.013 14.076 39.1025 13.8374L40.5094 14.0909C40.3967 14.5052 40.1945 14.8681 39.9029 15.1797C39.6145 15.4879 39.2516 15.7282 38.8141 15.9006C38.3799 16.0696 37.8844 16.1541 37.3276 16.1541ZM42.2532 16V8.36364H43.69V9.5767H43.7695C43.9087 9.16572 44.154 8.84257 44.5053 8.60724C44.86 8.36861 45.261 8.24929 45.7085 8.24929C45.8013 8.24929 45.9106 8.2526 46.0366 8.25923C46.1658 8.26586 46.2669 8.27415 46.3398 8.28409V9.70597C46.2802 9.68939 46.1741 9.67116 46.0217 9.65128C45.8692 9.62808 45.7167 9.61648 45.5643 9.61648C45.213 9.61648 44.8997 9.69105 44.6246 9.8402C44.3529 9.98603 44.1374 10.1899 43.9783 10.4517C43.8192 10.7102 43.7397 11.0052 43.7397 11.3366V16H42.2532ZM47.6262 16V8.36364H49.1127V16H47.6262ZM48.377 7.18537C48.1184 7.18537 47.8964 7.09919 47.7108 6.92685C47.5285 6.75118 47.4373 6.54238 47.4373 6.30043C47.4373 6.05516 47.5285 5.84635 47.7108 5.67401C47.8964 5.49834 48.1184 5.41051 48.377 5.41051C48.6355 5.41051 48.8559 5.49834 49.0382 5.67401C49.2238 5.84635 49.3166 6.05516 49.3166 6.30043C49.3166 6.54238 49.2238 6.75118 49.0382 6.92685C48.8559 7.09919 48.6355 7.18537 48.377 7.18537ZM54.7468 8.36364V9.55682H50.4315V8.36364H54.7468ZM51.6147 16V7.47869C51.6147 7.00142 51.7191 6.60535 51.9279 6.29048C52.1367 5.9723 52.4135 5.73532 52.7582 5.57955C53.1029 5.42045 53.4774 5.34091 53.8817 5.34091C54.18 5.34091 54.4353 5.36577 54.6474 5.41548C54.8595 5.46188 55.0169 5.50497 55.1197 5.54474L54.7717 6.74787C54.7021 6.72798 54.6126 6.70478 54.5032 6.67827C54.3938 6.64844 54.2612 6.63352 54.1055 6.63352C53.7442 6.63352 53.4857 6.72301 53.3299 6.90199C53.1774 7.08097 53.1012 7.33949 53.1012 7.67756V16H51.6147ZM56.2805 16V8.36364H57.767V16H56.2805ZM57.0312 7.18537C56.7727 7.18537 56.5507 7.09919 56.3651 6.92685C56.1828 6.75118 56.0916 6.54238 56.0916 6.30043C56.0916 6.05516 56.1828 5.84635 56.3651 5.67401C56.5507 5.49834 56.7727 5.41051 57.0312 5.41051C57.2898 5.41051 57.5102 5.49834 57.6925 5.67401C57.8781 5.84635 57.9709 6.05516 57.9709 6.30043C57.9709 6.54238 57.8781 6.75118 57.6925 6.92685C57.5102 7.09919 57.2898 7.18537 57.0312 7.18537ZM63.0581 16.1541C62.3057 16.1541 61.6577 15.9934 61.1142 15.6719C60.5739 15.3471 60.1563 14.8913 59.8613 14.3047C59.5697 13.7147 59.4238 13.0237 59.4238 12.2315C59.4238 11.4493 59.5697 10.7599 59.8613 10.1634C60.1563 9.56676 60.5673 9.10109 61.0943 8.76633C61.6246 8.43158 62.2444 8.2642 62.9537 8.2642C63.3845 8.2642 63.8021 8.33546 64.2065 8.47798C64.6109 8.6205 64.9738 8.84422 65.2953 9.14915C65.6168 9.45407 65.8703 9.85014 66.0559 10.3374C66.2415 10.8213 66.3343 11.4096 66.3343 12.1023V12.6293H60.264V11.5156H64.8777C64.8777 11.1245 64.7981 10.7782 64.639 10.4766C64.4799 10.1716 64.2562 9.93134 63.9679 9.75568C63.6828 9.58002 63.3481 9.49219 62.9636 9.49219C62.546 9.49219 62.1814 9.59493 61.8699 9.80043C61.5616 10.0026 61.323 10.2678 61.1539 10.5959C60.9882 10.9207 60.9054 11.2737 60.9054 11.6548V12.5249C60.9054 13.0353 60.9949 13.4695 61.1738 13.8274C61.3561 14.1854 61.6097 14.4588 61.9345 14.6477C62.2593 14.8333 62.6388 14.9261 63.073 14.9261C63.3547 14.9261 63.6116 14.8864 63.8436 14.8068C64.0756 14.724 64.2761 14.6013 64.4451 14.4389C64.6142 14.2765 64.7434 14.076 64.8329 13.8374L66.2399 14.0909C66.1272 14.5052 65.925 14.8681 65.6333 15.1797C65.345 15.4879 64.9821 15.7282 64.5446 15.9006C64.1104 16.0696 63.6149 16.1541 63.0581 16.1541ZM70.8423 16.1491C70.2259 16.1491 69.6757 15.9917 69.1918 15.6768C68.7112 15.3587 68.3333 14.9062 68.0582 14.3196C67.7865 13.7296 67.6506 13.022 67.6506 12.1967C67.6506 11.3714 67.7881 10.6655 68.0632 10.0788C68.3416 9.49219 68.7228 9.04309 69.2067 8.73153C69.6906 8.41998 70.2391 8.2642 70.8523 8.2642C71.3262 8.2642 71.7074 8.34375 71.9957 8.50284C72.2874 8.65862 72.5128 8.84091 72.6719 9.04972C72.8343 9.25852 72.9602 9.44247 73.0497 9.60156H73.1392V5.81818H74.6257V16H73.174V14.8118H73.0497C72.9602 14.9742 72.831 15.1598 72.6619 15.3686C72.4962 15.5774 72.2675 15.7597 71.9759 15.9155C71.6842 16.0713 71.3063 16.1491 70.8423 16.1491ZM71.1705 14.8814C71.598 14.8814 71.9593 14.7687 72.2543 14.5433C72.5526 14.3146 72.7779 13.9981 72.9304 13.5938C73.0862 13.1894 73.1641 12.7187 73.1641 12.1818C73.1641 11.6515 73.0878 11.1875 72.9354 10.7898C72.7829 10.392 72.5592 10.0821 72.2642 9.86009C71.9692 9.63802 71.6046 9.52699 71.1705 9.52699C70.723 9.52699 70.3501 9.64299 70.0518 9.875C69.7536 10.107 69.5282 10.4235 69.3757 10.8246C69.2266 11.2256 69.152 11.678 69.152 12.1818C69.152 12.6922 69.2282 13.1513 69.3807 13.5589C69.5331 13.9666 69.7585 14.2898 70.0568 14.5284C70.3584 14.7637 70.7296 14.8814 71.1705 14.8814Z"
+                                fill="#06C270"
+                              ></path></svg></span
+                          >
+                        </div>
+                        <div
+                          class="flex flex-col lg:flex-row mt-3 gap-3 md:gap-6"
+                        >
+                          <button class=" w-full py-4 px-10 text-gray">
+                            Discard Changes</button
+                          ><button
+                            type="submit"
+                            class="bg-deep-purple rounded-md py-4 w-full px-10"
+                          >
+                            <span>Save Changes</span>
+                          </button>
+                        </div>
+                      </form>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
