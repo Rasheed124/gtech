@@ -7,7 +7,7 @@
     <title>Dashboard - Home</title>
   </head>
   <body>
-    <div>
+    <div class="w-full relative">
       <main class="bg-white h-screen container mx-auto xl:px-20 font-medium">
         <div class="w-full flex">
           <!-- Sided Menu -->
@@ -315,6 +315,11 @@
             </div>
           </header>
 
+          <!-- Mobile Menu  -->
+          <!-- <div
+            class="bg-black/70 z-50 blur-2xl brightness-150 h-screen w-full border-2 border-red-900 top-0 fixed"
+          ></div> -->
+
           <!-- Main Dashboard Area -->
           <div
             class="w-full h-screen overflow-y-auto lg:overflow-y-hidden px-3 md:px-6 md:border-x md:border-l-2 flex flex-col gap-4 py-8"
@@ -358,9 +363,9 @@
               </div>
 
               <!-- Profile and Notifications -->
-              <div class="flex gap-2 items-center relative">
+              <div class="flex self-start gap-2 items-center relative ">
                 <!-- Notifications -->
-                <div class="relative">
+                <div class=" ">
                   <button
                     id="notification-btn"
                     class="border-2 border-gray-300 block p-2 rounded-full relative"
@@ -390,7 +395,7 @@
                   <!-- Notification Dropdown -->
                   <div
                     id="notification-dropdown"
-                    class="hidden z-30 absolute right-0 mt-2 bg-white shadow-lg border border-gray-200 rounded-lg w-64 text-sm"
+                    class="hidden z-30 absolute right-0 mt-2 ml-10 bg-white shadow-lg border border-gray-200 rounded-lg w-72 text-sm"
                   >
                     <div class="p-4 border-b">
                       <h3 class="font-semibold text-gray-700">Notifications</h3>
@@ -1101,7 +1106,6 @@
         </div>
       </main>
     </div>
-
 
     <script src="./js/script.js"></script>
   </body>
