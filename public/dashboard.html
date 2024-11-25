@@ -316,11 +316,273 @@
           </header>
 
           <!-- Mobile Menu  -->
-          <!-- <div
-            class="bg-black/70 z-50 blur-2xl brightness-150 h-screen w-full border-2 border-red-900 top-0 fixed"
-          ></div> -->
+          <div
+            class="bg-black/70 z-50 brightness-150 h-screen w-full top-0 fixed hidden"
+          >
+            <div
+              class="bg-white z-20 border max-h-screen h-screen overflow-y-auto py-8 text-left w-full max-w-[300px]"
+            >
+              <nav
+                class="text-black flex justify-between flex-col h-full pl-3 md:pl-8 pr-6"
+              >
+                <div>
+                  <div class="flex items-center gap-3">
+                    <img
+                      src="./images/auth-login-pin-profile.png"
+                      alt="Profile"
+                      class="h-[50px] w-[50px] rounded-full"
+                    />
 
-          <!-- Main Dashboard Area -->
+                    <div class="">
+                      <h2 class="text-dark text-base">Hello, dev 👋</h2>
+                      <p class="text-xs text-dim-gray">
+                        What bill would you like to pay today?
+                      </p>
+                    </div>
+                  </div>
+
+                  <ul class="flex flex-col space-y-2 mt-20 overflow-hidden">
+                    <li
+                      class="flex items-center gap-3 hover:text-grey-scale !duration-500 hover:translate-x-1"
+                    >
+                      <a
+                        href="/dashboard"
+                        class="flex items-center py-3 px-4 w-full rounded-lg text-secondary justify-between"
+                        ><div class="flex items-center gap-3">
+                          <div
+                            class="icon-wrapper w-10 h-10 rounded-full relative flex justify-center items-center"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="25"
+                              height="25"
+                              viewBox="0 0 25 25"
+                              fill="none"
+                              class="w-6 h-6 icon absolute top-0 left-0 right-0 bottom-0 m-auto"
+                            >
+                              <path
+                                d="M9.52 3.33992L4.13 7.53992C3.23 8.23992 2.5 9.72992 2.5 10.8599V18.2699C2.5 20.5899 4.39 22.4899 6.71 22.4899H18.29C20.61 22.4899 22.5 20.5899 22.5 18.2799V10.9999C22.5 9.78992 21.69 8.23992 20.7 7.54992L14.52 3.21992C13.12 2.23992 10.87 2.28992 9.52 3.33992Z"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path>
+                              <path
+                                d="M12.5 18.49V15.49"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path>
+                            </svg>
+                          </div>
+                          <p class="link-text">Home</p>
+                        </div></a
+                      >
+                    </li>
+                    <li
+                      class="flex items-center gap-3 hover:text-grey-scale !duration-500 hover:translate-x-1"
+                    >
+                      <a
+                        href="/dashboard/service"
+                        class="flex items-center py-3 px-4 w-full rounded-lg text-secondary justify-between"
+                        ><div class="flex items-center gap-3">
+                          <div
+                            class="icon-wrapper w-10 h-10 rounded-full relative flex justify-center items-center"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="25"
+                              height="25"
+                              viewBox="0 0 25 25"
+                              fill="none"
+                              class="w-6 h-6 icon absolute top-0 left-0 right-0 bottom-0 m-auto"
+                            >
+                              <path
+                                d="M3.50977 11.72V16.21C3.50977 20.7 5.30977 22.5 9.79977 22.5H15.1898C19.6798 22.5 21.4798 20.7 21.4798 16.21V11.72"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path>
+                              <path
+                                d="M12.5005 12.5C14.3305 12.5 15.6805 11.01 15.5005 9.18L14.8405 2.5H10.1705L9.50048 9.18C9.32048 11.01 10.6705 12.5 12.5005 12.5Z"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path>
+                              <path
+                                d="M18.8108 12.5C20.8308 12.5 22.3108 10.86 22.1108 8.85L21.8308 6.1C21.4708 3.5 20.4708 2.5 17.8508 2.5H14.8008L15.5008 9.51C15.6708 11.16 17.1608 12.5 18.8108 12.5Z"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path>
+                              <path
+                                d="M6.14037 12.5C7.79037 12.5 9.28037 11.16 9.44037 9.51L9.66037 7.3L10.1404 2.5H7.09037C4.47037 2.5 3.47037 3.5 3.11037 6.1L2.84037 8.85C2.64037 10.86 4.12037 12.5 6.14037 12.5Z"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path>
+                              <path
+                                d="M12.5 17.5C10.83 17.5 10 18.33 10 20V22.5H15V20C15 18.33 14.17 17.5 12.5 17.5Z"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path>
+                            </svg>
+                          </div>
+                          <p class="link-text">Service</p>
+                        </div></a
+                      >
+                    </li>
+                    <li
+                      class="flex items-center gap-3 hover:text-grey-scale !duration-500 hover:translate-x-1"
+                    >
+                      <a
+                        href="/dashboard/wallet"
+                        class="flex items-center py-3 px-4 w-full rounded-lg text-secondary justify-between"
+                        ><div class="flex items-center gap-3">
+                          <div
+                            class="icon-wrapper w-10 h-10 rounded-full relative flex justify-center items-center"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="25"
+                              height="25"
+                              viewBox="0 0 25 25"
+                              fill="none"
+                              class="w-6 h-6 icon absolute top-0 left-0 right-0 bottom-0 m-auto"
+                            >
+                              <path
+                                d="M2.83398 9.00488H22.834"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-miterlimit="10"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path>
+                              <path
+                                d="M6.83398 17.0049H8.83398"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-miterlimit="10"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path>
+                              <path
+                                d="M11.334 17.0049H15.334"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-miterlimit="10"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path>
+                              <path
+                                d="M7.27398 4.00488H18.384C21.944 4.00488 22.834 4.88488 22.834 8.39488V16.6049C22.834 20.1149 21.944 20.9949 18.394 20.9949H7.27398C3.72398 21.0049 2.83398 20.1249 2.83398 16.6149V8.39488C2.83398 4.88488 3.72398 4.00488 7.27398 4.00488Z"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path>
+                            </svg>
+                          </div>
+                          <p class="link-text">Wallet</p>
+                        </div></a
+                      >
+                    </li>
+                    <li
+                      class="flex items-center gap-3 hover:text-grey-scale !duration-500 hover:translate-x-1"
+                    >
+                      <a
+                        aria-current="page"
+                        href="/dashboard/profile"
+                        class="router-link-active router-link-exact-active flex items-center py-3 px-4 w-full rounded-lg text-secondary justify-between a-link"
+                        ><div class="flex items-center gap-3">
+                          <div
+                            class="icon-wrapper w-10 h-10 rounded-full relative bg-primary"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="25"
+                              height="25"
+                              viewBox="0 0 25 25"
+                              fill="none"
+                              class="w-6 h-6 icon absolute top-1 left-1.5 text-white"
+                            >
+                              <path
+                                d="M12.6605 11.37C12.5605 11.36 12.4405 11.36 12.3305 11.37C9.95055 11.29 8.06055 9.34 8.06055 6.94C8.06055 4.49 10.0405 2.5 12.5005 2.5C14.9505 2.5 16.9405 4.49 16.9405 6.94C16.9305 9.34 15.0405 11.29 12.6605 11.37Z"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path>
+                              <path
+                                d="M7.6607 15.06C5.2407 16.68 5.2407 19.32 7.6607 20.93C10.4107 22.77 14.9207 22.77 17.6707 20.93C20.0907 19.31 20.0907 16.67 17.6707 15.06C14.9307 13.23 10.4207 13.23 7.6607 15.06Z"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path>
+                            </svg>
+                          </div>
+                          <p class="link-text">Profile</p>
+                        </div></a
+                      >
+                    </li>
+                    <li
+                      class="flex items-center gap-3 hover:text-grey-scale !duration-500 hover:translate-x-1"
+                    >
+                      <a
+                        href="/dashboard/settings"
+                        class="flex items-center py-3 px-4 w-full rounded-lg text-secondary justify-between"
+                        ><div class="flex items-center gap-3">
+                          <div
+                            class="icon-wrapper w-10 h-10 rounded-full relative flex justify-center items-center"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="25"
+                              height="25"
+                              viewBox="0 0 25 25"
+                              fill="none"
+                              class="w-6 h-6 icon absolute top-0 left-0 right-0 bottom-0 m-auto"
+                            >
+                              <path
+                                d="M12.5 15.5C14.1569 15.5 15.5 14.1569 15.5 12.5C15.5 10.8431 14.1569 9.5 12.5 9.5C10.8431 9.5 9.5 10.8431 9.5 12.5C9.5 14.1569 10.8431 15.5 12.5 15.5Z"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-miterlimit="10"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path>
+                              <path
+                                d="M2.5 13.3799V11.6199C2.5 10.5799 3.35 9.71994 4.4 9.71994C6.21 9.71994 6.95 8.43994 6.04 6.86994C5.52 5.96994 5.83 4.79994 6.74 4.27994L8.47 3.28994C9.26 2.81994 10.28 3.09994 10.75 3.88994L10.86 4.07994C11.76 5.64994 13.24 5.64994 14.15 4.07994L14.26 3.88994C14.73 3.09994 15.75 2.81994 16.54 3.28994L18.27 4.27994C19.18 4.79994 19.49 5.96994 18.97 6.86994C18.06 8.43994 18.8 9.71994 20.61 9.71994C21.65 9.71994 22.51 10.5699 22.51 11.6199V13.3799C22.51 14.4199 21.66 15.2799 20.61 15.2799C18.8 15.2799 18.06 16.5599 18.97 18.1299C19.49 19.0399 19.18 20.1999 18.27 20.7199L16.54 21.7099C15.75 22.1799 14.73 21.8999 14.26 21.1099L14.15 20.9199C13.25 19.3499 11.77 19.3499 10.86 20.9199L10.75 21.1099C10.28 21.8999 9.26 22.1799 8.47 21.7099L6.74 20.7199C5.83 20.1999 5.52 19.0299 6.04 18.1299C6.95 16.5599 6.21 15.2799 4.4 15.2799C3.35 15.2799 2.5 14.4199 2.5 13.3799Z"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-miterlimit="10"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path>
+                            </svg>
+                          </div>
+                          <p class="link-text">Settings</p>
+                        </div></a
+                      >
+                    </li>
+                  </ul>
+
+                  <!-- logout -->
+                  <div></div>
+                </div>
+              </nav>
+            </div>
+          </div>
+
+          <!--  Dashboard Area -->
           <div
             class="w-full h-screen overflow-y-auto lg:overflow-y-hidden px-3 md:px-6 md:border-x md:border-l-2 flex flex-col gap-4 py-8"
           >
@@ -363,7 +625,7 @@
               </div>
 
               <!-- Profile and Notifications -->
-              <div class="flex self-start gap-2 items-center relative ">
+              <div class="flex self-start gap-2 items-center relative">
                 <!-- Notifications -->
                 <div class=" ">
                   <button
@@ -452,6 +714,7 @@
               <section
                 class="flex flex-col md:grid grid-cols-12 gap-10 md:gap-0"
               >
+                <!-- Left Dashboard Area -->
                 <div
                   class="dashboard-col-1 col-span-8 md:pr-5 px-3 lg:h-screen overflow-y-auto scrollbar md:max-h-[84vh]"
                 >
@@ -703,28 +966,18 @@
 
                       <div class="grid-cols-2 grid md:grid-cols-3 gap-5">
                         <button
-                          class="flex flex-row justify-between gap-2 px-5 py-6 bg-gray-100 rounded-lg"
+                          class="grid grid-cols-2 gap-2 px-5 py-6 bg-gray-100 rounded-lg overflow-hidden relative"
                         >
+                          <!-- Text -->
                           <p
                             class="text-base text-left font-bold capitalize text-deep-purple"
                           >
                             airtime to cash
                           </p>
 
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke-width="1.5"
-                            stroke="currentColor"
-                            class="size-6 text-black"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              d="m8.25 4.5 7.5 7.5-7.5 7.5"
-                            />
-                          </svg>
+                          <div
+                            class="absolute -bottom-5 -right-5 w-16 h-16 bg-[url('./images/wi-fi-icon.png')] bg-center bg-cover"
+                          ></div>
                         </button>
 
                         <button
@@ -885,6 +1138,7 @@
                   </div>
                 </div>
 
+                <!-- Right Dashboard Area -->
                 <div
                   class="dashboard-col-2 col-span-4 lg:h-screen overflow-y-auto scrollbar md:max-h-[84vh] pl-2 pr-5"
                 >
