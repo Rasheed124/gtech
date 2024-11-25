@@ -317,8 +317,8 @@
 
           <!-- Side Mobile Menu  -->
           <div
-          id="sideMobileMenu"
-            class="bg-black/70 z-50 brightness-150 h-screen w-full top-0 fixed transition-transform  transform duration-700 -translate-x-[1000%]"
+            id="sideMobileMenu"
+            class="bg-black/70 z-50 brightness-150 h-screen w-full top-0 fixed transition-transform transform duration-700 -translate-x-[1000%]"
           >
             <div
               class="bg-white menuContainer z-20 border max-h-screen h-screen overflow-y-auto py-8 text-left w-full max-w-[300px]"
@@ -347,7 +347,7 @@
                       class="flex items-center gap-3 hover:text-grey-scale !duration-500 hover:translate-x-1"
                     >
                       <a
-                        href="/dashboard"
+                      href="./dashboard.html"
                         class="flex items-center py-3 px-4 w-full rounded-lg text-secondary justify-between"
                         ><div class="flex items-center gap-3">
                           <div
@@ -385,7 +385,7 @@
                       class="flex items-center gap-3 hover:text-grey-scale !duration-500 hover:translate-x-1"
                     >
                       <a
-                        href="/dashboard/service"
+                      href="./dashboard/services.html"
                         class="flex items-center py-3 px-4 w-full rounded-lg text-secondary justify-between"
                         ><div class="flex items-center gap-3">
                           <div
@@ -444,7 +444,7 @@
                       class="flex items-center gap-3 hover:text-grey-scale !duration-500 hover:translate-x-1"
                     >
                       <a
-                        href="/dashboard/wallet"
+                      href="./dashboard/profile-info.html"
                         class="flex items-center py-3 px-4 w-full rounded-lg text-secondary justify-between"
                         ><div class="flex items-center gap-3">
                           <div
@@ -500,35 +500,35 @@
                     >
                       <a
                         aria-current="page"
-                        href="/dashboard/profile"
+                        href="./dashboard/services.html"
                         class="router-link-active router-link-exact-active flex items-center py-3 px-4 w-full rounded-lg text-secondary justify-between a-link"
                         ><div class="flex items-center gap-3">
                           <div
                             class="icon-wrapper w-10 h-10 rounded-full relative bg-primary"
                           >
-                          <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="25"
-                          height="25"
-                          viewBox="0 0 25 25"
-                          fill="none"
-                          class="w-6 h-6 icon absolute top-0 left-0 right-0 bottom-0 m-auto"
-                        >
-                          <path
-                            d="M12.6605 11.37C12.5605 11.36 12.4405 11.36 12.3305 11.37C9.95055 11.29 8.06055 9.34 8.06055 6.94C8.06055 4.49 10.0405 2.5 12.5005 2.5C14.9505 2.5 16.9405 4.49 16.9405 6.94C16.9305 9.34 15.0405 11.29 12.6605 11.37Z"
-                            stroke="currentColor"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          ></path>
-                          <path
-                            d="M7.6607 15.06C5.2407 16.68 5.2407 19.32 7.6607 20.93C10.4107 22.77 14.9207 22.77 17.6707 20.93C20.0907 19.31 20.0907 16.67 17.6707 15.06C14.9307 13.23 10.4207 13.23 7.6607 15.06Z"
-                            stroke="currentColor"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          ></path>
-                        </svg>
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="25"
+                              height="25"
+                              viewBox="0 0 25 25"
+                              fill="none"
+                              class="w-6 h-6 icon absolute top-0 left-0 right-0 bottom-0 m-auto"
+                            >
+                              <path
+                                d="M12.6605 11.37C12.5605 11.36 12.4405 11.36 12.3305 11.37C9.95055 11.29 8.06055 9.34 8.06055 6.94C8.06055 4.49 10.0405 2.5 12.5005 2.5C14.9505 2.5 16.9405 4.49 16.9405 6.94C16.9305 9.34 15.0405 11.29 12.6605 11.37Z"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path>
+                              <path
+                                d="M7.6607 15.06C5.2407 16.68 5.2407 19.32 7.6607 20.93C10.4107 22.77 14.9207 22.77 17.6707 20.93C20.0907 19.31 20.0907 16.67 17.6707 15.06C14.9307 13.23 10.4207 13.23 7.6607 15.06Z"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              ></path>
+                            </svg>
                           </div>
                           <p class="link-text">Profile</p>
                         </div></a
@@ -538,7 +538,7 @@
                       class="flex items-center gap-3 hover:text-grey-scale !duration-500 hover:translate-x-1"
                     >
                       <a
-                        href="/dashboard/settings"
+                      href="./dashboard/settings.html"
                         class="flex items-center py-3 px-4 w-full rounded-lg text-secondary justify-between"
                         ><div class="flex items-center gap-3">
                           <div
@@ -589,8 +589,10 @@
           >
             <header class="flex justify-between w-full">
               <div class="">
-                
-                <button id="openMenuButton" class="border p-2 rounded-lg mb-2 md:hidden">
+                <button
+                  id="openMenuButton"
+                  class="border p-2 rounded-lg mb-2 md:hidden"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -968,26 +970,34 @@
 
                       <div class="grid-cols-2 grid md:grid-cols-3 gap-5">
                         <button
-                          class="flex justify-between rounded-md items-center gap-2 px-5 pt-6 pb-14 bg-gray-100  overflow-hidden relative"
+                          class="flex justify-between rounded-md items-center gap-2 px-5 pt-6 pb-14 bg-gray-100 overflow-hidden relative"
                         >
                           <!-- Text -->
                           <p
-                            class="text-base max-w-16   text-left font-bold capitalize text-deep-purple"
+                            class="text-base max-w-16 text-left font-bold capitalize text-deep-purple"
                           >
                             airtime to cash
                           </p>
 
                           <div
-                            class="absolute  top-2 -right-1 w-16 h-16 bg-center bg-cover"
+                            class="absolute top-2 -right-1 w-16 h-16 bg-center bg-cover"
                           >
-                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class=" size-36 text-black opacity-5">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.288 15.038a5.25 5.25 0 0 1 7.424 0M5.106 11.856c3.807-3.808 9.98-3.808 13.788 0M1.924 8.674c5.565-5.565 14.587-5.565 20.152 0M12.53 18.22l-.53.53-.53-.53a.75.75 0 0 1 1.06 0Z" />
-                          </svg>
-                          
-                        </div>
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              class="size-36 text-black opacity-5"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M8.288 15.038a5.25 5.25 0 0 1 7.424 0M5.106 11.856c3.807-3.808 9.98-3.808 13.788 0M1.924 8.674c5.565-5.565 14.587-5.565 20.152 0M12.53 18.22l-.53.53-.53-.53a.75.75 0 0 1 1.06 0Z"
+                              />
+                            </svg>
+                          </div>
                         </button>
-
-                    
                       </div>
                     </div>
 
