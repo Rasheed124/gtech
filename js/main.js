@@ -42,28 +42,84 @@ if (lightSwitches.length > 0) {
 
 
 // LOGIN OTP PAGE
+// document.addEventListener("DOMContentLoaded", () => {
+//   const otpInputs = document.querySelectorAll(".otp-login-input");
+//   const otpLoginForm = document.getElementById("login-pin-form");
+
+//   otpInputs.forEach((input, index) => {
+//     input.addEventListener("input", (e) => {
+//       const value = e.target.value;
+
+//       // If a number is entered, move to the next input
+//       if (value.length === 1 && index < otpInputs.length - 1) {
+//         otpInputs[index + 1].focus();
+//       }
+
+//       // Clear the input if invalid value is entered
+//       if (!/^\d$/.test(value)) {
+//         e.target.value = "";
+//       }
+//     });
+
+//     input.addEventListener("keydown", (e) => {
+//       if (e.key === "Backspace" && !input.value && index > 0) {
+//         // Move focus to the previous input on Backspace if the current input is empty
+//         otpInputs[index - 1].focus();
+//       }
+//     });
+
+//     input.addEventListener("paste", (e) => {
+//       // Handle paste for multiple digits
+//       const data = e.clipboardData.getData("text");
+//       const digits = data.match(/\d/g); // Extract only digits
+//       if (digits) {
+//         e.preventDefault();
+//         digits.slice(0, otpInputs.length).forEach((digit, i) => {
+//           otpInputs[i].value = digit;
+//         });
+//         if (digits.length < otpInputs.length) {
+//           otpInputs[digits.length].focus();
+//         }
+//       }
+//     });
+//   });
+
+//   otpLoginForm.addEventListener("submit", (e) => {
+//     e.preventDefault();
+//     const otpCode = Array.from(otpInputs)
+//       .map((input) => input.value)
+//       .join(""); 
+//     // console.log("Entered OTP Code:", otpCode);
+
+  
+//   });
+// });
+
+
 document.addEventListener("DOMContentLoaded", () => {
   const otpInputs = document.querySelectorAll(".otp-login-input");
-  const otpLoginForm = document.getElementById("login-pin-form");
+  const otpForm = document.getElementById("login-pin-form");
 
   otpInputs.forEach((input, index) => {
+    // Restrict input to numbers only
     input.addEventListener("input", (e) => {
       const value = e.target.value;
 
-      // If a number is entered, move to the next input
-      if (value.length === 1 && index < otpInputs.length - 1) {
-        otpInputs[index + 1].focus();
+      // Validate if input is a single digit (0-9)
+      if (!/^\d$/.test(value)) {
+        e.target.value = ""; // Clear input if not a valid digit
+        return;
       }
 
-      // Clear the input if invalid value is entered
-      if (!/^\d$/.test(value)) {
-        e.target.value = "";
+      // Move focus to the next input if current input is valid
+      if (index < otpInputs.length - 1) {
+        otpInputs[index + 1].focus();
       }
     });
 
     input.addEventListener("keydown", (e) => {
+      // Handle Backspace key
       if (e.key === "Backspace" && !input.value && index > 0) {
-        // Move focus to the previous input on Backspace if the current input is empty
         otpInputs[index - 1].focus();
       }
     });
@@ -84,14 +140,14 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  otpLoginForm.addEventListener("submit", (e) => {
-    e.preventDefault();
+  otpForm.addEventListener("submit", (e) => {
+    e.preventDefault(); // Prevent default form submission
     const otpCode = Array.from(otpInputs)
       .map((input) => input.value)
-      .join(""); 
-    // console.log("Entered OTP Code:", otpCode);
+      .join(""); // Collect the values and join them into a string
+    console.log("Entered OTP Code:", otpCode);
 
-  
+ 
   });
 });
 
@@ -101,8 +157,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-// LOGIN WITH PIN PAGE
 
+// LOGIN WITH PIN PAGE
 const pinInputs = document.querySelectorAll(".otp-input");
 const pinButtons = document.querySelectorAll(".pin-btn");
 const deleteBtn = document.getElementById("delete-btn");
@@ -115,7 +171,15 @@ function updateActiveInput(index) {
 
 pinInputs.forEach((input, index) => {
   input.addEventListener("input", (e) => {
-    if (e.target.value) {
+    const value = e.target.value;
+
+    // Restrict to numbers only
+    if (!/^\d$/.test(value)) {
+      e.target.value = ""; // Clear non-numeric input
+      return;
+    }
+
+    if (value) {
       updateActiveInput(index + 1);
     }
   });
@@ -130,6 +194,7 @@ pinInputs.forEach((input, index) => {
 pinButtons.forEach((button) => {
   button.addEventListener("click", () => {
     const value = button.getAttribute("data-value");
+
     if (value === "") return; // Empty button
     if (value === "BACKSPACE") {
       // Delete last input
@@ -151,10 +216,9 @@ pinButtons.forEach((button) => {
 document.getElementById("pin-form").addEventListener("submit", (e) => {
   e.preventDefault();
   const pin = Array.from(pinInputs).map((input) => input.value).join("");
-  // alert(`Entered PIN: ${pin}`);
   console.log(pin);
-  
 });
+
 
 
 

@@ -1961,11 +1961,6 @@ span.flatpickr-weekday:is(.dark *){
   margin-bottom: 2rem;
 }
 
-.my-auto{
-  margin-top: auto;
-  margin-bottom: auto;
-}
-
 .-mb-3{
   margin-bottom: -0.75rem;
 }
@@ -3893,11 +3888,6 @@ span.flatpickr-weekday:is(.dark *){
   font-size: 2.25rem;
   line-height: 1.25;
   letter-spacing: -0.02em;
-}
-
-.text-8xl{
-  font-size: 6rem;
-  line-height: 1;
 }
 
 .text-\[10px\]{
