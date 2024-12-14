@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Login</title>
+  </head>
+  <body>
+    <div>
+      <main
+        class="min-h-screen bg-cover bg-black/50 bg-blend-overlay bg-no-repeat bg-[40%] lg:bg-top w-full bg-[url('./images/auth-login-bg.png')] flex h-screen overflow-y-auto md:px-2"
+      >
+        <section class="w-full container mx-auto">
+          <div
+            class="md:flex grid md:gap-5 items-center h-full mt-auto md:mt-0 md:my-auto md:py-20 md:px-10 lg:px-0 pb-5"
+          >
+            <!-- Right Sided Form -->
+            <div
+              class="md:flex-col gap-2 hidden md:flex mt-auto max-w-xs lg:max-w-md text-white"
+            >
+              <h2 class="text-lg md:text-2xl lg:text-3xl font-bold">
+                Join the excitement of sports betting with BillPoint!
+              </h2>
+
+              <p>
+                Pay your electricity, internetn, and other utility bills quickly
+                and easily from the palm of your hand.
+              </p>
+            </div>
+
+            <!-- Left Sided Form -->
+            <div
+              class="md:flex bg-white w-[90%] md:w-full mx-auto md:mx-0 md:max-w-[500px] rounded-2xl p-4 py-8 md:p-8 flex flex-col gap-4 md:ml-auto pt-10 md:py-10 pb-8 mt-auto"
+            >
+              <div class="mx-auto max-w-lg">
+                <a
+                  href="./index.html"
+                  class="w-8 h-8 mb-3 flex justify-center items-center border rounded-lg border-[#828282] text-[#828282]"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 18 18"
+                    fill="none"
+                    class="w-6 h-6 icon mx-auto"
+                  >
+                    <path
+                      d="M10.6996 14.2096L6.04867 9.55867C5.4994 9.0094 5.4994 8.1106 6.04867 7.56133L10.6996 2.9104"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                </a>
+                <h1 class="text-2xl font-bold">OTP Verification</h1>
+
+                <p class="text-black text-sm py-1">
+                  Create an account so you can pay your bills and purchase
+                  top-ups faster.
+                </p>
+                <p class="text-black font-semibold mt-1 text-sm">
+                  toluatnewlife@gmail.com
+                </p>
+
+                <form action="./dashboard.html" id="login-pin-form">
+                  <div class="mt-0">
+                    <div class="mt-9 w-full flex justify-around gap-5 md:gap-0">
+                      <input
+                        type="password"
+                        class="outline-none w-12 h-12 md:w-14 md:h-14 rounded-xl text-black focus:border-2 focus:border-gray-300 text-center hide-caret otp-login-input"
+                        data-index="0"
+                        required
+                        maxlength="1"
+                      />
+                      <input
+                        type="password"
+                        class="outline-none w-12 h-12 md:w-14 md:h-14 rounded-xl text-black focus:border-2 focus:border-gray-300 text-center hide-caret otp-login-input"
+                        data-index="0"
+                        required
+                        maxlength="1"
+                      />
+                      <input
+                        type="password"
+                        class="outline-none w-12 h-12 md:w-14 md:h-14 rounded-xl text-black focus:border-2 focus:border-gray-300 text-center hide-caret otp-login-input"
+                        data-index="0"
+                        required
+                        maxlength="1"
+                      />
+                      <input
+                        type="password"
+                        class="outline-none w-12 h-12 md:w-14 md:h-14 rounded-xl text-black focus:border-2 focus:border-gray-300 text-center hide-caret otp-login-input"
+                        data-index="0"
+                        required
+                        maxlength="1"
+                      />
+                    </div>
+                    <div class="w-full mt-3">
+                      <div class="mb-12">
+                        <button
+                          type="submit"
+                          class="flex w-full items-center justify-center text-gray-800 underline"
+                        >
+                          Reset code
+                        </button>
+
+                        <!-- <p class=" text-center text-gray-500">Code sent. Resend code in 1:50</p> -->
+                      </div>
+                      <button
+                        type="submit"
+                        class="block w-full capitalize rounded-xl bg-gray-900 px-5 py-3 text-sm font-medium text-white"
+                      >
+                        Continue
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>

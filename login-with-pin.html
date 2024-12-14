@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Login - Pin</title>
+  </head>
+  <body>
+    <div>
+      <main
+        class="min-h-screen bg-cover bg-black/50 bg-blend-overlay bg-no-repeat bg-[40%] lg:bg-top w-full bg-[url('./images/auth-main-bg.png')] flex h-screen overflow-y-auto md:px-2"
+      >
+        <section class="w-full container mx-auto">
+          <div
+            class="md:flex grid md:gap-5 items-center h-full mt-auto md:mt-0 md:my-auto md:py-10 md:px-10 lg:px-0 pb-5"
+          >
+            <!-- Right Sided Form -->
+            <div
+              class="md:flex-col gap-2 hidden md:flex mt-auto max-w-xs lg:max-w-sm text-white"
+            >
+              <h2 class="text-lg md:text-2xl lg:text-3xl font-bold">
+                Trust and security are at the heart of BillPoint
+              </h2>
+              <p>
+                Pay your electricity, internet, and other utility bills quickly
+                and easily from the palm of your hand.
+              </p>
+            </div>
+
+            <!-- Left Sided Form -->
+            <div
+              class="md:flex bg-white w-[90%] md:w-full mx-auto md:mx-0 md:max-w-[500px] rounded-2xl p-4 py-8 md:p-8 flex flex-col gap-4 md:ml-auto md:pb-16 pb-8 mt-auto"
+            >
+              <div
+                class="gap-4 flex flex-col justify-center items-center text-center"
+              >
+                <img
+                  src="./images/auth-login-pin-profile.png"
+                  class="h-20 w-20 rounded-full object-cover"
+                  alt=""
+                />
+                <h2 class="text-[#010E0E] font-[700] text-2xl leading-[1]">
+                  Welcome back
+                </h2>
+                <p class="text-[#757575] text-sm">
+                  Sign in with your security PIN
+                </p>
+              </div>
+
+              <form class="p-4 sm:p-6 lg:p-8" id="pin-form">
+                <div>
+                  <label for="email" class="sr-only">Email Address</label>
+
+                  <div class="relative">
+                    <input
+                      type="email"
+                      class="w-full outline-none focus:border focus:border-black focus:transition-colors focus:duration-700 rounded-lg border-gray-200 p-4 pe-8 text-sm shadow-sm"
+                      placeholder="Email Address"
+                    required
+
+                    />
+                  </div>
+                </div>
+                <!-- PIN Input -->
+                <div class="flex justify-around gap-2 mt-6" id="pin-inputs">
+                  <input
+                    type="password"
+                    maxlength="1"
+                    class="outline-none w-12 h-12 md:w-14 md:h-14 rounded-xl text-black focus:border-2 focus:border-gray-300 text-center hide-caret otp-input"
+                    data-index="0"
+                    required
+                  />
+                  <input
+                    type="password"
+                    maxlength="1"
+                    class="outline-none w-12 h-12 md:w-14 md:h-14 rounded-xl text-black focus:border-2 focus:border-gray-300 text-center hide-caret otp-input"
+                    data-index="1"
+                    required
+
+                  />
+                  <input
+                    type="password"
+                    maxlength="1"
+                    class="outline-none w-12 h-12 md:w-14 md:h-14 rounded-xl text-black focus:border-2 focus:border-gray-300 text-center hide-caret otp-input"
+                    data-index="2"
+                    required
+
+                  />
+                  <input
+                    type="password"
+                    maxlength="1"
+                    class="outline-none w-12 h-12 md:w-14 md:h-14 rounded-xl text-black focus:border-2 focus:border-gray-300 text-center hide-caret otp-input"
+                    data-index="3"
+                    required
+
+                  />
+                </div>
+
+                <!-- Buttons for PIN Input -->
+                <div
+                  class="grid grid-cols-3 font-semibold text-xl gap-4 my-6"
+                  id="pin-buttons"
+                >
+                  <button type="button" class="pin-btn" data-value="1">
+                    1
+                  </button>
+                  <button type="button" class="pin-btn" data-value="2">
+                    2
+                  </button>
+                  <button type="button" class="pin-btn" data-value="3">
+                    3
+                  </button>
+                  <button type="button" class="pin-btn" data-value="4">
+                    4
+                  </button>
+                  <button type="button" class="pin-btn" data-value="5">
+                    5
+                  </button>
+                  <button type="button" class="pin-btn" data-value="6">
+                    6
+                  </button>
+                  <button type="button" class="pin-btn" data-value="7">
+                    7
+                  </button>
+                  <button type="button" class="pin-btn" data-value="8">
+                    8
+                  </button>
+                  <button type="button" class="pin-btn" data-value="9">
+                    9
+                  </button>
+                  <button type="button" class="pin-btn" data-value="1"></button>
+                  <button type="button" class="pin-btn" data-value="0">
+                    0
+                  </button>
+                  <button
+                    type="button"
+                    class="pin-btn flex items-center justify-center"
+                    data-value="BACKSPACE"
+                  >
+                    <svg
+                      width="24"
+                      height="22"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10.28 18.514h6.72c2.76 0 5-1.958 5-4.371v-5.682c0-2.413-2.24-4.371-5-4.371h-6.72c-1.41 0-2.75.516-3.7 1.434l-3.53 3.392c-1.41 1.355-1.41 3.418 0 4.773l3.53 3.392c.95.918 2.29 1.434 3.7 1.434z"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                      <path
+                        d="M16 13.461l-4.94-4.319"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                      ></path>
+                      <path
+                        d="M11.06 13.461L16 9.143"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+
+                <button
+                  type="submit"
+                  class="block w-full capitalize rounded-xl bg-gray-900 px-5 py-3 text-sm font-medium text-white"
+                >
+                  Continue
+                </button>
+
+                <div class="text-center mt-10 text-sm">
+                  <p class="">
+                    Not you?
+                    <a
+                      class="text-gray-800 font-normal"
+                      href="./login-password.html"
+                      >Switch account</a
+                    >
+                  </p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>
