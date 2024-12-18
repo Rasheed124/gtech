@@ -2291,6 +2291,21 @@ span.flatpickr-weekday:is(.dark *){
   height: 1rem;
 }
 
+.size-3{
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.size-5{
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.size-6{
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
 .h-0{
   height: 0px;
 }
@@ -3269,6 +3284,16 @@ span.flatpickr-weekday:is(.dark *){
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
+.border-indigo-600{
+  --tw-border-opacity: 1;
+  border-color: rgb(79 70 229 / var(--tw-border-opacity));
+}
+
+.border-lightgreen{
+  --tw-border-opacity: 1;
+  border-color: rgb(0 219 94 / var(--tw-border-opacity));
+}
+
 .bg-\[\#24292E\]{
   --tw-bg-opacity: 1;
   background-color: rgb(36 41 46 / var(--tw-bg-opacity));
@@ -3484,6 +3509,16 @@ span.flatpickr-weekday:is(.dark *){
 
 .bg-yellow-500\/20{
   background-color: rgb(240 187 51 / 0.2);
+}
+
+.bg-indigo-600{
+  --tw-bg-opacity: 1;
+  background-color: rgb(79 70 229 / var(--tw-bg-opacity));
+}
+
+.bg-blue-600{
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-25{
@@ -4016,6 +4051,10 @@ span.flatpickr-weekday:is(.dark *){
 
 .pt-8{
   padding-top: 2rem;
+}
+
+.pl-5{
+  padding-left: 1.25rem;
 }
 
 .text-left{
@@ -4820,6 +4859,10 @@ body #login-pin-form input:focus {
   background-color: rgb(255 255 255 / 0.9);
 }
 
+.hover\:bg-transparent:hover{
+  background-color: transparent;
+}
+
 .hover\:font-bold:hover{
   font-weight: 700;
 }
@@ -4903,6 +4946,16 @@ body #login-pin-form input:focus {
 
 .hover\:text-white\/75:hover{
   color: rgb(255 255 255 / 0.75);
+}
+
+.hover\:text-indigo-600:hover{
+  --tw-text-opacity: 1;
+  color: rgb(79 70 229 / var(--tw-text-opacity));
+}
+
+.hover\:text-lightgreen:hover{
+  --tw-text-opacity: 1;
+  color: rgb(0 219 94 / var(--tw-text-opacity));
 }
 
 .hover\:underline:hover{
@@ -5017,6 +5070,11 @@ body #login-pin-form input:focus {
 
 .focus\:ring-offset-2:focus{
   --tw-ring-offset-width: 2px;
+}
+
+.active\:text-indigo-500:active{
+  --tw-text-opacity: 1;
+  color: rgb(99 102 241 / var(--tw-text-opacity));
 }
 
 .disabled\:cursor-not-allowed:disabled{
@@ -6785,6 +6843,11 @@ body #login-pin-form input:focus {
   .sidebar-expanded .\32xl\:sidebar-expanded\:w-56{
     width: 14rem;
   }
+}
+
+.rtl\:rotate-180:where([dir="rtl"], [dir="rtl"] *){
+  --tw-rotate: 180deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .\[\&_\*\]\:\!transition-none *{
