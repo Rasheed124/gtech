@@ -2202,6 +2202,10 @@ span.flatpickr-weekday:is(.dark *){
   margin-top: 0.5rem;
 }
 
+.mt-2\.5{
+  margin-top: 0.625rem;
+}
+
 .mt-3{
   margin-top: 0.75rem;
 }
@@ -2232,10 +2236,6 @@ span.flatpickr-weekday:is(.dark *){
 
 .mt-auto{
   margin-top: auto;
-}
-
-.mt-2\.5{
-  margin-top: 0.625rem;
 }
 
 .box-content{
@@ -2282,6 +2282,11 @@ span.flatpickr-weekday:is(.dark *){
   aspect-ratio: 7/4;
 }
 
+.size-12{
+  width: 3rem;
+  height: 3rem;
+}
+
 .size-3{
   width: 0.75rem;
   height: 0.75rem;
@@ -2295,16 +2300,6 @@ span.flatpickr-weekday:is(.dark *){
 .size-5{
   width: 1.25rem;
   height: 1.25rem;
-}
-
-.size-6{
-  width: 1.5rem;
-  height: 1.5rem;
-}
-
-.size-12{
-  width: 3rem;
-  height: 3rem;
 }
 
 .h-0{
@@ -3250,7 +3245,7 @@ span.flatpickr-weekday:is(.dark *){
 
 .border-lightgreen{
   --tw-border-opacity: 1;
-  border-color: rgb(0 219 94 / var(--tw-border-opacity));
+  border-color: rgb(0 218 95 / var(--tw-border-opacity));
 }
 
 .border-primary{
@@ -3412,7 +3407,7 @@ span.flatpickr-weekday:is(.dark *){
 
 .bg-lightgreen{
   --tw-bg-opacity: 1;
-  background-color: rgb(0 219 94 / var(--tw-bg-opacity));
+  background-color: rgb(0 218 95 / var(--tw-bg-opacity));
 }
 
 .bg-primary{
@@ -3943,6 +3938,10 @@ span.flatpickr-weekday:is(.dark *){
   padding-left: 3rem;
 }
 
+.pl-2{
+  padding-left: 0.5rem;
+}
+
 .pl-3{
   padding-left: 0.75rem;
 }
@@ -3969,6 +3968,10 @@ span.flatpickr-weekday:is(.dark *){
 
 .pr-1{
   padding-right: 0.25rem;
+}
+
+.pr-10{
+  padding-right: 2.5rem;
 }
 
 .pr-3{
@@ -4033,18 +4036,6 @@ span.flatpickr-weekday:is(.dark *){
 
 .pt-8{
   padding-top: 2rem;
-}
-
-.pr-10{
-  padding-right: 2.5rem;
-}
-
-.pl-2{
-  padding-left: 0.5rem;
-}
-
-.pr-20{
-  padding-right: 5rem;
 }
 
 .text-left{
@@ -4125,6 +4116,10 @@ span.flatpickr-weekday:is(.dark *){
   font-weight: 700;
 }
 
+.font-extrabold{
+  font-weight: 800;
+}
+
 .font-medium{
   font-weight: 500;
 }
@@ -4135,10 +4130,6 @@ span.flatpickr-weekday:is(.dark *){
 
 .font-semibold{
   font-weight: 600;
-}
-
-.font-extrabold{
-  font-weight: 800;
 }
 
 .uppercase{
@@ -4302,7 +4293,7 @@ span.flatpickr-weekday:is(.dark *){
 
 .text-lightgreen{
   --tw-text-opacity: 1;
-  color: rgb(0 219 94 / var(--tw-text-opacity));
+  color: rgb(0 218 95 / var(--tw-text-opacity));
 }
 
 .text-primary{
@@ -4904,7 +4895,7 @@ body #login-pin-form input:focus {
 
 .hover\:text-lightgreen:hover{
   --tw-text-opacity: 1;
-  color: rgb(0 219 94 / var(--tw-text-opacity));
+  color: rgb(0 218 95 / var(--tw-text-opacity));
 }
 
 .hover\:text-red-600:hover{
@@ -5119,7 +5110,7 @@ body #login-pin-form input:focus {
 
 .group:hover .group-hover\:text-lightgreen{
   --tw-text-opacity: 1;
-  color: rgb(0 219 94 / var(--tw-text-opacity));
+  color: rgb(0 218 95 / var(--tw-text-opacity));
 }
 
 .group:hover .group-hover\:text-violet-600{
@@ -6411,10 +6402,6 @@ body #login-pin-form input:focus {
     gap: 4rem;
   }
 
-  .lg\:gap-8{
-    gap: 2rem;
-  }
-
   .lg\:space-x-0 > :not([hidden]) ~ :not([hidden]){
     --tw-space-x-reverse: 0;
     margin-right: calc(0px * var(--tw-space-x-reverse));
@@ -6526,16 +6513,16 @@ body #login-pin-form input:focus {
     padding-bottom: 1.75rem;
   }
 
+  .lg\:pr-0{
+    padding-right: 0px;
+  }
+
   .lg\:pr-8{
     padding-right: 2rem;
   }
 
   .lg\:pt-16{
     padding-top: 4rem;
-  }
-
-  .lg\:pr-0{
-    padding-right: 0px;
   }
 
   .lg\:text-left{
