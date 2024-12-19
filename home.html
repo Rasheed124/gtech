@@ -9,18 +9,18 @@
   </head>
   <body>
     <!-- Header Start -->
-    <header class="bg-gradient-to-r from-primary to-primary pb-20">
+    <header class="bg-gradient-to-r from-primary to-primary">
       <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 py-3">
         <div class="flex h-16 items-center justify-between">
           <div class="md:flex md:items-center md:gap-12">
             <a class="block" href="./index.html">
               <!-- <span class="sr-only">Home</span> -->
-              <img src="./assets/zappy_logo.cd8bd496.svg" alt="" />
+              <img src="./images/zappy_logo.cd8bd496.svg" alt="" />
             </a>
           </div>
 
           <div class="hidden lg:block">
-            <nav >
+            <nav aria-label="Global">
               <ul class="flex items-center gap-6 text-base font-medium">
                 <li>
                   <a
@@ -67,12 +67,12 @@
           <div class="flex items-center gap-4">
             <div class="sm:flex sm:gap-4">
               <a class="rounded-md" href="#">
-                <img class="" src="./assets/nigeria_flag.43a5f9bd.svg" alt="" />
+                <img class="" src="./images/nigeria_flag.43a5f9bd.svg" alt="" />
               </a>
 
               <div class="hidden lg:block">
                 <a
-                  class="rounded-md px-7 py-2.5 capitalize bg-white text-base font-medium text-[#2e1a52]"
+                  class="rounded-md px-7 py-2.5 capitalize bg-white text-base font-medium text-primary"
                   href="#"
                 >
                   get started
@@ -208,21 +208,98 @@
         <div
           class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16 text-white"
         >
-          <div class="grid grid-cols-1 gap-5 sm:gap-8 lg:grid-cols-2 lg:gap-16">
-            <div class="">
+          <div class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
+            <div class="lg:py-24">
+              <h2 class="text-3xl font-bold sm:text-4xl">
+                Transactions Made Seamless.
+              </h2>
+
+              <p class="my-4 text-lg sm:text-xl lg:text-2xl">
+                Experience the future of banking with Zappy. From instant bill
+                payments to seamless transactions, and the flexibility of NGN
+                and USD virtual cards, we've got all your digital banking needs
+                covered.
+              </p>
+
+              <div class="mt-8">
+                <h6 class="text-sm font-semibold">
+                  Download and make zappy transaction
+                </h6>
+
+                <div class="flex gap-4 mt-4">
+                  <a class="" href="#">
+                    <img src="./images/app-store-purple.fd781530.svg" alt="" />
+                  </a>
+                  <a class="" href="#">
+                    <img src="./images/app-store-purple.fd781530.svg" alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="relative top-18 lg:top-0 flex justify-center items-center"
+            >
+              <img
+                alt=""
+                src="./images/hero_image.png"
+                class="lg:absolute w-[400px] h-full lg:w-full object-cover lg:object-contain"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Hero Client -->
+      <div class="max-w-screen-lg mx-5 relative xl:mx-auto mb-32">
+        <div
+          class="grid grid-cols-2 shadow-lg bg-secondary backdrop-invert-0 rounded-lg lg:grid-cols-4 absolute bottom-[-130px] lg:bottom-[-60px] w-full text-primary"
+        >
+          <div class="p-3 lg:p-8 text-center">
+            <h5 class="text-lg font-normal mb-2">Trusted users</h5>
+
+            <h4 class="font-bold text-3xl">5k<span>+</span></h4>
+          </div>
+          <div class="p-3 lg:p-8 text-center">
+            <h5 class="text-lg font-normal mb-2">Total Downloads</h5>
+
+            <h4 class="font-bold text-3xl">5k<span>+</span></h4>
+          </div>
+          <div class="p-3 lg:p-8 text-center">
+            <h5 class="text-lg font-normal mb-2">Total Transactions</h5>
+
+            <h4 class="font-bold text-3xl">85k<span>+</span></h4>
+          </div>
+          <div class="p-3 lg:p-8 text-center">
+            <h5 class="text-lg font-normal mb-2">Total Transactions</h5>
+
+            <h4 class="font-bold text-3xl">₦1.3<span>B</span></h4>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class=" pt-24 pb-20 lg:pt-0 lg:pb-0">
+      <!-- Hero Section -->
+      <div>
+        <div
+          class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16 text-white"
+        >
+          <div class="grid grid-cols-1 gap-5 sm:gap-8 lg:grid-cols-2 lg:gap-16 ">
+            <div class="lg:order-2">
               <div
                 class="inline-flex items-center justify-center rounded-full bg-lightgreen px-2.5 py-0.5 text-black"
               >
-                <p class="whitespace-nowrap text-base font-semibold">
+                <p class="whitespace-nowrap text-base font-bold">
                   ABOUT FINTO
                 </p>
               </div>
 
-              <h2 class="text-3xl font-extrabold sm:text-4xl xl:text-5xl">
+              <h2 class="text-3xl font-extrabold sm:text-4xl xl:text-5xl text-primary">
                 Your Right Path To Smart Financial Decisions
               </h2>
 
-              <p class="my-4 text-base">
+              <p class="my-4 text-base text-primary">
                 With a robust suite of products ranging from digital banking and
                 payment processing to wealth management and blockchain
                 applications we empower our clients
@@ -251,38 +328,12 @@
                       </svg>
                     </span>
 
-                    <p class=" text-lg pl-2 py-2 pr-10 lg:pr-0">
-                      Pay Bills On Time Without Missing A Beat
-                    </p>
-                  </li>
-                 <li
-                    class="inline-flex items-center w-full justify-start rounded-lg bg-[#29594b] px-3 lg:px-5 text-white"
-                  >
-                    <span class="bg-lightgreen p-2 rounded-full">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        width="24"
-                        height="24"
-                        class="size-3 text-black"
-                        stroke-width="2"
-                      >
-                        <path d="M3 14v-6h6"></path>
-                        <path d="M3 8l9 9l9 -9"></path>
-                      </svg>
-                    </span>
-
-             
-                    <p class=" text-lg pl-2 py-2 pr-10 lg:pr-0">
+                    <p class="text-lg pl-2 py-2 pr-10 lg:pr-0">
                       Pay Bills On Time Without Missing A Beat
                     </p>
                   </li>
                   <li
-                    class="inline-flex items-center w-full justify-start rounded-lg bg-[#29594b] px-3 lg:px-5 text-white"
+                    class="inline-flex items-center w-full justify-start rounded-lg bg-[#29594b] px-3 lg:px-5 py-3 text-white"
                   >
                     <span class="bg-lightgreen p-2 rounded-full">
                       <svg
@@ -302,16 +353,40 @@
                       </svg>
                     </span>
 
-              
-                    <p class=" text-lg pl-2 py-2 pr-10 lg:pr-0">
+                    <p class="text-lg pl-2 py-2 pr-10 lg:pr-0">
                       Pay Bills On Time Without Missing A Beat
                     </p>
-                  </li> 
+                  </li>
+                  <li
+                    class="inline-flex items-center w-full justify-start rounded-lg bg-[#29594b] px-3 lg:px-5 py-3 text-white"
+                  >
+                    <span class="bg-lightgreen p-2 rounded-full">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        width="24"
+                        height="24"
+                        class="size-3 text-black"
+                        stroke-width="2"
+                      >
+                        <path d="M3 14v-6h6"></path>
+                        <path d="M3 8l9 9l9 -9"></path>
+                      </svg>
+                    </span>
+
+                    <p class="text-lg pl-2 py-2 pr-10 lg:pr-0">
+                      Pay Bills On Time Without Missing A Beat
+                    </p>
+                  </li>
                 </ul>
 
                 <div class="mt-6 lg:mt-10">
                   <a
-                    class="inline-flex items-center gap-2 rounded border border-lightgreen bg-lightgreen px-8 py-3 text-black hover:bg-transparent hover:text-lightgreen focus:outline-none "
+                    class="inline-flex items-center gap-2 rounded border border-primary bg-primary px-8 py-3 text-lightgreen hover:bg-transparent hover:text-primary focus:outline-none"
                     href="#"
                   >
                     <span class="text-base font-medium"> Learn About </span>
@@ -333,22 +408,11 @@
                   </a>
                 </div>
 
-                <!-- <h6 class="text-sm font-semibold">
-                  Download and make zappy transaction
-                </h6>
-
-                <div class="flex gap-4 mt-4">
-                  <a class="" href="#">
-                    <img src="./assets/app-store-purple.fd781530.svg" alt="" />
-                  </a>
-                  <a class="" href="#">
-                    <img src="./assets/app-store-purple.fd781530.svg" alt="" />
-                  </a>
-                </div> -->
+               
               </div>
             </div>
 
-            <div class="flex justify-center items-center">
+            <div class="lg:order-1 flex justify-center items-center">
               <img
                 alt=""
                 src="./images/h-img1.jpg"
@@ -357,17 +421,18 @@
             </div>
           </div>
         </div>
-      </section>
-
+      </div>
       <!-- Hero Client -->
       <div class="max-w-screen-xl mx-5 relative xl:mx-auto">
         <h2
-          class="text-center uppercase text-lg sm:text-xl text-lightgreen font-bold py-6"
-        > DISCOVER POWERFUL FEATURES FOR FINANCIAL SUCCESS</h2>
+          class="text-center uppercase text-lg sm:text-xl text-primary font-bold py-6"
+        >
+          DISCOVER POWERFUL FEATURES FOR FINANCIAL SUCCESS
+        </h2>
         <div class="mt-5 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           <div class="rounded-3xl group bg-[#29594b] p-8">
             <span
-              class="inline-block  p-3 bg-lightgreen transition-colors duration-500 group-hover:bg-black group-hover:text-lightgreen  text-black rounded-full"
+              class="inline-block p-3 bg-lightgreen transition-colors duration-500 group-hover:bg-black group-hover:text-lightgreen text-black rounded-full"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -400,7 +465,7 @@
           </div>
           <div class="rounded-3xl group bg-[#29594b] p-8">
             <span
-              class="inline-block  p-3 bg-lightgreen transition-colors duration-500 group-hover:bg-black group-hover:text-lightgreen  text-black rounded-full"
+              class="inline-block p-3 bg-lightgreen transition-colors duration-500 group-hover:bg-black group-hover:text-lightgreen text-black rounded-full"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -433,7 +498,7 @@
           </div>
           <div class="rounded-3xl group bg-[#29594b] p-8">
             <span
-              class="inline-block  p-3 bg-lightgreen transition-colors duration-500 group-hover:bg-black group-hover:text-lightgreen  text-black rounded-full"
+              class="inline-block p-3 bg-lightgreen transition-colors duration-500 group-hover:bg-black group-hover:text-lightgreen text-black rounded-full"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -462,65 +527,13 @@
             <p class="mt-2.5 text-base sm:text-lg text-white">
               With a robust suite of products ranging from digital banking and
               payment processing.
-            </p>
-          </div>
-         
-        </div>
-      </div>
-    </header>
-
-    <!-------------Sections Start ---------------->
-
-    <!-- Section   -->
-    <section class="text-black">
-      <div
-        class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16"
-      >
-        <div class="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          <div
-            class="rounded-xl bg-[#F0EBF8] p-8 transition hover:bg-[#F0EBF8]/90"
-          >
-            <img src="./assets/secure_transaction_icon.svg" alt="" />
-
-            <h2 class="mt-4 text-2xl sm:text-3xl font-bold">
-              Secure Transaction
-            </h2>
-
-            <p class="mt-1 text-lg sm:text-xl lg:text-2xl">
-              Transactions with extra security. Only you can access your money.
-            </p>
-          </div>
-
-          <div
-            class="rounded-xl bg-[#F0EBF8] p-8 transition hover:bg-[#F0EBF8]/90"
-          >
-            <img src="./assets/secure_transaction_icon.svg" alt="" />
-
-            <h2 class="mt-4 text-2xl sm:text-3xl font-bold">
-              Secure Transaction
-            </h2>
-
-            <p class="mt-1 text-lg sm:text-xl lg:text-2xl">
-              Transactions with extra security. Only you can access your money.
-            </p>
-          </div>
-
-          <div
-            class="rounded-xl bg-[#F0EBF8] p-8 transition hover:bg-[#F0EBF8]/90"
-          >
-            <img src="./assets/secure_transaction_icon.svg" alt="" />
-
-            <h2 class="mt-4 text-2xl sm:text-3xl font-bold">
-              Secure Transaction
-            </h2>
-
-            <p class="mt-1 text-lg sm:text-xl lg:text-2xl">
-              Transactions with extra security. Only you can access your money.
             </p>
           </div>
         </div>
       </div>
     </section>
+
+    <!-------------Sections Start ---------------->
 
     <!-- Section -->
     <section class="py-16">
@@ -532,7 +545,7 @@
           <div class="absolute top-0 right-6">
             <img
               class="w-[120px]"
-              src="./assets/USD_image.4f06ab84.svg"
+              src="./images/USD_image.4f06ab84.svg"
               alt=""
             />
           </div>
@@ -542,7 +555,7 @@
           >
             <img
               class="w-[120px]"
-              src="./assets/NGN_image.3dcd16d9.svg"
+              src="./images/NGN_image.3dcd16d9.svg"
               alt=""
             />
           </div>
@@ -550,9 +563,9 @@
 
           <div class="lg:py-24 text-white">
             <div
-              class="inline-flex bg-[#FFC325] text-black text-xl font-medium rounded-full p-4"
+              class="inline-flex bg-lightgreen text-black text-xl font-medium rounded-full p-4"
             >
-              <img src="./assets/vector.b68a3a8d.svg" class="mr-1.5" alt="" />
+              <img src="./images/vector.b68a3a8d.svg" class="mr-1.5" alt="" />
               New
             </div>
 
@@ -561,13 +574,13 @@
               <span class="inline-flex">
                 <img
                   class="w-4"
-                  src="./assets/nigeria_circle.c70f113c.svg"
+                  src="./images/nigeria_circle.c70f113c.svg"
                   alt=""
                 />
-                <img class="w-4" src="./assets/vector.b68a3a8d.svg" alt="" />
+                <img class="w-4" src="./images/vector.b68a3a8d.svg" alt="" />
                 <img
                   class="w-4"
-                  src="./assets/united-states_circle.031cd429.svg"
+                  src="./images/united-states_circle.031cd429.svg"
                   alt=""
                 />
               </span>
@@ -591,7 +604,7 @@
           >
             <img
               alt=""
-              src="./assets/virtual-card.png"
+              src="./images/virtual-card.png"
               class="absolute  h-full w-full object-cover"
             />
           </div> -->
@@ -599,7 +612,7 @@
           <div class="relative flex justify-center items-center">
             <img
               alt=""
-              src="./assets/virtual-card.png"
+              src="./images/virtual-card.png"
               class="lg:absolute w-full h-full lg:w-[400px] object-cover lg:object-contain"
             />
           </div>
@@ -608,91 +621,54 @@
     </section>
 
     <!-- Section Products   -->
-    <section class="text-black">
-      <div
-        class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16"
-      >
-        <div class="mx-auto max-w-xl text-center text-[#2e1a52]">
-          <h2 class="text-3xl font-bold sm:text-4xl">Explore Our Products</h2>
-
-          <p class="mt-4 text-xl">
-            We leveraged on the latest technology to speed up transactions.
-          </p>
-        </div>
-        <div class="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          <div
-            class="rounded-xl p-8 transition bg-[#F0EBF8] hover:bg-[#F0EBF8]/90"
-          >
-            <img src="./assets/secure_transaction_icon.svg" alt="" />
-
-            <h2 class="mt-4 text-2xl sm:text-3xl font-bold">
-              Utilities and More
-            </h2>
-
-            <p class="mt-1 text-lg sm:text-xl lg:text-2xl">
-              Pay for electricity, cable TV, and other utilities directly from
-              the app
-            </p>
+    <!-- Section -->
+    <section class="py-16">
+      <div class="mx-auto max-w-screen-xl relative">
+        <div
+          class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16 px-4 py-8 sm:px-6 sm:py-12 lg:px-16 lg:py-7 rounded-xl mx-5"
+        >
+          <div class="flex justify-center items-center">
+            <img
+              alt=""
+              src="./images//h-img3.jpg"
+              class="w-full h-full rounded-3xl"
+            />
           </div>
-          <div
-            class="rounded-xl p-8 transition bg-[#F0EBF8] hover:bg-[#F0EBF8]/90"
-          >
-            <img src="./assets/fast_payment_icon.svg" alt="" />
+          <div class="text-primary">
+            <h2 class="text-2xl font-bold md:text-4xl mt-3">WHY CHOOSE US</h2>
+            <h4 class="text-2xl font-bold md:text-4xl mt-3">
+              Grow You Transaction From Another Level
+            </h4>
 
-            <h2 class="mt-4 text-2xl sm:text-3xl font-bold">Money Transfer</h2>
-
-            <p class="mt-1 text-lg sm:text-xl lg:text-2xl">
-              Facilitate quick and secure money transfers between Zappy users
-              and to other bank accounts
+            <p class="mt-4 text-lg sm:text-xl lg:text-2xl">
+              With a robust suite of products ranging from digital banking and
+              payment processing to wealth management and blockchain
+              applications we empower our clients.
             </p>
-          </div>
-          <div
-            class="rounded-xl p-8 transition bg-[#F0EBF8] hover:bg-[#F0EBF8]/90"
-          >
-            <img src="./assets/easy_process_icon.svg" alt="" />
 
-            <h2 class="mt-4 text-2xl sm:text-3xl font-bold">Virtual Cards</h2>
+            <div class="mt-6 lg:mt-10">
+              <a
+                class="inline-flex items-center gap-2 rounded border border-lightgreen bg-lightgreen px-8 py-3 text-black hover:bg-transparent hover:text-lightgreen focus:outline-none"
+                href="#"
+              >
+                <span class="text-base font-medium"> Learn More </span>
 
-            <p class="mt-1 text-lg sm:text-xl lg:text-2xl">
-              Create virtual cards in both USD and NGN for secure online
-              transactions, both locally and internationally.
-            </p>
-          </div>
-          <div
-            class="rounded-xl p-8 transition bg-[#F0EBF8] hover:bg-[#F0EBF8]/90"
-          >
-            <img src="./assets/secure_transaction_icon.svg" alt="" />
-
-            <h2 class="mt-4 text-2xl sm:text-3xl font-bold">Gift Cards</h2>
-
-            <p class="mt-1 text-lg sm:text-xl lg:text-2xl">
-              Pay for electricity, cable TV, and other utilities directly from
-              the app
-            </p>
-          </div>
-          <div
-            class="rounded-xl p-8 transition bg-[#F0EBF8] hover:bg-[#F0EBF8]/90"
-          >
-            <img src="./assets/fast_payment_icon.svg" alt="" />
-
-            <h2 class="mt-4 text-2xl sm:text-3xl font-bold">Airtime-to-Cash</h2>
-
-            <p class="mt-1 text-lg sm:text-xl lg:text-2xl">
-              Facilitate quick and secure money transfers between Zappy users
-              and to other bank accounts
-            </p>
-          </div>
-          <div
-            class="rounded-xl p-8 transition bg-[#F0EBF8] hover:bg-[#F0EBF8]/90"
-          >
-            <img src="./assets/easy_process_icon.svg" alt="" />
-
-            <h2 class="mt-4 text-2xl sm:text-3xl font-bold">Zap Pin</h2>
-
-            <p class="mt-1 text-lg sm:text-xl lg:text-2xl">
-              Create virtual cards in both USD and NGN for secure online
-              transactions, both locally and internationally.
-            </p>
+                <svg
+                  class="size-5 rtl:rotate-180"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
       </div>
