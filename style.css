@@ -3553,12 +3553,6 @@ span.flatpickr-weekday:is(.dark *){
   background-image: linear-gradient(to top right, var(--tw-gradient-stops));
 }
 
-.from-\[\#2e1a52\]{
-  --tw-gradient-from: #2e1a52 var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(46 26 82 / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
 .from-gray-100{
   --tw-gradient-from: #F3F4F6 var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(243 244 246 / 0) var(--tw-gradient-to-position);
@@ -3580,6 +3574,12 @@ span.flatpickr-weekday:is(.dark *){
 .from-gray-900{
   --tw-gradient-from: #111827 var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(17 24 39 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.from-lightgreen{
+  --tw-gradient-from: #00DA5F var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(0 218 95 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
@@ -3607,16 +3607,6 @@ span.flatpickr-weekday:is(.dark *){
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
-.from-lightgreen{
-  --tw-gradient-from: #00DA5F var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(0 218 95 / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
-.to-\[\#2e1a52\]{
-  --tw-gradient-to: #2e1a52 var(--tw-gradient-to-position);
-}
-
 .to-gray-100{
   --tw-gradient-to: #F3F4F6 var(--tw-gradient-to-position);
 }
@@ -3633,6 +3623,10 @@ span.flatpickr-weekday:is(.dark *){
   --tw-gradient-to: #111827 var(--tw-gradient-to-position);
 }
 
+.to-lightgreen{
+  --tw-gradient-to: #00DA5F var(--tw-gradient-to-position);
+}
+
 .to-primary{
   --tw-gradient-to: #004437 var(--tw-gradient-to-position);
 }
@@ -3647,10 +3641,6 @@ span.flatpickr-weekday:is(.dark *){
 
 .to-white{
   --tw-gradient-to: #fff var(--tw-gradient-to-position);
-}
-
-.to-lightgreen{
-  --tw-gradient-to: #00DA5F var(--tw-gradient-to-position);
 }
 
 .bg-cover{
@@ -3903,11 +3893,6 @@ span.flatpickr-weekday:is(.dark *){
   padding-bottom: 2rem;
 }
 
-.py-24{
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-}
-
 .pb-0{
   padding-bottom: 0px;
 }
@@ -4066,18 +4051,6 @@ span.flatpickr-weekday:is(.dark *){
 
 .pt-8{
   padding-top: 2rem;
-}
-
-.pt-16{
-  padding-top: 4rem;
-}
-
-.pt-28{
-  padding-top: 7rem;
-}
-
-.pt-20{
-  padding-top: 5rem;
 }
 
 .text-left{
@@ -6568,11 +6541,6 @@ body #login-pin-form input:focus {
     padding-bottom: 1.75rem;
   }
 
-  .lg\:py-1{
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
-  }
-
   .lg\:pb-0{
     padding-bottom: 0px;
   }
@@ -6611,12 +6579,6 @@ body #login-pin-form input:focus {
     font-size: 1.88rem;
     line-height: 1.33;
     letter-spacing: -0.01em;
-  }
-
-  .lg\:text-5xl{
-    font-size: 3rem;
-    line-height: 1.25;
-    letter-spacing: -0.02em;
   }
 
   .lg\:text-lg{
@@ -6838,10 +6800,6 @@ body #login-pin-form input:focus {
 
   .xl\:pr-16{
     padding-right: 4rem;
-  }
-
-  .xl\:pr-10{
-    padding-right: 2.5rem;
   }
 
   .xl\:text-left{
