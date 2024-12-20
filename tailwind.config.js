@@ -139,6 +139,8 @@ module.exports = {
           900: "#4F3D0E",
           950: "#342809",
         },
+        white: "#FCFFFF",
+        black: "#050505"
       },
       fontFamily: {
         inter: ["Inter", "sans-serif"],
