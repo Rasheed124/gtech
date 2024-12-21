@@ -41,61 +41,6 @@ if (lightSwitches.length > 0) {
 
 
 
-// LOGIN OTP PAGE
-// document.addEventListener("DOMContentLoaded", () => {
-//   const otpInputs = document.querySelectorAll(".otp-login-input");
-//   const otpLoginForm = document.getElementById("login-pin-form");
-
-//   otpInputs.forEach((input, index) => {
-//     input.addEventListener("input", (e) => {
-//       const value = e.target.value;
-
-//       // If a number is entered, move to the next input
-//       if (value.length === 1 && index < otpInputs.length - 1) {
-//         otpInputs[index + 1].focus();
-//       }
-
-//       // Clear the input if invalid value is entered
-//       if (!/^\d$/.test(value)) {
-//         e.target.value = "";
-//       }
-//     });
-
-//     input.addEventListener("keydown", (e) => {
-//       if (e.key === "Backspace" && !input.value && index > 0) {
-//         // Move focus to the previous input on Backspace if the current input is empty
-//         otpInputs[index - 1].focus();
-//       }
-//     });
-
-//     input.addEventListener("paste", (e) => {
-//       // Handle paste for multiple digits
-//       const data = e.clipboardData.getData("text");
-//       const digits = data.match(/\d/g); // Extract only digits
-//       if (digits) {
-//         e.preventDefault();
-//         digits.slice(0, otpInputs.length).forEach((digit, i) => {
-//           otpInputs[i].value = digit;
-//         });
-//         if (digits.length < otpInputs.length) {
-//           otpInputs[digits.length].focus();
-//         }
-//       }
-//     });
-//   });
-
-//   otpLoginForm.addEventListener("submit", (e) => {
-//     e.preventDefault();
-//     const otpCode = Array.from(otpInputs)
-//       .map((input) => input.value)
-//       .join(""); 
-//     // console.log("Entered OTP Code:", otpCode);
-
-  
-//   });
-// });
-
-
 document.addEventListener("DOMContentLoaded", () => {
   const otpInputs = document.querySelectorAll(".otp-login-input");
   const otpForm = document.getElementById("login-pin-form");
@@ -150,11 +95,6 @@ document.addEventListener("DOMContentLoaded", () => {
  
   });
 });
-
-
-
-
-
 
 
 
