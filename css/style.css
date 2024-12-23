@@ -1,11 +1,11 @@
 
-@font-face {
+/* @font-face {
   font-family: 'NexaBold';
   src: url('../font/Nexa-Bold.woff2') format('woff2'),
        url('../font/Nexa-Bold.woff') format('woff');
-  /* font-weight: bold;
-  font-style: normal; */
-}
+  font-weight: bold;
+  font-style: normal;
+} */
 
 /* @font-face {
   font-family: 'NexaLight';

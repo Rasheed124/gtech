@@ -7,7 +7,10 @@
     "license": "https://cruip.com/terms/",
     "scripts": {
         "dev": "npx tailwindcss -i ./css/style.css -o ./style.css --watch",
-        "build": "npx tailwindcss -i ./css/style.css -o ./style.css"
+        "build": "npx tailwindcss -i ./css/style.css -o ./style.css",
+        
+        "devf": "npx tailwindcss -i ./css/front-pages/input.css -o ./css/front-pages/output.css --watch",
+        "buildf": "npx tailwindcss -i ./css/front-pages/input.css -o ./css/front-pages/output.css"
     },
     "devDependencies": {
         "@tailwindcss/forms": "^0.5.7",
