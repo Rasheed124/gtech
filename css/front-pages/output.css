@@ -1383,10 +1383,6 @@ select {
   margin-bottom: 0.5rem;
 }
 
-.mb-20 {
-  margin-bottom: 5rem;
-}
-
 .mb-3 {
   margin-bottom: 0.75rem;
 }
@@ -3442,6 +3438,10 @@ select {
   font-family: Inter, sans-serif;
 }
 
+.font-NexaBold {
+  font-family: NexaBold, sans-serif;
+}
+
 .text-2xl {
   font-size: 1.5rem;
   line-height: 1.33;
@@ -3998,6 +3998,86 @@ select {
        url('../../front-pages/font/Nexa-Bold.woff') format('woff');
 
   font-weight: bold;
+
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NexaLight';
+
+  src: url('../../front-pages/font/Nexa-Light.eot');
+
+  src: local('Nexa Light'), local('Nexa-Light'),
+      url('../../front-pages/font/Nexa-Light.eot?#iefix') format('embedded-opentype'),
+      url('../../front-pages/font/Nexa-Light.woff2') format('woff2'),
+      url('../../front-pages/font/Nexa-Light.woff') format('woff'),
+      url('../../front-pages/font/Nexa-Light.ttf') format('truetype');
+
+  font-weight: 300;
+
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NexaThin';
+
+  src: url('../../front-pages/font/Nexa-Thin.eot');
+
+  src: local('Nexa Thin'), local('Nexa-Thin'),
+      url('../../front-pages/font/Nexa-Thin.eot?#iefix') format('embedded-opentype'),
+      url('../../front-pages/font/Nexa-Thin.woff2') format('woff2'),
+      url('../../front-pages/font/Nexa-Thin.woff') format('woff'),
+      url('../../front-pages/font/Nexa-Thin.ttf') format('truetype');
+
+  font-weight: 100;
+
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NexaXBold';
+
+  src: url('../../front-pages/font/Nexa-XBold.eot');
+
+  src: local('Nexa XBold'), local('Nexa-XBold'),
+      url('../../front-pages/font/Nexa-XBold.eot?#iefix') format('embedded-opentype'),
+      url('../../front-pages/font/Nexa-XBold.woff2') format('woff2'),
+      url('../../front-pages/font/Nexa-XBold.woff') format('woff'),
+      url('../../front-pages/font/Nexa-XBold.ttf') format('truetype');
+
+  font-weight: bold;
+
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NexaBold';
+
+  src: url('../../front-pages/font/Nexa-Bold.eot');
+
+  src: local('Nexa Bold'), local('Nexa-Bold'),
+      url('../../front-pages/font/Nexa-Bold.eot?#iefix') format('embedded-opentype'),
+      url('../../front-pages/font/Nexa-Bold.woff2') format('woff2'),
+      url('../../front-pages/font/Nexa-Bold.woff') format('woff'),
+      url('../../front-pages/font/Nexa-Bold.ttf') format('truetype');
+
+  font-weight: bold;
+
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NexaBook';
+
+  src: url('../../front-pages/font/Nexa-Book.eot');
+
+  src: local('Nexa Book'), local('Nexa-Book'),
+      url('../../front-pages/font/Nexa-Book.eot?#iefix') format('embedded-opentype'),
+      url('../../front-pages/font/Nexa-Book.woff2') format('woff2'),
+      url('../../front-pages/font/Nexa-Book.woff') format('woff'),
+      url('../../front-pages/font/Nexa-Book.ttf') format('truetype');
+
+  font-weight: normal;
 
   font-style: normal;
 }
@@ -5266,11 +5346,6 @@ select {
     padding-bottom: 3rem;
   }
 
-  .sm\:py-8 {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-  }
-
   .sm\:text-left {
     text-align: left;
   }
@@ -5802,12 +5877,12 @@ select {
     margin-bottom: 0px;
   }
 
-  .lg\:mt-10 {
-    margin-top: 2.5rem;
-  }
-
   .lg\:mb-20 {
     margin-bottom: 5rem;
+  }
+
+  .lg\:mt-10 {
+    margin-top: 2.5rem;
   }
 
   .lg\:block {
