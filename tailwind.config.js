@@ -146,8 +146,8 @@ module.exports = {
         inter: ["Inter", "sans-serif"],
         // NexaLight: ["NexaLight", "sans-serif"],
         // NexaThin: ["NexaThin", "sans-serif"],
-        NexaBold: ["NexaBold", "sans-serif"],
-        // NexaBook: ["NexaBook", "sans-serif"],
+        // NexaBold: ["NexaBold", "sans-serif"],
+        NexaBook: ["NexaBook", "sans-serif"],
         // NexaXBold: ["NexaXBold", "sans-serif"],
         
       },

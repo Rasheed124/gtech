@@ -3434,6 +3434,10 @@ select {
   vertical-align: top;
 }
 
+.font-NexaBook {
+  font-family: NexaBook, sans-serif;
+}
+
 .font-inter {
   font-family: Inter, sans-serif;
 }
@@ -3985,6 +3989,17 @@ select {
 
 .ease-out {
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+@font-face {
+  font-family: 'NexaBold';
+
+  src: url('../../front-pages/font/Nexa-Bold.woff2') format('woff2'),
+       url('../../front-pages/font/Nexa-Bold.woff') format('woff');
+
+  font-weight: bold;
+
+  font-style: normal;
 }
 
 .\*\:py-2 > * {
