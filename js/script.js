@@ -43,15 +43,31 @@ detailsElements.forEach((details) => {
   });
 });
 
-//   const detailsElement = document.querySelector('#details');
-//   const relativeElement = detailsElement.querySelector('#details-span');
 
-//   if (detailsElement && relativeElement) {
-//     detailsElement.addEventListener('toggle', () => {
-//       if (detailsElement.open) {
-//         relativeElement.style.width = '150%'; // Increase width when expanded
-//       } else {
-//         relativeElement.style.width = '100%'; // Reset to original width when collapsed
-//       }
-//     });
-//   }
+// HOME PAGE VIODE MODAL DISPLAY
+
+const modal = document.getElementById("videoModal");
+const openModal = document.getElementById("openModal");
+const closeModal = document.getElementById("closeModal");
+
+openModal.addEventListener("click", () => {
+  const videoURL = "https://www.youtube.com/embed/JSTUtRQ8Hwc?autoplay=1  ";
+  youtubeVideo.src = videoURL;
+  modal.classList.remove("hidden");
+});
+
+closeModal.addEventListener("click", () => {
+  modal.classList.add("hidden");
+  youtubeVideo.src = ""; // Stop the video
+});
+
+// function openModal() {
+//   const videoURL = "https://www.youtube.com/embed/JSTUtRQ8Hwc?autoplay=1  ";
+//   youtubeVideo.src = videoURL;
+//   modal.classList.remove("hidden");
+// }
+
+// function closeModal() {
+//   modal.classList.add("hidden");
+//   youtubeVideo.src = ""; // Stop the video
+// }

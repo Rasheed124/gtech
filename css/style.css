@@ -1,3 +1,207 @@
+
+@font-face {
+  font-family: 'NexaBold';
+  src: url('../font/Nexa-Bold.woff2') format('woff2'),
+       url('../font/Nexa-Bold.woff') format('woff');
+  /* font-weight: bold;
+  font-style: normal; */
+}
+
+/* @font-face {
+  font-family: 'NexaLight';
+  src: url('../font/Nexa-Light.eot');
+  src: local('Nexa Light'), local('Nexa-Light'),
+      url('../font/Nexa-Light.eot?#iefix') format('embedded-opentype'),
+      url('../font/Nexa-Light.woff2') format('woff2'),
+      url('../font/Nexa-Light.woff') format('woff'),
+      url('../font/Nexa-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NexaThin';
+  src: url('../font/Nexa-Thin.eot');
+  src: local('Nexa Thin'), local('Nexa-Thin'),
+      url('../font/Nexa-Thin.eot?#iefix') format('embedded-opentype'),
+      url('../font/Nexa-Thin.woff2') format('woff2'),
+      url('../font/Nexa-Thin.woff') format('woff'),
+      url('../font/Nexa-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NexaHeavyItalic';
+  src: url('../font/Nexa-HeavyItalic.eot');
+  src: local('Nexa Heavy Italic'), local('Nexa-HeavyItalic'),
+      url('../font/Nexa-HeavyItalic.eot?#iefix') format('embedded-opentype'),
+      url('../font/Nexa-HeavyItalic.woff2') format('woff2'),
+      url('../font/Nexa-HeavyItalic.woff') format('woff'),
+      url('../font/Nexa-HeavyItalic.ttf') format('truetype');
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'NexaXBold';
+  src: url('../font/Nexa-XBold.eot');
+  src: local('Nexa XBold'), local('Nexa-XBold'),
+      url('../font/Nexa-XBold.eot?#iefix') format('embedded-opentype'),
+      url('../font/Nexa-XBold.woff2') format('woff2'),
+      url('../font/Nexa-XBold.woff') format('woff'),
+      url('../font/Nexa-XBold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NexaBlackItalic';
+  src: url('../font/Nexa-BlackItalic.eot');
+  src: local('Nexa Black Italic'), local('Nexa-BlackItalic'),
+      url('../font/Nexa-BlackItalic.eot?#iefix') format('embedded-opentype'),
+      url('../font/Nexa-BlackItalic.woff2') format('woff2'),
+      url('../font/Nexa-BlackItalic.woff') format('woff'),
+      url('../font/Nexa-BlackItalic.ttf') format('truetype');
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'NexaBookItalic';
+  src: url('../font/Nexa-BookItalic.eot');
+  src: local('Nexa Book Italic'), local('Nexa-BookItalic'),
+      url('../font/Nexa-BookItalic.eot?#iefix') format('embedded-opentype'),
+      url('../font/Nexa-BookItalic.woff2') format('woff2'),
+      url('../font/Nexa-BookItalic.woff') format('woff'),
+      url('../font/Nexa-BookItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'NexaBold';
+  src: url('../font/Nexa-Bold.eot');
+  src: local('Nexa Bold'), local('Nexa-Bold'),
+      url('../font/Nexa-Bold.eot?#iefix') format('embedded-opentype'),
+      url('../font/Nexa-Bold.woff2') format('woff2'),
+      url('../font/Nexa-Bold.woff') format('woff'),
+      url('../font/Nexa-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NexaBoldItalic';
+  src: url('../font/Nexa-BoldItalic.eot');
+  src: local('Nexa Bold Italic'), local('Nexa-BoldItalic'),
+      url('../font/Nexa-BoldItalic.eot?#iefix') format('embedded-opentype'),
+      url('../font/Nexa-BoldItalic.woff2') format('woff2'),
+      url('../font/Nexa-BoldItalic.woff') format('woff'),
+      url('../font/Nexa-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'NexaThinItalic';
+  src: url('../font/Nexa-ThinItalic.eot');
+  src: local('Nexa Thin Italic'), local('Nexa-ThinItalic'),
+      url('../font/Nexa-ThinItalic.eot?#iefix') format('embedded-opentype'),
+      url('../font/Nexa-ThinItalic.woff2') format('woff2'),
+      url('../font/Nexa-ThinItalic.woff') format('woff'),
+      url('../font/Nexa-ThinItalic.ttf') format('truetype');
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'NexaItalic';
+  src: url('../font/Nexa-Italic.eot');
+  src: local('Nexa Italic'), local('Nexa-Italic'),
+      url('../font/Nexa-Italic.eot?#iefix') format('embedded-opentype'),
+      url('../font/Nexa-Italic.woff2') format('woff2'),
+      url('../font/Nexa-Italic.woff') format('woff'),
+      url('../font/Nexa-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'NexaRegular';
+  src: url('../font/Nexa-Regular.eot');
+  src: local('Nexa Regular'), local('Nexa-Regular'),
+      url('../font/Nexa-Regular.eot?#iefix') format('embedded-opentype'),
+      url('../font/Nexa-Regular.woff2') format('woff2'),
+      url('../font/Nexa-Regular.woff') format('woff'),
+      url('../font/Nexa-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NexaBlack';
+  src: url('../font/Nexa-Black.eot');
+  src: local('Nexa Black'), local('Nexa-Black'),
+      url('../font/Nexa-Black.eot?#iefix') format('embedded-opentype'),
+      url('../font/Nexa-Black.woff2') format('woff2'),
+      url('../font/Nexa-Black.woff') format('woff'),
+      url('../font/Nexa-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NexaXBoldItalic';
+  src: url('../font/Nexa-XBoldItalic.eot');
+  src: local('Nexa XBold Italic'), local('Nexa-XBoldItalic'),
+      url('../font/Nexa-XBoldItalic.eot?#iefix') format('embedded-opentype'),
+      url('../font/Nexa-XBoldItalic.woff2') format('woff2'),
+      url('../font/Nexa-XBoldItalic.woff') format('woff'),
+      url('../font/Nexa-XBoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'NexaBook';
+  src: url('../font/Nexa-Book.eot');
+  src: local('Nexa Book'), local('Nexa-Book'),
+      url('../font/Nexa-Book.eot?#iefix') format('embedded-opentype'),
+      url('../font/Nexa-Book.woff2') format('woff2'),
+      url('../font/Nexa-Book.woff') format('woff'),
+      url('../font/Nexa-Book.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NexaLightItalic';
+  src: url('../font/Nexa-LightItalic.eot');
+  src: local('Nexa Light Italic'), local('Nexa-LightItalic'),
+      url('../font/Nexa-LightItalic.eot?#iefix') format('embedded-opentype'),
+      url('../font/Nexa-LightItalic.woff2') format('woff2'),
+      url('../font/Nexa-LightItalic.woff') format('woff'),
+      url('../font/Nexa-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'NexaHeavy';
+  src: url('Nexa-Heavy.eot');
+  src: local('Nexa Heavy'), local('Nexa-Heavy'),
+      url('Nexa-Heavy.eot?#iefix') format('embedded-opentype'),
+      url('Nexa-Heavy.woff2') format('woff2'),
+      url('Nexa-Heavy.woff') format('woff'),
+      url('Nexa-Heavy.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+} */
+
+
+
+
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=fallback");
 
 @import "tailwindcss/base";
@@ -31,3 +235,5 @@ body #singleP-search2 input:focus {
   outline: none;
   box-shadow: none;
 }
+
+

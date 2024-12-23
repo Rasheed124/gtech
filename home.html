@@ -8,7 +8,7 @@
     <title>Home - Template</title>
   </head>
 
-  <body class="bg-white">
+  <body class="bg-white font-NexaBook">
     <!-- Header Start -->
     <header class="bg-gradient-to-r from-primary to-primary">
       <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 py-3">
@@ -209,7 +209,7 @@
               <h2 class="text-3xl font-bold sm:text-4xl">
                 Transactions Made Seamless.
               </h2>
-
+ 
               <p class="my-4 text-lg sm:text-xl">
                 Experience the future of banking with Zappy. From instant bill
                 payments to seamless transactions, and the flexibility of NGN
@@ -642,13 +642,81 @@
         <div
           class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16 px-4 sm:py-12 lg:py-7 rounded-xl"
         >
-          <div class="flex justify-center items-center">
+          <!-- <div class="flex justify-center items-center">
             <img
               alt=""
               src="./images//h-img3.jpg"
               class="w-full h-full rounded-3xl"
             />
+          </div> -->
+
+          <!-- Image with Play Icon -->
+          <div class="relative flex justify-center items-center">
+            <img
+              alt=""
+              src="./images/h-img3.jpg"
+              class="w-full h-full rounded-3xl"
+            />
+            <!-- Play Icon -->
+            <div
+              class="absolute inset-0 rounded-3xl flex justify-center items-center  bg-black bg-opacity-30 "
+            >
+              <div
+                class="text-white text-5xl bg-black bg-opacity-50 rounded-full p-3 cursor-pointer"
+                id="openModal"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="size-12"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm14.024-.983a1.125 1.125 0 0 1 0 1.966l-5.603 3.113A1.125 1.125 0 0 1 9 15.113V8.887c0-.857.921-1.4 1.671-.983l5.603 3.113Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </div>
           </div>
+
+          <!-- Modal -->
+          <div
+            id="videoModal"
+            class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-80 justify-center items-center hidden z-50"
+          >
+            <!-- Close Button -->
+            <button
+              id="closeModal"
+              class="absolute top-4 right-4 text-white text-3xl p-3"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="size-6"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </button>
+            <div class="w-full h-full flex justify-center items-center">
+              <!-- YouTube Video -->
+              <div class="w-11/12 md:w-3/4 lg:w-1/2 aspect-video">
+                <iframe
+                  id="youtubeVideo"
+                  class="w-full h-full rounded-lg"
+                  src=""
+                  allow="autoplay; fullscreen"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+
           <div class="text-primary">
             <h2 class="text-lg font-bold mt-3">WHY CHOOSE US</h2>
             <h4 class="text-2xl font-bold md:text-4xl mt-1 max-w-md">

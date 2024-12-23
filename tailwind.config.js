@@ -144,6 +144,12 @@ module.exports = {
       },
       fontFamily: {
         inter: ["Inter", "sans-serif"],
+        // NexaLight: ["NexaLight", "sans-serif"],
+        // NexaThin: ["NexaThin", "sans-serif"],
+        NexaBold: ["NexaBold", "sans-serif"],
+        // NexaBook: ["NexaBook", "sans-serif"],
+        // NexaXBold: ["NexaXBold", "sans-serif"],
+        
       },
       fontSize: {
         xs: ["0.75rem", { lineHeight: "1.5" }],
