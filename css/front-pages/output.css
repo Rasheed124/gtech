@@ -5266,6 +5266,11 @@ select {
     padding-bottom: 3rem;
   }
 
+  .sm\:py-8 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
   .sm\:text-left {
     text-align: left;
   }
@@ -5799,6 +5804,10 @@ select {
 
   .lg\:mt-10 {
     margin-top: 2.5rem;
+  }
+
+  .lg\:mb-20 {
+    margin-bottom: 5rem;
   }
 
   .lg\:block {
