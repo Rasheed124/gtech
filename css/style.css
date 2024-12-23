@@ -22,7 +22,11 @@
 
 body #form-login input:focus,
 body #pin-form input:focus,
-body #login-pin-form input:focus {
+body #login-pin-form input:focus ,
+body #blog-search input:focus ,
+body #blog-search2 input:focus ,
+body #singleP-search input:focus ,
+body #singleP-search2 input:focus {
   border-color: black;
   outline: none;
   box-shadow: none;
