@@ -3373,6 +3373,14 @@ span.flatpickr-weekday:is(.dark *){
   background-color: rgb(5 5 5 / 0.5);
 }
 
+.bg-black\/60{
+  background-color: rgb(5 5 5 / 0.6);
+}
+
+.bg-black\/80{
+  background-color: rgb(5 5 5 / 0.8);
+}
+
 .bg-blue-500\/20{
   background-color: rgb(59 130 246 / 0.2);
 }
@@ -3556,8 +3564,12 @@ span.flatpickr-weekday:is(.dark *){
   background-color: rgb(240 187 51 / 0.2);
 }
 
-.bg-black\/60{
-  background-color: rgb(5 5 5 / 0.6);
+.bg-black\/70{
+  background-color: rgb(5 5 5 / 0.7);
+}
+
+.bg-black\/0{
+  background-color: rgb(5 5 5 / 0);
 }
 
 .bg-opacity-25{
@@ -4127,12 +4139,8 @@ span.flatpickr-weekday:is(.dark *){
   vertical-align: top;
 }
 
-.font-NexaBold{
-  font-family: NexaBold, sans-serif;
-}
-
-.font-NexaBook{
-  font-family: NexaBook, sans-serif;
+.font-Poppins{
+  font-family: Poppins, sans-serif;
 }
 
 .font-inter{
