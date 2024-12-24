@@ -2855,6 +2855,10 @@ select {
   background-color: rgb(240 187 51 / 0.2);
 }
 
+.bg-black\/20 {
+  background-color: rgb(5 5 5 / 0.2);
+}
+
 .bg-opacity-25 {
   --tw-bg-opacity: 0.25;
 }
@@ -2909,6 +2913,10 @@ select {
 
 .bg-gradient-to-tr {
   background-image: linear-gradient(to top right, var(--tw-gradient-stops));
+}
+
+.bg-\[url\(\'\.\/images\/auth-bg\.png\'\)\] {
+  background-image: url('./images/auth-bg.png');
 }
 
 .from-gray-100 {
@@ -3430,16 +3438,16 @@ select {
   vertical-align: top;
 }
 
+.font-NexaBold {
+  font-family: NexaBold, sans-serif;
+}
+
 .font-NexaBook {
   font-family: NexaBook, sans-serif;
 }
 
 .font-inter {
   font-family: Inter, sans-serif;
-}
-
-.font-NexaBold {
-  font-family: NexaBold, sans-serif;
 }
 
 .text-2xl {
