@@ -1,73 +1,10 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
 
-@font-face {
-  font-family: 'NexaBold';
-  src: url('../../front-pages/font/Nexa-Bold.woff2') format('woff2'),
-       url('../../front-pages/font/Nexa-Bold.woff') format('woff');
-  font-weight: bold;
-  font-style: normal;
-}
 
-@font-face {
-  font-family: 'NexaLight';
-  src: url('../../front-pages/font/Nexa-Light.eot');
-  src: local('Nexa Light'), local('Nexa-Light'),
-      url('../../front-pages/font/Nexa-Light.eot?#iefix') format('embedded-opentype'),
-      url('../../front-pages/font/Nexa-Light.woff2') format('woff2'),
-      url('../../front-pages/font/Nexa-Light.woff') format('woff'),
-      url('../../front-pages/font/Nexa-Light.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal;
-}
-
-
-@font-face {
-  font-family: 'NexaThin';
-  src: url('../../front-pages/font/Nexa-Thin.eot');
-  src: local('Nexa Thin'), local('Nexa-Thin'),
-      url('../../front-pages/font/Nexa-Thin.eot?#iefix') format('embedded-opentype'),
-      url('../../front-pages/font/Nexa-Thin.woff2') format('woff2'),
-      url('../../front-pages/font/Nexa-Thin.woff') format('woff'),
-      url('../../front-pages/font/Nexa-Thin.ttf') format('truetype');
-  font-weight: 100;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'NexaXBold';
-  src: url('../../front-pages/font/Nexa-XBold.eot');
-  src: local('Nexa XBold'), local('Nexa-XBold'),
-      url('../../front-pages/font/Nexa-XBold.eot?#iefix') format('embedded-opentype'),
-      url('../../front-pages/font/Nexa-XBold.woff2') format('woff2'),
-      url('../../front-pages/font/Nexa-XBold.woff') format('woff'),
-      url('../../front-pages/font/Nexa-XBold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'NexaBold';
-  src: url('../../front-pages/font/Nexa-Bold.eot');
-  src: local('Nexa Bold'), local('Nexa-Bold'),
-      url('../../front-pages/font/Nexa-Bold.eot?#iefix') format('embedded-opentype'),
-      url('../../front-pages/font/Nexa-Bold.woff2') format('woff2'),
-      url('../../front-pages/font/Nexa-Bold.woff') format('woff'),
-      url('../../front-pages/font/Nexa-Bold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'NexaBook';
-  src: url('../../front-pages/font/Nexa-Book.eot');
-  src: local('Nexa Book'), local('Nexa-Book'),
-      url('../../front-pages/font/Nexa-Book.eot?#iefix') format('embedded-opentype'),
-      url('../../front-pages/font/Nexa-Book.woff2') format('woff2'),
-      url('../../front-pages/font/Nexa-Book.woff') format('woff'),
-      url('../../front-pages/font/Nexa-Book.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
