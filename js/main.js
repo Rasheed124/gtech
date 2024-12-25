@@ -39,8 +39,7 @@ if (lightSwitches.length > 0) {
 
 
 
-
-
+// LOGIN ONly 
 document.addEventListener("DOMContentLoaded", () => {
   const otpInputs = document.querySelectorAll(".otp-login-input");
   const otpForm = document.getElementById("login-pin-form");
@@ -66,26 +65,25 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     input.addEventListener("focus", () => {
-      input.type = "tel"; // Change back to tel on focus for easier input
+      input.type = "tel";
     });
 
     input.addEventListener("keydown", (e) => {
       // Handle Backspace key
       if (e.key === "Backspace" && !input.value && index > 0) {
         otpInputs[index - 1].focus();
-        otpInputs[index - 1].type = "tel"; // Reset to tel for the previous input
+        otpInputs[index - 1].type = "tel";
       }
     });
 
     input.addEventListener("paste", (e) => {
-      // Handle paste for multiple digits
       const data = e.clipboardData.getData("text");
-      const digits = data.match(/\d/g); // Extract only digits
+      const digits = data.match(/\d/g);
       if (digits) {
         e.preventDefault();
         digits.slice(0, otpInputs.length).forEach((digit, i) => {
           otpInputs[i].value = digit;
-          otpInputs[i].type = "password"; // Mask the pasted digits
+          otpInputs[i].type = "password";
         });
         if (digits.length < otpInputs.length) {
           otpInputs[digits.length].focus();
@@ -102,10 +100,6 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("Entered OTP Code:", otpCode);
   });
 });
-
-
-
-
 
 // LOGIN WITH PIN PAGE
 const pinInputs = document.querySelectorAll(".otp-input");
@@ -164,10 +158,8 @@ pinButtons.forEach((button) => {
 
 document.getElementById("pin-form").addEventListener("submit", (e) => {
   e.preventDefault();
-  const pin = Array.from(pinInputs).map((input) => input.value).join("");
+  const pin = Array.from(pinInputs)
+    .map((input) => input.value)
+    .join("");
   console.log(pin);
 });
-
-
-
-
