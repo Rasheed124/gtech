@@ -41,7 +41,6 @@ if (lightSwitches.length > 0) {
 
 
 
-
 document.addEventListener("DOMContentLoaded", () => {
   const otpInputs = document.querySelectorAll(".otp-login-input");
   const otpForm = document.getElementById("login-pin-form");
@@ -57,16 +56,24 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
+      // Hide the entered value and change it to a dot
+      input.type = "password";
+
       // Move focus to the next input if current input is valid
       if (index < otpInputs.length - 1) {
         otpInputs[index + 1].focus();
       }
     });
 
+    input.addEventListener("focus", () => {
+      input.type = "tel"; // Change back to tel on focus for easier input
+    });
+
     input.addEventListener("keydown", (e) => {
       // Handle Backspace key
       if (e.key === "Backspace" && !input.value && index > 0) {
         otpInputs[index - 1].focus();
+        otpInputs[index - 1].type = "tel"; // Reset to tel for the previous input
       }
     });
 
@@ -78,6 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
         e.preventDefault();
         digits.slice(0, otpInputs.length).forEach((digit, i) => {
           otpInputs[i].value = digit;
+          otpInputs[i].type = "password"; // Mask the pasted digits
         });
         if (digits.length < otpInputs.length) {
           otpInputs[digits.length].focus();
@@ -92,10 +100,10 @@ document.addEventListener("DOMContentLoaded", () => {
       .map((input) => input.value)
       .join(""); // Collect the values and join them into a string
     console.log("Entered OTP Code:", otpCode);
-
- 
   });
 });
+
+
 
 
 
