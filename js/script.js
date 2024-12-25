@@ -22,6 +22,29 @@ document.addEventListener("DOMContentLoaded", () => {
       showIcons.forEach((el) => el.classList.remove("hidden"));
     }
   });
+
+
+
+  const toggleConfirmPasswordButton = document.querySelector(
+    "button[data-toggle='confirmPassword']"
+  );
+  const toggleConfirmPasswordInput = document.getElementById("confirmPassword");
+  const toggleConfirmPasswordIcon = toggleConfirmPasswordButton.querySelector(".confirmPassword-icon");
+
+  toggleConfirmPasswordButton.addEventListener("click", () => {
+    const showIcons = toggleConfirmPasswordIcon.querySelectorAll(".confirmPasswordShow-icon");
+    const hideIcons = toggleConfirmPasswordIcon.querySelectorAll(".confirmPasswordHide-icon");
+
+    if (toggleConfirmPasswordInput.type === "password") {
+      toggleConfirmPasswordInput.type = "text";
+      showIcons.forEach((el) => el.classList.add("hidden"));
+      hideIcons.forEach((el) => el.classList.remove("hidden"));
+    } else {
+      toggleConfirmPasswordInput.type = "password";
+      hideIcons.forEach((el) => el.classList.add("hidden"));
+      showIcons.forEach((el) => el.classList.remove("hidden"));
+    }
+  });
 });
 
 
