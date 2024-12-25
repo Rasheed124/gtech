@@ -71,7 +71,7 @@
                         <div>
                           <label
                             for="fullName"
-                            class="block font-medium text-gray-700"
+                            class="block font-medium text-gray-700 mb-1"
                           >
                             Full Name <span class="text-red-500">*</span>
                           </label>
@@ -96,7 +96,7 @@
                         <div>
                           <label
                             for="email"
-                            class="block font-medium text-gray-700"
+                            class="block font-medium text-gray-700 mb-1"
                           >
                             Email Address <span class="text-red-500">*</span>
                           </label>
@@ -121,7 +121,7 @@
                         <div>
                           <label
                             for="whatsapp"
-                            class="block font-medium text-gray-700"
+                            class="block font-medium text-gray-700 mb-1"
                           >
                             Whatsapp Number <span class="text-red-500">*</span>
                           </label>
@@ -146,7 +146,7 @@
                         <div>
                           <label
                             for="password"
-                            class="block font-medium text-gray-700"
+                            class="block font-medium text-gray-700 mb-1"
                           >
                             Password <span class="text-red-500">*</span>
                           </label>
@@ -159,7 +159,8 @@
                               required
                             />
                             <button
-                              class="absolute inset-y-0 end-0 grid place-content-center px-4"
+                              data-toggle="password"
+                              class="absolute inset-y-0 end-0 grid place-content-center px-4 border-0 outline-none"
                               type="button"
                             >
                               <svg
@@ -168,9 +169,11 @@
                                 height="24"
                                 viewBox="0 0 24 24"
                                 fill="none"
-                                class="w-6 h-6"
+                                class="w-6 h-6 password-icon"
                               >
+                                <!-- Default "show" icon -->
                                 <path
+                                  class="show-icon"
                                   d="M15.5799 12C15.5799 13.98 13.9799 15.58 11.9999 15.58C10.0199 15.58 8.41992 13.98 8.41992 12C8.41992 10.02 10.0199 8.41998 11.9999 8.41998C13.9799 8.41998 15.5799 10.02 15.5799 12Z"
                                   stroke="#333"
                                   stroke-width="1.5"
@@ -178,7 +181,17 @@
                                   stroke-linejoin="round"
                                 ></path>
                                 <path
+                                  class="show-icon"
                                   d="M11.9998 20.27C15.5298 20.27 18.8198 18.19 21.1098 14.59C22.0098 13.18 22.0098 10.81 21.1098 9.39997C18.8198 5.79997 15.5298 3.71997 11.9998 3.71997C8.46984 3.71997 5.17984 5.79997 2.88984 9.39997C1.98984 10.81 1.98984 13.18 2.88984 14.59C5.17984 18.19 8.46984 20.27 11.9998 20.27Z"
+                                  stroke="#333"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                ></path>
+                                <!-- "hide" icon (hidden initially) -->
+                                <path
+                                  class="hide-icon hidden"
+                                  d="M2.5 2.5L21.5 21.5M6.55997 6.60997C4.17997 8.19997 2.42997 10.61 1.73997 12C2.62997 13.7 4.61997 16.45 7.30997 18.07M17.2 17.41C15.12 18.74 13.11 19.25 11.6 19.25C8.16997 19.25 4.88997 17.21 2.59997 13.61M14.8 10.79L10.78 6.76997M20.21 9.05997C18.81 6.87997 16.35 4.57997 13.03 3.35997M11.99 3.10997C11.71 3.10997 11.44 3.10997 11.18 3.10997"
                                   stroke="#333"
                                   stroke-width="1.5"
                                   stroke-linecap="round"
@@ -199,7 +212,7 @@
                         <div>
                           <label
                             for="confirmPassword"
-                            class="block font-medium text-gray-700"
+                            class="block font-medium text-gray-700 mb-1"
                             data-tooltip="Make sure passwords match."
                           >
                             Confirm Password <span class="text-red-500">*</span>
@@ -214,7 +227,7 @@
                             />
                           </div>
                           <p
-                            class="mt-1 text-sm text-red-500 "
+                            class="mt-1 text-sm text-red-500"
                             id="error-confirmPassword"
                           >
                             Passwords do not match.
@@ -231,13 +244,13 @@
                     </div>
                   </div>
                 </form>
-
-
               </div>
             </div>
           </div>
         </section>
       </main>
     </div>
+
+    <script src="./js/script.js"></script>
   </body>
 </html>

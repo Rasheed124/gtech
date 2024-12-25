@@ -49,17 +49,27 @@
               </div>
 
               <form class="p-4 sm:p-6 lg:p-8" id="pin-form">
-                <div>
-                  <label for="email" class="sr-only">Email Address</label>
+             
 
+                <!-- Email Input -->
+                <div>
+                  <label
+                    for="email"
+                    class="block text-sm font-medium mb-1 text-gray-700"
+                  >
+                    Email Address <span class="text-red-500">*</span>
+                  </label>
                   <div class="relative">
                     <input
                       type="email"
-                      class="w-full outline-none border  text-black  rounded-lg border-black p-4 pe-8 text-sm shadow-sm"
+                      id="email"
+                      class="w-full outline-none border text-black rounded-lg border-black p-4 pe-8 text-sm shadow-sm"
                       placeholder="Email Address"
-                    required
-
+                      required
                     />
+                    <p class="text-xs text-red-500 mt-1 hidden">
+                      Please enter a valid email address.
+                    </p>
                   </div>
                 </div>
                 <!-- PIN Input -->
@@ -67,33 +77,30 @@
                   <input
                     type="password"
                     maxlength="1"
-                    class="outline-none border border-black w-12 h-12 md:w-14 md:h-14 rounded-xl text-black  text-center hide-caret otp-input"
+                    class="outline-none border border-black w-12 h-12 md:w-14 md:h-14 rounded-xl text-black text-center hide-caret otp-input"
                     data-index="0"
                     required
                   />
                   <input
                     type="password"
                     maxlength="1"
-                    class="outline-none border border-black w-12 h-12 md:w-14 md:h-14 rounded-xl text-black  text-center hide-caret otp-input"
+                    class="outline-none border border-black w-12 h-12 md:w-14 md:h-14 rounded-xl text-black text-center hide-caret otp-input"
                     data-index="1"
                     required
-
                   />
                   <input
                     type="password"
                     maxlength="1"
-                    class="outline-none border border-black w-12 h-12 md:w-14 md:h-14 rounded-xl text-black  text-center hide-caret otp-input"
+                    class="outline-none border border-black w-12 h-12 md:w-14 md:h-14 rounded-xl text-black text-center hide-caret otp-input"
                     data-index="2"
                     required
-
                   />
                   <input
                     type="password"
                     maxlength="1"
-                    class="outline-none border border-black w-12 h-12 md:w-14 md:h-14 rounded-xl text-black  text-center hide-caret otp-input"
+                    class="outline-none border border-black w-12 h-12 md:w-14 md:h-14 rounded-xl text-black text-center hide-caret otp-input"
                     data-index="3"
                     required
-
                   />
                 </div>
 

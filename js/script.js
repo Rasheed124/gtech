@@ -1,10 +1,39 @@
+
+
+// SHOW & OFF PASWWORD
+document.addEventListener("DOMContentLoaded", () => {
+  const togglePasswordButton = document.querySelector(
+    "button[data-toggle='password']"
+  );
+  const passwordInput = document.getElementById("password");
+  const icon = togglePasswordButton.querySelector(".password-icon");
+
+  togglePasswordButton.addEventListener("click", () => {
+    const showIcons = icon.querySelectorAll(".show-icon");
+    const hideIcons = icon.querySelectorAll(".hide-icon");
+
+    if (passwordInput.type === "password") {
+      passwordInput.type = "text";
+      showIcons.forEach((el) => el.classList.add("hidden"));
+      hideIcons.forEach((el) => el.classList.remove("hidden"));
+    } else {
+      passwordInput.type = "password";
+      hideIcons.forEach((el) => el.classList.add("hidden"));
+      showIcons.forEach((el) => el.classList.remove("hidden"));
+    }
+  });
+});
+
+
+
+
+
 // HOME MENU TOGGLER
 
 const openMenu = document.getElementById("openMenu");
 const closeMenu = document.getElementById("closeMenu");
 const menuContainer = document.getElementById("menuContainer");
 
-console.log(openMenu, closeMenu, menuContainer);
 
 openMenu.addEventListener("click", () => {
   menuContainer.classList.toggle("translate-y-0");
@@ -43,7 +72,6 @@ detailsElements.forEach((details) => {
   });
 });
 
-
 // HOME PAGE VIODE MODAL DISPLAY
 
 const modal = document.getElementById("videoModal");
@@ -61,13 +89,3 @@ closeModal.addEventListener("click", () => {
   youtubeVideo.src = ""; // Stop the video
 });
 
-// function openModal() {
-//   const videoURL = "https://www.youtube.com/embed/JSTUtRQ8Hwc?autoplay=1  ";
-//   youtubeVideo.src = videoURL;
-//   modal.classList.remove("hidden");
-// }
-
-// function closeModal() {
-//   modal.classList.add("hidden");
-//   youtubeVideo.src = ""; // Stop the video
-// }
