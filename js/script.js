@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
       showIcons.forEach((el) => el.classList.remove("hidden"));
     }
   });
+  
 });
 
 

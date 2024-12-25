@@ -41,6 +41,7 @@ if (lightSwitches.length > 0) {
 
 
 
+
 document.addEventListener("DOMContentLoaded", () => {
   const otpInputs = document.querySelectorAll(".otp-login-input");
   const otpForm = document.getElementById("login-pin-form");
