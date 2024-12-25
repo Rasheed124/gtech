@@ -1,46 +1,26 @@
-
-
 // SHOW & OFF PASWWORD
+
+
+
+  // LOGIN PASSWORD
 document.addEventListener("DOMContentLoaded", () => {
-  const togglePasswordButton = document.querySelector(
-    "button[data-toggle='password']"
+
+  const toggleLoginPasswordButton = document.querySelector(
+    "button[data-toggle='loginPassword']"
   );
-  const passwordInput = document.getElementById("password");
-  const icon = togglePasswordButton.querySelector(".password-icon");
+  const passwordLoginInput = document.getElementById("loginPassword");
+  const icon = toggleLoginPasswordButton.querySelector(".loginPassword-icon");
 
-  togglePasswordButton.addEventListener("click", () => {
-    const showIcons = icon.querySelectorAll(".show-icon");
-    const hideIcons = icon.querySelectorAll(".hide-icon");
+  toggleLoginPasswordButton.addEventListener("click", () => {
+    const showIcons = icon.querySelectorAll(".loginPasswordShow-icon");
+    const hideIcons = icon.querySelectorAll(".loginPasswordHide-icon");
 
-    if (passwordInput.type === "password") {
-      passwordInput.type = "text";
+    if (passwordLoginInput.type === "password") {
+      passwordLoginInput.type = "text";
       showIcons.forEach((el) => el.classList.add("hidden"));
       hideIcons.forEach((el) => el.classList.remove("hidden"));
     } else {
-      passwordInput.type = "password";
-      hideIcons.forEach((el) => el.classList.add("hidden"));
-      showIcons.forEach((el) => el.classList.remove("hidden"));
-    }
-  });
-
-
-
-  const toggleConfirmPasswordButton = document.querySelector(
-    "button[data-toggle='confirmPassword']"
-  );
-  const toggleConfirmPasswordInput = document.getElementById("confirmPassword");
-  const toggleConfirmPasswordIcon = toggleConfirmPasswordButton.querySelector(".confirmPassword-icon");
-
-  toggleConfirmPasswordButton.addEventListener("click", () => {
-    const showIcons = toggleConfirmPasswordIcon.querySelectorAll(".confirmPasswordShow-icon");
-    const hideIcons = toggleConfirmPasswordIcon.querySelectorAll(".confirmPasswordHide-icon");
-
-    if (toggleConfirmPasswordInput.type === "password") {
-      toggleConfirmPasswordInput.type = "text";
-      showIcons.forEach((el) => el.classList.add("hidden"));
-      hideIcons.forEach((el) => el.classList.remove("hidden"));
-    } else {
-      toggleConfirmPasswordInput.type = "password";
+      passwordLoginInput.type = "password";
       hideIcons.forEach((el) => el.classList.add("hidden"));
       showIcons.forEach((el) => el.classList.remove("hidden"));
     }
@@ -48,15 +28,63 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+  // SIGNUP PASSWORD
+document.addEventListener("DOMContentLoaded", () => {
+  // SIGN UP
+  const togglePasswordButton = document.querySelector(
+    "button[data-toggle='password']"
+  );
+  const toggleConfirmPasswordButton = document.querySelector(
+    "button[data-toggle='confirmPassword']"
+  );
+  const passwordInput = document.getElementById("password");
+  const confirmPasswordInput = document.getElementById("confirmPassword");
+  const passwordIcon = togglePasswordButton.querySelector(".password-icon");
+  const confirmPasswordIcon = toggleConfirmPasswordButton.querySelector(
+    ".confirmPassword-icon"
+  );
 
+  // Function to toggle visibility for both inputs
+  const toggleVisibility = () => {
+    const passwordShowIcons = passwordIcon.querySelectorAll(".show-icon");
+    const passwordHideIcons = passwordIcon.querySelectorAll(".hide-icon");
+    const confirmPasswordShowIcons = confirmPasswordIcon.querySelectorAll(
+      ".confirmPasswordShow-icon"
+    );
+    const confirmPasswordHideIcons = confirmPasswordIcon.querySelectorAll(
+      ".confirmPasswordHide-icon"
+    );
 
+    if (passwordInput.type === "password") {
+      passwordInput.type = "text";
+      confirmPasswordInput.type = "text";
+
+      // Update icons
+      passwordShowIcons.forEach((el) => el.classList.add("hidden"));
+      passwordHideIcons.forEach((el) => el.classList.remove("hidden"));
+      confirmPasswordShowIcons.forEach((el) => el.classList.add("hidden"));
+      confirmPasswordHideIcons.forEach((el) => el.classList.remove("hidden"));
+    } else {
+      passwordInput.type = "password";
+      confirmPasswordInput.type = "password";
+
+      // Update icons
+      passwordHideIcons.forEach((el) => el.classList.add("hidden"));
+      passwordShowIcons.forEach((el) => el.classList.remove("hidden"));
+      confirmPasswordHideIcons.forEach((el) => el.classList.add("hidden"));
+      confirmPasswordShowIcons.forEach((el) => el.classList.remove("hidden"));
+    }
+  };
+
+  togglePasswordButton.addEventListener("click", toggleVisibility);
+  toggleConfirmPasswordButton.addEventListener("click", toggleVisibility);
+});
 
 // HOME MENU TOGGLER
 
 const openMenu = document.getElementById("openMenu");
 const closeMenu = document.getElementById("closeMenu");
 const menuContainer = document.getElementById("menuContainer");
-
 
 openMenu.addEventListener("click", () => {
   menuContainer.classList.toggle("translate-y-0");
@@ -111,4 +139,3 @@ closeModal.addEventListener("click", () => {
   modal.classList.add("hidden");
   youtubeVideo.src = ""; // Stop the video
 });
-
