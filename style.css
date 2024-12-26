@@ -2036,6 +2036,10 @@ span.flatpickr-weekday:is(.dark *){
   margin-top: -4rem;
 }
 
+.-mt-2{
+  margin-top: -0.5rem;
+}
+
 .-mt-3{
   margin-top: -0.75rem;
 }
@@ -2573,6 +2577,42 @@ span.flatpickr-weekday:is(.dark *){
   width: 1px;
 }
 
+.w-auto{
+  width: auto;
+}
+
+.w-\[auto\]{
+  width: auto;
+}
+
+.w-\[300px\]{
+  width: 300px;
+}
+
+.w-\[300p\]{
+  width: 300p;
+}
+
+.w-2\/5{
+  width: 40%;
+}
+
+.w-2\/4{
+  width: 50%;
+}
+
+.w-\[100px\]{
+  width: 100px;
+}
+
+.w-\[200px\]{
+  width: 200px;
+}
+
+.w-36{
+  width: 9rem;
+}
+
 .min-w-0{
   min-width: 0px;
 }
@@ -2774,6 +2814,11 @@ span.flatpickr-weekday:is(.dark *){
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.rotate-45{
+  --tw-rotate: 45deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .transform{
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
@@ -2867,6 +2912,14 @@ span.flatpickr-weekday:is(.dark *){
 
 .place-content-center{
   place-content: center;
+}
+
+.place-content-between{
+  place-content: space-between;
+}
+
+.place-items-end{
+  place-items: end;
 }
 
 .place-items-center{
@@ -3343,6 +3396,11 @@ span.flatpickr-weekday:is(.dark *){
   border-color: rgb(252 255 255 / var(--tw-border-opacity));
 }
 
+.border-red-950{
+  --tw-border-opacity: 1;
+  border-color: rgb(96 15 15 / var(--tw-border-opacity));
+}
+
 .border-y-\[\#F0EBF8\]{
   --tw-border-opacity: 1;
   border-top-color: rgb(240 235 248 / var(--tw-border-opacity));
@@ -3606,10 +3664,6 @@ span.flatpickr-weekday:is(.dark *){
 
 .bg-gradient-to-tr{
   background-image: linear-gradient(to top right, var(--tw-gradient-stops));
-}
-
-.bg-\[url\(\'\.\/images\/1000667005\.png\'\)\]{
-  background-image: url('./images/1000667005.png');
 }
 
 .from-gray-100{
@@ -4261,6 +4315,10 @@ span.flatpickr-weekday:is(.dark *){
 }
 
 .leading-\[1\]{
+  line-height: 1;
+}
+
+.leading-none{
   line-height: 1;
 }
 
@@ -5227,6 +5285,10 @@ body #singleP-search2 input:focus {
 
 .group[open] .group-open\:opacity-100{
   opacity: 1;
+}
+
+.group:hover .group-hover\:flex{
+  display: flex;
 }
 
 .group:hover .group-hover\:scale-105{
