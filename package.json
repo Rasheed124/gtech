@@ -10,7 +10,11 @@
         "build": "npx tailwindcss -i ./css/style.css -o ./style.css",
         
         "devf": "npx tailwindcss -i ./css/front-pages/input.css -o ./css/front-pages/output.css --watch",
-        "buildf": "npx tailwindcss -i ./css/front-pages/input.css -o ./css/front-pages/output.css"
+        "buildf": "npx tailwindcss -i ./css/front-pages/input.css -o ./css/front-pages/output.css",
+
+
+        "devu": "npx tailwindcss -i ./css/user/input.css -o ./css/user/output.css --watch",
+        "buildu": "npx tailwindcss -i ./css/user/input.css -o ./css/user/output.css"
     },
     "devDependencies": {
         "@tailwindcss/forms": "^0.5.7",
