@@ -1735,10 +1735,6 @@ span.flatpickr-weekday:is(.dark *){
   right: -0.25rem;
 }
 
-.-right-5{
-  right: -1.25rem;
-}
-
 .-top-1{
   top: -0.25rem;
 }
@@ -1829,10 +1825,6 @@ span.flatpickr-weekday:is(.dark *){
 
 .top-20{
   top: 5rem;
-}
-
-.top-3{
-  top: 0.75rem;
 }
 
 .top-4{
@@ -1985,11 +1977,6 @@ span.flatpickr-weekday:is(.dark *){
 .my-1{
   margin-top: 0.25rem;
   margin-bottom: 0.25rem;
-}
-
-.my-10{
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
 }
 
 .my-2{
@@ -2355,11 +2342,6 @@ span.flatpickr-weekday:is(.dark *){
   height: 3rem;
 }
 
-.size-20{
-  width: 5rem;
-  height: 5rem;
-}
-
 .size-3{
   width: 0.75rem;
   height: 0.75rem;
@@ -2466,10 +2448,6 @@ span.flatpickr-weekday:is(.dark *){
 
 .h-\[178px\]{
   height: 178px;
-}
-
-.h-\[200px\]{
-  height: 200px;
 }
 
 .h-\[400px\]{
@@ -2705,10 +2683,6 @@ span.flatpickr-weekday:is(.dark *){
   max-width: 0px;
 }
 
-.max-w-16{
-  max-width: 4rem;
-}
-
 .max-w-28{
   max-width: 7rem;
 }
@@ -2733,8 +2707,8 @@ span.flatpickr-weekday:is(.dark *){
   max-width: 96rem;
 }
 
-.max-w-\[300px\]{
-  max-width: 300px;
+.max-w-\[200px\]{
+  max-width: 200px;
 }
 
 .max-w-\[40px\]{
@@ -4096,10 +4070,6 @@ span.flatpickr-weekday:is(.dark *){
   padding-bottom: 2.5rem;
 }
 
-.pb-14{
-  padding-bottom: 3.5rem;
-}
-
 .pb-2{
   padding-bottom: 0.5rem;
 }
@@ -4582,11 +4552,6 @@ span.flatpickr-weekday:is(.dark *){
   color: rgb(230 57 57 / var(--tw-text-opacity));
 }
 
-.text-secondary{
-  --tw-text-opacity: 1;
-  color: rgb(225 243 229 / var(--tw-text-opacity));
-}
-
 .text-sky-500{
   --tw-text-opacity: 1;
   color: rgb(37 155 150 / var(--tw-text-opacity));
@@ -4709,10 +4674,6 @@ span.flatpickr-weekday:is(.dark *){
 
 .opacity-100{
   opacity: 1;
-}
-
-.opacity-5{
-  opacity: 0.05;
 }
 
 .opacity-50{
@@ -6336,10 +6297,6 @@ body #singleP-search2 input:focus {
     margin-top: 0px;
   }
 
-  .md\:mt-6{
-    margin-top: 1.5rem;
-  }
-
   .md\:block{
     display: block;
   }
@@ -7229,35 +7186,16 @@ body #singleP-search2 input:focus {
     margin-right: auto;
   }
 
-  .xl\:my-6{
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .xl\:my-10{
-    margin-top: 2.5rem;
-    margin-bottom: 2.5rem;
-  }
-
-  .xl\:my-2{
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-  }
-
   .xl\:mb-0{
     margin-bottom: 0px;
   }
 
-  .xl\:mr-4{
-    margin-right: 1rem;
-  }
-
-  .xl\:mt-0{
-    margin-top: 0px;
-  }
-
   .xl\:mb-10{
     margin-bottom: 2.5rem;
+  }
+
+  .xl\:mr-4{
+    margin-right: 1rem;
   }
 
   .xl\:block{
@@ -7355,31 +7293,14 @@ body #singleP-search2 input:focus {
     margin-bottom: calc(0px * var(--tw-space-y-reverse));
   }
 
-  .xl\:self-end{
-    align-self: flex-end;
-  }
-
-  .xl\:p-0{
-    padding: 0px;
-  }
-
-  .xl\:p-6{
-    padding: 1.5rem;
-  }
-
-  .xl\:px-10{
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-  }
-
   .xl\:px-20{
     padding-left: 5rem;
     padding-right: 5rem;
   }
 
-  .xl\:py-5{
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
+  .xl\:px-4{
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .xl\:px-5{
@@ -7387,29 +7308,8 @@ body #singleP-search2 input:focus {
     padding-right: 1.25rem;
   }
 
-  .xl\:py-10{
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
-  }
-
-  .xl\:py-12{
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-  }
-
-  .xl\:py-4{
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
-
-  .xl\:py-2{
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-  }
-
-  .xl\:py-1{
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
+  .xl\:pb-0{
+    padding-bottom: 0px;
   }
 
   .xl\:pl-32{
@@ -7422,14 +7322,6 @@ body #singleP-search2 input:focus {
 
   .xl\:pt-2{
     padding-top: 0.5rem;
-  }
-
-  .xl\:pb-0{
-    padding-bottom: 0px;
-  }
-
-  .xl\:pb-2{
-    padding-bottom: 0.5rem;
   }
 
   .xl\:text-left{
