@@ -1130,10 +1130,6 @@ select {
   top: 1rem;
 }
 
-.top-\[-70px\] {
-  top: -70px;
-}
-
 .top-full {
   top: 100%;
 }
@@ -1641,6 +1637,11 @@ select {
   height: 3rem;
 }
 
+.size-16 {
+  width: 4rem;
+  height: 4rem;
+}
+
 .size-3 {
   width: 0.75rem;
   height: 0.75rem;
@@ -1963,14 +1964,6 @@ select {
 
 .min-w-80 {
   min-width: 20rem;
-}
-
-.min-w-\[250px\] {
-  min-width: 250px;
-}
-
-.min-w-\[350px\] {
-  min-width: 350px;
 }
 
 .min-w-fit {
@@ -3729,11 +3722,6 @@ select {
   color: rgb(130 130 130 / var(--tw-text-opacity));
 }
 
-.text-\[\#F2F5FC\] {
-  --tw-text-opacity: 1;
-  color: rgb(242 245 252 / var(--tw-text-opacity));
-}
-
 .text-black {
   --tw-text-opacity: 1;
   color: rgb(5 5 5 / var(--tw-text-opacity));
@@ -4374,6 +4362,11 @@ body .dashboard-col-1:hover.scrollbar::-webkit-scrollbar ,
 .hover\:bg-gray-100:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-gray-200:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-gray-50:hover {
@@ -5671,10 +5664,6 @@ body .dashboard-col-1:hover.scrollbar::-webkit-scrollbar ,
     width: 100%;
   }
 
-  .md\:min-w-full {
-    min-width: 100%;
-  }
-
   .md\:max-w-2xl {
     max-width: 42rem;
   }
@@ -6354,12 +6343,6 @@ body .dashboard-col-1:hover.scrollbar::-webkit-scrollbar ,
     font-size: 1.88rem;
     line-height: 1.33;
     letter-spacing: -0.01em;
-  }
-
-  .lg\:text-4xl {
-    font-size: 2.25rem;
-    line-height: 1.25;
-    letter-spacing: -0.02em;
   }
 
   .lg\:text-5xl {
