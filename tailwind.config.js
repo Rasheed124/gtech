@@ -38,18 +38,6 @@ module.exports = {
           // 950: "#011514",
         },
         violet: {
-          // 50: "#F1EEFF",
-          // 100: "#E6E1FF",
-          // 200: "#D2CBFF",
-          // 300: "#B7ACFF",
-          // 400: "#9C8CFF",
-          // 500: "#8470FF",
-          // 600: "#755FF8",
-          // 700: "#5D47DE",
-          // 800: "#4634B1",
-          // 900: "#2F227C",
-          // 950: "#1C1357",
-
           50: "#F2F8F7",
           100: "#D6EEEC",
           200: "#ADE0DE",
@@ -74,7 +62,6 @@ module.exports = {
           // 800: "#1C71AE",
           // 900: "#124D79",
           // 950: "#0B324F",
-
 
           50: "#F2F8F7",
           100: "#D6EEEC",
@@ -140,13 +127,11 @@ module.exports = {
           950: "#342809",
         },
         white: "#FCFFFF",
-        black: "#050505"
+        black: "#050505",
       },
       fontFamily: {
         inter: ["Inter", "sans-serif"],
         Poppins: ["Poppins", "sans-serif"],
-   
-        
       },
       fontSize: {
         xs: ["0.75rem", { lineHeight: "1.5" }],
