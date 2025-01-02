@@ -64,19 +64,12 @@ document.addEventListener("click", (e) => {
 
 // Function to show the menu
 openMenuButton.addEventListener("click", () => {
-  sideMobileMenu.classList.remove("-translate-x-[1000%]");
+  sideMobileMenu.classList.remove("scale-0");
 });
 
 document.addEventListener("click", (e) => {
-  if (
-    !notificationBtn.contains(e.target) &&
-    !notificationDropdown.contains(e.target)
-  ) {
-    notificationDropdown.classList.add("hidden");
-  }
-
   // Side Mobile Menu
   if (sideMobileMenu.contains(e.target) && !menuContainer.contains(e.target)) {
-    sideMobileMenu.classList.add("-translate-x-[1000%]");
+    sideMobileMenu.classList.add("scale-0");
   }
 });
