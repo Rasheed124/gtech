@@ -1,39 +1,36 @@
-
-
-
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-
 @layer utilities {
-    body .dashboard-col-1.scrollbar::-webkit-scrollbar ,
-   body .dashboard-col-2.scrollbar::-webkit-scrollbar {
-      display: none;
-    }
-    body .dashboard-col-1:hover.scrollbar::-webkit-scrollbar ,
-    body .dashboard-col-2:hover.scrollbar::-webkit-scrollbar ,  .scrollbar::-webkit-scrollbar {
-      display: block;
-  
-      width: 5px;
-      height: 5px;
-    }
-    .scrollbar::-webkit-scrollbar-track {
-      border-radius: 100vh;
-      background: #808080;
-    }
-  
-    .scrollbar::-webkit-scrollbar-thumb {
-      background: #2e1a52;
-      border-radius: 100vh;
-      border: 3px solid #2e1a52;
-    }
-  
-    .scrollbar::-webkit-scrollbar-thumb:hover {
-      background: #2e1a52;
-    }
+  body .dashboard-col-1.scrollbar::-webkit-scrollbar,
+  body .dashboard-col-2.scrollbar::-webkit-scrollbar {
+    display: none;
   }
-  
+  body .dashboard-col-1:hover.scrollbar::-webkit-scrollbar,
+  body .dashboard-col-2:hover.scrollbar::-webkit-scrollbar,
+  .scrollbar::-webkit-scrollbar {
+    display: block;
 
+    width: 5px;
+    height: 5px;
+  }
+  .scrollbar::-webkit-scrollbar-track {
+    border-radius: 100vh;
+    background: #808080;
+  }
 
+  .scrollbar::-webkit-scrollbar-thumb {
+    background: #2e1a52;
+    border-radius: 100vh;
+    border: 3px solid #2e1a52;
+  }
 
+  .scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #2e1a52;
+  }
+}
+
+[x-cloak] {
+  display: none !important;
+}

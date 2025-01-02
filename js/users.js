@@ -64,12 +64,12 @@ document.addEventListener("click", (e) => {
 
 // Function to show the menu
 openMenuButton.addEventListener("click", () => {
-  sideMobileMenu.classList.remove("scale-0");
+  sideMobileMenu.classList.remove("-translate-x-[1000%]");
 });
 
 document.addEventListener("click", (e) => {
   // Side Mobile Menu
   if (sideMobileMenu.contains(e.target) && !menuContainer.contains(e.target)) {
-    sideMobileMenu.classList.add("scale-0");
+    sideMobileMenu.classList.add("-translate-x-[1000%]");
   }
 });
