@@ -1683,6 +1683,11 @@ select {
   height: 1.5rem;
 }
 
+.size-7 {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
 .h-0 {
   height: 0px;
 }
@@ -2992,6 +2997,11 @@ select {
   background-color: rgb(240 187 51 / 0.2);
 }
 
+.bg-gray-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(191 196 205 / var(--tw-bg-opacity));
+}
+
 .bg-opacity-25 {
   --tw-bg-opacity: 0.25;
 }
@@ -4256,6 +4266,11 @@ body .dashboard-col-1:hover.scrollbar::-webkit-scrollbar,
   background-color: rgb(252 255 255 / 0.9);
 }
 
+.before\:bg-gray-100\/90::before {
+  content: var(--tw-content);
+  background-color: rgb(243 244 246 / 0.9);
+}
+
 .before\:backdrop-blur-md::before {
   content: var(--tw-content);
   --tw-backdrop-blur: blur(12px);
@@ -4935,6 +4950,15 @@ body .dashboard-col-1:hover.scrollbar::-webkit-scrollbar,
   background-color: rgb(252 255 255 / var(--tw-bg-opacity));
 }
 
+.dark\:bg-secondary:is(.dark *) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(225 243 229 / var(--tw-bg-opacity));
+}
+
+.dark\:bg-gray-800\/55:is(.dark *) {
+  background-color: rgb(31 41 55 / 0.55);
+}
+
 .dark\:bg-opacity-50:is(.dark *) {
   --tw-bg-opacity: 0.5;
 }
@@ -5068,6 +5092,11 @@ body .dashboard-col-1:hover.scrollbar::-webkit-scrollbar,
   color: rgb(252 255 255 / var(--tw-text-opacity));
 }
 
+.dark\:text-gray-900:is(.dark *) {
+  --tw-text-opacity: 1;
+  color: rgb(17 24 39 / var(--tw-text-opacity));
+}
+
 .dark\:placeholder-gray-500:is(.dark *)::-moz-placeholder {
   --tw-placeholder-opacity: 1;
   color: rgb(107 114 128 / var(--tw-placeholder-opacity));
@@ -5098,6 +5127,11 @@ body .dashboard-col-1:hover.scrollbar::-webkit-scrollbar,
   content: var(--tw-content);
   --tw-bg-opacity: 1;
   background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+}
+
+.dark\:before\:bg-gray-900\/90:is(.dark *)::before {
+  content: var(--tw-content);
+  background-color: rgb(17 24 39 / 0.9);
 }
 
 .dark\:after\:bg-gray-700\/60:is(.dark *)::after {
