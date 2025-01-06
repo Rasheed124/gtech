@@ -21,13 +21,13 @@
   }
 
   .scrollbar::-webkit-scrollbar-thumb {
-    background: #2e1a52;
+    background: #004437;
     border-radius: 100vh;
-    border: 3px solid #2e1a52;
+    border: 3px solid #004437;
   }
 
   .scrollbar::-webkit-scrollbar-thumb:hover {
-    background: #2e1a52;
+    background: #004437;
   }
 }
 
