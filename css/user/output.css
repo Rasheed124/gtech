@@ -2919,10 +2919,6 @@ select {
   background-color: rgb(0 218 95 / 0.5);
 }
 
-.bg-lightgreen\/80 {
-  background-color: rgb(0 218 95 / 0.8);
-}
-
 .bg-primary {
   --tw-bg-opacity: 1;
   background-color: rgb(0 68 55 / var(--tw-bg-opacity));
@@ -3020,10 +3016,6 @@ select {
   background-color: rgb(240 187 51 / 0.2);
 }
 
-.bg-lightgreen\/40 {
-  background-color: rgb(0 218 95 / 0.4);
-}
-
 .bg-opacity-25 {
   --tw-bg-opacity: 0.25;
 }
@@ -3052,8 +3044,8 @@ select {
   background-image: linear-gradient(225deg,var(--tw-gradient-stops));
 }
 
-.bg-\[url\(\'\.\.\/\.\.\/images\/dash-wallet-bg\.png\'\)\] {
-  background-image: url('../../images/dash-wallet-bg.png');
+.bg-\[url\(\'\.\.\/\.\.\/images\/dash-bg\.png\'\)\] {
+  background-image: url('../../images/dash-bg.png');
 }
 
 .bg-\[url\(\'\.\/images\/auth-bg\.png\'\)\] {
@@ -3074,10 +3066,6 @@ select {
 
 .bg-gradient-to-tr {
   background-image: linear-gradient(to top right, var(--tw-gradient-stops));
-}
-
-.bg-\[url\(\'\.\.\/\.\.\/images\/dash-bg\.png\'\)\] {
-  background-image: url('../../images/dash-bg.png');
 }
 
 .from-gray-100 {
