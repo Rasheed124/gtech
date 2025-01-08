@@ -1,3 +1,5 @@
+
+
 // User Dark/Light Mode
 const lightSwitches = document.querySelectorAll(".user-light-switch");
 if (lightSwitches.length > 0) {
@@ -72,4 +74,23 @@ document.addEventListener("click", (e) => {
   if (sideMobileMenu.contains(e.target) && !menuContainer.contains(e.target)) {
     sideMobileMenu.classList.add("-translate-x-[1000%]");
   }
+});
+
+
+// Announcement Ad Banner
+
+$(document).ready(function () {
+  $("#announcement-banner .owl-carousel").owlCarousel({
+    loop: true,
+    margin: 20,
+    nav: false,
+    dots: false,
+    autoplay: true,
+    autoplayTimeout: 2000,
+    responsive: {
+      0: {
+        items: 1
+      }
+    }
+  });
 });
