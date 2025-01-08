@@ -3020,6 +3020,10 @@ select {
   background-color: rgb(240 187 51 / 0.2);
 }
 
+.bg-\[40\] {
+  background-color: 40;
+}
+
 .bg-opacity-25 {
   --tw-bg-opacity: 0.25;
 }
@@ -3176,6 +3180,22 @@ select {
 
 .bg-center {
   background-position: center;
+}
+
+.bg-\[center\] {
+  background-position: center;
+}
+
+.bg-\[600\%\] {
+  background-position: 600%;
+}
+
+.bg-\[60\%\] {
+  background-position: 60%;
+}
+
+.bg-top {
+  background-position: top;
 }
 
 .bg-no-repeat {

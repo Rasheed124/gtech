@@ -27,20 +27,20 @@
     <title>User Dashboard - Home</title>
   </head>
   <body
-    class="bg-gray-100 dark:bg-gray-900 bg-no-repeat bg-center bg-blend-overlay w-full bg-[url('../../images/dash-bg.png')]"
+    class="bg-gray-100 dark:bg-gray-900 bg-no-repeat bg-center bg-blend-overlay w-full "
   >
     <div class="w-full relative">
       <main
         class="h-screen max-w-screen-lg md:max-w-screen-xl lg:max-w-screen-2xl mx-auto xl:px-20 font-medium"
       >
-        <div class="w-full flex">
+        <div class="w-full flex bg-gray-100 dark:bg-gray-900 ">
           <!-- Side Desktop Menu  -->
           <header
             x-data="{ isCollapsed: true }"
             :class="isCollapsed ? 'md:max-w-[100px]' : 'md:max-w-[250px]'"
             x-init="$el.classList.remove('opacity-0', 'w-0')"
             x-cloak
-            class="fixed top-0 md:relative opacity-0 w-0 md:w-full md:opacity-100 transition-all duration-300"
+            class="fixed top-0 md:relative opacity-0 w-0 md:w-full md:opacity-100 transition-all duration-300  "
           >
             <div
               class="max-h-screen overflow-y-auto py-8 text-left h-screen w-full max-w-0 md:max-w-[250px]"
@@ -690,7 +690,7 @@
 
           <!-- Dashboard Area -->
           <div
-            class="w-full h-screen overflow-y-scroll lg:overflow-y-hidden px-3 md:px-6 md:border-x md:border-l-2 flex flex-col gap-4 py-8 dark:border-gray-700"
+            class="w-full h-screen overflow-y-scroll lg:overflow-y-hidden px-3 md:px-6 md:border-x md:border-l-2 flex flex-col gap-4 py-8 dark:border-gray-700 bg-gray-100 dark:bg-gray-900 "
           >
             <!-- Front Page Header  -->
             <header class="flex justify-between w-full">
@@ -912,7 +912,7 @@
                             : `${this.currencies[this.currentCurrency]}****`;
                         },
                       }"
-                        class="min-w-[390px] md:min-w-full flex justify-between p-5 text-left text-white w-full bg-primary dark:bg-primary/75 rounded-xl col-span-6 bg-no-repeat bg-center bg-blend-overlay bg-cover bg-[url('../../images/dash-wallet-bg.png')]"
+                        class="min-w-[390px] md:min-w-full flex justify-between p-5 text-left text-white w-full bg-primary dark:bg-primary/75 rounded-xl col-span-6 bg-no-repeat bg-top bg-blend-overlay bg-cover bg-[url('../../images/dash-wallet-bg.png')]"
                       >
                         <!-- Left Side: Balance Area -->
                         <div x-cloak class="flex flex-col">
