@@ -2783,6 +2783,16 @@ select {
   border-color: rgb(252 255 255 / var(--tw-border-opacity));
 }
 
+.border-red-950 {
+  --tw-border-opacity: 1;
+  border-color: rgb(96 15 15 / var(--tw-border-opacity));
+}
+
+.border-blue-950 {
+  --tw-border-opacity: 1;
+  border-color: rgb(23 37 84 / var(--tw-border-opacity));
+}
+
 .border-y-\[\#F0EBF8\] {
   --tw-border-opacity: 1;
   border-top-color: rgb(240 235 248 / var(--tw-border-opacity));
