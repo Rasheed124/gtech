@@ -29,6 +29,11 @@
   .scrollbar::-webkit-scrollbar-thumb:hover {
     background: #004437;
   }
+
+  body #announcement-banner > div > div.owl-dots > button.owl-dot span {
+    background: #004437;
+    opacity: 0.7;
+  }
 }
 
 [x-cloak] {

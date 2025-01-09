@@ -83,7 +83,6 @@ $(document).ready(function () {
   $("#announcement-banner .owl-carousel").owlCarousel({
     loop: true,
     margin: 20,
-    nav: false,
     dots: true,
     autoplay: true,
     autoplayTimeout: 2000,
