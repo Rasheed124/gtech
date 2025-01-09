@@ -2928,10 +2928,6 @@ select {
   background-color: rgb(0 68 55 / 0.65);
 }
 
-.bg-primary\/80 {
-  background-color: rgb(0 68 55 / 0.8);
-}
-
 .bg-red-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(255 209 209 / var(--tw-bg-opacity));
@@ -5846,14 +5842,6 @@ body #announcement-banner > div > div.owl-dots > button.owl-dot span {
 
   .md\:items-center {
     align-items: center;
-  }
-
-  .md\:items-stretch {
-    align-items: stretch;
-  }
-
-  .md\:justify-normal {
-    justify-content: normal;
   }
 
   .md\:justify-start {
