@@ -907,6 +907,29 @@
                         currentCurrency: 'naira', 
                         balance: 0.0, 
                         isBalanceVisible: true, 
+                        init() {
+                          // Load balance visibility state from localStorage
+                          const storedVisibility = localStorage.getItem('isBalanceVisible');
+                          this.isBalanceVisible = storedVisibility !== null 
+                            ? JSON.parse(storedVisibility) 
+                            : true; // Default to visible
+                    
+                          // Load selected currency from localStorage
+                          const storedCurrency = localStorage.getItem('currentCurrency');
+                          this.currentCurrency = storedCurrency !== null 
+                            ? storedCurrency 
+                            : 'naira'; // Default to 'naira'
+                        },
+                        toggleBalanceVisibility() {
+                          this.isBalanceVisible = !this.isBalanceVisible;
+                          // Save the toggle state to localStorage
+                          localStorage.setItem('isBalanceVisible', JSON.stringify(this.isBalanceVisible));
+                        },
+                        changeCurrency(newCurrency) {
+                          this.currentCurrency = newCurrency;
+                          // Save the selected currency to localStorage
+                          localStorage.setItem('currentCurrency', newCurrency);
+                        },
                         get formattedBalance() {
                           return this.isBalanceVisible
                             ? `${this.currencies[this.currentCurrency]}${this.balance.toFixed(2)}`
@@ -925,9 +948,10 @@
                             ></h1>
                             <button
                               class="ml-3"
-                              @click="isBalanceVisible = !isBalanceVisible"
+                              @click="toggleBalanceVisibility()"
                             >
                               <!-- Toggle Button for Showing/ Hiding Balance -->
+
                               <svg
                                 x-show="isBalanceVisible"
                                 xmlns="http://www.w3.org/2000/svg"
@@ -936,18 +960,20 @@
                                 stroke-width="1.5"
                                 stroke="currentColor"
                                 class="w-6 h-6"
+                                style="display: none"
                               >
                                 <path
                                   stroke-linecap="round"
                                   stroke-linejoin="round"
                                   d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"
-                                />
+                                ></path>
                                 <path
                                   stroke-linecap="round"
                                   stroke-linejoin="round"
                                   d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-                                />
+                                ></path>
                               </svg>
+
                               <svg
                                 x-show="!isBalanceVisible"
                                 xmlns="http://www.w3.org/2000/svg"
@@ -961,7 +987,7 @@
                                   stroke-linecap="round"
                                   stroke-linejoin="round"
                                   d="M3.98 8.223A10.477 10.477 0 0 0 1.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.451 10.451 0 0 1 12 4.5c4.756 0 8.773 3.162 10.065 7.498a10.522 10.522 0 0 1-4.293 5.774M6.228 6.228 3 3m3.228 3.228 3.65 3.65m7.894 7.894L21 21m-3.228-3.228-3.65-3.65m0 0a3 3 0 1 0-4.243-4.243m4.242 4.242L9.88 9.88"
-                                />
+                                ></path>
                               </svg>
                             </button>
                           </div>
@@ -1159,7 +1185,7 @@
                             </div>
 
                             <div
-                              class="absolute text-black dark:text-white/70 opacity-10 -right-10 -bottom-5"
+                              class="absolute text-black dark:text-white/70 opacity-5 -right-10 -bottom-5"
                             >
                               <i class="fas fa-6x fa-wifi"></i>
                             </div>
@@ -1177,7 +1203,7 @@
                             </div>
 
                             <div
-                              class="absolute text-black dark:text-white/70 opacity-10 -right-10 -bottom-5"
+                              class="absolute text-black dark:text-white/70 opacity-5 -right-10 -bottom-5"
                             >
                               <i class="fas fa-6x fa-wifi"></i>
                             </div>
@@ -1195,7 +1221,7 @@
                             </div>
 
                             <div
-                              class="absolute text-black dark:text-white/70 opacity-10 -right-10 -bottom-5"
+                              class="absolute text-black dark:text-white/70 opacity-5 -right-10 -bottom-5"
                             >
                               <i class="fas fa-6x fa-wifi"></i>
                             </div>
@@ -1214,7 +1240,7 @@
                             </div>
 
                             <div
-                              class="absolute text-black dark:text-white/70 opacity-10 -right-10 -bottom-5"
+                              class="absolute text-black dark:text-white/70 opacity-5 -right-10 -bottom-5"
                             >
                               <i class="fas fa-6x fa-wifi"></i>
                             </div>
@@ -1232,7 +1258,7 @@
                             </div>
 
                             <div
-                              class="absolute text-black dark:text-white/70 opacity-10 -right-10 -bottom-5"
+                              class="absolute text-black dark:text-white/70 opacity-5 -right-10 -bottom-5"
                             >
                               <i class="fas fa-6x fa-wifi"></i>
                             </div>
@@ -1250,7 +1276,7 @@
                               <p class="font-medium lg:font-normal">More</p>
 
                               <div
-                                class="text-black opacity-35 dark:text-white/40"
+                                class="text-black opacity-5 dark:text-white/40"
                               >
                                 <i
                                   class="fa fa-ellipsis-h text-2xl"
@@ -1285,7 +1311,7 @@
                       <div class="py-5">
                         <h4 class="font-normal text-base">Sun Nov 03 2024</h4>
                         <div
-                          class="p-4 border-b border-b-primary/35 flex w-full justify-between mt-4"
+                          class="p-4 border-b  flex w-full justify-between mt-4"
                         >
                           <div class="flex pl-3 lg:pl-5 gap-2 lg:gap-5">
                             <div class="flex relative">
@@ -1357,7 +1383,7 @@
                       <div class="py-5">
                         <h4 class="font-normal text-base">Sun Nov 03 2024</h4>
                         <div
-                          class="p-4 border-b border-b-primary/35 flex w-full justify-between mt-4"
+                          class="p-4 border-b  flex w-full justify-between mt-4"
                         >
                           <div class="flex pl-3 lg:pl-5 gap-2 lg:gap-5">
                             <div class="flex relative">
@@ -1426,7 +1452,7 @@
                         </div>
 
                         <div
-                          class="p-4 border-b border-b-primary/35 flex w-full justify-between mt-4"
+                          class="p-4  border-b flex w-full justify-between mt-4"
                         >
                           <div class="flex pl-3 lg:pl-5 gap-2 lg:gap-5">
                             <div class="flex relative">
