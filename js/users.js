@@ -84,7 +84,7 @@ $(document).ready(function () {
     loop: true,
     margin: 20,
     nav: false,
-    dots: false,
+    dots: true,
     autoplay: true,
     autoplayTimeout: 2000,
     responsive: {

@@ -2783,16 +2783,6 @@ select {
   border-color: rgb(252 255 255 / var(--tw-border-opacity));
 }
 
-.border-red-950 {
-  --tw-border-opacity: 1;
-  border-color: rgb(96 15 15 / var(--tw-border-opacity));
-}
-
-.border-blue-950 {
-  --tw-border-opacity: 1;
-  border-color: rgb(23 37 84 / var(--tw-border-opacity));
-}
-
 .border-y-\[\#F0EBF8\] {
   --tw-border-opacity: 1;
   border-top-color: rgb(240 235 248 / var(--tw-border-opacity));
@@ -3024,6 +3014,22 @@ select {
 
 .bg-yellow-500\/20 {
   background-color: rgb(240 187 51 / 0.2);
+}
+
+.bg-primary\/40 {
+  background-color: rgb(0 68 55 / 0.4);
+}
+
+.bg-primary\/60 {
+  background-color: rgb(0 68 55 / 0.6);
+}
+
+.bg-primary\/0 {
+  background-color: rgb(0 68 55 / 0);
+}
+
+.bg-primary\/65 {
+  background-color: rgb(0 68 55 / 0.65);
 }
 
 .bg-opacity-25 {

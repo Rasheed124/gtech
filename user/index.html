@@ -1138,13 +1138,13 @@
                     <!-- Quick Actions -->
                     <div class="mt-12 flex flex-col overflow-x-hidden">
                       <h2
-                        class="mb-4 dark:text-white font-semibold text-gray-900"
+                        class="mb-4 dark:text-white font-semibold text-lg text-gray-900"
                       >
                         What will you like to do?
                       </h2>
 
                       <div
-                        class="grid-cols-3 grid md:grid-cols-5 gap-5 lg:pb-10 pr-3 py-3 border border-red-950"
+                        class="grid-cols-3 grid md:grid-cols-5 gap-5 lg:pb-10 pr-3 py-3"
                       >
                         <a href="#">
                           <div
@@ -1244,81 +1244,231 @@
 
                     <!-- Recent Activities -->
 
-                    <div class="mt-8 pb-10 flex flex-col overflow-x-hidden border border-blue-950">
-                      <h2
-                        class="mb-4 dark:text-white font-semibold text-gray-900"
-                      >
-                        Recent Activities
-                      </h2>
+                    <div class="mt-6 pb-10 flex flex-col overflow-x-hidden">
+                      <div class="flex w-full justify-between">
+                        <h2
+                          class="mb-4 dark:text-white text-lg font-semibold text-gray-900"
+                        >
+                          Recent Activity
+                        </h2>
+
+                        <a href="#" class="text-base text-primary font-bold"
+                          >See all</a
+                        >
+                      </div>
 
                       <!-- Transaction List out -->
 
-                      <div
-                        class="p-4 shadow-md border-b border-b-primary/35 flex w-full justify-between"
-                      >
-                        <div class="flex pl-3 lg:pl-5 gap-2 lg:gap-5">
-                          <div class="flex relative">
-                            <span
-                              class="absolute right-6 flex items-center justify-center rounded-full h-10 p-2 w-10 bg-lightgreen/50 text-white"
-                            >
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke-width="1.5"
-                                stroke="currentColor"
-                                class="size-6"
+                      <div class="py-5">
+                        <h4 class="font-normal text-base">Sun Nov 03 2024</h4>
+                        <div
+                          class="p-4 border-b border-b-primary/35 flex w-full justify-between mt-4"
+                        >
+                          <div class="flex pl-3 lg:pl-5 gap-2 lg:gap-5">
+                            <div class="flex relative">
+                              <span
+                                class="absolute right-6 flex items-center justify-center bg-primary/65 rounded-full h-10 p-2 w-10  text-white"
                               >
-                                <path
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  d="m19.5 4.5-15 15m0 0h11.25m-11.25 0V8.25"
-                                />
-                              </svg>
-                            </span>
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  fill="none"
+                                  viewBox="0 0 24 24"
+                                  stroke-width="1.5"
+                                  stroke="currentColor"
+                                  class="size-6"
+                                >
+                                  <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125"
+                                  />
+                                </svg>
+                              </span>
 
-                            <span
-                              class="flex items-center justify-center rounded-full h-10 p-2 w-10 bg-primary/80 text-white"
-                            >
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke-width="1.5"
-                                stroke="currentColor"
-                                class="size-6"
+                              <span
+                                class="flex items-center justify-center rounded-full h-10 p-2 w-10  bg-lightgreen/50 text-white"
                               >
-                                <path
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125"
-                                />
-                              </svg>
-                            </span>
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  fill="none"
+                                  viewBox="0 0 24 24"
+                                  stroke-width="1.5"
+                                  stroke="currentColor"
+                                  class="size-6"
+                                >
+                                  <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="m19.5 4.5-15 15m0 0h11.25m-11.25 0V8.25"
+                                  />
+                                </svg>
+                              </span>
+                            </div>
+
+                            <div class="flex flex-col">
+                              <h3
+                                class="mt-0.5 text-base lg:text-lg font-medium dark:text-white text-gray-900"
+                              >
+                                Mtn Airtime VTU Topop
+                              </h3>
+                              <p
+                                class="text-gray-600 dark:text-white/65 text-xs lg:text-sm"
+                              >
+                                Mon Oct 14 2024
+                              </p>
+                            </div>
                           </div>
 
-                          <div class="flex flex-col">
-                            <h3
-                              class="mt-0.5 text-base lg:text-lg font-medium dark:text-white text-gray-900"
-                            >
-                              Mtn Airtime VTU Topop
-                            </h3>
+                          <div class="text-center space-y-1">
+                            <p class="text-sm lg:text-base">₦100.00</p>
+
                             <p
-                              class="text-gray-600 dark:text-white/65 text-xs lg:text-sm"
+                              class="rounded-full bg-primary px-2 py-1 md:px-4 lg:px-6 lg:py-2 text-xs font-medium text-white transition"
                             >
-                              Mon Oct 14 2024
+                              Completed
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="py-5">
+                        <h4 class="font-normal text-base">Sun Nov 03 2024</h4>
+                        <div
+                          class="p-4 border-b border-b-primary/35 flex w-full justify-between mt-4"
+                        >
+                          <div class="flex pl-3 lg:pl-5 gap-2 lg:gap-5">
+                            <div class="flex relative">
+                              <span
+                                class="absolute right-6 flex items-center justify-center rounded-full h-10 p-2 w-10 bg-lightgreen/50 text-white"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  fill="none"
+                                  viewBox="0 0 24 24"
+                                  stroke-width="1.5"
+                                  stroke="currentColor"
+                                  class="size-6"
+                                >
+                                  <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="m19.5 4.5-15 15m0 0h11.25m-11.25 0V8.25"
+                                  />
+                                </svg>
+                              </span>
+
+                              <span
+                                class="flex items-center justify-center rounded-full h-10 p-2 w-10 bg-primary/80 text-white"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  fill="none"
+                                  viewBox="0 0 24 24"
+                                  stroke-width="1.5"
+                                  stroke="currentColor"
+                                  class="size-6"
+                                >
+                                  <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125"
+                                  />
+                                </svg>
+                              </span>
+                            </div>
+
+                            <div class="flex flex-col">
+                              <h3
+                                class="mt-0.5 text-base lg:text-lg font-medium dark:text-white text-gray-900"
+                              >
+                                Mtn Airtime VTU Topop
+                              </h3>
+                              <p
+                                class="text-gray-600 dark:text-white/65 text-xs lg:text-sm"
+                              >
+                                Mon Oct 14 2024
+                              </p>
+                            </div>
+                          </div>
+
+                          <div class="text-center space-y-1">
+                            <p class="text-sm lg:text-base">₦100.00</p>
+
+                            <p
+                              class="rounded-full bg-primary px-2 py-1 md:px-4 lg:px-6 lg:py-2 text-xs font-medium text-white transition"
+                            >
+                              Completed
                             </p>
                           </div>
                         </div>
 
-                        <div class="text-center space-y-1">
-                          <p class="text-sm lg:text-base">₦100.00</p>
+                        <div
+                          class="p-4 border-b border-b-primary/35 flex w-full justify-between mt-4"
+                        >
+                          <div class="flex pl-3 lg:pl-5 gap-2 lg:gap-5">
+                            <div class="flex relative">
+                              <span
+                                class="absolute right-6 flex items-center justify-center rounded-full h-10 p-2 w-10 bg-lightgreen/50 text-white"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  fill="none"
+                                  viewBox="0 0 24 24"
+                                  stroke-width="1.5"
+                                  stroke="currentColor"
+                                  class="size-6"
+                                >
+                                  <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="m19.5 4.5-15 15m0 0h11.25m-11.25 0V8.25"
+                                  />
+                                </svg>
+                              </span>
 
-                          <p
-                            class="rounded-full bg-primary px-2 py-1 md:px-4 lg:px-6 lg:py-2 text-xs font-medium text-white transition"
-                          >
-                            Completed
-                          </p>
+                              <span
+                                class="flex items-center justify-center rounded-full h-10 p-2 w-10 bg-primary/80 text-white"
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  fill="none"
+                                  viewBox="0 0 24 24"
+                                  stroke-width="1.5"
+                                  stroke="currentColor"
+                                  class="size-6"
+                                >
+                                  <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125"
+                                  />
+                                </svg>
+                              </span>
+                            </div>
+
+                            <div class="flex flex-col">
+                              <h3
+                                class="mt-0.5 text-base lg:text-lg font-medium dark:text-white text-gray-900"
+                              >
+                                Mtn Airtime VTU Topop
+                              </h3>
+                              <p
+                                class="text-gray-600 dark:text-white/65 text-xs lg:text-sm"
+                              >
+                                Mon Oct 14 2024
+                              </p>
+                            </div>
+                          </div>
+
+                          <div class="text-center space-y-1">
+                            <p class="text-sm lg:text-base">₦100.00</p>
+
+                            <p
+                              class="rounded-full bg-primary px-2 py-1 md:px-4 lg:px-6 lg:py-2 text-xs font-medium text-white transition"
+                            >
+                              Completed
+                            </p>
+                          </div>
                         </div>
                       </div>
                     </div>
