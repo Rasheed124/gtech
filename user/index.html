@@ -888,6 +888,7 @@
                   <div>
                     <!-- Balance Cards -->
                     <div
+                      id="left-dashboard-area"
                       class="gap-4 flex md:grid grid-cols-10 w-full overflow-x-auto mb-5 text-white"
                     >
                       <!-- Slider -->
@@ -912,7 +913,7 @@
                             : `${this.currencies[this.currentCurrency]}****`;
                         },
                       }"
-                        class="min-w-[390px] md:min-w-full flex justify-between p-5 text-left text-white w-full bg-black dark:bg-primary/75 rounded-xl col-span-6 bg-no-repeat bg-top bg-blend-overlay bg-cover bg-[url('../../images/dash-bg.png')] bg-opacity-60"
+                        class="min-w-[390px] md:min-w-full flex justify-between p-5 text-left text-white w-full bg-black rounded-xl col-span-6 bg-no-repeat bg-top bg-blend-overlay bg-cover bg-[url('../../images/dash-bg.png')] bg-opacity-60"
                       >
                         <!-- Left Side: Balance Area -->
                         <div x-cloak class="flex flex-col">
@@ -1144,11 +1145,11 @@
                       </h2>
 
                       <div
-                        class="grid-cols-3 grid md:grid-cols-5 gap-5 lg:pb-10 pr-3 py-3"
+                        class="grid-cols-3 grid md:grid-cols-3 gap-5 lg:pb-10 pr-3 py-3"
                       >
                         <a href="#">
                           <div
-                            class="relative p-5 pb-6 min-h-[50px] dark:bg-gray-800 dark:text-white flex items-center justify-center overflow-hidden text-primary border shadow-sm duration-200 ease-linear bg-gray-100 hover:bg-primary-50 rounded-xl"
+                            class="relative p-5 pb-6 min-h-[50px] dark:bg-gray-800 dark:text-white flex items-center justify-center overflow-hidden text-primary border dark:border-0 shadow-sm duration-200 ease-linear bg-gray-100 hover:bg-primary-50 rounded-xl"
                           >
                             <div>
                               <div class="font-medium lg:font-normal">
@@ -1166,7 +1167,25 @@
                         </a>
                         <a href="#">
                           <div
-                            class="relative p-5 pb-6 min-h-[50px] dark:bg-gray-800 dark:text-white flex items-center justify-center overflow-hidden text-primary border shadow-sm duration-200 ease-linear bg-gray-100 hover:bg-primary-50 rounded-xl"
+                            class="relative p-5 pb-6 min-h-[50px] dark:bg-gray-800 dark:text-white flex items-center justify-center overflow-hidden text-primary border dark:border-0 shadow-sm duration-200 ease-linear bg-gray-100 hover:bg-primary-50 rounded-xl"
+                          >
+                            <div>
+                              <div class="font-medium lg:font-normal">
+                                Airtime
+                                <span class="block">to cash</span>
+                              </div>
+                            </div>
+
+                            <div
+                              class="absolute text-black dark:text-white/70 opacity-10 -right-10 -bottom-5"
+                            >
+                              <i class="fas fa-6x fa-wifi"></i>
+                            </div>
+                          </div>
+                        </a>
+                        <a href="#">
+                          <div
+                            class="relative p-5 pb-6 min-h-[50px] dark:bg-gray-800 dark:text-white flex items-center justify-center overflow-hidden text-primary border dark:border-0 shadow-sm duration-200 ease-linear bg-gray-100 hover:bg-primary-50 rounded-xl"
                           >
                             <div>
                               <div class="font-medium lg:font-normal">
@@ -1185,7 +1204,7 @@
 
                         <a href="#">
                           <div
-                            class="relative p-5 pb-6 min-h-[50px] dark:bg-gray-800 dark:text-white flex items-center justify-center overflow-hidden text-primary border shadow-sm duration-200 ease-linear bg-gray-100 hover:bg-primary-50 rounded-xl"
+                            class="relative p-5 pb-6 min-h-[50px] dark:bg-gray-800 dark:text-white flex items-center justify-center overflow-hidden text-primary border dark:border-0 shadow-sm duration-200 ease-linear bg-gray-100 hover:bg-primary-50 rounded-xl"
                           >
                             <div>
                               <div class="font-medium lg:font-normal">
@@ -1203,7 +1222,7 @@
                         </a>
                         <a href="#">
                           <div
-                            class="relative p-5 pb-6 min-h-[50px] dark:bg-gray-800 dark:text-white flex items-center justify-center overflow-hidden text-primary border shadow-sm duration-200 ease-linear bg-gray-100 hover:bg-primary-50 rounded-xl"
+                            class="relative p-5 pb-6 min-h-[50px] dark:bg-gray-800 dark:text-white flex items-center justify-center overflow-hidden text-primary border dark:border-0 shadow-sm duration-200 ease-linear bg-gray-100 hover:bg-primary-50 rounded-xl"
                           >
                             <div>
                               <div class="font-medium lg:font-normal">
@@ -1223,14 +1242,16 @@
                         <!-- Button -->
                         <a href="#">
                           <div
-                            class="relative p-5 dark:bg-gray-800 dark:text-white flex items-center justify-center overflow-hidden text-primary duration-200 border shadow-sm ease-linear bg-gray-100 hover:bg-primary-50  rounded-xl"
+                            class="relative p-5 dark:bg-gray-800 dark:text-white flex items-center justify-center overflow-hidden text-primary duration-200 border dark:border-0 shadow-sm ease-linear bg-gray-100 hover:bg-primary-50 rounded-xl"
                           >
                             <div
                               class="flex flex-col justify-center items-center"
                             >
                               <p class="font-medium lg:font-normal">More</p>
 
-                              <div class="text-black opacity-35 dark:text-white/40">
+                              <div
+                                class="text-black opacity-35 dark:text-white/40"
+                              >
                                 <i
                                   class="fa fa-ellipsis-h text-2xl"
                                   aria-hidden="true"
@@ -1252,7 +1273,9 @@
                           Recent Activity
                         </h2>
 
-                        <a href="#" class="text-base text-primary font-bold"
+                        <a
+                          href="#"
+                          class="text-base dark:text-white text-primary font-bold"
                           >See all</a
                         >
                       </div>

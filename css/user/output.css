@@ -4036,8 +4036,8 @@ select {
   opacity: 1;
 }
 
-.opacity-5 {
-  opacity: 0.05;
+.opacity-35 {
+  opacity: 0.35;
 }
 
 .opacity-50 {
@@ -4052,16 +4052,8 @@ select {
   opacity: 0.8;
 }
 
-.opacity-35 {
-  opacity: 0.35;
-}
-
-.opacity-45 {
-  opacity: 0.45;
-}
-
-.opacity-15 {
-  opacity: 0.15;
+.opacity-5 {
+  opacity: 0.05;
 }
 
 .bg-blend-overlay {
@@ -4222,6 +4214,8 @@ select {
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
 
+/* Main Dashboard scroll bar  */
+
 body .dashboard-col-1.scrollbar::-webkit-scrollbar,
   body .dashboard-col-2.scrollbar::-webkit-scrollbar {
   display: none;
@@ -4250,10 +4244,39 @@ body .dashboard-col-1:hover.scrollbar::-webkit-scrollbar,
   background: #004437;
 }
 
+/* Carousel dots */
+
 body #announcement-banner > div > div.owl-dots > button.owl-dot span {
   background: #004437;
   opacity: 0.7;
 }
+
+/* Balance cards  */
+
+/* Custom Scrollbar Styles */
+
+#left-dashboard-area {
+  scrollbar-width: thin;
+  scrollbar-color: #888 transparent;
+  padding-bottom: 16px;
+}
+
+#left-dashboard-area::-webkit-scrollbar {
+  height: 8px;
+}
+
+#left-dashboard-area::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* #left-dashboard-area::-webkit-scrollbar-thumb {
+    background-color: #888; 
+    border-radius: 10px; 
+  }
+
+  #left-dashboard-area::-webkit-scrollbar-thumb:hover {
+    background-color: #555; 
+  } */
 
 [x-cloak] {
   display: none !important;
@@ -4849,6 +4872,10 @@ body #announcement-banner > div > div.owl-dots > button.owl-dot span {
   border-color: rgb(55 65 81 / 0.6);
 }
 
+.dark\:border-0:is(.dark *) {
+  border-width: 0px;
+}
+
 .dark\:border-gray-500:is(.dark *) {
   --tw-border-opacity: 1;
   border-color: rgb(107 114 128 / var(--tw-border-opacity));
@@ -4965,10 +4992,6 @@ body #announcement-banner > div > div.owl-dots > button.owl-dot span {
 
 .dark\:bg-green-400\/20:is(.dark *) {
   background-color: rgb(75 211 125 / 0.2);
-}
-
-.dark\:bg-primary\/75:is(.dark *) {
-  background-color: rgb(0 68 55 / 0.75);
 }
 
 .dark\:bg-secondary:is(.dark *) {
@@ -5838,10 +5861,6 @@ body #announcement-banner > div > div.owl-dots > button.owl-dot span {
 
   .md\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .md\:grid-cols-5 {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 
   .md\:flex-row {
