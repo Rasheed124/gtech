@@ -4052,6 +4052,10 @@ select {
   opacity: 0.8;
 }
 
+.opacity-35 {
+  opacity: 0.35;
+}
+
 .bg-blend-overlay {
   background-blend-mode: overlay;
 }
