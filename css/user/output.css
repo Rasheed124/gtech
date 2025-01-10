@@ -2092,8 +2092,40 @@ select {
   max-width: 20rem;
 }
 
+.max-w-40 {
+  max-width: 10rem;
+}
+
+.max-w-\[40\] {
+  max-width: 40;
+}
+
+.max-w-\[500px\] {
+  max-width: 500px;
+}
+
+.max-w-\[400px\] {
+  max-width: 400px;
+}
+
+.max-w-\[00px\] {
+  max-width: 00px;
+}
+
 .flex-1 {
   flex: 1 1 0%;
+}
+
+.flex-\[\] {
+  flex: ;
+}
+
+.flex-\[50\] {
+  flex: 50;
+}
+
+.flex-\[50\%\] {
+  flex: 50%;
 }
 
 .flex-shrink-0 {
