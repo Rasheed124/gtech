@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/user/output.css " />
+
+    <link rel="stylesheet" href="../css/vendors/owl.carousel.min.css" />
+    <link rel="stylesheet" href="../css/vendors/owl.theme.default.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://rawcdn.githack.com/hung1001/font-awesome-pro/4cac1a6/css/all.css"
+    />
+
+    <script>
+      if (
+        localStorage.getItem("user-dark-mode") === "false" ||
+        !("user-dark-mode" in localStorage)
+      ) {
+        document.querySelector("html").classList.remove("dark");
+        document.querySelector("html").style.colorScheme = "light";
+      } else {
+        document.querySelector("html").classList.add("dark");
+        document.querySelector("html").style.colorScheme = "dark";
+      }
+    </script>
+    <title>User Template - Home</title>
+  </head>
+  <body
+    class="bg-gray-100 dark:bg-gray-900 bg-no-repeat bg-center bg-blend-overlay w-full"
+  >
+    <div class="w-full">
+      <main class="px-2">
+        <div>
+          <input
+            type="checkbox"
+            name="user-light-switch"
+            id="user-light-switch"
+            class="user-light-switch sr-only"
+          />
+          <label
+            class="flex items-center justify-center cursor-pointer w-9 h-9 p-2.5 hover:bg-gray-100 lg:hover:bg-gray-200 dark:hover:bg-gray-700/50 dark:lg:hover:bg-gray-800 rounded-md"
+            for="user-light-switch"
+          >
+            <svg
+              class="dark:hidden fill-current text-black dark:text-gray-400/80"
+              class="size-7"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M8 0a1 1 0 0 1 1 1v.5a1 1 0 1 1-2 0V1a1 1 0 0 1 1-1Z" />
+              <path
+                d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0Zm-4 2a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"
+              />
+              <path
+                d="M13.657 3.757a1 1 0 0 0-1.414-1.414l-.354.354a1 1 0 0 0 1.414 1.414l.354-.354ZM13.5 8a1 1 0 0 1 1-1h.5a1 1 0 1 1 0 2h-.5a1 1 0 0 1-1-1ZM13.303 11.889a1 1 0 0 0-1.414 1.414l.354.354a1 1 0 0 0 1.414-1.414l-.354-.354ZM8 13.5a1 1 0 0 1 1 1v.5a1 1 0 1 1-2 0v-.5a1 1 0 0 1 1-1ZM4.111 13.303a1 1 0 1 0-1.414-1.414l-.354.354a1 1 0 1 0 1.414 1.414l.354-.354ZM0 8a1 1 0 0 1 1-1h.5a1 1 0 0 1 0 2H1a1 1 0 0 1-1-1ZM3.757 2.343a1 1 0 1 0-1.414 1.414l.354.354A1 1 0 1 0 4.11 2.697l-.354-.354Z"
+              />
+            </svg>
+            <svg
+              class="hidden dark:block fill-current text-gray-500/80 dark:text-gray-400/80"
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11.875 4.375a.625.625 0 1 0 1.25 0c.001-.69.56-1.249 1.25-1.25a.625.625 0 1 0 0-1.25 1.252 1.252 0 0 1-1.25-1.25.625.625 0 1 0-1.25 0 1.252 1.252 0 0 1-1.25 1.25.625.625 0 1 0 0 1.25c.69.001 1.249.56 1.25 1.25Z"
+              />
+              <path
+                d="M7.019 1.985a1.55 1.55 0 0 0-.483-1.36 1.44 1.44 0 0 0-1.53-.277C2.056 1.553 0 4.5 0 7.9 0 12.352 3.648 16 8.1 16c3.407 0 6.246-2.058 7.51-4.963a1.446 1.446 0 0 0-.25-1.55 1.554 1.554 0 0 0-1.372-.502c-4.01.552-7.539-2.987-6.97-7ZM2 7.9C2 5.64 3.193 3.664 4.961 2.6 4.82 7.245 8.72 11.158 13.36 11.04 12.265 12.822 10.341 14 8.1 14 4.752 14 2 11.248 2 7.9Z"
+              />
+            </svg>
+            <span class="sr-only">Switch to light / dark version</span>
+          </label>
+        </div>
+
+        <!-- First Payment -->
+        <section>
+          <div
+            class="max-w-screen-sm m-auto bg-gray-900 text-white rounded-xl py-6"
+          >
+            <div class="flex flex-col gap-8 px-7 py-5">
+              <!-- Card Box -->
+              <header class="bg-purple-100 rounded-lg text-black px-5 py-2">
+                <div class="flex justify-between">
+                  <h4 class="text-xl font-bold">ZeroNaira</h4>
+
+                  <div class="overflow-hidden bg-gray-900">
+                    <img
+                      src="../images/master-card.png "
+                      class="w-12 h-12 object-contain"
+                      alt=""
+                    />
+                  </div>
+                </div>
+
+                <div class="flex flex-col w-full justify-center items-center">
+                  <button
+                    class="flex justify-center items-center p-2 bg-black rounded-full w-10 h-10 text-white"
+                  >
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                  </button>
+
+                  <h4 class="text-xl font-bold mt-6">USD Virtual Card</h4>
+                </div>
+              </header>
+              <!-- Card content -->
+              <div class="space-y-4">
+                <!-- Heading -->
+                <div class="">
+                  <h4 class="text-xl lg:text-2xl font-bold">ZeroNaira</h4>
+                  <h3 class="text-xl lg:text-2xl font-bold">
+                    Built for your digital life
+                  </h3>
+                </div>
+                <article class="border-b-2 border-gray-200/40 pb-5">
+                  <div class="flex items-start gap-4">
+                    <span class="block text-3xl shrink-0 text-primary">
+                      <i class="fa fa-globe" aria-hidden="true"></i>
+                    </span>
+
+                    <div>
+                      <h3 class="font-medium text-lg capitalize">
+                        Shop globally
+                      </h3>
+
+                      <p class="text-base">
+                        Ue your virtual to ZeroNaira card everywhere to make
+                        online payment. Visa/Virtual are accepted
+                      </p>
+                    </div>
+                  </div>
+                </article>
+                <article class="border-b-2 border-gray-200/40 pb-5">
+                  <div class="flex items-start gap-4">
+                    <span class="block text-3xl shrink-0 text-primary">
+                      <i class="fa fa-mobile" aria-hidden="true"></i>
+                    </span>
+
+                    <div>
+                      <h3 class="font-medium text-lg capitalize">
+                        Shop globally
+                      </h3>
+
+                      <p class="text-base">
+                        Ue your virtual to ZeroNaira card everywhere to make
+                        online payment. Visa/Virtual are accepted
+                      </p>
+                    </div>
+                  </div>
+                </article>
+                <article class="border-b-2 border-gray-200/40 pb-5">
+                  <div class="flex items-start gap-4">
+                    <span class="block text-3xl shrink-0 text-primary">
+                      <i class="fa fa-globe" aria-hidden="true"></i>
+                    </span>
+
+                    <div>
+                      <h3 class="font-medium text-lg capitalize">
+                        card creation fee
+                      </h3>
+
+                      <p class="text-base">
+                        Ue your virtual to ZeroNaira card everywhere to make
+                        online payment. Visa/Virtual are accepted
+                      </p>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- Buttons -->
+                <div class="mt-10 mx-8">
+                  <a
+                    class="inline-block rounded-lg bg-gray-800 w-full text-center px-8 py-3 text-lg font-bold text-white transition hover:bg-gray-800/60 active:text-white"
+                    href="#"
+                  >
+                    Download
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- First Payment -->
+        <section class="mt-10">
+          <div
+            class="max-w-screen-sm m-auto bg-gray-900 text-white rounded-xl py-6"
+          >
+            <div class="flex flex-col gap-8 px-7 py-5">
+              <!-- Card Box -->
+              <header class="bg-purple-100 rounded-lg text-black px-5 py-2">
+                <div class="flex justify-between">
+                  <h4 class="text-xl font-bold">ZeroNaira</h4>
+
+                  <div class="overflow-hidden bg-gray-900">
+                    <img
+                      src="../images/visa.png "
+                      class="w-12 h-12 object-contain"
+                      alt=""
+                    />
+                  </div>
+                </div>
+
+                <div class="flex flex-col w-full justify-center items-center">
+                  <button
+                    class="flex justify-center items-center p-2 bg-black rounded-full w-10 h-10 text-white"
+                  >
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                  </button>
+
+                  <h4 class="text-xl font-bold mt-6">USD Virtual Card</h4>
+                </div>
+              </header>
+              <!-- Card content -->
+              <div class="space-y-4">
+                <article
+                  class=" flex justify-between"
+                >
+                  <div class="flex items-center gap-4 max-w-sm">
+                    <span
+                      class="shrink-0 text-center text-primary rounded-full p-6 w-6 h-6 flex justify-center items-center bg-purple-100"
+                    >
+                      <i
+                        class="fa fa-globe text-center text-2xl"
+                        aria-hidden="true"
+                      ></i>
+                    </span>
+
+                    <div>
+                      <h3 class="font-medium text-lg capitalize">
+                        card creation fee
+                      </h3>
+
+                      <p class="text-lg">
+                        A non refundable fee will be deducted for card insurance
+                      </p>
+                    </div>
+                  </div>
+
+                  <p class="font-bold">$2.00</p>
+                </article>
+                <article
+                  class=" flex justify-between"
+                >
+                  <div class="flex items-center gap-4 max-w-sm">
+                    <span
+                      class="shrink-0 text-center text-primary rounded-full p-6 w-6 h-6 flex justify-center items-center bg-purple-100"
+                    >
+                      <i
+                        class="fa fa-globe text-center text-2xl"
+                        aria-hidden="true"
+                      ></i>
+                    </span>
+
+                    <div>
+                      <h3 class="font-medium text-lg capitalize">
+                        maintenance fee
+                      </h3>
+
+                      <p class="text-lg">
+                        A non refundable fee will be deducted for card insurance
+                      </p>
+                    </div>
+                  </div>
+
+                  <p class="font-bold">$2.00</p>
+                </article>
+                <article
+                  class=" flex justify-between"
+                >
+                  <div class="flex items-center gap-4 max-w-sm">
+                    <span
+                      class="shrink-0 text-center text-primary rounded-full p-6 w-6 h-6 flex justify-center items-center bg-purple-100"
+                    >
+                      <i
+                        class="fa fa-credit-card text-center text-2xl"
+                        aria-hidden="true"
+                      ></i>
+                    </span>
+
+                    <div>
+                      <h3 class="font-medium text-lg capitalize">
+                        maintenance fee
+                      </h3>
+
+                      <p class="text-lg">
+                        A non refundable fee will be deducted for card insurance
+                      </p>
+                    </div>
+                  </div>
+
+                  <p class="font-bold">$2.00</p>
+                </article>
+
+                <!-- Notifications -->
+                <div class="mx-4 mt-7">
+                  <div
+                    class=" flex justify-between rounded-lg bg-yellow-100 w-full text-center p-3 text-base font-medium text-black active:text-white"
+                  >
+                    <h4 class="pr-10 text-lg text-left max-w-md">
+                      You have not performed your KYC yet. Click this button to
+                      start
+                    </h4>
+
+                    <span
+                      class="shrink-0 text-center text-primary bg-white rounded-full p-6 w-6 h-6 flex justify-center items-center"
+                    >
+                      <i class="fa fa-exclamation" aria-hidden="true"></i>
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Buttons -->
+                <div class="">
+                  <a
+                    class="inline-block rounded-lg bg-gray-800 w-full text-center px-8 py-5   text-white transition hover:bg-gray-800/60 active:text-white mt-6 font-bold text-lg"
+                    href="#"
+                  >
+                    Continue
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="../js/vendors/jquery.min.js"></script>
+    <script src="../js/vendors/owl.carousel.js"></script>
+    <script src="../js/users.js"></script>
+    <script src="../js/vendors/alpinejs.min.js" defer></script>
+  </body>
+</html>
