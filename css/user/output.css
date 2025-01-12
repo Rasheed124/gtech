@@ -2809,6 +2809,18 @@ select {
   border-color: rgb(252 255 255 / var(--tw-border-opacity));
 }
 
+.border-gray-300\/20 {
+  border-color: rgb(191 196 205 / 0.2);
+}
+
+.border-gray-300\/30 {
+  border-color: rgb(191 196 205 / 0.3);
+}
+
+.border-gray-300\/40 {
+  border-color: rgb(191 196 205 / 0.4);
+}
+
 .border-y-\[\#F0EBF8\] {
   --tw-border-opacity: 1;
   border-top-color: rgb(240 235 248 / var(--tw-border-opacity));
@@ -3041,6 +3053,21 @@ select {
 
 .bg-yellow-500\/20 {
   background-color: rgb(240 187 51 / 0.2);
+}
+
+.bg-purple-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(233 213 255 / var(--tw-bg-opacity));
+}
+
+.bg-blue-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(29 78 216 / var(--tw-bg-opacity));
+}
+
+.bg-yellow-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(188 144 33 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-25 {
@@ -4569,6 +4596,14 @@ body #announcement-banner > div > div.owl-dots > button.owl-dot span {
   background-color: rgb(252 255 255 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-gray-800\/80:hover {
+  background-color: rgb(31 41 55 / 0.8);
+}
+
+.hover\:bg-gray-800\/90:hover {
+  background-color: rgb(31 41 55 / 0.9);
+}
+
 .hover\:text-\[\#2e1a52\]\/30:hover {
   color: rgb(46 26 82 / 0.3);
 }
@@ -4954,6 +4989,15 @@ body #announcement-banner > div > div.owl-dots > button.owl-dot span {
   border-color: rgb(37 155 150 / var(--tw-border-opacity));
 }
 
+.dark\:border-gray-200\/40:is(.dark *) {
+  border-color: rgb(229 231 235 / 0.4);
+}
+
+.dark\:border-white:is(.dark *) {
+  --tw-border-opacity: 1;
+  border-color: rgb(252 255 255 / var(--tw-border-opacity));
+}
+
 .dark\:border-b-secondary:is(.dark *) {
   --tw-border-opacity: 1;
   border-bottom-color: rgb(225 243 229 / var(--tw-border-opacity));
@@ -5051,6 +5095,11 @@ body #announcement-banner > div > div.owl-dots > button.owl-dot span {
   background-color: rgb(37 155 150 / 0.2);
 }
 
+.dark\:bg-purple-100:is(.dark *) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 232 255 / var(--tw-bg-opacity));
+}
+
 .dark\:bg-opacity-50:is(.dark *) {
   --tw-bg-opacity: 0.5;
 }
@@ -5101,6 +5150,10 @@ body #announcement-banner > div > div.owl-dots > button.owl-dot span {
 
 .dark\:to-gray-900:is(.dark *) {
   --tw-gradient-to: #111827 var(--tw-gradient-to-position);
+}
+
+.dark\:to-white:is(.dark *) {
+  --tw-gradient-to: #FCFFFF var(--tw-gradient-to-position);
 }
 
 .dark\:fill-gray-500:is(.dark *) {
@@ -5269,6 +5322,10 @@ body #announcement-banner > div > div.owl-dots > button.owl-dot span {
 
 .hover\:dark\:bg-gray-700\/20:is(.dark *):hover {
   background-color: rgb(55 65 81 / 0.2);
+}
+
+.dark\:hover\:bg-gray-800\/60:hover:is(.dark *) {
+  background-color: rgb(31 41 55 / 0.6);
 }
 
 .dark\:hover\:text-gray-100:hover:is(.dark *) {
