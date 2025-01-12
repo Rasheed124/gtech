@@ -6,28 +6,41 @@
   /* Main Dashboard scroll bar  */
   body .dashboard-col-1.scrollbar::-webkit-scrollbar,
   body .dashboard-col-2.scrollbar::-webkit-scrollbar {
-    display: none;
+    
+    width: 5px;
+    height: 5px;
+    background: transparent ;
+    transition: background .5s;
+
   }
   body .dashboard-col-1:hover.scrollbar::-webkit-scrollbar,
   body .dashboard-col-2:hover.scrollbar::-webkit-scrollbar,
   .scrollbar::-webkit-scrollbar {
-    display: block;
-
+  
+    /* background: #111827; */
     width: 5px;
     height: 5px;
   }
+
   .scrollbar::-webkit-scrollbar-track {
     border-radius: 100vh;
-    background: #808080;
+   background: transparent;
+  }
+
+  body .dashboard-col-1:hover.scrollbar::-webkit-scrollbar-track , 
+  body .dashboard-col-2:hover.scrollbar::-webkit-scrollbar-track{
+    background: #888;
   }
 
   .scrollbar::-webkit-scrollbar-thumb {
-    background: #004437;
+    background: transparent;
     border-radius: 100vh;
-    border: 3px solid #004437;
+    transition: background .5s;
+    /* border: 3px solid ; */
   }
 
-  .scrollbar::-webkit-scrollbar-thumb:hover {
+  body .dashboard-col-1:hover.scrollbar::-webkit-scrollbar-thumb,   
+  body .dashboard-col-2:hover.scrollbar::-webkit-scrollbar-thumb {
     background: #004437;
   }
 

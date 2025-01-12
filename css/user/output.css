@@ -1474,6 +1474,10 @@ select {
   margin-left: 2.5rem;
 }
 
+.ml-12 {
+  margin-left: 3rem;
+}
+
 .ml-2 {
   margin-left: 0.5rem;
 }
@@ -1620,10 +1624,6 @@ select {
 
 .mt-auto {
   margin-top: auto;
-}
-
-.ml-12 {
-  margin-left: 3rem;
 }
 
 .box-content {
@@ -2005,6 +2005,10 @@ select {
   min-width: 0px;
 }
 
+.min-w-24 {
+  min-width: 6rem;
+}
+
 .min-w-28 {
   min-width: 7rem;
 }
@@ -2044,18 +2048,6 @@ select {
 .min-w-fit {
   min-width: -moz-fit-content;
   min-width: fit-content;
-}
-
-.min-w-20 {
-  min-width: 5rem;
-}
-
-.min-w-2 {
-  min-width: 0.5rem;
-}
-
-.min-w-24 {
-  min-width: 6rem;
 }
 
 .max-w-0 {
@@ -2979,6 +2971,10 @@ select {
   background-color: rgb(0 218 95 / var(--tw-bg-opacity));
 }
 
+.bg-lightgreen\/20 {
+  background-color: rgb(0 218 95 / 0.2);
+}
+
 .bg-lightgreen\/50 {
   background-color: rgb(0 218 95 / 0.5);
 }
@@ -3081,6 +3077,10 @@ select {
   background-color: rgb(255 231 160 / var(--tw-bg-opacity));
 }
 
+.bg-yellow-100\/40 {
+  background-color: rgb(255 231 160 / 0.4);
+}
+
 .bg-yellow-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(240 187 51 / var(--tw-bg-opacity));
@@ -3095,32 +3095,16 @@ select {
   background-color: rgb(129 99 22 / var(--tw-bg-opacity));
 }
 
-.bg-yellow-100\/40 {
-  background-color: rgb(255 231 160 / 0.4);
-}
-
-.bg-lightgreen\/30 {
-  background-color: rgb(0 218 95 / 0.3);
-}
-
-.bg-lightgreen\/20 {
-  background-color: rgb(0 218 95 / 0.2);
-}
-
-.bg-lightgreen\/0 {
-  background-color: rgb(0 218 95 / 0);
-}
-
-.bg-lightgreen\/70 {
-  background-color: rgb(0 218 95 / 0.7);
-}
-
 .bg-opacity-25 {
   --tw-bg-opacity: 0.25;
 }
 
 .bg-opacity-30 {
   --tw-bg-opacity: 0.3;
+}
+
+.bg-opacity-5 {
+  --tw-bg-opacity: 0.05;
 }
 
 .bg-opacity-50 {
@@ -3131,20 +3115,8 @@ select {
   --tw-bg-opacity: 0.6;
 }
 
-.bg-opacity-70 {
-  --tw-bg-opacity: 0.7;
-}
-
 .bg-opacity-80 {
   --tw-bg-opacity: 0.8;
-}
-
-.bg-opacity-5 {
-  --tw-bg-opacity: 0.05;
-}
-
-.bg-opacity-0 {
-  --tw-bg-opacity: 0;
 }
 
 .bg-\[linear-gradient\(135deg\2c var\(--tw-gradient-stops\)\)\] {
@@ -3541,6 +3513,10 @@ select {
   padding-bottom: 2.5rem;
 }
 
+.pb-14 {
+  padding-bottom: 3.5rem;
+}
+
 .pb-2 {
   padding-bottom: 0.5rem;
 }
@@ -3709,14 +3685,6 @@ select {
   padding-top: 2rem;
 }
 
-.pb-20 {
-  padding-bottom: 5rem;
-}
-
-.pb-14 {
-  padding-bottom: 3.5rem;
-}
-
 .text-left {
   text-align: left;
 }
@@ -3837,10 +3805,6 @@ select {
 
 .font-semibold {
   font-weight: 600;
-}
-
-.font-extralight {
-  font-weight: 200;
 }
 
 .uppercase {
@@ -4009,6 +3973,11 @@ select {
   color: rgb(35 159 82 / var(--tw-text-opacity));
 }
 
+.text-green-900 {
+  --tw-text-opacity: 1;
+  color: rgb(15 84 41 / var(--tw-text-opacity));
+}
+
 .text-indigo-600 {
   --tw-text-opacity: 1;
   color: rgb(79 70 229 / var(--tw-text-opacity));
@@ -4119,16 +4088,6 @@ select {
   color: rgb(188 144 33 / var(--tw-text-opacity));
 }
 
-.text-yellow-800 {
-  --tw-text-opacity: 1;
-  color: rgb(129 99 22 / var(--tw-text-opacity));
-}
-
-.text-green-900 {
-  --tw-text-opacity: 1;
-  color: rgb(15 84 41 / var(--tw-text-opacity));
-}
-
 .underline {
   text-decoration-line: underline;
 }
@@ -4188,10 +4147,6 @@ select {
 
 .opacity-60 {
   opacity: 0.6;
-}
-
-.opacity-70 {
-  opacity: 0.7;
 }
 
 .opacity-80 {
@@ -4360,29 +4315,41 @@ select {
 
 body .dashboard-col-1.scrollbar::-webkit-scrollbar,
   body .dashboard-col-2.scrollbar::-webkit-scrollbar {
-  display: none;
+  width: 5px;
+  height: 5px;
+  background: transparent ;
+  -webkit-transition: background .5s;
+  transition: background .5s;
 }
 
 body .dashboard-col-1:hover.scrollbar::-webkit-scrollbar,
   body .dashboard-col-2:hover.scrollbar::-webkit-scrollbar,
   .scrollbar::-webkit-scrollbar {
-  display: block;
+  /* background: #111827; */
   width: 5px;
   height: 5px;
 }
 
 .scrollbar::-webkit-scrollbar-track {
   border-radius: 100vh;
-  background: #808080;
+  background: transparent;
+}
+
+body .dashboard-col-1:hover.scrollbar::-webkit-scrollbar-track , 
+  body .dashboard-col-2:hover.scrollbar::-webkit-scrollbar-track{
+  background: #888;
 }
 
 .scrollbar::-webkit-scrollbar-thumb {
-  background: #004437;
+  background: transparent;
   border-radius: 100vh;
-  border: 3px solid #004437;
+  -webkit-transition: background .5s;
+  transition: background .5s;
+  /* border: 3px solid ; */
 }
 
-.scrollbar::-webkit-scrollbar-thumb:hover {
+body .dashboard-col-1:hover.scrollbar::-webkit-scrollbar-thumb,   
+  body .dashboard-col-2:hover.scrollbar::-webkit-scrollbar-thumb {
   background: #004437;
 }
 
