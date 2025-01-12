@@ -31,7 +31,7 @@
   >
     <div class="w-full">
       <main class="px-2">
-        <div class="m-auto flex justify-center items-center pt-5">
+        <div class="m-auto flex justify-center items-center pt-5 sticky top-3">
           <input
             type="checkbox"
             name="user-light-switch"
@@ -446,14 +446,13 @@
 
         <!-- Fourth Payment -->
         <section class="mt-10">
-          <div
-            class="max-w-screen-sm m-auto  rounded-xl py-6"
-          >
+          <div class="max-w-screen-sm m-auto rounded-xl py-6">
             <div class="flex flex-col gap-8 px-2.5 py-5">
-          
               <!-- Card content -->
               <div class="space-y-4">
-                <article class="flex text-black dark:text-white bg-blue-700 rounded-xl p-5">
+                <article
+                  class="flex text-black dark:text-white bg-blue-700 rounded-xl p-5"
+                >
                   <div class="flex items-center gap-4">
                     <span
                       class="shrink-0 text-center text-primary rounded-full p-6 w-6 h-6 flex justify-center items-center bg-gray-100 dark:bg-purple-100"
@@ -473,17 +472,17 @@
                     </div>
                   </div>
                 </article>
-                
+
                 <article
-                  class="flex justify-between text-white  bg-black  bg-opacity-70 rounded-xl p-5 bg-no-repeat bg-top bg-blend-overlay bg-cover bg-[url('../../images/dash-bg.png')]"
+                  class="flex justify-between text-white bg-black bg-opacity-80 rounded-xl p-5 bg-no-repeat bg-top bg-blend-overlay bg-cover bg-[url('../../images/dash-bg.png')]"
                 >
-                  <div
-                    class="flex flex-col items-start text-left gap-4  "
-                  >
+                  <div class="flex flex-col items-start text-left gap-4">
                     <h3 class="font-bold text-lg capitalize">
                       virtual account
                     </h3>
-                    <div class="bg-yellow-800 flex items-center gap-2.5 rounded-full p-5 ">
+                    <div
+                      class="bg-yellow-800 flex items-center gap-2.5 rounded-full p-5"
+                    >
                       <span class="text-2xl xl:text-3xl">6038389449</span>
 
                       <span class="shrink-0 text-center">
@@ -501,17 +500,17 @@
 
                   <p class="font-bold capitalize">palmapy bank</p>
                 </article>
-           
+
                 <article
-                  class="flex justify-between text-white  bg-black  bg-opacity-70 rounded-xl p-5 bg-no-repeat bg-top bg-blend-overlay bg-cover bg-[url('../../images/dash-bg.png')]"
+                  class="flex justify-between text-white bg-black bg-opacity-80 rounded-xl p-5 bg-no-repeat bg-top bg-blend-overlay bg-cover bg-[url('../../images/dash-bg.png')]"
                 >
-                  <div
-                    class="flex flex-col items-start text-left gap-4  "
-                  >
+                  <div class="flex flex-col items-start text-left gap-4">
                     <h3 class="font-bold text-lg capitalize">
                       virtual account
                     </h3>
-                    <div class="bg-yellow-800 flex items-center gap-2.5 rounded-full p-5 ">
+                    <div
+                      class="bg-yellow-800 flex items-center gap-2.5 rounded-full p-5"
+                    >
                       <span class="text-2xl xl:text-3xl">6038389449</span>
 
                       <span class="shrink-0 text-center">
@@ -529,17 +528,17 @@
 
                   <p class="font-bold capitalize">palmapy bank</p>
                 </article>
-           
+
                 <article
-                  class="flex justify-between text-white  bg-black  bg-opacity-70 rounded-xl p-5 bg-no-repeat bg-top bg-blend-overlay bg-cover bg-[url('../../images/dash-bg.png')]"
+                  class="flex justify-between text-white bg-black bg-opacity-80 rounded-xl p-5 bg-no-repeat bg-top bg-blend-overlay bg-cover bg-[url('../../images/dash-bg.png')]"
                 >
-                  <div
-                    class="flex flex-col items-start text-left gap-4  "
-                  >
+                  <div class="flex flex-col items-start text-left gap-4">
                     <h3 class="font-bold text-lg capitalize">
                       virtual account
                     </h3>
-                    <div class="bg-yellow-800 flex items-center gap-2.5 rounded-full p-5 ">
+                    <div
+                      class="bg-yellow-800 flex items-center gap-2.5 rounded-full p-5"
+                    >
                       <span class="text-2xl xl:text-3xl">6038389449</span>
 
                       <span class="shrink-0 text-center">
@@ -557,10 +556,249 @@
 
                   <p class="font-bold capitalize">palmapy bank</p>
                 </article>
-           
+              </div>
+            </div>
+          </div>
+        </section>
 
-        
+        <section class="mt-10">
+          <div
+            class="max-w-screen-sm m-auto text-black dark:text-white rounded-xl py-6 px-2.5"
+          >
+            <div class="flex flex-col">
+              <!-- Card Header -->
+              <header class="justify-between flex px-5 py-2 w-full">
+                <button class="text-3xl font-light">
+                  <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+                </button>
+                <div
+                  class="self-center w-full justify-center items-center flex"
+                >
+                  <h4 class="text-xl font-bold capitalize">exchange money</h4>
+                </div>
+              </header>
 
+              <!-- Card content -->
+              <div class="space-y-4">
+                <!-- First Currency Switcher -->
+                <article
+                  x-data="{
+                        isOpen: false,
+                        currentCurrency: {
+                          name: 'Naira',
+                          symbol: '₦',
+                          icon: '../images/ng-flag.png',
+                        },
+                        currencies: [
+                          { name: 'Naira', symbol: '₦', icon: '../images/ng-flag.png' },
+                          { name: 'Dollar', symbol: '$', icon: '../images/dollar.jpeg' },
+                          { name: 'Euro', symbol: '€', icon: '../images/euro-flag.png' },
+                        ],
+                        init() {
+                          const savedCurrency = localStorage.getItem('firstCurrency');
+                          if (savedCurrency) {
+                            this.currentCurrency = JSON.parse(savedCurrency);
+                          }
+                        },
+                        toggleDropdown() {
+                          this.isOpen = !this.isOpen;
+                        },
+                        selectCurrency(currency) {
+                          this.currentCurrency = currency;
+                          this.isOpen = false;
+                          localStorage.setItem('firstCurrency', JSON.stringify(currency));
+                        },
+                      }"
+                  x-init="init()"
+                >
+                  <div
+                    class="flex justify-between bg-gray-100 shadow-sm border dark:border-0 dark:bg-gray-800 p-5 pb-14 rounded-xl"
+                  >
+                    <!-- Currency Button -->
+                    <div class="relative mt-4 flex justify-between w-full">
+                      <button
+                        x-cloak
+                        @click="toggleDropdown"
+                        class="py-2 pl-3 min-w-28 bg-white text-primary rounded-full gap-2 cursor-pointer"
+                      >
+                        <div class="flex">
+                          <img
+                            :src="currentCurrency.icon"
+                            :alt="currentCurrency.name"
+                            class="w-7 h-7 rounded-full"
+                          />
+                          <span
+                            class="text-xl ml-3"
+                            x-text="currentCurrency.symbol"
+                          ></span>
+                        </div>
+                      </button>
+
+                      <p class="capitalize font-semibold text-lg ml-12">
+                        you pay
+                      </p>
+
+                      <!-- Dropdown Menu -->
+                      <ul
+                        x-show="isOpen"
+                        @click.outside="isOpen = false"
+                        class="absolute flex-col text-xs top-12 left-0 bg-white text-primary rounded-md shadow-xl overflow-hidden z-10 min-w-24"
+                      >
+                        <template
+                          x-for="currency in currencies"
+                          :key="currency.name"
+                        >
+                          <li>
+                            <button
+                              @click="selectCurrency(currency)"
+                              class="w-full px-2 py-2 text-base text-left hover:bg-gray-200 flex items-center gap-2"
+                            >
+                              <img
+                                :src="currency.icon"
+                                :alt="currency.name"
+                                class="w-5 h-5 rounded-full"
+                              />
+                              <span x-text="currency.name"></span>
+                            </button>
+                          </li>
+                        </template>
+                      </ul>
+                    </div>
+
+                    <div class="self-end w-full justify-between flex">
+                      <div></div>
+                      <i
+                        class="fa fa-clock text-yellow-300 text-3xl"
+                        aria-hidden="true"
+                      ></i>
+                    </div>
+                  </div>
+
+                  <p class="text-lg mt-2">
+                    Balance:
+                    <span
+                      class="font-bold"
+                      x-cloak
+                      x-text="currentCurrency.symbol + '0.00'"
+                    ></span>
+                  </p>
+                </article>
+
+                <div class="w-full py-10 flex justify-center items-center">
+                  <span
+                    class="p-5 bg-yellow-100/40 dark:bg-gray-800 font-bold text-3xl text-yellow-600 rounded-full"
+                  >
+                    <i
+                      class="fa fa-exchange transform rotate-90"
+                      aria-hidden="true"
+                    ></i>
+                  </span>
+                </div>
+
+                <!-- Second Currency Switcher -->
+                <article
+                  x-data="{
+            isOpen: false,
+            currentCurrency: {
+              name: 'Naira',
+              symbol: '₦',
+              icon: '../images/ng-flag.png',
+            },
+            currencies: [
+              { name: 'Naira', symbol: '₦', icon: '../images/ng-flag.png' },
+              { name: 'Dollar', symbol: '$', icon: '../images/dollar.jpeg' },
+              { name: 'Euro', symbol: '€', icon: '../images/euro-flag.png' },
+            ],
+            init() {
+              const savedCurrency = localStorage.getItem('secondCurrency');
+              if (savedCurrency) {
+                this.currentCurrency = JSON.parse(savedCurrency);
+              }
+            },
+            toggleDropdown() {
+              this.isOpen = !this.isOpen;
+            },
+            selectCurrency(currency) {
+              this.currentCurrency = currency;
+              this.isOpen = false;
+              localStorage.setItem('secondCurrency', JSON.stringify(currency));
+            },
+          }"
+                  x-init="init()"
+                >
+                  <div
+                    class="flex justify-between bg-gray-100 shadow-sm border dark:border-0 dark:bg-gray-800 p-5 pb-14 rounded-xl"
+                  >
+                    <!-- Currency Button -->
+                    <div class="relative mt-4 flex justify-between w-full">
+                      <button
+                        x-cloak
+                        @click="toggleDropdown"
+                        class="py-2 pl-3 min-w-28 bg-white text-primary rounded-full gap-2 cursor-pointer"
+                      >
+                        <div class="flex">
+                          <img
+                            :src="currentCurrency.icon"
+                            :alt="currentCurrency.name"
+                            class="w-7 h-7 rounded-full"
+                          />
+                          <span
+                            class="text-xl ml-3"
+                            x-text="currentCurrency.symbol"
+                          ></span>
+                        </div>
+                      </button>
+
+                      <p class="capitalize font-semibold text-lg ml-12">you pay</p>
+
+                      <!-- Dropdown Menu -->
+                      <ul
+                        x-show="isOpen"
+                        @click.outside="isOpen = false"
+                        class="absolute flex-col text-xs top-12 left-0 bg-white text-primary rounded-md shadow-xl overflow-hidden z-10 min-w-24"
+                      >
+                        <template
+                          x-for="currency in currencies"
+                          :key="currency.name"
+                        >
+                          <li>
+                            <button
+                              @click="selectCurrency(currency)"
+                              class="w-full px-2 py-2 text-base text-left hover:bg-gray-200 flex items-center gap-2"
+                            >
+                              <img
+                                :src="currency.icon"
+                                :alt="currency.name"
+                                class="w-5 h-5 rounded-full"
+                              />
+                              <span x-text="currency.name"></span>
+                            </button>
+                          </li>
+                        </template>
+                      </ul>
+                    </div>
+
+                    <div class="self-end w-full justify-between flex">
+                      <div></div>
+                      <i
+                        class="fa fa-clock text-yellow-300 text-3xl"
+                        aria-hidden="true"
+                      ></i>
+                    </div>
+                  </div>
+
+                  <p
+                    class="text-lg mt-3 dark:text-white bg-lightgreen/20 font-semibold bg-opacity-5 text-green-900 text inline-flex py-4 gap-3 rounded-full px-3"
+                  >
+                    <!-- Balance:  -->
+                    <!-- <span
+                    class="font-bold"
+                    x-cloak
+                    x-text="currentCurrency.symbol + '0.00'"
+                  ></span> -->
+                    <span class="">FX Rate: $1 = ₦16789 </span>
+                  </p>
+                </article>
               </div>
             </div>
           </div>
@@ -571,6 +809,10 @@
     <script src="../js/vendors/jquery.min.js"></script>
     <script src="../js/vendors/owl.carousel.js"></script>
     <script src="../js/users.js"></script>
-    <script src="../js/vendors/alpinejs.min.js" defer></script>
+    <!-- <script src="../js/vendors/alpinejs.min.js" defer></script> -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+      defer
+    ></script>
   </body>
 </html>
