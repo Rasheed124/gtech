@@ -893,48 +893,20 @@
                     >
                       <!-- Slider -->
                       <div
-                        x-data="{ 
-                        currencies: { 
-                          naira: '₦', 
-                          dollar: '$', 
-                          euro: '€' 
-                        }, 
-                        currencyImages: { 
-                          naira: '../images/ng-flag.png', 
-                          dollar: '../images/dollar.jpeg', 
-                          euro: '../images/euro-flag.png' 
-                        }, 
-                        currentCurrency: 'naira', 
-                        balance: 0.0, 
-                        isBalanceVisible: true, 
+                        x-data="{
                         init() {
                           // Load balance visibility state from localStorage
                           const storedVisibility = localStorage.getItem('isBalanceVisible');
                           this.isBalanceVisible = storedVisibility !== null 
                             ? JSON.parse(storedVisibility) 
                             : true; // Default to visible
-                    
-                          // Load selected currency from localStorage
-                          const storedCurrency = localStorage.getItem('currentCurrency');
-                          this.currentCurrency = storedCurrency !== null 
-                            ? storedCurrency 
-                            : 'naira'; // Default to 'naira'
                         },
                         toggleBalanceVisibility() {
                           this.isBalanceVisible = !this.isBalanceVisible;
                           // Save the toggle state to localStorage
                           localStorage.setItem('isBalanceVisible', JSON.stringify(this.isBalanceVisible));
                         },
-                        changeCurrency(newCurrency) {
-                          this.currentCurrency = newCurrency;
-                          // Save the selected currency to localStorage
-                          localStorage.setItem('currentCurrency', newCurrency);
-                        },
-                        get formattedBalance() {
-                          return this.isBalanceVisible
-                            ? `${this.currencies[this.currentCurrency]}${this.balance.toFixed(2)}`
-                            : `${this.currencies[this.currentCurrency]}****`;
-                        },
+                 
                       }"
                         class="min-w-[390px] md:min-w-full flex justify-between p-5 text-left text-white w-full bg-black rounded-xl col-span-6 bg-no-repeat bg-top bg-blend-overlay bg-cover bg-[url('../../images/dash-bg.png')] bg-opacity-60"
                       >
@@ -942,16 +914,12 @@
                         <div x-cloak class="flex flex-col">
                           <p class="text-sm">Total Balance</p>
                           <div class="flex">
-                            <h1
-                              class="text-4xl font-semibold"
-                              x-text="formattedBalance"
-                            ></h1>
+                            <h1 class="text-4xl font-semibold">₦0.00</h1>
                             <button
                               class="ml-3"
                               @click="toggleBalanceVisibility()"
                             >
                               <!-- Toggle Button for Showing/ Hiding Balance -->
-
                               <svg
                                 x-show="isBalanceVisible"
                                 xmlns="http://www.w3.org/2000/svg"
@@ -1060,15 +1028,15 @@
                         </div>
 
                         <!-- Right Side: Currency Dropdown -->
-                        <div class="relative mt-4">
+                        <div class="relative mt-4" x-data="{ isOpen: false }">
                           <button
                             class="py-2 px-2 bg-white text-primary rounded-lg flex items-center gap-2 cursor-pointer"
-                            @click="$refs.dropdown.classList.toggle('hidden')"
-                            @click.outside="$refs.dropdown.classList.add('hidden')"
+                            @click="isOpen = !isOpen"
+                            @click.outside="isOpen = false"
                             x-cloak
                           >
                             <img
-                              :src="currencyImages[currentCurrency]"
+                              src="../images/ng-flag.png"
                               alt=""
                               class="w-4 h-4 rounded-full"
                             />
@@ -1090,27 +1058,34 @@
 
                           <!-- Dropdown Menu -->
                           <ul
-                            x-ref="dropdown"
+                            x-show="isOpen"
+                            x-transition
                             id="wallet-currency-dropdown"
-                            class="hidden absolute flex-col text-xs top-10 left-0 bg-white text-primary rounded-md shadow-xl overflow-hidden z-10 w-full"
+                            class="absolute flex-col text-xs top-10 left-0 bg-white text-primary rounded-md shadow-xl overflow-hidden z-10 w-full"
+                            @click.away="isOpen = false"
                           >
-                            <template
-                              x-for="(img, key) in currencyImages"
-                              :key="key"
-                            >
-                              <li class="relative">
-                                <button
-                                  class="w-full px-1 py-1 text-base text-left hover:bg-gray-200 flex flex-col items-center"
-                                  @click="currentCurrency = key; $refs.dropdown.classList.add('hidden')"
-                                >
-                                  <img
-                                    :src="img"
-                                    alt=""
-                                    class="w-5 h-5 rounded-full"
-                                  />
-                                </button>
-                              </li>
-                            </template>
+                            <li class="relative">
+                              <button
+                                class="w-full px-2 py-2 text-base text-left hover:bg-gray-200 flex items-center justify-center"
+                              >
+                                <img
+                                  src="../images/ng-flag.png"
+                                  alt="Nigeria Flag"
+                                  class="w-5 h-5 rounded-full"
+                                />
+                              </button>
+                            </li>
+                            <li class="relative">
+                              <button
+                                class="w-full px-2 py-2 text-base text-left hover:bg-gray-200 flex items-center justify-center"
+                              >
+                                <img
+                                  src="../images/dollar.jpeg"
+                                  alt="Another Country Flag"
+                                  class="w-5 h-5 rounded-full"
+                                />
+                              </button>
+                            </li>
                           </ul>
                         </div>
                       </div>
@@ -1315,7 +1290,7 @@
                           class="p-4 border-b dark:border-b-white/10 flex justify-between mt-4"
                         >
                           <div
-                            class="flex pl-3 lg:pl-5 gap-2 lg:gap-5 max-w-[500px] "
+                            class="flex pl-3 lg:pl-5 gap-2 lg:gap-5 max-w-[500px]"
                           >
                             <div class="flex relative">
                               <span
@@ -1389,7 +1364,7 @@
                           class="p-4 border-b dark:border-b-white/10 flex justify-between mt-4"
                         >
                           <div
-                            class="flex pl-3 lg:pl-5 gap-2 lg:gap-5 max-w-[500px] "
+                            class="flex pl-3 lg:pl-5 gap-2 lg:gap-5 max-w-[500px]"
                           >
                             <div class="flex relative">
                               <span
@@ -1435,7 +1410,7 @@
                               <h3
                                 class="mt-0.5 text-base lg:text-lg font-medium dark:text-white text-gray-900"
                               >
-                                Mtn Airtime VTU Topup 
+                                Mtn Airtime VTU Topup
                               </h3>
                               <p
                                 class="text-gray-600 dark:text-white/65 text-xs lg:text-sm"
@@ -1460,7 +1435,7 @@
                           class="p-4 border-b dark:border-b-white/10 flex justify-between mt-4"
                         >
                           <div
-                            class="flex pl-3 lg:pl-5 gap-2 lg:gap-5 max-w-[500px] "
+                            class="flex pl-3 lg:pl-5 gap-2 lg:gap-5 max-w-[500px]"
                           >
                             <div class="flex relative">
                               <span
@@ -1506,7 +1481,7 @@
                               <h3
                                 class="mt-0.5 text-base lg:text-lg font-medium dark:text-white text-gray-900"
                               >
-                                Mtn Airtime VTU Topup 
+                                Mtn Airtime VTU Topup
                               </h3>
                               <p
                                 class="text-gray-600 dark:text-white/65 text-xs lg:text-sm"
