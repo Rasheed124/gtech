@@ -894,19 +894,20 @@
                       <!-- Slider -->
                       <div
                         x-data="{
+                        isBalanceVisible: true, // Default visibility
                         init() {
                           // Load balance visibility state from localStorage
                           const storedVisibility = localStorage.getItem('isBalanceVisible');
-                          this.isBalanceVisible = storedVisibility !== null 
-                            ? JSON.parse(storedVisibility) 
-                            : true; // Default to visible
+                          this.isBalanceVisible = storedVisibility !== null
+                            ? JSON.parse(storedVisibility)
+                            : true; // Default to visible if no stored value
                         },
                         toggleBalanceVisibility() {
+                          // Toggle visibility state
                           this.isBalanceVisible = !this.isBalanceVisible;
-                          // Save the toggle state to localStorage
+                          // Save the updated state to localStorage
                           localStorage.setItem('isBalanceVisible', JSON.stringify(this.isBalanceVisible));
-                        },
-                 
+                        }
                       }"
                         class="min-w-[390px] md:min-w-full flex justify-between p-5 text-left text-white w-full bg-black rounded-xl col-span-6 bg-no-repeat bg-top bg-blend-overlay bg-cover bg-[url('../../images/dash-bg.png')] bg-opacity-60"
                       >
@@ -914,7 +915,10 @@
                         <div x-cloak class="flex flex-col">
                           <p class="text-sm">Total Balance</p>
                           <div class="flex">
-                            <h1 class="text-4xl font-semibold">₦0.00</h1>
+                            <h1 class="text-4xl font-semibold">
+                              ₦<span x-show="isBalanceVisible">0.00</span>
+                              <span x-show="!isBalanceVisible">****</span>
+                            </h1>
                             <button
                               class="ml-3"
                               @click="toggleBalanceVisibility()"
