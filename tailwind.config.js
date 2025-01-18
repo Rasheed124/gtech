@@ -130,8 +130,8 @@ module.exports = {
         black: "#050505",
       },
       backgroundImage: {
-        'dash-bg': "url('../../images/dash-bg.png')",
-        'footer-texture': "url('/img/footer-texture.png')",
+        "dash-bg": "url('../../images/dash-bg.png')",
+        "footer-texture": "url('/img/footer-texture.png')",
       },
       fontFamily: {
         inter: ["Inter", "sans-serif"],

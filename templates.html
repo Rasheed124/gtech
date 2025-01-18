@@ -3,10 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/user/output.css " />
-
-    <link rel="stylesheet" href="../css/vendors/owl.carousel.min.css" />
-    <link rel="stylesheet" href="../css/vendors/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="./style.css " />
     <link
       rel="stylesheet"
       href="https://rawcdn.githack.com/hung1001/font-awesome-pro/4cac1a6/css/all.css"
@@ -86,7 +83,7 @@
 
                   <div class="overflow-hidden bg-gray-900">
                     <img
-                      src="../images/master-card.png "
+                      src="./images/master-card.png "
                       class="w-12 h-12 object-contain"
                       alt=""
                     />
@@ -202,7 +199,7 @@
 
                   <div class="overflow-hidden bg-gray-900">
                     <img
-                      src="../images/visa.png "
+                      src="./images/visa.png "
                       class="w-12 h-12 object-contain"
                       alt=""
                     />
@@ -581,88 +578,27 @@
               <!-- Card content -->
               <div class="space-y-4">
                 <!-- First Currency Switcher -->
-                <article
-                  x-data="{
-                        isOpen: false,
-                        currentCurrency: {
-                          name: 'Naira',
-                          symbol: '₦',
-                          icon: '../images/ng-flag.png',
-                        },
-                        currencies: [
-                          { name: 'Naira', symbol: '₦', icon: '../images/ng-flag.png' },
-                          { name: 'Dollar', symbol: '$', icon: '../images/dollar.jpeg' },
-                          { name: 'Euro', symbol: '€', icon: '../images/euro-flag.png' },
-                        ],
-                        init() {
-                          const savedCurrency = localStorage.getItem('firstCurrency');
-                          if (savedCurrency) {
-                            this.currentCurrency = JSON.parse(savedCurrency);
-                          }
-                        },
-                        toggleDropdown() {
-                          this.isOpen = !this.isOpen;
-                        },
-                        selectCurrency(currency) {
-                          this.currentCurrency = currency;
-                          this.isOpen = false;
-                          localStorage.setItem('firstCurrency', JSON.stringify(currency));
-                        },
-                      }"
-                  x-init="init()"
-                >
+                <article>
                   <div
                     class="flex justify-between bg-gray-100 shadow-sm border dark:border-0 dark:bg-gray-800 p-5 pb-14 rounded-xl"
                   >
                     <!-- Currency Button -->
                     <div class="relative mt-4 flex justify-between w-full">
                       <button
-                        x-cloak
-                        @click="toggleDropdown"
                         class="py-2 pl-3 min-w-28 bg-white text-primary rounded-full gap-2 cursor-pointer"
                       >
                         <div class="flex">
                           <img
-                            :src="currentCurrency.icon"
-                            :alt="currentCurrency.name"
+                            src="./images/ng-flag.png"
                             class="w-7 h-7 rounded-full"
                           />
-                          <span
-                            class="text-xl ml-3"
-                            x-text="currentCurrency.symbol"
-                          ></span>
+                          <span class="text-xl ml-3">₦</span>
                         </div>
                       </button>
 
                       <p class="capitalize font-semibold text-lg ml-12">
                         you pay
                       </p>
-
-                      <!-- Dropdown Menu -->
-                      <ul
-                        x-show="isOpen"
-                        @click.outside="isOpen = false"
-                        class="absolute flex-col text-xs top-12 left-0 bg-white text-primary rounded-md shadow-xl overflow-hidden z-10 min-w-24"
-                      >
-                        <template
-                          x-for="currency in currencies"
-                          :key="currency.name"
-                        >
-                          <li>
-                            <button
-                              @click="selectCurrency(currency)"
-                              class="w-full px-2 py-2 text-base text-left hover:bg-gray-200 flex items-center gap-2"
-                            >
-                              <img
-                                :src="currency.icon"
-                                :alt="currency.name"
-                                class="w-5 h-5 rounded-full"
-                              />
-                              <span x-text="currency.name"></span>
-                            </button>
-                          </li>
-                        </template>
-                      </ul>
                     </div>
 
                     <div class="self-end w-full justify-between flex">
@@ -676,11 +612,7 @@
 
                   <p class="text-lg mt-2">
                     Balance:
-                    <span
-                      class="font-bold"
-                      x-cloak
-                      x-text="currentCurrency.symbol + '0.00'"
-                    ></span>
+                    <span class="font-bold"> ₦0.00</span>
                   </p>
                 </article>
 
@@ -696,86 +628,27 @@
                 </div>
 
                 <!-- Second Currency Switcher -->
-                <article
-                  x-data="{
-            isOpen: false,
-            currentCurrency: {
-              name: 'Naira',
-              symbol: '₦',
-              icon: '../images/ng-flag.png',
-            },
-            currencies: [
-              { name: 'Naira', symbol: '₦', icon: '../images/ng-flag.png' },
-              { name: 'Dollar', symbol: '$', icon: '../images/dollar.jpeg' },
-              { name: 'Euro', symbol: '€', icon: '../images/euro-flag.png' },
-            ],
-            init() {
-              const savedCurrency = localStorage.getItem('secondCurrency');
-              if (savedCurrency) {
-                this.currentCurrency = JSON.parse(savedCurrency);
-              }
-            },
-            toggleDropdown() {
-              this.isOpen = !this.isOpen;
-            },
-            selectCurrency(currency) {
-              this.currentCurrency = currency;
-              this.isOpen = false;
-              localStorage.setItem('secondCurrency', JSON.stringify(currency));
-            },
-          }"
-                  x-init="init()"
-                >
+                <article>
                   <div
                     class="flex justify-between bg-gray-100 shadow-sm border dark:border-0 dark:bg-gray-800 p-5 pb-14 rounded-xl"
                   >
                     <!-- Currency Button -->
                     <div class="relative mt-4 flex justify-between w-full">
                       <button
-                        x-cloak
-                        @click="toggleDropdown"
                         class="py-2 pl-3 min-w-28 bg-white text-primary rounded-full gap-2 cursor-pointer"
                       >
                         <div class="flex">
                           <img
-                            :src="currentCurrency.icon"
-                            :alt="currentCurrency.name"
+                            src="./images/dollar.jpeg"
                             class="w-7 h-7 rounded-full"
                           />
-                          <span
-                            class="text-xl ml-3"
-                            x-text="currentCurrency.symbol"
-                          ></span>
+                          <span class="text-xl ml-3">$</span>
                         </div>
                       </button>
 
-                      <p class="capitalize font-semibold text-lg ml-12">you pay</p>
-
-                      <!-- Dropdown Menu -->
-                      <ul
-                        x-show="isOpen"
-                        @click.outside="isOpen = false"
-                        class="absolute flex-col text-xs top-12 left-0 bg-white text-primary rounded-md shadow-xl overflow-hidden z-10 min-w-24"
-                      >
-                        <template
-                          x-for="currency in currencies"
-                          :key="currency.name"
-                        >
-                          <li>
-                            <button
-                              @click="selectCurrency(currency)"
-                              class="w-full px-2 py-2 text-base text-left hover:bg-gray-200 flex items-center gap-2"
-                            >
-                              <img
-                                :src="currency.icon"
-                                :alt="currency.name"
-                                class="w-5 h-5 rounded-full"
-                              />
-                              <span x-text="currency.name"></span>
-                            </button>
-                          </li>
-                        </template>
-                      </ul>
+                      <p class="capitalize font-semibold text-lg ml-12">
+                        you pay
+                      </p>
                     </div>
 
                     <div class="self-end w-full justify-between flex">
@@ -790,12 +663,6 @@
                   <p
                     class="text-lg mt-3 dark:text-white bg-lightgreen/20 font-semibold bg-opacity-5 text-green-900 text inline-flex py-4 gap-3 rounded-full px-3"
                   >
-                    <!-- Balance:  -->
-                    <!-- <span
-                    class="font-bold"
-                    x-cloak
-                    x-text="currentCurrency.symbol + '0.00'"
-                  ></span> -->
                     <span class="">FX Rate: $1 = ₦16789 </span>
                   </p>
                 </article>
@@ -806,9 +673,9 @@
       </main>
     </div>
 
-    <script src="../js/vendors/jquery.min.js"></script>
-    <script src="../js/vendors/owl.carousel.js"></script>
-    <script src="../js/users.js"></script>
+    <script src="./js/vendors/jquery.min.js"></script>
+    <script src="./js/vendors/owl.carousel.js"></script>
+    <script src="./js/users.js"></script>
     <!-- <script src="../js/vendors/alpinejs.min.js" defer></script> -->
     <script
       src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"

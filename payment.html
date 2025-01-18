@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css " />
+
+    <link
+      rel="stylesheet"
+      href="https://rawcdn.githack.com/hung1001/font-awesome-pro/4cac1a6/css/all.css"
+    />
+
+    <script>
+      if (
+        localStorage.getItem("user-dark-mode") === "false" ||
+        !("user-dark-mode" in localStorage)
+      ) {
+        document.querySelector("html").classList.remove("dark");
+        document.querySelector("html").style.colorScheme = "light";
+      } else {
+        document.querySelector("html").classList.add("dark");
+        document.querySelector("html").style.colorScheme = "dark";
+      }
+    </script>
+    <title>User Template - Home</title>
+  </head>
+  <body
+    class="bg-gray-100 dark:bg-gray-900 bg-no-repeat bg-center bg-blend-overlay w-full"
+  >
+    <div class="w-full">
+      <main class="px-2">
+        <div class="m-auto flex justify-center items-center pt-5 sticky top-3">
+          <input
+            type="checkbox"
+            name="user-light-switch"
+            id="user-light-switch"
+            class="user-light-switch sr-only"
+          />
+          <label
+            class="flex items-center justify-center cursor-pointer w-9 h-9 p-2.5 hover:bg-gray-100 lg:hover:bg-gray-200 dark:hover:bg-gray-700/50 dark:lg:hover:bg-gray-800 rounded-md"
+            for="user-light-switch"
+          >
+            <svg
+              class="dark:hidden fill-current text-black dark:text-gray-400/80"
+              class="size-7"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M8 0a1 1 0 0 1 1 1v.5a1 1 0 1 1-2 0V1a1 1 0 0 1 1-1Z" />
+              <path
+                d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0Zm-4 2a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"
+              />
+              <path
+                d="M13.657 3.757a1 1 0 0 0-1.414-1.414l-.354.354a1 1 0 0 0 1.414 1.414l.354-.354ZM13.5 8a1 1 0 0 1 1-1h.5a1 1 0 1 1 0 2h-.5a1 1 0 0 1-1-1ZM13.303 11.889a1 1 0 0 0-1.414 1.414l.354.354a1 1 0 0 0 1.414-1.414l-.354-.354ZM8 13.5a1 1 0 0 1 1 1v.5a1 1 0 1 1-2 0v-.5a1 1 0 0 1 1-1ZM4.111 13.303a1 1 0 1 0-1.414-1.414l-.354.354a1 1 0 1 0 1.414 1.414l.354-.354ZM0 8a1 1 0 0 1 1-1h.5a1 1 0 0 1 0 2H1a1 1 0 0 1-1-1ZM3.757 2.343a1 1 0 1 0-1.414 1.414l.354.354A1 1 0 1 0 4.11 2.697l-.354-.354Z"
+              />
+            </svg>
+            <svg
+              class="hidden dark:block fill-current text-gray-500/80 dark:text-gray-400/80"
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11.875 4.375a.625.625 0 1 0 1.25 0c.001-.69.56-1.249 1.25-1.25a.625.625 0 1 0 0-1.25 1.252 1.252 0 0 1-1.25-1.25.625.625 0 1 0-1.25 0 1.252 1.252 0 0 1-1.25 1.25.625.625 0 1 0 0 1.25c.69.001 1.249.56 1.25 1.25Z"
+              />
+              <path
+                d="M7.019 1.985a1.55 1.55 0 0 0-.483-1.36 1.44 1.44 0 0 0-1.53-.277C2.056 1.553 0 4.5 0 7.9 0 12.352 3.648 16 8.1 16c3.407 0 6.246-2.058 7.51-4.963a1.446 1.446 0 0 0-.25-1.55 1.554 1.554 0 0 0-1.372-.502c-4.01.552-7.539-2.987-6.97-7ZM2 7.9C2 5.64 3.193 3.664 4.961 2.6 4.82 7.245 8.72 11.158 13.36 11.04 12.265 12.822 10.341 14 8.1 14 4.752 14 2 11.248 2 7.9Z"
+              />
+            </svg>
+            <span class="sr-only">Switch to light / dark version</span>
+          </label>
+        </div>
+        <!-- First Payment -->
+        <section>
+          <div class="max-w-screen-sm m-auto text-black rounded-xl py-6">
+            <div class="flex flex-col gap-8 px-2.5 py-5">
+              <!-- Card Box -->
+
+              <div class="flex items-center mt-4">
+                <span class="text-sm font-semibold mr-2">₦</span>
+                <input
+                  type="number"
+                  placeholder="₦50 - ₦500,000"
+                  name="amount"
+                  id="amount"
+                  class="border-none outline-none text-sm font-semibold rounded-lg flex-grow"
+                />
+                <button
+                  type="button"
+                  id="buy-airtime-bb"
+                  class="ml-8 px-4 py-2 text-sm font-semibold text-white bg-primary rounded-full"
+                  onclick="toggleCanvas(event)"
+                >
+                  Pay
+                </button>
+              </div>
+
+              <form class="p-4 sm:p-6 lg:p-8" id="pin-form">
+                <!-- PIN Input -->
+                <div class="flex justify-around gap-2 mt-6" id="pin-inputs">
+                  <input
+                    type="password"
+                    maxlength="1"
+                    class="outline-none border caret-transparent text-7xl font-bold border-black w-12 h-12 md:w-14 md:h-14 rounded-xl text-black text-center otp-input pb-5"
+                    data-index="0"
+                    required
+                    readonly
+                  />
+                  <input
+                    type="password"
+                    maxlength="1"
+                    class="outline-none border caret-transparent text-7xl font-bold border-black w-12 h-12 md:w-14 md:h-14 rounded-xl text-black text-center otp-input pb-4"
+                    data-index="1"
+                    required
+                    readonly
+                  />
+                  <input
+                    type="password"
+                    maxlength="1"
+                    class="outline-none border caret-transparent text-7xl font-bold border-black w-12 h-12 md:w-14 md:h-14 rounded-xl text-black text-center pb-4 otp-input"
+                    data-index="2"
+                    required
+                    readonly
+                  />
+                  <input
+                    type="password"
+                    maxlength="1"
+                    class="outline-none border caret-transparent text-7xl font-bold border-black w-12 h-12 md:w-14 md:h-14 rounded-xl text-black text-center pb-4 otp-input"
+                    data-index="3"
+                    required
+                    readonly
+                  />
+                </div>
+
+                <!-- Buttons for PIN Input -->
+                <div
+                  class="grid grid-cols-3 font-semibold text-xl gap-4 my-6"
+                  id="pin-buttons"
+                >
+                  <button type="button" class="pin-btn" data-value="1">
+                    1
+                  </button>
+                  <button type="button" class="pin-btn" data-value="2">
+                    2
+                  </button>
+                  <button type="button" class="pin-btn" data-value="3">
+                    3
+                  </button>
+                  <button type="button" class="pin-btn" data-value="4">
+                    4
+                  </button>
+                  <button type="button" class="pin-btn" data-value="5">
+                    5
+                  </button>
+                  <button type="button" class="pin-btn" data-value="6">
+                    6
+                  </button>
+                  <button type="button" class="pin-btn" data-value="7">
+                    7
+                  </button>
+                  <button type="button" class="pin-btn" data-value="8">
+                    8
+                  </button>
+                  <button type="button" class="pin-btn" data-value="9">
+                    9
+                  </button>
+                  <button type="button" class="pin-btn" data-value="1"></button>
+                  <button type="button" class="pin-btn" data-value="0">
+                    0
+                  </button>
+                  <button
+                    type="button"
+                    class="pin-btn flex items-center justify-center"
+                    data-value="BACKSPACE"
+                  >
+                    <svg
+                      width="24"
+                      height="22"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10.28 18.514h6.72c2.76 0 5-1.958 5-4.371v-5.682c0-2.413-2.24-4.371-5-4.371h-6.72c-1.41 0-2.75.516-3.7 1.434l-3.53 3.392c-1.41 1.355-1.41 3.418 0 4.773l3.53 3.392c.95.918 2.29 1.434 3.7 1.434z"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                      <path
+                        d="M16 13.461l-4.94-4.319"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                      ></path>
+                      <path
+                        d="M11.06 13.461L16 9.143"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="./js/vendors/jquery.min.js"></script>
+    <script src="./js/vendors/owl.carousel.js"></script>
+    <script src="./js/users.js"></script>
+    <!-- <script src="../js/vendors/alpinejs.min.js" defer></script> -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+      defer
+    ></script>
+  </body>
+</html>
