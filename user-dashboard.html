@@ -681,28 +681,47 @@
 
                 <!-- Logout -->
 
-                <!-- logout -->
-                <div class="flex justify-start items-start gap-3 px-2">
-                  <button class="flex dark:text-white text-black items-start">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="25"
-                      height="25"
-                      viewBox="0 0 25 25"
-                      fill="none"
-                      class="w-6 h-6 icon"
+                  <!--  Logout  -->
+                  <div class="">
+                    <button
+                      class="flex dark:text-white text-black items-start gap-3 hover:text-grey-scale !duration-500 hover:translate-x-1"
                     >
-                      <path
-                        d="M17.3 2.5H14.7C11.5 2.5 9.5 4.5 9.5 7.7V11.75H15.75C16.16 11.75 16.5 12.09 16.5 12.5C16.5 12.91 16.16 13.25 15.75 13.25H9.5V17.3C9.5 20.5 11.5 22.5 14.7 22.5H17.29C20.49 22.5 22.49 20.5 22.49 17.3V7.7C22.5 4.5 20.5 2.5 17.3 2.5Z"
-                        fill="currentColor"
-                      ></path>
-                      <path
-                        d="M5.06043 11.7498L7.13043 9.67984C7.28043 9.52984 7.35043 9.33984 7.35043 9.14984C7.35043 8.95984 7.28043 8.75984 7.13043 8.61984C6.84043 8.32984 6.36043 8.32984 6.07043 8.61984L2.72043 11.9698C2.43043 12.2598 2.43043 12.7398 2.72043 13.0298L6.07043 16.3798C6.36043 16.6698 6.84043 16.6698 7.13043 16.3798C7.42043 16.0898 7.42043 15.6098 7.13043 15.3198L5.06043 13.2498H9.50043V11.7498H5.06043V11.7498Z"
-                        fill="currentColor"
-                      ></path>
-                    </svg>
-                  </button>
-                </div>
+                      <a
+                        aria-current="page"
+                        href="/dashboard"
+                        class="router-link-active flex items-center py-3 px-4 w-full rounded-lg text-secondary justify-between"
+                        ><div class="flex items-center gap-3">
+                          <div
+                            class="w-10 h-10 rounded-full relative bg-primary flex justify-center items-center"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="25"
+                              height="25"
+                              viewBox="0 0 25 25"
+                              fill="none"
+                              class="w-6 h-6 text-white"
+                            >
+                              <path
+                                d="M17.3 2.5H14.7C11.5 2.5 9.5 4.5 9.5 7.7V11.75H15.75C16.16 11.75 16.5 12.09 16.5 12.5C16.5 12.91 16.16 13.25 15.75 13.25H9.5V17.3C9.5 20.5 11.5 22.5 14.7 22.5H17.29C20.49 22.5 22.49 20.5 22.49 17.3V7.7C22.5 4.5 20.5 2.5 17.3 2.5Z"
+                                fill="currentColor"
+                              ></path>
+                              <path
+                                d="M5.06043 11.7498L7.13043 9.67984C7.28043 9.52984 7.35043 9.33984 7.35043 9.14984C7.35043 8.95984 7.28043 8.75984 7.13043 8.61984C6.84043 8.32984 6.36043 8.32984 6.07043 8.61984L2.72043 11.9698C2.43043 12.2598 2.43043 12.7398 2.72043 13.0298L6.07043 16.3798C6.36043 16.6698 6.84043 16.6698 7.13043 16.3798C7.42043 16.0898 7.42043 15.6098 7.13043 15.3198L5.06043 13.2498H9.50043V11.7498H5.06043V11.7498Z"
+                                fill="currentColor"
+                              ></path>
+                            </svg>
+                          </div>
+                          <p
+                            :class="isCollapsed ? 'hidden' : 'block'"
+                            class="text-black dark:text-white"
+                          >
+                            Logout
+                          </p>
+                        </div>
+                      </a>
+                    </button>
+                  </div>
               </nav>
             </div>
           </div>
@@ -715,7 +734,7 @@
               <!-- MAIN HEADER  -->
               <header class="lg:col-span-12 ">
                 <!-- Top Header Content -->
-                <div class="flex justify-between">
+                <div class="grid grid-cols-2">
                   <div class="px-3 ">
                     <button
                       id="openMenuButton"
@@ -750,16 +769,20 @@
                       </svg>
                     </button>
 
-                    <h2 class="text-black dark:text-gray-100 text-2xl mb-1">
-                      Hello, James 👋
-                    </h2>
-                    <p class="text-xs text-gray-500 dark:text-gray-400">
-                      What bill would you like to pay today?
-                    </p>
+                    <div class="lg:max-w-max">
+                      <h2 class="text-black dark:text-gray-100 text-2xl mb-1">
+                        Hello, James 👋
+                      </h2>
+                      <p class="text-xs text-gray-500 dark:text-gray-400">
+                        Good afternoon, Glutizen! Got bills? Handle them with GlutPay and enjoy your day!
+                      </p>  
+                    </div>
+
+                  
                   </div>
 
                   <!-- Profile and Notifications -->
-                  <div class="flex self-start gap-2 items-center relative">
+                  <div class="flex self-start gap-2 place-self-end items-center relative">
                     <img
                       class="w-10 h-10"
                       src="./images/auth-login-pin-profile.png"

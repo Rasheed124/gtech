@@ -1887,10 +1887,6 @@ span.flatpickr-weekday:is(.dark *){
   grid-column: span 6 / span 6;
 }
 
-.col-span-8{
-  grid-column: span 8 / span 8;
-}
-
 .col-span-full{
   grid-column: 1 / -1;
 }
@@ -3275,6 +3271,10 @@ span.flatpickr-weekday:is(.dark *){
 .divide-gray-200 > :not([hidden]) ~ :not([hidden]){
   --tw-divide-opacity: 1;
   border-color: rgb(229 231 235 / var(--tw-divide-opacity));
+}
+
+.place-self-end{
+  place-self: end;
 }
 
 .self-start{
@@ -6808,17 +6808,8 @@ body #announcement-banner > div > div.owl-dots > button.owl-dot span {
     overflow-x: hidden;
   }
 
-  .md\:border-x{
-    border-left-width: 1px;
-    border-right-width: 1px;
-  }
-
   .md\:border-b-0{
     border-bottom-width: 0px;
-  }
-
-  .md\:border-l-2{
-    border-left-width: 2px;
   }
 
   .md\:border-r{
@@ -6851,11 +6842,6 @@ body #announcement-banner > div > div.owl-dots > button.owl-dot span {
   .md\:px-5{
     padding-left: 1.25rem;
     padding-right: 1.25rem;
-  }
-
-  .md\:px-6{
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
   }
 
   .md\:py-0{
@@ -7131,8 +7117,17 @@ body #announcement-banner > div > div.owl-dots > button.owl-dot span {
     max-width: 250px;
   }
 
+  .lg\:max-w-\[270px\]{
+    max-width: 270px;
+  }
+
   .lg\:max-w-\[640px\]{
     max-width: 640px;
+  }
+
+  .lg\:max-w-max{
+    max-width: -moz-max-content;
+    max-width: max-content;
   }
 
   .lg\:max-w-md{
@@ -7153,14 +7148,6 @@ body #announcement-banner > div > div.owl-dots > button.owl-dot span {
 
   .lg\:max-w-xs{
     max-width: 20rem;
-  }
-
-  .lg\:max-w-\[270px\]{
-    max-width: 270px;
-  }
-
-  .lg\:max-w-\[300px\]{
-    max-width: 300px;
   }
 
   .lg\:shrink-0{
@@ -7263,10 +7250,6 @@ body #announcement-banner > div > div.owl-dots > button.owl-dot span {
 
   .lg\:overflow-x-hidden{
     overflow-x: hidden;
-  }
-
-  .lg\:overflow-y-hidden{
-    overflow-y: hidden;
   }
 
   .lg\:rounded-xl{
