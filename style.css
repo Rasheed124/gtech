@@ -2191,10 +2191,6 @@ span.flatpickr-weekday:is(.dark *){
   margin-left: 1rem;
 }
 
-.ml-8{
-  margin-left: 2rem;
-}
-
 .ml-auto{
   margin-left: auto;
 }
@@ -2841,10 +2837,6 @@ span.flatpickr-weekday:is(.dark *){
 
 .shrink-0{
   flex-shrink: 0;
-}
-
-.flex-grow{
-  flex-grow: 1;
 }
 
 .grow{
@@ -6991,6 +6983,18 @@ body #announcement-banner > div > div.owl-dots > button.owl-dot span {
     order: 2;
   }
 
+  .lg\:col-span-12{
+    grid-column: span 12 / span 12;
+  }
+
+  .lg\:col-span-4{
+    grid-column: span 4 / span 4;
+  }
+
+  .lg\:col-span-8{
+    grid-column: span 8 / span 8;
+  }
+
   .lg\:col-start-1{
     grid-column-start: 1;
   }
@@ -7151,6 +7155,14 @@ body #announcement-banner > div > div.owl-dots > button.owl-dot span {
     max-width: 20rem;
   }
 
+  .lg\:max-w-\[270px\]{
+    max-width: 270px;
+  }
+
+  .lg\:max-w-\[300px\]{
+    max-width: 300px;
+  }
+
   .lg\:shrink-0{
     flex-shrink: 0;
   }
@@ -7162,6 +7174,10 @@ body #announcement-banner > div > div.owl-dots > button.owl-dot span {
   .lg\:translate-x-0{
     --tw-translate-x: 0px;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .lg\:grid-cols-12{
+    grid-template-columns: repeat(12, minmax(0, 1fr));
   }
 
   .lg\:grid-cols-2{
