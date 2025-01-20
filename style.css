@@ -6808,21 +6808,12 @@ body #announcement-banner > div > div.owl-dots > button.owl-dot span {
     overflow-x: hidden;
   }
 
-  .md\:border-x{
-    border-left-width: 1px;
-    border-right-width: 1px;
-  }
-
   .md\:border-b-0{
     border-bottom-width: 0px;
   }
 
   .md\:border-r{
     border-right-width: 1px;
-  }
-
-  .md\:border-l-2{
-    border-left-width: 2px;
   }
 
   .md\:p-10{
@@ -7278,12 +7269,12 @@ body #announcement-banner > div > div.owl-dots > button.owl-dot span {
     border-left-width: 1px;
   }
 
-  .lg\:border-t-0{
-    border-top-width: 0px;
-  }
-
   .lg\:border-l-2{
     border-left-width: 2px;
+  }
+
+  .lg\:border-t-0{
+    border-top-width: 0px;
   }
 
   .lg\:bg-top{
