@@ -1851,6 +1851,18 @@ span.flatpickr-weekday:is(.dark *){
   top: 100%;
 }
 
+.-right-0{
+  right: -0px;
+}
+
+.-right-2{
+  right: -0.5rem;
+}
+
+.right-3{
+  right: 0.75rem;
+}
+
 .z-10{
   z-index: 10;
 }
@@ -4380,6 +4392,10 @@ span.flatpickr-weekday:is(.dark *){
 
 .pt-8{
   padding-top: 2rem;
+}
+
+.pr-2{
+  padding-right: 0.5rem;
 }
 
 .text-left{
@@ -7361,6 +7377,11 @@ body #announcement-banner > div > div.owl-dots > button.owl-dot span {
   .lg\:py-8{
     padding-top: 2rem;
     padding-bottom: 2rem;
+  }
+
+  .lg\:px-3{
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 
   .lg\:pb-0{
