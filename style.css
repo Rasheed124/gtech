@@ -2558,6 +2558,10 @@ span.flatpickr-weekday:is(.dark *){
   max-height: 100vh;
 }
 
+.max-h-\[34vh\]{
+  max-height: 34vh;
+}
+
 .min-h-\[100dvh\]{
   min-height: 100dvh;
 }
@@ -3325,6 +3329,10 @@ span.flatpickr-weekday:is(.dark *){
   overflow-x: hidden;
 }
 
+.overflow-y-hidden{
+  overflow-y: hidden;
+}
+
 .overflow-x-scroll{
   overflow-x: scroll;
 }
@@ -3555,6 +3563,11 @@ span.flatpickr-weekday:is(.dark *){
 .border-white{
   --tw-border-opacity: 1;
   border-color: rgb(252 255 255 / var(--tw-border-opacity));
+}
+
+.border-red-900{
+  --tw-border-opacity: 1;
+  border-color: rgb(148 24 24 / var(--tw-border-opacity));
 }
 
 .border-y-\[\#F0EBF8\]{
@@ -6676,6 +6689,10 @@ body #announcement-banner > div > div.owl-dots > button.owl-dot span {
 
   .md\:max-h-\[84vh\]{
     max-height: 84vh;
+  }
+
+  .md\:max-h-\[34vh\]{
+    max-height: 34vh;
   }
 
   .md\:w-1\/2{
