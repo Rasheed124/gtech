@@ -1831,6 +1831,10 @@ span.flatpickr-weekday:is(.dark *){
   top: 2.5rem;
 }
 
+.top-12{
+  top: 3rem;
+}
+
 .top-16{
   top: 4rem;
 }
@@ -1849,22 +1853,6 @@ span.flatpickr-weekday:is(.dark *){
 
 .top-full{
   top: 100%;
-}
-
-.-right-0{
-  right: -0px;
-}
-
-.-right-2{
-  right: -0.5rem;
-}
-
-.right-3{
-  right: 0.75rem;
-}
-
-.top-12{
-  top: 3rem;
 }
 
 .z-10{
@@ -1895,6 +1883,10 @@ span.flatpickr-weekday:is(.dark *){
   order: 2;
 }
 
+.col-span-2{
+  grid-column: span 2 / span 2;
+}
+
 .col-span-4{
   grid-column: span 4 / span 4;
 }
@@ -1903,16 +1895,12 @@ span.flatpickr-weekday:is(.dark *){
   grid-column: span 6 / span 6;
 }
 
-.col-span-full{
-  grid-column: 1 / -1;
-}
-
-.col-span-2{
-  grid-column: span 2 / span 2;
-}
-
 .col-span-8{
   grid-column: span 8 / span 8;
+}
+
+.col-span-full{
+  grid-column: 1 / -1;
 }
 
 .-m-1{
@@ -2722,6 +2710,10 @@ span.flatpickr-weekday:is(.dark *){
   min-width: 0px;
 }
 
+.min-w-24{
+  min-width: 6rem;
+}
+
 .min-w-28{
   min-width: 7rem;
 }
@@ -2761,10 +2753,6 @@ span.flatpickr-weekday:is(.dark *){
 .min-w-fit{
   min-width: -moz-fit-content;
   min-width: fit-content;
-}
-
-.min-w-24{
-  min-width: 6rem;
 }
 
 .max-w-0{
@@ -3425,11 +3413,6 @@ span.flatpickr-weekday:is(.dark *){
   border-bottom-right-radius: 0.5rem;
 }
 
-.rounded-t-xl{
-  border-top-left-radius: 0.75rem;
-  border-top-right-radius: 0.75rem;
-}
-
 .rounded-t-2xl{
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
@@ -3438,6 +3421,11 @@ span.flatpickr-weekday:is(.dark *){
 .rounded-t-lg{
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
+}
+
+.rounded-t-xl{
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
 }
 
 .rounded-tl-none{
@@ -3544,6 +3532,11 @@ span.flatpickr-weekday:is(.dark *){
 .border-red-300{
   --tw-border-opacity: 1;
   border-color: rgb(255 148 148 / var(--tw-border-opacity));
+}
+
+.border-red-700{
+  --tw-border-opacity: 1;
+  border-color: rgb(230 57 57 / var(--tw-border-opacity));
 }
 
 .border-transparent{
@@ -4418,10 +4411,6 @@ span.flatpickr-weekday:is(.dark *){
 
 .pt-8{
   padding-top: 2rem;
-}
-
-.pr-2{
-  padding-right: 0.5rem;
 }
 
 .text-left{
@@ -6864,12 +6853,12 @@ body #announcement-banner > div > div.owl-dots > button.owl-dot span {
     border-bottom-width: 0px;
   }
 
-  .md\:border-r{
-    border-right-width: 1px;
-  }
-
   .md\:border-l-2{
     border-left-width: 2px;
+  }
+
+  .md\:border-r{
+    border-right-width: 1px;
   }
 
   .md\:p-10{
@@ -6900,6 +6889,11 @@ body #announcement-banner > div > div.owl-dots > button.owl-dot span {
     padding-right: 1.25rem;
   }
 
+  .md\:px-6{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
   .md\:py-0{
     padding-top: 0px;
     padding-bottom: 0px;
@@ -6923,11 +6917,6 @@ body #announcement-banner > div > div.owl-dots > button.owl-dot span {
   .md\:py-8{
     padding-top: 2rem;
     padding-bottom: 2rem;
-  }
-
-  .md\:px-6{
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
   }
 
   .md\:pb-16{
@@ -7066,6 +7055,10 @@ body #announcement-banner > div > div.owl-dots > button.owl-dot span {
     grid-column-end: 6;
   }
 
+  .lg\:m-3{
+    margin: 0.75rem;
+  }
+
   .lg\:-mx-8{
     margin-left: -2rem;
     margin-right: -2rem;
@@ -7086,6 +7079,11 @@ body #announcement-banner > div > div.owl-dots > button.owl-dot span {
     margin-bottom: 0px;
   }
 
+  .lg\:mx-3{
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+  }
+
   .lg\:mb-0{
     margin-bottom: 0px;
   }
@@ -7100,6 +7098,22 @@ body #announcement-banner > div > div.owl-dots > button.owl-dot span {
 
   .lg\:mt-10{
     margin-top: 2.5rem;
+  }
+
+  .lg\:mr-3{
+    margin-right: 0.75rem;
+  }
+
+  .lg\:ml-3{
+    margin-left: 0.75rem;
+  }
+
+  .lg\:ml-5{
+    margin-left: 1.25rem;
+  }
+
+  .lg\:ml-4{
+    margin-left: 1rem;
   }
 
   .lg\:block{
@@ -7321,15 +7335,6 @@ body #announcement-banner > div > div.owl-dots > button.owl-dot span {
     border-radius: 0.75rem;
   }
 
-  .lg\:border{
-    border-width: 1px;
-  }
-
-  .lg\:border-x{
-    border-left-width: 1px;
-    border-right-width: 1px;
-  }
-
   .lg\:border-b{
     border-bottom-width: 1px;
   }
@@ -7342,12 +7347,12 @@ body #announcement-banner > div > div.owl-dots > button.owl-dot span {
     border-left-width: 2px;
   }
 
-  .lg\:border-t-0{
-    border-top-width: 0px;
-  }
-
   .lg\:border-r-2{
     border-right-width: 2px;
+  }
+
+  .lg\:border-t-0{
+    border-top-width: 0px;
   }
 
   .lg\:bg-top{
@@ -7379,6 +7384,11 @@ body #announcement-banner > div > div.owl-dots > button.owl-dot span {
   .lg\:px-16{
     padding-left: 4rem;
     padding-right: 4rem;
+  }
+
+  .lg\:px-3{
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 
   .lg\:px-4{
@@ -7436,11 +7446,6 @@ body #announcement-banner > div > div.owl-dots > button.owl-dot span {
     padding-bottom: 2rem;
   }
 
-  .lg\:px-3{
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
-  }
-
   .lg\:pb-0{
     padding-bottom: 0px;
   }
@@ -7479,6 +7484,10 @@ body #announcement-banner > div > div.owl-dots > button.owl-dot span {
 
   .lg\:pt-24{
     padding-top: 6rem;
+  }
+
+  .lg\:pl-3{
+    padding-left: 0.75rem;
   }
 
   .lg\:text-left{
