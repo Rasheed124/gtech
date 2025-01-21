@@ -1863,6 +1863,10 @@ span.flatpickr-weekday:is(.dark *){
   right: 0.75rem;
 }
 
+.top-12{
+  top: 3rem;
+}
+
 .z-10{
   z-index: 10;
 }
@@ -1901,6 +1905,14 @@ span.flatpickr-weekday:is(.dark *){
 
 .col-span-full{
   grid-column: 1 / -1;
+}
+
+.col-span-2{
+  grid-column: span 2 / span 2;
+}
+
+.col-span-8{
+  grid-column: span 8 / span 8;
 }
 
 .-m-1{
@@ -2751,6 +2763,10 @@ span.flatpickr-weekday:is(.dark *){
   min-width: fit-content;
 }
 
+.min-w-24{
+  min-width: 6rem;
+}
+
 .max-w-0{
   max-width: 0px;
 }
@@ -3412,6 +3428,16 @@ span.flatpickr-weekday:is(.dark *){
 .rounded-t-xl{
   border-top-left-radius: 0.75rem;
   border-top-right-radius: 0.75rem;
+}
+
+.rounded-t-2xl{
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.rounded-t-lg{
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
 }
 
 .rounded-tl-none{
@@ -5770,6 +5796,11 @@ body #announcement-banner > div > div.owl-dots > button.owl-dot span {
   border-color: rgb(37 155 150 / var(--tw-border-opacity));
 }
 
+.dark\:border-white:is(.dark *){
+  --tw-border-opacity: 1;
+  border-color: rgb(252 255 255 / var(--tw-border-opacity));
+}
+
 .dark\:border-b-secondary:is(.dark *){
   --tw-border-opacity: 1;
   border-bottom-color: rgb(225 243 229 / var(--tw-border-opacity));
@@ -6824,12 +6855,21 @@ body #announcement-banner > div > div.owl-dots > button.owl-dot span {
     overflow-x: hidden;
   }
 
+  .md\:border-x{
+    border-left-width: 1px;
+    border-right-width: 1px;
+  }
+
   .md\:border-b-0{
     border-bottom-width: 0px;
   }
 
   .md\:border-r{
     border-right-width: 1px;
+  }
+
+  .md\:border-l-2{
+    border-left-width: 2px;
   }
 
   .md\:p-10{
@@ -6883,6 +6923,11 @@ body #announcement-banner > div > div.owl-dots > button.owl-dot span {
   .md\:py-8{
     padding-top: 2rem;
     padding-bottom: 2rem;
+  }
+
+  .md\:px-6{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 
   .md\:pb-16{
@@ -7268,8 +7313,16 @@ body #announcement-banner > div > div.owl-dots > button.owl-dot span {
     overflow-x: hidden;
   }
 
+  .lg\:overflow-y-hidden{
+    overflow-y: hidden;
+  }
+
   .lg\:rounded-xl{
     border-radius: 0.75rem;
+  }
+
+  .lg\:border{
+    border-width: 1px;
   }
 
   .lg\:border-x{
@@ -7291,6 +7344,10 @@ body #announcement-banner > div > div.owl-dots > button.owl-dot span {
 
   .lg\:border-t-0{
     border-top-width: 0px;
+  }
+
+  .lg\:border-r-2{
+    border-right-width: 2px;
   }
 
   .lg\:bg-top{
