@@ -3534,11 +3534,6 @@ span.flatpickr-weekday:is(.dark *){
   border-color: rgb(255 148 148 / var(--tw-border-opacity));
 }
 
-.border-red-700{
-  --tw-border-opacity: 1;
-  border-color: rgb(230 57 57 / var(--tw-border-opacity));
-}
-
 .border-transparent{
   border-color: transparent;
 }
@@ -7055,10 +7050,6 @@ body #announcement-banner > div > div.owl-dots > button.owl-dot span {
     grid-column-end: 6;
   }
 
-  .lg\:m-3{
-    margin: 0.75rem;
-  }
-
   .lg\:-mx-8{
     margin-left: -2rem;
     margin-right: -2rem;
@@ -7079,11 +7070,6 @@ body #announcement-banner > div > div.owl-dots > button.owl-dot span {
     margin-bottom: 0px;
   }
 
-  .lg\:mx-3{
-    margin-left: 0.75rem;
-    margin-right: 0.75rem;
-  }
-
   .lg\:mb-0{
     margin-bottom: 0px;
   }
@@ -7098,22 +7084,6 @@ body #announcement-banner > div > div.owl-dots > button.owl-dot span {
 
   .lg\:mt-10{
     margin-top: 2.5rem;
-  }
-
-  .lg\:mr-3{
-    margin-right: 0.75rem;
-  }
-
-  .lg\:ml-3{
-    margin-left: 0.75rem;
-  }
-
-  .lg\:ml-5{
-    margin-left: 1.25rem;
-  }
-
-  .lg\:ml-4{
-    margin-left: 1rem;
   }
 
   .lg\:block{
@@ -7335,6 +7305,10 @@ body #announcement-banner > div > div.owl-dots > button.owl-dot span {
     border-radius: 0.75rem;
   }
 
+  .lg\:border{
+    border-width: 1px;
+  }
+
   .lg\:border-b{
     border-bottom-width: 1px;
   }
@@ -7353,6 +7327,11 @@ body #announcement-banner > div > div.owl-dots > button.owl-dot span {
 
   .lg\:border-t-0{
     border-top-width: 0px;
+  }
+
+  .lg\:border-gray-700{
+    --tw-border-opacity: 1;
+    border-color: rgb(55 65 81 / var(--tw-border-opacity));
   }
 
   .lg\:bg-top{
@@ -7486,10 +7465,6 @@ body #announcement-banner > div > div.owl-dots > button.owl-dot span {
     padding-top: 6rem;
   }
 
-  .lg\:pl-3{
-    padding-left: 0.75rem;
-  }
-
   .lg\:text-left{
     text-align: left;
   }
@@ -7591,6 +7566,11 @@ body #announcement-banner > div > div.owl-dots > button.owl-dot span {
 
   .sidebar-expanded .lg\:sidebar-expanded\:opacity-100{
     opacity: 1;
+  }
+
+  .lg\:dark\:border-gray-700:is(.dark *){
+    --tw-border-opacity: 1;
+    border-color: rgb(55 65 81 / var(--tw-border-opacity));
   }
 
   .dark\:lg\:before\:bg-gray-900\/90:is(.dark *)::before{
