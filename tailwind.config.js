@@ -129,6 +129,7 @@ module.exports = {
         white: "#FCFFFF",
         black: "#050505",
       },
+
       backgroundImage: {
         "dash-bg": "url('../../images/dash-bg.png')",
         "footer-texture": "url('/img/footer-texture.png')",
@@ -170,11 +171,19 @@ module.exports = {
       zIndex: {
         60: "60",
       },
+
+      scrollbar: {
+        width: {
+          thin: "4px", // Custom thin scrollbar width
+          normal: "8px", // Custom normal scrollbar width
+        },
+      },
     },
   },
   plugins: [
     // eslint-disable-next-line global-require
     require("@tailwindcss/forms"),
+    require("tailwind-scrollbar"), // Add the scrollbar plugin
     // add custom variant for expanding sidebar
     plugin(({ addVariant, e }) => {
       addVariant("sidebar-expanded", ({ modifySelectors, separator }) => {

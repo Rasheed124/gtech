@@ -643,6 +643,11 @@ select{
   outline: 1px auto -webkit-focus-ring-color;
 }
 
+*{
+  scrollbar-color: initial;
+  scrollbar-width: initial;
+}
+
 *, ::before, ::after{
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -1831,10 +1836,6 @@ span.flatpickr-weekday:is(.dark *){
   top: 2.5rem;
 }
 
-.top-12{
-  top: 3rem;
-}
-
 .top-16{
   top: 4rem;
 }
@@ -1883,20 +1884,12 @@ span.flatpickr-weekday:is(.dark *){
   order: 2;
 }
 
-.col-span-2{
-  grid-column: span 2 / span 2;
-}
-
 .col-span-4{
   grid-column: span 4 / span 4;
 }
 
 .col-span-6{
   grid-column: span 6 / span 6;
-}
-
-.col-span-8{
-  grid-column: span 8 / span 8;
 }
 
 .col-span-full{
@@ -2558,10 +2551,6 @@ span.flatpickr-weekday:is(.dark *){
   max-height: 100vh;
 }
 
-.max-h-\[34vh\]{
-  max-height: 34vh;
-}
-
 .min-h-\[100dvh\]{
   min-height: 100dvh;
 }
@@ -2712,10 +2701,6 @@ span.flatpickr-weekday:is(.dark *){
 
 .min-w-0{
   min-width: 0px;
-}
-
-.min-w-24{
-  min-width: 6rem;
 }
 
 .min-w-28{
@@ -3329,10 +3314,6 @@ span.flatpickr-weekday:is(.dark *){
   overflow-x: hidden;
 }
 
-.overflow-y-hidden{
-  overflow-y: hidden;
-}
-
 .overflow-x-scroll{
   overflow-x: scroll;
 }
@@ -3419,16 +3400,6 @@ span.flatpickr-weekday:is(.dark *){
 .rounded-r-lg{
   border-top-right-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
-}
-
-.rounded-t-2xl{
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
-}
-
-.rounded-t-lg{
-  border-top-left-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
 }
 
 .rounded-t-xl{
@@ -3563,11 +3534,6 @@ span.flatpickr-weekday:is(.dark *){
 .border-white{
   --tw-border-opacity: 1;
   border-color: rgb(252 255 255 / var(--tw-border-opacity));
-}
-
-.border-red-900{
-  --tw-border-opacity: 1;
-  border-color: rgb(148 24 24 / var(--tw-border-opacity));
 }
 
 .border-y-\[\#F0EBF8\]{
@@ -5047,6 +5013,64 @@ span.flatpickr-weekday:is(.dark *){
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
 
+.scrollbar::-webkit-scrollbar-track{
+  background-color: var(--scrollbar-track);
+  border-radius: var(--scrollbar-track-radius);
+}
+
+.scrollbar::-webkit-scrollbar-track:hover{
+  background-color: var(--scrollbar-track-hover, var(--scrollbar-track));
+}
+
+.scrollbar::-webkit-scrollbar-track:active{
+  background-color: var(--scrollbar-track-active, var(--scrollbar-track-hover, var(--scrollbar-track)));
+}
+
+.scrollbar::-webkit-scrollbar-thumb{
+  background-color: var(--scrollbar-thumb);
+  border-radius: var(--scrollbar-thumb-radius);
+}
+
+.scrollbar::-webkit-scrollbar-thumb:hover{
+  background-color: var(--scrollbar-thumb-hover, var(--scrollbar-thumb));
+}
+
+.scrollbar::-webkit-scrollbar-thumb:active{
+  background-color: var(--scrollbar-thumb-active, var(--scrollbar-thumb-hover, var(--scrollbar-thumb)));
+}
+
+.scrollbar::-webkit-scrollbar-corner{
+  background-color: var(--scrollbar-corner);
+  border-radius: var(--scrollbar-corner-radius);
+}
+
+.scrollbar::-webkit-scrollbar-corner:hover{
+  background-color: var(--scrollbar-corner-hover, var(--scrollbar-corner));
+}
+
+.scrollbar::-webkit-scrollbar-corner:active{
+  background-color: var(--scrollbar-corner-active, var(--scrollbar-corner-hover, var(--scrollbar-corner)));
+}
+
+.scrollbar{
+  scrollbar-width: auto;
+  scrollbar-color: var(--scrollbar-thumb, initial) var(--scrollbar-track, initial);
+}
+
+.scrollbar::-webkit-scrollbar{
+  display: block;
+  width: var(--scrollbar-width, 16px);
+  height: var(--scrollbar-height, 16px);
+}
+
+.scrollbar-none{
+  scrollbar-width: none;
+}
+
+.scrollbar-none::-webkit-scrollbar{
+  display: none;
+}
+
 /* See Alpine.js: https://github.com/alpinejs/alpine#x-cloak */
 
 [x-cloak=""] {
@@ -5326,6 +5350,74 @@ body #announcement-banner > div > div.owl-dots > button.owl-dot span {
 .checked\:outline-none:checked{
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+
+.group[open] .group-open\:opacity-0{
+  opacity: 0;
+}
+
+.group[open] .group-open\:opacity-100{
+  opacity: 1;
+}
+
+.group:hover .group-hover\:flex{
+  display: flex;
+}
+
+.group:hover .group-hover\:scale-105{
+  --tw-scale-x: 1.05;
+  --tw-scale-y: 1.05;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.group:hover .group-hover\:bg-black{
+  --tw-bg-opacity: 1;
+  background-color: rgb(5 5 5 / var(--tw-bg-opacity));
+}
+
+.group:hover .group-hover\:fill-gray-600{
+  fill: #4B5563;
+}
+
+.group:hover .group-hover\:text-\[\#2e1a52\]\/70{
+  color: rgb(46 26 82 / 0.7);
+}
+
+.group:hover .group-hover\:text-gray-500{
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+
+.group:hover .group-hover\:text-gray-800{
+  --tw-text-opacity: 1;
+  color: rgb(31 41 55 / var(--tw-text-opacity));
+}
+
+.group:hover .group-hover\:text-lightgreen{
+  --tw-text-opacity: 1;
+  color: rgb(0 218 95 / var(--tw-text-opacity));
+}
+
+.group:hover .group-hover\:text-primary\/70{
+  color: rgb(0 68 55 / 0.7);
+}
+
+.group:hover .group-hover\:text-violet-600{
+  --tw-text-opacity: 1;
+  color: rgb(25 127 119 / var(--tw-text-opacity));
+}
+
+.group:hover .group-hover\:opacity-100{
+  opacity: 1;
+}
+
+.peer:checked ~ .peer-checked\:border-violet-400{
+  --tw-border-opacity: 1;
+  border-color: rgb(77 187 181 / var(--tw-border-opacity));
+}
+
+.peer:checked ~ .peer-checked\:line-through{
+  text-decoration-line: line-through;
 }
 
 .hover\:-translate-y-4:hover{
@@ -5662,74 +5754,6 @@ body #announcement-banner > div > div.owl-dots > button.owl-dot span {
   color: rgb(156 163 175 / var(--tw-text-opacity));
 }
 
-.group[open] .group-open\:opacity-0{
-  opacity: 0;
-}
-
-.group[open] .group-open\:opacity-100{
-  opacity: 1;
-}
-
-.group:hover .group-hover\:flex{
-  display: flex;
-}
-
-.group:hover .group-hover\:scale-105{
-  --tw-scale-x: 1.05;
-  --tw-scale-y: 1.05;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.group:hover .group-hover\:bg-black{
-  --tw-bg-opacity: 1;
-  background-color: rgb(5 5 5 / var(--tw-bg-opacity));
-}
-
-.group:hover .group-hover\:fill-gray-600{
-  fill: #4B5563;
-}
-
-.group:hover .group-hover\:text-\[\#2e1a52\]\/70{
-  color: rgb(46 26 82 / 0.7);
-}
-
-.group:hover .group-hover\:text-gray-500{
-  --tw-text-opacity: 1;
-  color: rgb(107 114 128 / var(--tw-text-opacity));
-}
-
-.group:hover .group-hover\:text-gray-800{
-  --tw-text-opacity: 1;
-  color: rgb(31 41 55 / var(--tw-text-opacity));
-}
-
-.group:hover .group-hover\:text-lightgreen{
-  --tw-text-opacity: 1;
-  color: rgb(0 218 95 / var(--tw-text-opacity));
-}
-
-.group:hover .group-hover\:text-primary\/70{
-  color: rgb(0 68 55 / 0.7);
-}
-
-.group:hover .group-hover\:text-violet-600{
-  --tw-text-opacity: 1;
-  color: rgb(25 127 119 / var(--tw-text-opacity));
-}
-
-.group:hover .group-hover\:opacity-100{
-  opacity: 1;
-}
-
-.peer:checked ~ .peer-checked\:border-violet-400{
-  --tw-border-opacity: 1;
-  border-color: rgb(77 187 181 / var(--tw-border-opacity));
-}
-
-.peer:checked ~ .peer-checked\:line-through{
-  text-decoration-line: line-through;
-}
-
 .sidebar-expanded .sidebar-expanded\:rotate-180{
   --tw-rotate: 180deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -5791,11 +5815,6 @@ body #announcement-banner > div > div.owl-dots > button.owl-dot span {
 .dark\:border-violet-500:is(.dark *){
   --tw-border-opacity: 1;
   border-color: rgb(37 155 150 / var(--tw-border-opacity));
-}
-
-.dark\:border-white:is(.dark *){
-  --tw-border-opacity: 1;
-  border-color: rgb(252 255 255 / var(--tw-border-opacity));
 }
 
 .dark\:border-b-secondary:is(.dark *){
@@ -6083,6 +6102,31 @@ body #announcement-banner > div > div.owl-dots > button.owl-dot span {
   color: rgb(75 85 99 / var(--tw-text-opacity));
 }
 
+.group:hover .dark\:group-hover\:text-gray-200:is(.dark *){
+  --tw-text-opacity: 1;
+  color: rgb(229 231 235 / var(--tw-text-opacity));
+}
+
+.group:hover .dark\:group-hover\:text-gray-400:is(.dark *){
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
+}
+
+.group:hover .dark\:group-hover\:text-violet-400:is(.dark *){
+  --tw-text-opacity: 1;
+  color: rgb(77 187 181 / var(--tw-text-opacity));
+}
+
+.group:hover .dark\:group-hover\:text-white:is(.dark *){
+  --tw-text-opacity: 1;
+  color: rgb(252 255 255 / var(--tw-text-opacity));
+}
+
+.peer:checked ~ .dark\:peer-checked\:border-violet-500:is(.dark *){
+  --tw-border-opacity: 1;
+  border-color: rgb(37 155 150 / var(--tw-border-opacity));
+}
+
 .dark\:hover\:border-gray-600:hover:is(.dark *){
   --tw-border-opacity: 1;
   border-color: rgb(75 85 99 / var(--tw-border-opacity));
@@ -6192,31 +6236,6 @@ body #announcement-banner > div > div.owl-dots > button.owl-dot span {
 .dark\:disabled\:placeholder\:text-gray-600:disabled:is(.dark *)::placeholder{
   --tw-text-opacity: 1;
   color: rgb(75 85 99 / var(--tw-text-opacity));
-}
-
-.group:hover .dark\:group-hover\:text-gray-200:is(.dark *){
-  --tw-text-opacity: 1;
-  color: rgb(229 231 235 / var(--tw-text-opacity));
-}
-
-.group:hover .dark\:group-hover\:text-gray-400:is(.dark *){
-  --tw-text-opacity: 1;
-  color: rgb(156 163 175 / var(--tw-text-opacity));
-}
-
-.group:hover .dark\:group-hover\:text-violet-400:is(.dark *){
-  --tw-text-opacity: 1;
-  color: rgb(77 187 181 / var(--tw-text-opacity));
-}
-
-.group:hover .dark\:group-hover\:text-white:is(.dark *){
-  --tw-text-opacity: 1;
-  color: rgb(252 255 255 / var(--tw-text-opacity));
-}
-
-.peer:checked ~ .dark\:peer-checked\:border-violet-500:is(.dark *){
-  --tw-border-opacity: 1;
-  border-color: rgb(37 155 150 / var(--tw-border-opacity));
 }
 
 @media not all and (min-width: 1024px){
@@ -6691,10 +6710,6 @@ body #announcement-banner > div > div.owl-dots > button.owl-dot span {
     max-height: 84vh;
   }
 
-  .md\:max-h-\[34vh\]{
-    max-height: 34vh;
-  }
-
   .md\:w-1\/2{
     width: 50%;
   }
@@ -6856,17 +6871,8 @@ body #announcement-banner > div > div.owl-dots > button.owl-dot span {
     overflow-x: hidden;
   }
 
-  .md\:border-x{
-    border-left-width: 1px;
-    border-right-width: 1px;
-  }
-
   .md\:border-b-0{
     border-bottom-width: 0px;
-  }
-
-  .md\:border-l-2{
-    border-left-width: 2px;
   }
 
   .md\:border-r{
@@ -6899,11 +6905,6 @@ body #announcement-banner > div > div.owl-dots > button.owl-dot span {
   .md\:px-5{
     padding-left: 1.25rem;
     padding-right: 1.25rem;
-  }
-
-  .md\:px-6{
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
   }
 
   .md\:py-0{
@@ -7314,16 +7315,8 @@ body #announcement-banner > div > div.owl-dots > button.owl-dot span {
     overflow-x: hidden;
   }
 
-  .lg\:overflow-y-hidden{
-    overflow-y: hidden;
-  }
-
   .lg\:rounded-xl{
     border-radius: 0.75rem;
-  }
-
-  .lg\:border{
-    border-width: 1px;
   }
 
   .lg\:border-b{
@@ -7344,11 +7337,6 @@ body #announcement-banner > div > div.owl-dots > button.owl-dot span {
 
   .lg\:border-t-0{
     border-top-width: 0px;
-  }
-
-  .lg\:border-gray-700{
-    --tw-border-opacity: 1;
-    border-color: rgb(55 65 81 / var(--tw-border-opacity));
   }
 
   .lg\:bg-top{
