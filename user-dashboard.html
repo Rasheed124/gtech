@@ -13,12 +13,15 @@
     />
 
     <script>
+      let isCollapsed;
       if (
-        localStorage.getItem("user-dark-mode") === "false" ||
-        !("user-dark-mode" in localStorage)
+        localStorage.getItem("dark-mode") === "false" ||
+        !("dark-mode" in localStorage)
       ) {
         document.querySelector("html").classList.remove("dark");
         document.querySelector("html").style.colorScheme = "light";
+
+      
       } else {
         document.querySelector("html").classList.add("dark");
         document.querySelector("html").style.colorScheme = "dark";
@@ -27,7 +30,7 @@
     <title>User Dashboard - Home</title>
   </head>
   <body
-    class="bg-gray-100 dark:bg-gray-900 bg-no-repeat bg-center bg-blend-overlay w-full"
+    class="bg-gray-100 dark:bg-gray-900 bg-no-repeat bg-center bg-blend-overlay w-full overflow-x-hidden"
   >
     <div class="w-full relative">
       <main
@@ -55,14 +58,19 @@
                     :class="isCollapsed ? 'justify-center' : 'justify-between'"
                     class="flex items-center gap-3"
                   >
+                    <!-- app-logo-2.png -->
                     <a href="" class="">
                       <img
-                        :src="isCollapsed ? './images/dashboard-logo-1.png' : './images/app-logo-2.png'"
+                        id="logo-sidebar"
+                        :src="isCollapsed ? './images/logo-menu-icon.png' : './images/logo-dark-menu.png'"
                         :class="isCollapsed ? 'max-w-[40px] mx-auto block' : 'max-w-[100px] mr-auto  hidden md:block ml-2'"
                         class="h-auto object-contain"
                         alt=""
                       />
+
+             
                     </a>
+
                     <button
                       @click="isCollapsed = !isCollapsed"
                       class="flex items-center mr-3"
@@ -77,21 +85,21 @@
                       >
                         <path
                           d="M21 4.1V10.9C21 11.5934 20.8501 11.9494 20.6386 12.1483C20.4196 12.3544 20.0215 12.5 19.27 12.5H15.23C14.4785 12.5 14.0804 12.3544 13.8614 12.1483C13.6499 11.9494 13.5 11.5934 13.5 10.9V4.1C13.5 3.40657 13.6499 3.05057 13.8614 2.85167C14.0804 2.64556 14.4785 2.5 15.23 2.5H19.27C20.0215 2.5 20.4196 2.64556 20.6386 2.85167C20.8501 3.05057 21 3.40657 21 4.1Z"
-                          fill="#311503"
-                          stroke="#311503"
+                          fill="#004437"
+                          stroke="#004437"
                         ></path>
                         <path
                           d="M10.5 13.1V19.9C10.5 20.5934 10.3501 20.9494 10.1386 21.1483C9.91956 21.3544 9.52146 21.5 8.77 21.5H4.73C3.97854 21.5 3.58044 21.3544 3.36135 21.1483C3.14993 20.9494 3 20.5934 3 19.9V13.1C3 12.4066 3.14993 12.0506 3.36135 11.8517C3.58044 11.6456 3.97854 11.5 4.73 11.5H8.77C9.52146 11.5 9.91956 11.6456 10.1386 11.8517C10.3501 12.0506 10.5 12.4066 10.5 13.1Z"
-                          fill="#311503"
-                          stroke="#311503"
+                          fill="#004437"
+                          stroke="#004437"
                         ></path>
                         <path
                           d="M21.5 19.9V17.1C21.5 15.6 20.86 15 19.27 15H15.23C13.64 15 13 15.6 13 17.1V19.9C13 21.4 13.64 22 15.23 22H19.27C20.86 22 21.5 21.4 21.5 19.9Z"
-                          fill="#F66B03"
+                          fill="#004437"
                         ></path>
                         <path
                           d="M11 6.9V4.1C11 2.6 10.36 2 8.77 2H4.73C3.14 2 2.5 2.6 2.5 4.1V6.9C2.5 8.4 3.14 9 4.73 9H8.77C10.36 9 11 8.4 11 6.9Z"
-                          fill="#F66B03"
+                          fill="#004437"
                         ></path>
                       </svg>
                     </button>
@@ -833,9 +841,7 @@
                             Notifications
                           </h3>
                         </div>
-                        <ul
-                          class="max-h-60 overflow-y-auto  scrollbar-none "
-                        >
+                        <ul class="max-h-60 overflow-y-auto scrollbar-none">
                           <li
                             class="p-3 hover:bg-gray-100 dark:hover:bg-gray-600 border-b dark:border-gray-600"
                           >
@@ -901,13 +907,13 @@
                     <div>
                       <input
                         type="checkbox"
-                        name="user-light-switch"
-                        id="user-light-switch"
-                        class="user-light-switch sr-only"
+                        name="light-switch"
+                        id="light-switch"
+                        class="light-switch sr-only"
                       />
                       <label
                         class="flex items-center justify-center cursor-pointer w-9 h-9 p-2.5 hover:bg-gray-100 lg:hover:bg-gray-200 dark:hover:bg-gray-700/50 dark:lg:hover:bg-gray-800 rounded-md"
-                        for="user-light-switch"
+                        for="light-switch"
                       >
                         <svg
                           class="dark:hidden fill-current text-black dark:text-gray-400/80"
@@ -2061,7 +2067,7 @@
 
     <script src="./js/vendors/jquery.min.js"></script>
     <script src="./js/vendors/owl.carousel.js"></script>
-    <script src="./js/users.js"></script>
+    <script src="./js/main.js"></script>
     <script src="./js/vendors/alpinejs.min.js" defer></script>
   </body>
 </html>

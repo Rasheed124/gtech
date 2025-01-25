@@ -39,127 +39,60 @@ if (lightSwitches.length > 0) {
 
 
 
-// LOGIN ONly 
-document.addEventListener("DOMContentLoaded", () => {
-  const otpInputs = document.querySelectorAll(".otp-login-input");
-  const otpForm = document.getElementById("login-pin-form");
 
-  otpInputs.forEach((input, index) => {
-    // Restrict input to numbers only
-    input.addEventListener("input", (e) => {
-      const value = e.target.value;
 
-      // Validate if input is a single digit (0-9)
-      if (!/^\d$/.test(value)) {
-        e.target.value = ""; // Clear input if not a valid digit
-        return;
-      }
+// ==================================USERDASHBOARD=================
+// Select buttons and menu
+const openMenuButton = document.getElementById("openMenuButton");
+const closeMenuButton = document.getElementById("closeMenuButton");
+const sideMobileMenu = document.getElementById("sideMobileMenu");
 
-      // Hide the entered value and change it to a dot
-      input.type = "password";
+const menuContainer = document.querySelector("#sideMobileMenu .menuContainer");
 
-      // Move focus to the next input if current input is valid
-      if (index < otpInputs.length - 1) {
-        otpInputs[index + 1].focus();
-      }
-    });
+const notificationBtn = document.getElementById("notification-btn");
+const notificationDropdown = document.getElementById("notification-dropdown");
 
-    input.addEventListener("focus", () => {
-      input.type = "tel";
-    });
-
-    input.addEventListener("keydown", (e) => {
-      // Handle Backspace key
-      if (e.key === "Backspace" && !input.value && index > 0) {
-        otpInputs[index - 1].focus();
-        otpInputs[index - 1].type = "tel";
-      }
-    });
-
-    input.addEventListener("paste", (e) => {
-      const data = e.clipboardData.getData("text");
-      const digits = data.match(/\d/g);
-      if (digits) {
-        e.preventDefault();
-        digits.slice(0, otpInputs.length).forEach((digit, i) => {
-          otpInputs[i].value = digit;
-          otpInputs[i].type = "password";
-        });
-        if (digits.length < otpInputs.length) {
-          otpInputs[digits.length].focus();
-        }
-      }
-    });
-  });
-
-  otpForm.addEventListener("submit", (e) => {
-    e.preventDefault(); // Prevent default form submission
-    const otpCode = Array.from(otpInputs)
-      .map((input) => input.value)
-      .join(""); // Collect the values and join them into a string
-    console.log("Entered OTP Code:", otpCode);
-  });
+// Toggle notification dropdown visibility
+notificationBtn.addEventListener("click", () => {
+  notificationDropdown.classList.toggle("hidden");
 });
 
-// LOGIN WITH PIN PAGE
-const pinInputs = document.querySelectorAll(".otp-input");
-const pinButtons = document.querySelectorAll(".pin-btn");
-const deleteBtn = document.getElementById("delete-btn");
-let activeInputIndex = 0;
-
-function updateActiveInput(index) {
-  activeInputIndex = Math.max(0, Math.min(index, pinInputs.length - 1));
-  pinInputs[activeInputIndex].focus();
-}
-
-pinInputs.forEach((input, index) => {
-  input.addEventListener("input", (e) => {
-    const value = e.target.value;
-
-    // Restrict to numbers only
-    if (!/^\d$/.test(value)) {
-      e.target.value = ""; // Clear non-numeric input
-      return;
-    }
-
-    if (value) {
-      updateActiveInput(index + 1);
-    }
-  });
-
-  input.addEventListener("keydown", (e) => {
-    if (e.key === "Backspace" && !e.target.value) {
-      updateActiveInput(index - 1);
-    }
-  });
+// Close dropdown when clicking outside
+document.addEventListener("click", (e) => {
+  if (
+    !notificationBtn.contains(e.target) &&
+    !notificationDropdown.contains(e.target)
+  ) {
+    notificationDropdown.classList.add("hidden");
+  }
 });
 
-pinButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const value = button.getAttribute("data-value");
+// Function to show the menu
+openMenuButton.addEventListener("click", () => {
+  sideMobileMenu.classList.remove("-translate-x-[1000%]");
+});
 
-    if (value === "") return; // Empty button
-    if (value === "BACKSPACE") {
-      // Delete last input
-      if (pinInputs[activeInputIndex].value) {
-        pinInputs[activeInputIndex].value = "";
-      } else if (activeInputIndex > 0) {
-        updateActiveInput(activeInputIndex - 1);
-        pinInputs[activeInputIndex].value = "";
-      }
-    } else {
-      if (pinInputs[activeInputIndex].value === "") {
-        pinInputs[activeInputIndex].value = value;
-        updateActiveInput(activeInputIndex + 1);
+document.addEventListener("click", (e) => {
+  // Side Mobile Menu
+  if (sideMobileMenu.contains(e.target) && !menuContainer.contains(e.target)) {
+    sideMobileMenu.classList.add("-translate-x-[1000%]");
+  }
+});
+
+
+// Announcement Ad Banner
+
+$(document).ready(function () {
+  $("#announcement-banner .owl-carousel").owlCarousel({
+    loop: true,
+    margin: 20,
+    dots: true,
+    autoplay: true,
+    autoplayTimeout: 6000,
+    responsive: {
+      0: {
+        items: 1
       }
     }
   });
-});
-
-document.getElementById("pin-form").addEventListener("submit", (e) => {
-  e.preventDefault();
-  const pin = Array.from(pinInputs)
-    .map((input) => input.value)
-    .join("");
-  console.log(pin);
 });
