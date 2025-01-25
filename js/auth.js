@@ -84,33 +84,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // LOGIN ONly 
 document.addEventListener("DOMContentLoaded", () => {
     const otpInputs = document.querySelectorAll(".otp-login-input");

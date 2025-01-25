@@ -2502,6 +2502,14 @@ span.flatpickr-weekday:is(.dark *){
   max-height: 100vh;
 }
 
+.max-h-\[50px\]{
+  max-height: 50px;
+}
+
+.max-h-\[100px\]{
+  max-height: 100px;
+}
+
 .min-h-\[100dvh\]{
   min-height: 100dvh;
 }
