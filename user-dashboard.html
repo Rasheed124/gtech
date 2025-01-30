@@ -974,7 +974,7 @@
                         localStorage.setItem('isBalanceVisible', JSON.stringify(this.isBalanceVisible));
                       }
                     }"
-                      class="min-w-[350px] lg:min-w-[390px] md:min-w-full flex justify-between p-5 text-left text-white w-full bg-black rounded-xl col-span-6 bg-no-repeat bg-top bg-blend-overlay bg-cover bg-[url('./images/dash-bg.png')] bg-opacity-60"
+                      class="min-w-[355px] lg:min-w-[390px] md:min-w-full flex justify-between p-5 text-left text-white w-full bg-black rounded-xl col-span-6 bg-no-repeat bg-top bg-blend-overlay bg-cover bg-[url('./images/dash-bg.png')] bg-opacity-60"
                     >
                       <!-- Left Side: Balance Area -->
                       <div x-cloak class="flex flex-col">
@@ -1097,9 +1097,9 @@
                       </div>
 
                       <!-- Right Side: Currency Dropdown -->
-                      <div class="relative mt-4" x-data="{ isOpen: false }">
+                      <div class="relative mt-4 " x-data="{ isOpen: false }">
                         <button
-                          class="py-2 px-2 bg-white text-primary rounded-lg flex items-center gap-2 cursor-pointer"
+                          class="py-2 px-2   bg-white text-primary rounded-lg flex items-center gap-2 cursor-pointer"
                           @click="isOpen = !isOpen"
                           @click.outside="isOpen = false"
                           x-cloak

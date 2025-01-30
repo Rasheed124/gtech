@@ -2293,6 +2293,10 @@ span.flatpickr-weekday:is(.dark *){
   margin-top: auto;
 }
 
+.-ml-6{
+  margin-left: -1.5rem;
+}
+
 .box-content{
   box-sizing: content-box;
 }
@@ -2707,6 +2711,14 @@ span.flatpickr-weekday:is(.dark *){
 
 .min-w-\[330px\]{
   min-width: 330px;
+}
+
+.min-w-\[356px\]{
+  min-width: 356px;
+}
+
+.min-w-\[355px\]{
+  min-width: 355px;
 }
 
 .max-w-0{
@@ -4247,6 +4259,10 @@ span.flatpickr-weekday:is(.dark *){
 
 .pl-5{
   padding-left: 1.25rem;
+}
+
+.pr-2{
+  padding-right: 0.5rem;
 }
 
 .text-left{
@@ -6054,6 +6070,10 @@ body #announcement-banner > div > div.owl-dots > button.owl-dot span {
 
   .sm\:mt-0{
     margin-top: 0px;
+  }
+
+  .sm\:ml-0{
+    margin-left: 0px;
   }
 
   .sm\:block{
