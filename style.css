@@ -5007,19 +5007,6 @@ body #announcement-banner > div > div.owl-dots > button.owl-dot span {
 
 /* Safari-specific fix */
 
-@supports (-webkit-touch-callout: none) {
-  #left-dashboard-area {
-    overflow-y: scroll;
-    scrollbar-width: none;
-    /* Hide default scrollbar */
-  }
-
-  #left-dashboard-area::-webkit-scrollbar {
-    display: none;
-    /* Hide Safari's default white scrollbar */
-  }
-}
-
 .before\:absolute::before{
   content: var(--tw-content);
   position: absolute;
@@ -7285,3 +7272,4 @@ body #announcement-banner > div > div.owl-dots > button.owl-dot span {
 .\[\&_\*\]\:\!transition-none *{
   transition-property: none !important;
 }
+
