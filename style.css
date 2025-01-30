@@ -2370,6 +2370,16 @@ span.flatpickr-weekday:is(.dark *){
   height: 1.75rem;
 }
 
+.size-2{
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+.size-2\.5{
+  width: 0.625rem;
+  height: 0.625rem;
+}
+
 .h-0{
   height: 0px;
 }
@@ -2490,6 +2500,10 @@ span.flatpickr-weekday:is(.dark *){
   max-height: 15rem;
 }
 
+.max-h-\[100px\]{
+  max-height: 100px;
+}
+
 .max-h-\[400px\]{
   max-height: 400px;
 }
@@ -2502,20 +2516,8 @@ span.flatpickr-weekday:is(.dark *){
   max-height: 100vh;
 }
 
-.max-h-\[50px\]{
-  max-height: 50px;
-}
-
-.max-h-\[100px\]{
-  max-height: 100px;
-}
-
 .min-h-\[100dvh\]{
   min-height: 100dvh;
-}
-
-.min-h-\[50px\]{
-  min-height: 50px;
 }
 
 .min-h-screen{
@@ -2685,6 +2687,26 @@ span.flatpickr-weekday:is(.dark *){
 .min-w-fit{
   min-width: -moz-fit-content;
   min-width: fit-content;
+}
+
+.min-w-\[0px\]{
+  min-width: 0px;
+}
+
+.min-w-\[250px\]{
+  min-width: 250px;
+}
+
+.min-w-\[350px\]{
+  min-width: 350px;
+}
+
+.min-w-\[340px\]{
+  min-width: 340px;
+}
+
+.min-w-\[330px\]{
+  min-width: 330px;
 }
 
 .max-w-0{
@@ -4221,6 +4243,10 @@ span.flatpickr-weekday:is(.dark *){
 
 .pt-8{
   padding-top: 2rem;
+}
+
+.pl-5{
+  padding-left: 1.25rem;
 }
 
 .text-left{
@@ -6667,6 +6693,10 @@ body #announcement-banner > div > div.owl-dots > button.owl-dot span {
 
   .lg\:w-full{
     width: 100%;
+  }
+
+  .lg\:min-w-\[390px\]{
+    min-width: 390px;
   }
 
   .lg\:max-w-\[100px\]{
