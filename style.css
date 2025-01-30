@@ -2293,10 +2293,6 @@ span.flatpickr-weekday:is(.dark *){
   margin-top: auto;
 }
 
-.-ml-6{
-  margin-left: -1.5rem;
-}
-
 .box-content{
   box-sizing: content-box;
 }
@@ -2349,6 +2345,16 @@ span.flatpickr-weekday:is(.dark *){
   aspect-ratio: 7/4;
 }
 
+.size-2{
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+.size-2\.5{
+  width: 0.625rem;
+  height: 0.625rem;
+}
+
 .size-3{
   width: 0.75rem;
   height: 0.75rem;
@@ -2372,16 +2378,6 @@ span.flatpickr-weekday:is(.dark *){
 .size-7{
   width: 1.75rem;
   height: 1.75rem;
-}
-
-.size-2{
-  width: 0.5rem;
-  height: 0.5rem;
-}
-
-.size-2\.5{
-  width: 0.625rem;
-  height: 0.625rem;
 }
 
 .h-0{
@@ -2684,6 +2680,10 @@ span.flatpickr-weekday:is(.dark *){
   min-width: 270px;
 }
 
+.min-w-\[355px\]{
+  min-width: 355px;
+}
+
 .min-w-\[390px\]{
   min-width: 390px;
 }
@@ -2693,32 +2693,8 @@ span.flatpickr-weekday:is(.dark *){
   min-width: fit-content;
 }
 
-.min-w-\[0px\]{
-  min-width: 0px;
-}
-
-.min-w-\[250px\]{
-  min-width: 250px;
-}
-
 .min-w-\[350px\]{
   min-width: 350px;
-}
-
-.min-w-\[340px\]{
-  min-width: 340px;
-}
-
-.min-w-\[330px\]{
-  min-width: 330px;
-}
-
-.min-w-\[356px\]{
-  min-width: 356px;
-}
-
-.min-w-\[355px\]{
-  min-width: 355px;
 }
 
 .max-w-0{
@@ -2984,6 +2960,10 @@ span.flatpickr-weekday:is(.dark *){
 
 .grid-cols-7{
   grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+.flex-row{
+  flex-direction: row;
 }
 
 .flex-col{
@@ -4255,14 +4235,6 @@ span.flatpickr-weekday:is(.dark *){
 
 .pt-8{
   padding-top: 2rem;
-}
-
-.pl-5{
-  padding-left: 1.25rem;
-}
-
-.pr-2{
-  padding-right: 0.5rem;
 }
 
 .text-left{
@@ -6070,10 +6042,6 @@ body #announcement-banner > div > div.owl-dots > button.owl-dot span {
 
   .sm\:mt-0{
     margin-top: 0px;
-  }
-
-  .sm\:ml-0{
-    margin-left: 0px;
   }
 
   .sm\:block{

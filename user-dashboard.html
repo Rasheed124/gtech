@@ -974,186 +974,196 @@
                         localStorage.setItem('isBalanceVisible', JSON.stringify(this.isBalanceVisible));
                       }
                     }"
-                      class="min-w-[355px] lg:min-w-[390px] md:min-w-full flex justify-between p-5 text-left text-white w-full bg-black rounded-xl col-span-6 bg-no-repeat bg-top bg-blend-overlay bg-cover bg-[url('./images/dash-bg.png')] bg-opacity-60"
+                      class="min-w-[355px] lg:min-w-[390px] md:min-w-full flex justify-between flex-col p-5 text-left text-white w-full bg-black rounded-xl col-span-6 bg-no-repeat bg-top bg-blend-overlay bg-cover bg-[url('./images/dash-bg.png')] bg-opacity-60"
                     >
                       <!-- Left Side: Balance Area -->
-                      <div x-cloak class="flex flex-col">
-                        <p class="text-sm">Total Balance</p>
-                        <div class="flex">
-                          <h1 class="text-4xl font-semibold">
-                            <span x-show="isBalanceVisible">₦0.00</span>
-                            <span x-show="!isBalanceVisible">****</span>
-                          </h1>
-                          <button
-                            class="ml-3"
-                            @click="toggleBalanceVisibility()"
-                          >
-                            <!-- Toggle Button for Showing/ Hiding Balance -->
-                            <svg
-                              x-show="isBalanceVisible"
-                              xmlns="http://www.w3.org/2000/svg"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              stroke-width="1.5"
-                              stroke="currentColor"
-                              class="w-6 h-6"
-                              style="display: none"
+                      <div x-cloak class="flex flex-row justify-between">
+                        <div>
+                          <p class="text-sm">Total Balance</p>
+                          <div class="flex">
+                            <h1 class="text-4xl font-semibold">
+                              <span x-show="isBalanceVisible">₦0.00</span>
+                              <span x-show="!isBalanceVisible">****</span>
+                            </h1>
+                            <button
+                              class="ml-3"
+                              @click="toggleBalanceVisibility()"
                             >
-                              <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"
-                              ></path>
-                              <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-                              ></path>
-                            </svg>
+                              <!-- Toggle Button for Showing/ Hiding Balance -->
+                              <svg
+                                x-show="isBalanceVisible"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                class="w-6 h-6"
+                                style="display: none"
+                              >
+                                <path
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"
+                                ></path>
+                                <path
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                                ></path>
+                              </svg>
 
+                              <svg
+                                x-show="!isBalanceVisible"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                class="w-6 h-6"
+                              >
+                                <path
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  d="M3.98 8.223A10.477 10.477 0 0 0 1.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.451 10.451 0 0 1 12 4.5c4.756 0 8.773 3.162 10.065 7.498a10.522 10.522 0 0 1-4.293 5.774M6.228 6.228 3 3m3.228 3.228 3.65 3.65m7.894 7.894L21 21m-3.228-3.228-3.65-3.65m0 0a3 3 0 1 0-4.243-4.243m4.242 4.242L9.88 9.88"
+                                ></path>
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+
+                        <!-- Right Side: Currency Dropdown -->
+                        <div class="relative mt-4" x-data="{ isOpen: false }">
+                          <button
+                            class="py-2 px-2 bg-white text-primary rounded-lg flex items-center gap-2 cursor-pointer"
+                            @click="isOpen = !isOpen"
+                            @click.outside="isOpen = false"
+                            x-cloak
+                          >
+                            <img
+                              src="./images/ng-flag.png"
+                              alt=""
+                              class="w-4 h-4 rounded-full"
+                            />
                             <svg
-                              x-show="!isBalanceVisible"
                               xmlns="http://www.w3.org/2000/svg"
+                              class="w-5 h-5"
                               fill="none"
                               viewBox="0 0 24 24"
-                              stroke-width="1.5"
                               stroke="currentColor"
-                              class="w-6 h-6"
                             >
                               <path
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
-                                d="M3.98 8.223A10.477 10.477 0 0 0 1.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.451 10.451 0 0 1 12 4.5c4.756 0 8.773 3.162 10.065 7.498a10.522 10.522 0 0 1-4.293 5.774M6.228 6.228 3 3m3.228 3.228 3.65 3.65m7.894 7.894L21 21m-3.228-3.228-3.65-3.65m0 0a3 3 0 1 0-4.243-4.243m4.242 4.242L9.88 9.88"
-                              ></path>
+                                stroke-width="2"
+                                d="M19 9l-7 7-7-7"
+                              />
                             </svg>
                           </button>
-                        </div>
-                        <!-- Add Funds -->
-                        <div class="mt-10 flex gap-3 lg:gap-1 xl:gap-3">
-                          <a
-                            class="inline-flex items-center gap-2 rounded bg-white px-3 py-2 text-black focus:outline-none"
-                            href="#"
-                          >
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              stroke-width="1.5"
-                              stroke="currentColor"
-                              class="size-2.5"
-                            >
-                              <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="M16.5 8.25V6a2.25 2.25 0 0 0-2.25-2.25H6A2.25 2.25 0 0 0 3.75 6v8.25A2.25 2.25 0 0 0 6 16.5h2.25m8.25-8.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-7.5A2.25 2.25 0 0 1 8.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 0 0-2.25 2.25v6"
-                              />
-                            </svg>
 
-                            <span class="text-xs font-medium whitespace-nowrap">Top Up</span>
-                          </a>
-                          <a
-                            class="inline-flex items-center gap-2 rounded bg-white px-3 py-2 text-black focus:outline-none"
-                            href="#"
+                          <!-- Dropdown Menu -->
+                          <ul
+                            x-show="isOpen"
+                            class="absolute flex-col text-xs top-10 left-0 bg-white text-primary rounded-md shadow-xl overflow-hidden z-10 w-full"
+                            @click.away="isOpen = false"
                           >
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              stroke-width="1.5"
-                              stroke="currentColor"
-                              class="size-2.5"
-                            >
-                              <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="M16.5 8.25V6a2.25 2.25 0 0 0-2.25-2.25H6A2.25 2.25 0 0 0 3.75 6v8.25A2.25 2.25 0 0 0 6 16.5h2.25m8.25-8.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-7.5A2.25 2.25 0 0 1 8.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 0 0-2.25 2.25v6"
-                              />
-                            </svg>
-
-                            <span class="text-xs font-medium white whitespace-nowrap">Transfer</span>
-                          </a>
-                          <a
-                            class="inline-flex items-center gap-2 rounded bg-white px-3 py-2 text-black focus:outline-none"
-                            href="#"
-                          >
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              stroke-width="1.5"
-                              stroke="currentColor"
-                              class="size-2.5"
-                            >
-                              <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="M16.5 8.25V6a2.25 2.25 0 0 0-2.25-2.25H6A2.25 2.25 0 0 0 3.75 6v8.25A2.25 2.25 0 0 0 6 16.5h2.25m8.25-8.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-7.5A2.25 2.25 0 0 1 8.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 0 0-2.25 2.25v6"
-                              />
-                            </svg>
-
-                            <span class="text-xs font-medium whitespace-nowrap">Convert</span>
-                          </a>
+                            <li class="relative">
+                              <button
+                                class="w-full px-2 py-2 text-base text-left hover:bg-gray-200 flex items-center justify-center"
+                              >
+                                <img
+                                  src="./images/ng-flag.png"
+                                  alt="Nigeria Flag"
+                                  class="w-5 h-5 rounded-full"
+                                />
+                              </button>
+                            </li>
+                            <li class="relative">
+                              <button
+                                class="w-full px-2 py-2 text-base text-left hover:bg-gray-200 flex items-center justify-center"
+                              >
+                                <img
+                                  src="./images/dollar.jpeg"
+                                  alt="Another Country Flag"
+                                  class="w-5 h-5 rounded-full"
+                                />
+                              </button>
+                            </li>
+                          </ul>
                         </div>
                       </div>
 
-                      <!-- Right Side: Currency Dropdown -->
-                      <div class="relative mt-4 " x-data="{ isOpen: false }">
-                        <button
-                          class="py-2 px-2   bg-white text-primary rounded-lg flex items-center gap-2 cursor-pointer"
-                          @click="isOpen = !isOpen"
-                          @click.outside="isOpen = false"
-                          x-cloak
+                      <!-- Add Funds -->
+                      <div class="mt-10 flex gap-3 lg:gap-1 xl:gap-3">
+                        <a
+                          class="inline-flex items-center gap-2 rounded bg-white px-3 py-2 text-black focus:outline-none"
+                          href="#"
                         >
-                          <img
-                            src="./images/ng-flag.png"
-                            alt=""
-                            class="w-4 h-4 rounded-full"
-                          />
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            class="w-5 h-5"
                             fill="none"
                             viewBox="0 0 24 24"
+                            stroke-width="1.5"
                             stroke="currentColor"
+                            class="size-2.5"
                           >
                             <path
                               stroke-linecap="round"
                               stroke-linejoin="round"
-                              stroke-width="2"
-                              d="M19 9l-7 7-7-7"
+                              d="M16.5 8.25V6a2.25 2.25 0 0 0-2.25-2.25H6A2.25 2.25 0 0 0 3.75 6v8.25A2.25 2.25 0 0 0 6 16.5h2.25m8.25-8.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-7.5A2.25 2.25 0 0 1 8.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 0 0-2.25 2.25v6"
                             />
                           </svg>
-                        </button>
 
-                        <!-- Dropdown Menu -->
-                        <ul
-                          x-show="isOpen"
-                          class="absolute flex-col text-xs top-10 left-0 bg-white text-primary rounded-md shadow-xl overflow-hidden z-10 w-full"
-                          @click.away="isOpen = false"
+                          <span class="text-xs font-medium whitespace-nowrap"
+                            >Top Up</span
+                          >
+                        </a>
+                        <a
+                          class="inline-flex items-center gap-2 rounded bg-white px-3 py-2 text-black focus:outline-none"
+                          href="#"
                         >
-                          <li class="relative">
-                            <button
-                              class="w-full px-2 py-2 text-base text-left hover:bg-gray-200 flex items-center justify-center"
-                            >
-                              <img
-                                src="./images/ng-flag.png"
-                                alt="Nigeria Flag"
-                                class="w-5 h-5 rounded-full"
-                              />
-                            </button>
-                          </li>
-                          <li class="relative">
-                            <button
-                              class="w-full px-2 py-2 text-base text-left hover:bg-gray-200 flex items-center justify-center"
-                            >
-                              <img
-                                src="./images/dollar.jpeg"
-                                alt="Another Country Flag"
-                                class="w-5 h-5 rounded-full"
-                              />
-                            </button>
-                          </li>
-                        </ul>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="size-2.5"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M16.5 8.25V6a2.25 2.25 0 0 0-2.25-2.25H6A2.25 2.25 0 0 0 3.75 6v8.25A2.25 2.25 0 0 0 6 16.5h2.25m8.25-8.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-7.5A2.25 2.25 0 0 1 8.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 0 0-2.25 2.25v6"
+                            />
+                          </svg>
+
+                          <span
+                            class="text-xs font-medium white whitespace-nowrap"
+                            >Transfer</span
+                          >
+                        </a>
+                        <a
+                          class="inline-flex items-center gap-2 rounded bg-white px-3 py-2 text-black focus:outline-none"
+                          href="#"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="size-2.5"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M16.5 8.25V6a2.25 2.25 0 0 0-2.25-2.25H6A2.25 2.25 0 0 0 3.75 6v8.25A2.25 2.25 0 0 0 6 16.5h2.25m8.25-8.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-7.5A2.25 2.25 0 0 1 8.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 0 0-2.25 2.25v6"
+                            />
+                          </svg>
+
+                          <span class="text-xs font-medium whitespace-nowrap"
+                            >Convert</span
+                          >
+                        </a>
                       </div>
                     </div>
 
@@ -1574,20 +1584,20 @@
                           <div
                             class="relative p-5 pb-6 max-h-[100px] dark:bg-gray-800 dark:text-white flex items-center justify-center overflow-hidden text-primary border dark:border-0 shadow-sm duration-200 ease-linear bg-gray-100 hover:bg-primary-50 rounded-xl"
                           >
-                          <div
-                          class="flex flex-col justify-center items-center"
-                        >
-                          <p class="font-medium lg:font-normal">More</p>
-          
-                          <div
-                            class="text-black opacity-5 dark:text-white/40"
-                          >
-                            <i
-                              class="fa fa-ellipsis-h text-2xl"
-                              aria-hidden="true"
-                            ></i>
-                          </div>
-                        </div>
+                            <div
+                              class="flex flex-col justify-center items-center"
+                            >
+                              <p class="font-medium lg:font-normal">More</p>
+
+                              <div
+                                class="text-black opacity-5 dark:text-white/40"
+                              >
+                                <i
+                                  class="fa fa-ellipsis-h text-2xl"
+                                  aria-hidden="true"
+                                ></i>
+                              </div>
+                            </div>
                           </div>
                         </a>
                       </div>

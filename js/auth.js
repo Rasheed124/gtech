@@ -145,6 +145,11 @@ document.addEventListener("DOMContentLoaded", () => {
       console.log("Entered OTP Code:", otpCode);
     });
   });
+
+
+
+
+  
   
   // LOGIN WITH PIN PAGE
   const pinInputs = document.querySelectorAll(".otp-input");
