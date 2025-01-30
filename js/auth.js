@@ -86,65 +86,60 @@
 
 // LOGIN ONly 
 document.addEventListener("DOMContentLoaded", () => {
-    const otpInputs = document.querySelectorAll(".otp-login-input");
-    const otpForm = document.getElementById("login-pin-form");
-  
-    otpInputs.forEach((input, index) => {
-      // Restrict input to numbers only
-      input.addEventListener("input", (e) => {
-        const value = e.target.value;
-  
-        // Validate if input is a single digit (0-9)
-        if (!/^\d$/.test(value)) {
-          e.target.value = ""; // Clear input if not a valid digit
-          return;
-        }
-  
-        // Hide the entered value and change it to a dot
-        input.type = "password";
-  
-        // Move focus to the next input if current input is valid
-        if (index < otpInputs.length - 1) {
-          otpInputs[index + 1].focus();
-        }
-      });
-  
-      input.addEventListener("focus", () => {
-        input.type = "tel";
-      });
-  
-      input.addEventListener("keydown", (e) => {
-        // Handle Backspace key
-        if (e.key === "Backspace" && !input.value && index > 0) {
-          otpInputs[index - 1].focus();
-          otpInputs[index - 1].type = "tel";
-        }
-      });
-  
-      input.addEventListener("paste", (e) => {
-        const data = e.clipboardData.getData("text");
-        const digits = data.match(/\d/g);
-        if (digits) {
-          e.preventDefault();
-          digits.slice(0, otpInputs.length).forEach((digit, i) => {
-            otpInputs[i].value = digit;
-            otpInputs[i].type = "password";
-          });
-          if (digits.length < otpInputs.length) {
-            otpInputs[digits.length].focus();
-          }
-        }
-      });
+  const otpInputs = document.querySelectorAll(".otp-login-input");
+  const otpForm = document.getElementById("login-pin-form");
+
+  otpInputs.forEach((input, index) => {
+    input.type = "password";
+
+    // Restrict input to numbers only
+    input.addEventListener("input", (e) => {
+      const value = e.target.value;
+
+      if (!/^\d$/.test(value)) {
+        e.target.value = ""; 
+        return;
+      }
+
+      if (index < otpInputs.length - 1) {
+        otpInputs[index + 1].focus();
+      }
     });
-  
-    otpForm.addEventListener("submit", (e) => {
-      e.preventDefault(); // Prevent default form submission
-      const otpCode = Array.from(otpInputs)
-        .map((input) => input.value)
-        .join(""); // Collect the values and join them into a string
-      console.log("Entered OTP Code:", otpCode);
+
+    // Prevent type change on focus
+    input.addEventListener("focus", () => {
+      input.setSelectionRange(1, 1); 
+    });
+
+    input.addEventListener("keydown", (e) => {
+      if (e.key === "Backspace" && !input.value && index > 0) {
+        otpInputs[index - 1].focus();
+      }
+    });
+
+    input.addEventListener("paste", (e) => {
+      const data = e.clipboardData.getData("text");
+      const digits = data.match(/\d/g);
+      if (digits) {
+        e.preventDefault();
+        digits.slice(0, otpInputs.length).forEach((digit, i) => {
+          otpInputs[i].value = digit;
+        });
+        if (digits.length < otpInputs.length) {
+          otpInputs[digits.length].focus();
+        }
+      }
     });
   });
+
+  otpForm.addEventListener("submit", (e) => {
+    e.preventDefault(); 
+    const otpCode = Array.from(otpInputs)
+      .map((input) => input.value)
+      .join(""); 
+    console.log("Entered OTP Code:", otpCode);
+  });
+});
 
 
 
