@@ -4940,12 +4940,11 @@ body #announcement-banner > div > div.owl-dots > button.owl-dot span {
 
 /* Custom Scrollbar Styles */
 
-/* #left-dashboard-area {
+#left-dashboard-area {
   scrollbar-width: thin;
-  scrollbar-color: #004437 transparent;
+  /* scrollbar-color: #000  transparent; */
   padding-bottom: 16px;
 }
-
 
 #left-dashboard-area::-webkit-scrollbar {
   height: 8px;
@@ -4953,84 +4952,6 @@ body #announcement-banner > div > div.owl-dots > button.owl-dot span {
 
 #left-dashboard-area::-webkit-scrollbar-track {
   background: transparent;
-} */
-
-#left-dashboard-area {
-  scrollbar-width: thin;
-  padding-bottom: 16px;
-  -webkit-overflow-scrolling: touch;
-  /* Ensures smooth scrolling on iOS */
-}
-
-/* Light Mode */
-
-#left-dashboard-area.light {
-  scrollbar-color: #000 transparent;
-  /* Firefox support */
-}
-
-#left-dashboard-area.light::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
-#left-dashboard-area.light::-webkit-scrollbar-thumb {
-  background-color: #000 !important;
-  /* Ensures color applies */
-  border-radius: 4px;
-}
-
-#left-dashboard-area.light::-webkit-scrollbar-track {
-  background: transparent !important;
-}
-
-/* Dark Mode */
-
-#left-dashboard-area.dark {
-  scrollbar-color: #004437 transparent;
-  /* Firefox support */
-}
-
-#left-dashboard-area.dark::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
-#left-dashboard-area.dark::-webkit-scrollbar-thumb {
-  background-color: #004437 !important;
-  border-radius: 4px;
-}
-
-#left-dashboard-area.dark::-webkit-scrollbar-track {
-  background: transparent !important;
-}
-
-/* Safari-specific fix */
-
-@supports (-webkit-touch-callout: none) {
-  #left-dashboard-area {
-    overflow-y: scroll;
-    scrollbar-width: thin;
-    -webkit-overflow-scrolling: touch;
-    /* Ensure smooth scrolling on iOS */
-    position: relative;
-  }
-
-  #left-dashboard-area::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-    background: black !important;
-    /* Force black background */
-  }
-
-  #left-dashboard-area::-webkit-scrollbar-thumb {
-    background: black !important;
-    border-radius: 4px;
-  }
-
-  #left-dashboard-area::-webkit-scrollbar-track {
-    background: black !important;
-  }
 }
 
 .before\:absolute::before{
@@ -7298,3 +7219,4 @@ body #announcement-banner > div > div.owl-dots > button.owl-dot span {
 .\[\&_\*\]\:\!transition-none *{
   transition-property: none !important;
 }
+
