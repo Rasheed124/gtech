@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css " />
+    <link rel="stylesheet" href="./style.css" />
 
     <link rel="stylesheet" href="./css/vendors/owl.carousel.min.css" />
     <link rel="stylesheet" href="./css/vendors/owl.theme.default.min.css" />
@@ -13,9 +13,10 @@
     />
 
     <script>
+      let isCollapsed;
       if (
-        localStorage.getItem("user-dark-mode") === "false" ||
-        !("user-dark-mode" in localStorage)
+        localStorage.getItem("dark-mode") === "false" ||
+        !("dark-mode" in localStorage)
       ) {
         document.querySelector("html").classList.remove("dark");
         document.querySelector("html").style.colorScheme = "light";
@@ -27,7 +28,8 @@
     <title>User Dashboard - Home</title>
   </head>
   <body
-    class="bg-gray-100 dark:bg-gray-900 bg-no-repeat bg-center bg-blend-overlay w-full"
+    class="bg-gray-100 dark:bg-gray-900 bg-no-repeat bg-center bg-blend-overlay w-full overflow-x-hidden"
+    id="user-dashboard"
   >
     <div class="w-full relative">
       <main
@@ -55,14 +57,17 @@
                     :class="isCollapsed ? 'justify-center' : 'justify-between'"
                     class="flex items-center gap-3"
                   >
+                    <!-- app-logo-2.png -->
                     <a href="" class="">
                       <img
-                        :src="isCollapsed ? './images/dashboard-logo-1.png' : './images/app-logo-2.png'"
+                        id="logo-sidebar"
+                        :src="isCollapsed ? './images/logo-menu-icon.png' : './images/logo-dark-menu.png'"
                         :class="isCollapsed ? 'max-w-[40px] mx-auto block' : 'max-w-[100px] mr-auto  hidden md:block ml-2'"
                         class="h-auto object-contain"
                         alt=""
                       />
                     </a>
+
                     <button
                       @click="isCollapsed = !isCollapsed"
                       class="flex items-center mr-3"
@@ -77,21 +82,21 @@
                       >
                         <path
                           d="M21 4.1V10.9C21 11.5934 20.8501 11.9494 20.6386 12.1483C20.4196 12.3544 20.0215 12.5 19.27 12.5H15.23C14.4785 12.5 14.0804 12.3544 13.8614 12.1483C13.6499 11.9494 13.5 11.5934 13.5 10.9V4.1C13.5 3.40657 13.6499 3.05057 13.8614 2.85167C14.0804 2.64556 14.4785 2.5 15.23 2.5H19.27C20.0215 2.5 20.4196 2.64556 20.6386 2.85167C20.8501 3.05057 21 3.40657 21 4.1Z"
-                          fill="#311503"
-                          stroke="#311503"
+                          fill="#004437"
+                          stroke="#004437"
                         ></path>
                         <path
                           d="M10.5 13.1V19.9C10.5 20.5934 10.3501 20.9494 10.1386 21.1483C9.91956 21.3544 9.52146 21.5 8.77 21.5H4.73C3.97854 21.5 3.58044 21.3544 3.36135 21.1483C3.14993 20.9494 3 20.5934 3 19.9V13.1C3 12.4066 3.14993 12.0506 3.36135 11.8517C3.58044 11.6456 3.97854 11.5 4.73 11.5H8.77C9.52146 11.5 9.91956 11.6456 10.1386 11.8517C10.3501 12.0506 10.5 12.4066 10.5 13.1Z"
-                          fill="#311503"
-                          stroke="#311503"
+                          fill="#004437"
+                          stroke="#004437"
                         ></path>
                         <path
                           d="M21.5 19.9V17.1C21.5 15.6 20.86 15 19.27 15H15.23C13.64 15 13 15.6 13 17.1V19.9C13 21.4 13.64 22 15.23 22H19.27C20.86 22 21.5 21.4 21.5 19.9Z"
-                          fill="#F66B03"
+                          fill="#004437"
                         ></path>
                         <path
                           d="M11 6.9V4.1C11 2.6 10.36 2 8.77 2H4.73C3.14 2 2.5 2.6 2.5 4.1V6.9C2.5 8.4 3.14 9 4.73 9H8.77C10.36 9 11 8.4 11 6.9Z"
-                          fill="#F66B03"
+                          fill="#004437"
                         ></path>
                       </svg>
                     </button>
@@ -732,6 +737,7 @@
           <div class="mt-8">
             <section class="grid grid-cols-1 lg:grid lg:grid-cols-12">
               <!-- MAIN HEADER  -->
+
               <header
                 class="lg:col-span-12 lg:border-l-2 lg:border-r-2 dark:border-gray-700"
               >
@@ -896,16 +902,16 @@
                       </svg>
                     </button>
 
-                    <div>
+                    <button class="text-black block">
                       <input
                         type="checkbox"
-                        name="user-light-switch"
-                        id="user-light-switch"
-                        class="user-light-switch sr-only"
+                        name="light-switch"
+                        id="light-switch"
+                        class="light-switch sr-only"
                       />
                       <label
                         class="flex items-center justify-center cursor-pointer w-9 h-9 p-2.5 hover:bg-gray-100 lg:hover:bg-gray-200 dark:hover:bg-gray-700/50 dark:lg:hover:bg-gray-800 rounded-md"
-                        for="user-light-switch"
+                        for="light-switch"
                       >
                         <svg
                           class="dark:hidden fill-current text-black dark:text-gray-400/80"
@@ -941,7 +947,7 @@
                           >Switch to light / dark version</span
                         >
                       </label>
-                    </div>
+                    </button>
                   </div>
                 </div>
 
@@ -970,186 +976,196 @@
                         localStorage.setItem('isBalanceVisible', JSON.stringify(this.isBalanceVisible));
                       }
                     }"
-                      class="min-w-[390px] md:min-w-full flex justify-between p-5 text-left text-white w-full bg-black rounded-xl col-span-6 bg-no-repeat bg-top bg-blend-overlay bg-cover bg-[url('./images/dash-bg.png')] bg-opacity-60"
+                      class="min-w-[355px] lg:min-w-[390px] md:min-w-full flex justify-between flex-col p-5 text-left text-white w-full bg-black rounded-xl col-span-6 bg-no-repeat bg-top bg-blend-overlay bg-cover bg-[url('./images/dash-bg.png')] bg-opacity-60"
                     >
                       <!-- Left Side: Balance Area -->
-                      <div x-cloak class="flex flex-col">
-                        <p class="text-sm">Total Balance</p>
-                        <div class="flex">
-                          <h1 class="text-4xl font-semibold">
-                            <span x-show="isBalanceVisible">₦0.00</span>
-                            <span x-show="!isBalanceVisible">****</span>
-                          </h1>
-                          <button
-                            class="ml-3"
-                            @click="toggleBalanceVisibility()"
-                          >
-                            <!-- Toggle Button for Showing/ Hiding Balance -->
-                            <svg
-                              x-show="isBalanceVisible"
-                              xmlns="http://www.w3.org/2000/svg"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              stroke-width="1.5"
-                              stroke="currentColor"
-                              class="w-6 h-6"
-                              style="display: none"
+                      <div x-cloak class="flex flex-row justify-between">
+                        <div>
+                          <p class="text-sm">Total Balance</p>
+                          <div class="flex">
+                            <h1 class="text-4xl font-semibold">
+                              <span x-show="isBalanceVisible">₦0.00</span>
+                              <span x-show="!isBalanceVisible">****</span>
+                            </h1>
+                            <button
+                              class="ml-3"
+                              @click="toggleBalanceVisibility()"
                             >
-                              <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"
-                              ></path>
-                              <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-                              ></path>
-                            </svg>
+                              <!-- Toggle Button for Showing/ Hiding Balance -->
+                              <svg
+                                x-show="isBalanceVisible"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                class="w-6 h-6"
+                                style="display: none"
+                              >
+                                <path
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"
+                                ></path>
+                                <path
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                                ></path>
+                              </svg>
 
+                              <svg
+                                x-show="!isBalanceVisible"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                class="w-6 h-6"
+                              >
+                                <path
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  d="M3.98 8.223A10.477 10.477 0 0 0 1.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.451 10.451 0 0 1 12 4.5c4.756 0 8.773 3.162 10.065 7.498a10.522 10.522 0 0 1-4.293 5.774M6.228 6.228 3 3m3.228 3.228 3.65 3.65m7.894 7.894L21 21m-3.228-3.228-3.65-3.65m0 0a3 3 0 1 0-4.243-4.243m4.242 4.242L9.88 9.88"
+                                ></path>
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+
+                        <!-- Right Side: Currency Dropdown -->
+                        <div class="relative mt-4" x-data="{ isOpen: false }">
+                          <button
+                            class="py-2 px-2 bg-white text-primary rounded-lg flex items-center gap-2 cursor-pointer"
+                            @click="isOpen = !isOpen"
+                            @click.outside="isOpen = false"
+                            x-cloak
+                          >
+                            <img
+                              src="./images/ng-flag.png"
+                              alt=""
+                              class="w-4 h-4 rounded-full"
+                            />
                             <svg
-                              x-show="!isBalanceVisible"
                               xmlns="http://www.w3.org/2000/svg"
+                              class="w-5 h-5"
                               fill="none"
                               viewBox="0 0 24 24"
-                              stroke-width="1.5"
                               stroke="currentColor"
-                              class="w-6 h-6"
                             >
                               <path
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
-                                d="M3.98 8.223A10.477 10.477 0 0 0 1.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.451 10.451 0 0 1 12 4.5c4.756 0 8.773 3.162 10.065 7.498a10.522 10.522 0 0 1-4.293 5.774M6.228 6.228 3 3m3.228 3.228 3.65 3.65m7.894 7.894L21 21m-3.228-3.228-3.65-3.65m0 0a3 3 0 1 0-4.243-4.243m4.242 4.242L9.88 9.88"
-                              ></path>
+                                stroke-width="2"
+                                d="M19 9l-7 7-7-7"
+                              />
                             </svg>
                           </button>
-                        </div>
-                        <!-- Add Funds -->
-                        <div class="mt-10 flex gap-3 lg:gap-1 xl:gap-3">
-                          <a
-                            class="inline-flex items-center gap-2 rounded bg-white px-3 py-2 text-black focus:outline-none"
-                            href="#"
-                          >
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              stroke-width="1.5"
-                              stroke="currentColor"
-                              class="size-3"
-                            >
-                              <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="M16.5 8.25V6a2.25 2.25 0 0 0-2.25-2.25H6A2.25 2.25 0 0 0 3.75 6v8.25A2.25 2.25 0 0 0 6 16.5h2.25m8.25-8.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-7.5A2.25 2.25 0 0 1 8.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 0 0-2.25 2.25v6"
-                              />
-                            </svg>
 
-                            <span class="text-xs font-medium">Top Up</span>
-                          </a>
-                          <a
-                            class="inline-flex items-center gap-2 rounded bg-white px-3 py-2 text-black focus:outline-none"
-                            href="#"
+                          <!-- Dropdown Menu -->
+                          <ul
+                            x-show="isOpen"
+                            class="absolute flex-col text-xs top-10 left-0 bg-white text-primary rounded-md shadow-xl overflow-hidden z-10 w-full"
+                            @click.away="isOpen = false"
                           >
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              stroke-width="1.5"
-                              stroke="currentColor"
-                              class="size-3"
-                            >
-                              <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="M16.5 8.25V6a2.25 2.25 0 0 0-2.25-2.25H6A2.25 2.25 0 0 0 3.75 6v8.25A2.25 2.25 0 0 0 6 16.5h2.25m8.25-8.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-7.5A2.25 2.25 0 0 1 8.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 0 0-2.25 2.25v6"
-                              />
-                            </svg>
-
-                            <span class="text-xs font-medium">Transfer</span>
-                          </a>
-                          <a
-                            class="inline-flex items-center gap-2 rounded bg-white px-3 py-2 text-black focus:outline-none"
-                            href="#"
-                          >
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              stroke-width="1.5"
-                              stroke="currentColor"
-                              class="size-3"
-                            >
-                              <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="M16.5 8.25V6a2.25 2.25 0 0 0-2.25-2.25H6A2.25 2.25 0 0 0 3.75 6v8.25A2.25 2.25 0 0 0 6 16.5h2.25m8.25-8.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-7.5A2.25 2.25 0 0 1 8.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 0 0-2.25 2.25v6"
-                              />
-                            </svg>
-
-                            <span class="text-xs font-medium">Convert</span>
-                          </a>
+                            <li class="relative">
+                              <button
+                                class="w-full px-2 py-2 text-base text-left hover:bg-gray-200 flex items-center justify-center"
+                              >
+                                <img
+                                  src="./images/ng-flag.png"
+                                  alt="Nigeria Flag"
+                                  class="w-5 h-5 rounded-full"
+                                />
+                              </button>
+                            </li>
+                            <li class="relative">
+                              <button
+                                class="w-full px-2 py-2 text-base text-left hover:bg-gray-200 flex items-center justify-center"
+                              >
+                                <img
+                                  src="./images/dollar.jpeg"
+                                  alt="Another Country Flag"
+                                  class="w-5 h-5 rounded-full"
+                                />
+                              </button>
+                            </li>
+                          </ul>
                         </div>
                       </div>
 
-                      <!-- Right Side: Currency Dropdown -->
-                      <div class="relative mt-4" x-data="{ isOpen: false }">
-                        <button
-                          class="py-2 px-2 bg-white text-primary rounded-lg flex items-center gap-2 cursor-pointer"
-                          @click="isOpen = !isOpen"
-                          @click.outside="isOpen = false"
-                          x-cloak
+                      <!-- Add Funds -->
+                      <div class="mt-10 flex gap-3 lg:gap-1 xl:gap-3">
+                        <a
+                          class="inline-flex items-center gap-2 rounded bg-white px-3 py-2 text-black focus:outline-none"
+                          href="#"
                         >
-                          <img
-                            src="./images/ng-flag.png"
-                            alt=""
-                            class="w-4 h-4 rounded-full"
-                          />
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            class="w-5 h-5"
                             fill="none"
                             viewBox="0 0 24 24"
+                            stroke-width="1.5"
                             stroke="currentColor"
+                            class="size-2.5"
                           >
                             <path
                               stroke-linecap="round"
                               stroke-linejoin="round"
-                              stroke-width="2"
-                              d="M19 9l-7 7-7-7"
+                              d="M16.5 8.25V6a2.25 2.25 0 0 0-2.25-2.25H6A2.25 2.25 0 0 0 3.75 6v8.25A2.25 2.25 0 0 0 6 16.5h2.25m8.25-8.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-7.5A2.25 2.25 0 0 1 8.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 0 0-2.25 2.25v6"
                             />
                           </svg>
-                        </button>
 
-                        <!-- Dropdown Menu -->
-                        <ul
-                          x-show="isOpen"
-                          class="absolute flex-col text-xs top-10 left-0 bg-white text-primary rounded-md shadow-xl overflow-hidden z-10 w-full"
-                          @click.away="isOpen = false"
+                          <span class="text-xs font-medium whitespace-nowrap"
+                            >Top Up</span
+                          >
+                        </a>
+                        <a
+                          class="inline-flex items-center gap-2 rounded bg-white px-3 py-2 text-black focus:outline-none"
+                          href="#"
                         >
-                          <li class="relative">
-                            <button
-                              class="w-full px-2 py-2 text-base text-left hover:bg-gray-200 flex items-center justify-center"
-                            >
-                              <img
-                                src="./images/ng-flag.png"
-                                alt="Nigeria Flag"
-                                class="w-5 h-5 rounded-full"
-                              />
-                            </button>
-                          </li>
-                          <li class="relative">
-                            <button
-                              class="w-full px-2 py-2 text-base text-left hover:bg-gray-200 flex items-center justify-center"
-                            >
-                              <img
-                                src="./images/dollar.jpeg"
-                                alt="Another Country Flag"
-                                class="w-5 h-5 rounded-full"
-                              />
-                            </button>
-                          </li>
-                        </ul>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="size-2.5"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M16.5 8.25V6a2.25 2.25 0 0 0-2.25-2.25H6A2.25 2.25 0 0 0 3.75 6v8.25A2.25 2.25 0 0 0 6 16.5h2.25m8.25-8.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-7.5A2.25 2.25 0 0 1 8.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 0 0-2.25 2.25v6"
+                            />
+                          </svg>
+
+                          <span
+                            class="text-xs font-medium white whitespace-nowrap"
+                            >Transfer</span
+                          >
+                        </a>
+                        <a
+                          class="inline-flex items-center gap-2 rounded bg-white px-3 py-2 text-black focus:outline-none"
+                          href="#"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="size-2.5"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M16.5 8.25V6a2.25 2.25 0 0 0-2.25-2.25H6A2.25 2.25 0 0 0 3.75 6v8.25A2.25 2.25 0 0 0 6 16.5h2.25m8.25-8.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-7.5A2.25 2.25 0 0 1 8.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 0 0-2.25 2.25v6"
+                            />
+                          </svg>
+
+                          <span class="text-xs font-medium whitespace-nowrap"
+                            >Convert</span
+                          >
+                        </a>
                       </div>
                     </div>
 
@@ -1208,9 +1224,10 @@
                   <!-- Header Part on Desktop -->
                   <div class="hidden lg:block px-3 mt-10">
                     <!-- Balance Cards -->
+
                     <div
                       id="left-dashboard-area"
-                      class="gap-4 flex md:grid grid-cols-10 w-full overflow-x-auto mb-5 text-white"
+                      class="gap-4 flex md:grid scrollbar grid-cols-10 w-full overflow-x-auto mb-5 text-white"
                     >
                       <!-- Slider -->
                       <div
@@ -1461,10 +1478,108 @@
                     </div>
                   </div>
 
-                  <!-- ======================================================  CONTENTS -->
-                  <div class="content-area">
+                  <!-- ============================ CONTENTS -->
+                  <div class="content-area mt-10">
                     <!-- Quick Actions -->
-                    New Content Goes here
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5 w-full">
+                      <!-- Card content -->
+
+                      <div class="space-y-4 order-2 md:order-1">
+                        <article
+                          class="flex justify-between text-white bg-black bg-opacity-80 rounded-xl p-5 bg-no-repeat bg-top bg-blend-overlay bg-cover bg-[url('./images/dash-bg.png')]"
+                        >
+                          <div
+                            class="flex flex-col items-start text-left gap-4"
+                          >
+                            <h3 class="font-bold text-lg capitalize">
+                              virtual account
+                            </h3>
+                            <div
+                              class="bg-yellow-800 flex items-center gap-2.5 rounded-full p-4"
+                            >
+                              <span class="text-lg xl:text-xl"
+                                >6038389449</span
+                              >
+
+                              <span class="shrink-0 text-center">
+                                <i
+                                  class="fa fa-clone text-center text-2xl"
+                                  aria-hidden="true"
+                                ></i>
+                              </span>
+                            </div>
+
+                            <p class="text-base lg:text-lg font-semibold uppercase">
+                              Billpint app(billpoint technology)
+                            </p>
+                          </div>
+
+                          <p class="font-bold capitalize">palmapy bank</p>
+                        </article>
+                      
+                        <article
+                          class="flex justify-between text-white bg-black bg-opacity-80 rounded-xl p-5 bg-no-repeat bg-top bg-blend-overlay bg-cover bg-[url('./images/dash-bg.png')]"
+                        >
+                          <div
+                            class="flex flex-col items-start text-left gap-4"
+                          >
+                            <h3 class="font-bold text-lg capitalize">
+                              virtual account
+                            </h3>
+                            <div
+                              class="bg-yellow-800 flex items-center gap-2.5 rounded-full p-4"
+                            >
+                              <span class="text-lg xl:text-xl"
+                                >6038389449</span
+                              >
+
+                              <span class="shrink-0 text-center">
+                                <i
+                                  class="fa fa-clone text-center text-2xl"
+                                  aria-hidden="true"
+                                ></i>
+                              </span>
+                            </div>
+
+                            <p class="text-base lg:text-lg font-semibold uppercase">
+                              Billpint app(billpoint technology)
+                            </p>
+                          </div>
+
+                          <p class="font-bold capitalize">palmapy bank</p>
+                        </article>
+                      
+
+                      </div>
+                      <div class="order-1 md:order-2">
+                        <article
+                          class="flex text-black dark:text-white bg-blue-700 rounded-xl p-5"
+                        >
+                          <div class="flex items-center gap-4">
+                            <span
+                              class="shrink-0 text-center text-primary rounded-full p-6 w-6 h-6 flex justify-center items-center bg-gray-100 dark:bg-purple-100"
+                            >
+                              <i
+                                class="fa fa-bell text-center text-base lg:text-lg"
+                                aria-hidden="true"
+                              ></i>
+                            </span>
+
+                            <div>
+                              <h3 class="font-medium text-lg capitalize">
+                                Fund tips
+                              </h3>
+
+                              <p class="text-lg">
+                                Transfer to the account number below to fund
+                                your wallet
+                              </p>
+                            </div>
+                          </div>
+                        </article>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
