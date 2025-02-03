@@ -4101,10 +4101,6 @@ span.flatpickr-weekday:is(.dark *){
   padding-bottom: 1.5rem;
 }
 
-.pb-7{
-  padding-bottom: 1.75rem;
-}
-
 .pb-8{
   padding-bottom: 2rem;
 }
@@ -4592,6 +4588,18 @@ span.flatpickr-weekday:is(.dark *){
 .text-yellow-700{
   --tw-text-opacity: 1;
   color: rgb(188 144 33 / var(--tw-text-opacity));
+}
+
+.text-black\/50{
+  color: rgb(5 5 5 / 0.5);
+}
+
+.text-white\/50{
+  color: rgb(252 255 255 / 0.5);
+}
+
+.text-black\/80{
+  color: rgb(5 5 5 / 0.8);
 }
 
 .underline{
@@ -5744,6 +5752,14 @@ body #singleP-search2 input:focus {
 
 .dark\:text-white\/70:is(.dark *){
   color: rgb(252 255 255 / 0.7);
+}
+
+.dark\:text-black\/80:is(.dark *){
+  color: rgb(5 5 5 / 0.8);
+}
+
+.dark\:text-white\/80:is(.dark *){
+  color: rgb(252 255 255 / 0.8);
 }
 
 .dark\:placeholder-gray-500:is(.dark *)::-moz-placeholder{
