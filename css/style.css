@@ -65,9 +65,12 @@ body#user-dashboard #announcement-banner > div > div.owl-dots > button.owl-dot.a
 /* Custom Scrollbar Styles */
 body#user-dashboard #left-dashboard-area {
   scrollbar-width: thin;
-  /* scrollbar-color: #000  transparent; */
+  scrollbar-color: #888  transparent;
   padding-bottom: 16px;
 }
+/* #left-dashboard-area.scrollbar::-webkit-scrollbar-thumb{
+  background: #4a5553;
+} */
 
 body#user-dashboard #left-dashboard-area::-webkit-scrollbar {
   height: 8px;
