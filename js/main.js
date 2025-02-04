@@ -80,6 +80,12 @@ document.addEventListener("click", (e) => {
 });
 
 
+
+
+
+
+
+
 // Announcement Ad Banner
 
 $(document).ready(function () {
@@ -95,4 +101,69 @@ $(document).ready(function () {
       }
     }
   });
+});
+
+
+// PAYMENT INPUT PAGE
+
+const pinInputs = document.querySelectorAll(".payment-input");
+const pinButtons = document.querySelectorAll(".payment-btn");
+const deleteBtn = document.getElementById("delete-btn");
+let activeInputIndex = 0;
+
+function updateActiveInput(index) {
+  activeInputIndex = Math.max(0, Math.min(index, pinInputs.length - 1));
+  pinInputs[activeInputIndex].focus();
+}
+
+pinInputs.forEach((input, index) => {
+  input.addEventListener("input", (e) => {
+    const value = e.target.value;
+
+    // Restrict to numbers only
+    if (!/^\d$/.test(value)) {
+      e.target.value = ""; // Clear non-numeric input
+      return;
+    }
+
+    if (value) {
+      updateActiveInput(index + 1);
+    }
+  });
+
+  input.addEventListener("keydown", (e) => {
+    if (e.key === "Backspace" && !e.target.value) {
+      updateActiveInput(index - 1);
+    }
+  });
+});
+
+pinButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const value = button.getAttribute("data-value");
+
+    if (value === "") return; // Empty button
+    if (value === "BACKSPACE") {
+      // Delete last input
+      if (pinInputs[activeInputIndex].value) {
+        pinInputs[activeInputIndex].value = "";
+      } else if (activeInputIndex > 0) {
+        updateActiveInput(activeInputIndex - 1);
+        pinInputs[activeInputIndex].value = "";
+      }
+    } else {
+      if (pinInputs[activeInputIndex].value === "") {
+        pinInputs[activeInputIndex].value = value;
+        updateActiveInput(activeInputIndex + 1);
+      }
+    }
+  });
+});
+
+document.getElementById("payment-form").addEventListener("submit", (e) => {
+  e.preventDefault();
+  const pin = Array.from(pinInputs)
+    .map((input) => input.value)
+    .join("");
+  console.log(pin);
 });

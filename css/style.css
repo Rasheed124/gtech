@@ -52,11 +52,12 @@ body#user-dashboard .dashboard-col-2:hover.scrollbar::-webkit-scrollbar-thumb {
 
 /* Carousel dots */
 body#user-dashboard #announcement-banner > div > div.owl-dots > button.owl-dot span {
-  background: #004437;
+  background: #c3c3c3;
   opacity: 0.7;
 }
 body#user-dashboard #announcement-banner > div > div.owl-dots > button.owl-dot.active span {
-  background: #4a5553;
+  background: #004437;
+  padding: 0px 15px;
   opacity: 0.7;
 }
 
