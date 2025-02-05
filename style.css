@@ -5751,6 +5751,16 @@ body #singleP-search2 input:focus {
   background-color: rgb(37 155 150 / 0.2);
 }
 
+.dark\:bg-gray-600:is(.dark *){
+  --tw-bg-opacity: 1;
+  background-color: rgb(75 85 99 / var(--tw-bg-opacity));
+}
+
+.dark\:bg-primary:is(.dark *){
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 68 55 / var(--tw-bg-opacity));
+}
+
 .dark\:bg-opacity-50:is(.dark *){
   --tw-bg-opacity: 0.5;
 }
@@ -5898,6 +5908,11 @@ body #singleP-search2 input:focus {
 
 .dark\:text-white\/70:is(.dark *){
   color: rgb(252 255 255 / 0.7);
+}
+
+.dark\:text-black:is(.dark *){
+  --tw-text-opacity: 1;
+  color: rgb(5 5 5 / var(--tw-text-opacity));
 }
 
 .dark\:placeholder-gray-500:is(.dark *)::-moz-placeholder{
