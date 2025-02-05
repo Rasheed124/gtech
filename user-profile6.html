@@ -1250,7 +1250,7 @@
                         class="min-w-[390px] md:min-w-full flex justify-between p-5 text-left text-white w-full bg-black rounded-xl col-span-6 bg-no-repeat bg-top bg-blend-overlay bg-cover bg-[url('./images/dash-bg.png')] bg-opacity-60"
                       >
                         <!-- Left Side: Balance Area -->
-                        <div  class="flex flex-col">
+                        <div class="flex flex-col">
                           <p class="text-sm">Total Balance</p>
                           <div class="flex">
                             <h1 class="text-4xl font-semibold">
@@ -1482,201 +1482,341 @@
                   <div class="content-area my-10">
                     <!-- Quick Actions -->
 
-                    <div class=" w-full">
+                    <div class="w-full grid grid-cols-1 lg:grid-cols-2 gap-5">
                       <!-- Card content -->
 
-                      <div class="grid grid-cols-4 gap-4 lg:gap-8 border-t-4 rounded-t-lg border-t-red-500 pt-8">
-                        <div class="relative min-h-16 rounded-lg p-2 flex justify-center items-center bg-gray-200">
-                          <img src="./images/mtn.png" class="h-16" alt="">
-                          <!-- Badge with checkmark -->
-                          <span class="absolute top-0 right-0  bg-red-500 rounded-b-md rounded-l-md text-white p-1  shadow-md">
-                            <i class="fas fa-solid fa-check"></i>
-                          </span>
+                     <div class="order-2 md:order-1">
+                      <div class="" x-data="{ card: true }">
+                        <!-- Toggle -->
+                        <div class="flex justify-center my-6">
+                          <div
+                            class="relative flex w-full p-1 bg-gray-100 dark:bg-gray-700/30 rounded"
+                          >
+                            <span
+                              class="absolute inset-0 m-1 pointer-events-none"
+                              aria-hidden="true"
+                            >
+                              <span
+                                class="absolute inset-0 w-1/2 bg-transparent border-b border-b-primary dark:border-b-gray-200 shadow-sm transition"
+                                :class="card ? 'translate-x-0' : 'translate-x-full'"
+                              ></span>
+                            </span>
+                            <button
+                              class="relative flex-1 text-sm font-medium text-gray-600 p-1 transition"
+                              :class="card ? 'dark:text-white' : 'dark:text-white'"
+                              @click.prevent="card = true"
+                            >
+                              Local
+                            </button>
+                            <button
+                              class="relative flex-1 text-sm font-medium text-gray-600 p-1 transition"
+                              :class="!card ? 'dark:text-white' : 'dark:text-white'"
+                              @click.prevent="card = false"
+                            >
+                              International
+                            </button>
+                          </div>
                         </div>
-                        <div class="relative min-h-16 rounded-lg p-2 flex justify-center items-center bg-gray-200">
-                          <img src="./images/glo.png" class="h-16" alt="">
-                        
-                        </div>
-                        <div class="relative min-h-16 rounded-lg p-2 flex justify-center items-center bg-gray-200">
-                          <img src="./images/9mobile.png" class="h-16" alt="">
-                        
-                        </div>
-                        <div class="relative min-h-16 rounded-lg p-2 flex justify-center items-center bg-gray-200">
-                          <img src="./images/airtel.png" class="h-16" alt="">
-                        
-                        </div>
-                     
-                     
-                      </div>
-                      
 
-                      <div class=""  x-data="{ card: true }">
-                               <!-- Toggle -->
-                               <div class="flex justify-center my-6">
-                                <div class="relative   flex w-full p-1 bg-gray-100 dark:bg-gray-700/30 rounded">
-                                    <span class="absolute inset-0 m-1 pointer-events-none" aria-hidden="true">
-                                        <span class="absolute inset-0 w-1/2 bg-white dark:bg-gray-100 rounded-lg border border-gray-200 shadow-sm transition" :class="card ? 'translate-x-0' : 'translate-x-full'"></span>
-                                    </span>
-                                    <button class="relative flex-1 text-sm font-medium text-gray-600 p-1 transition" :class="card ? 'dark:text-gray-800' : 'dark:text-gray-500'" @click.prevent="card = true">
-                                      
-                                     <div class="flex justify-center">
-                                      <svg
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      width="25"
-                                      height="25"
-                                      viewBox="0 0 25 25"
-                                      fill="none"
-                                      class=" text-primary"
-                                    >
-                                      <path
-                                        d="M12.6605 11.37C12.5605 11.36 12.4405 11.36 12.3305 11.37C9.95055 11.29 8.06055 9.34 8.06055 6.94C8.06055 4.49 10.0405 2.5 12.5005 2.5C14.9505 2.5 16.9405 4.49 16.9405 6.94C16.9305 9.34 15.0405 11.29 12.6605 11.37Z"
-                                        stroke="currentColor"
-                                        stroke-width="1.5"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                      ></path>
-                                      <path
-                                        d="M7.6607 15.06C5.2407 16.68 5.2407 19.32 7.6607 20.93C10.4107 22.77 14.9207 22.77 17.6707 20.93C20.0907 19.31 20.0907 16.67 17.6707 15.06C14.9307 13.23 10.4207 13.23 7.6607 15.06Z"
-                                        stroke="currentColor"
-                                        stroke-width="1.5"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                      ></path>
-                                    </svg> 
-                                    <span>
-                                      Own Number
+                        <!-- Local Transactions -->
+                        <div x-show="card">
+                          <div class="">
+                            <!-- Network Provider -->
+                            <div class="space-y-2">
+                              <h2 class="text-base font-semibold">
+                                Network Provider
+                              </h2>
 
-                                    </span>
-                                     </div>
-                                    
-                                    </button>
-                                    <button class="relative flex-1 text-sm font-medium text-gray-600 p-1 transition" :class="!card ? 'dark:text-gray-800' : 'dark:text-gray-500'" @click.prevent="card = false">Beneficiary</button>
-                                </div>
-                            </div>
-    
-                            <!-- Own Number -->
-                            <div x-show="card" >
-                                <div class="space-y-4">
-
-                                  <div class="">
-                                    <!-- Phone Number -->
-                                    <label
-                                    for="Username"
-                                    class="relative block rounded-md border border-gray-200 shadow-xs focus-within:border-blue-600 focus-within:ring-1 focus-within:ring-blue-600"
-                                    >
-                                    <input
-                                      type="number"
-                                      id="number"
-                                      class="peer border-none bg-transparent placeholder-transparent focus:border-transparent focus:ring-0 focus:outline-hidden"
-                                      placeholder="Username"
-                                    />
-  
-                                    <span
-                                      class="pointer-events-none absolute start-2.5 top-0 -translate-y-1/2 bg-gray-100 p-0.5 text-xs text-gray-700 transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm peer-focus:top-0 peer-focus:text-xs"
-                                    >
-                                      Phone Number
-                                    </span>
-                                    </label>
-                                  </div>
-
-                                  <!--  -->
-                                  <div class="relative w-full" x-data="{ open: false, selected: '' }">
-                                    <label for="HeadlineAct" class="block text-sm font-medium text-gray-900">Select Data Plan</label>
-                                    <div 
-                                      @click="open = !open" 
-                                      class="mt-1.5 w-full rounded-lg border border-gray-300 bg-white p-2 cursor-pointer flex justify-between items-center sm:text-sm"
-                                    >
-                                      <span x-text="selected || 'Please select'" class="text-gray-700"></span>
-                                      <svg class="w-5 h-5 text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 011.06 1.06l-4 4a.75.75 0 01-1.06 0l-4-4a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
-                                      </svg>
-                                    </div>
-                                  
-                                    <!-- Dropdown Options -->
-                                    <div 
-                                      x-show="open" 
-                                      @click.away="open = false"
-                                      class="absolute z-10 mt-2 w-full bg-white border border-gray-300 rounded-lg shadow-lg overflow-hidden"
-                                      x-transition
-                                    >
-                                      <ul class="max-h-40 overflow-y-auto">
-                                        <li @click="selected = 'John Mayer'; open = false" class="px-4 py-2 hover:bg-gray-100 cursor-pointer">John Mayer</li>
-                                        <li @click="selected = 'Stevie Ray Vaughn'; open = false" class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Stevie Ray Vaughn</li>
-                                        <li @click="selected = 'Jimi Hendrix'; open = false" class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Jimi Hendrix</li>
-                                        <li @click="selected = 'B.B King'; open = false" class="px-4 py-2 hover:bg-gray-100 cursor-pointer">B.B King</li>
-                                        <li @click="selected = 'Albert King'; open = false" class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Albert King</li>
-                                        <li @click="selected = 'Buddy Guy'; open = false" class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Buddy Guy</li>
-                                        <li @click="selected = 'Eric Clapton'; open = false" class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Eric Clapton</li>
-                                      </ul>
-                                    </div>
-                                  </div>
-                                  
-                                </div>
-                                <!-- Form footer -->
-                               
-                            </div>
-    
-                            <!-- PayPal form -->
-                            <div x-show="!card" x-cloak>
-                              <div class="space-y-4">
-
-                                <div class="">
-                                  <!-- Phone Number -->
-                                  <label
-                                  for="Username"
-                                  class="relative block rounded-md border border-gray-200 shadow-xs focus-within:border-blue-600 focus-within:ring-1 focus-within:ring-blue-600"
+                              <div class="grid grid-cols-4 gap-4 lg:gap-8">
+                                <div
+                                  class="relative min-h-16 rounded-lg p-2 flex justify-center items-center bg-gray-200"
+                                >
+                                  <img
+                                    src="./images/mtn.png"
+                                    class="h-16"
+                                    alt=""
+                                  />
+                                  <!-- Badge with checkmark -->
+                                  <span
+                                    class="absolute top-0 right-0 bg-red-500 rounded-b-md rounded-l-md text-white p-1 shadow-md"
                                   >
+                                    <i class="fas fa-solid fa-check"></i>
+                                  </span>
+                                </div>
+                                <div
+                                  class="relative min-h-16 rounded-lg p-2 flex justify-center items-center bg-gray-200"
+                                >
+                                  <img
+                                    src="./images/glo.png"
+                                    class="h-16"
+                                    alt=""
+                                  />
+                                </div>
+                                <div
+                                  class="relative min-h-16 rounded-lg p-2 flex justify-center items-center bg-gray-200"
+                                >
+                                  <img
+                                    src="./images/9mobile.png"
+                                    class="h-16"
+                                    alt=""
+                                  />
+                                </div>
+                                <div
+                                  class="relative min-h-16 rounded-lg p-2 flex justify-center items-center bg-gray-200"
+                                >
+                                  <img
+                                    src="./images/airtel.png"
+                                    class="h-16"
+                                    alt=""
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                            <!-- Data Bundle Option -->
+                            <div class="space-y-2 mt-5">
+                              <h2 class="text-base font-semibold">
+                                Data Bundle Option
+                              </h2>
+
+                              <div class="flex gap-x-7">
+                                <!-- Own Number -->
+                                <div class="">
+                                  <!-- Start -->
+                                  <button
+                                    class="btn bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700/60 hover:border-gray-300 dark:hover:border-gray-600 text-green-500 dark:text-gray-300"
+                                  >
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      fill="none"
+                                      viewBox="0 0 24 24"
+                                      stroke-width="1.5"
+                                      stroke="currentColor"
+                                      class="size-6 fill-current text-green-500 dark:text-gray-500 shrink-0"
+                                    >
+                                      <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
+                                      />
+                                    </svg>
+
+                                    <span class="ml-2">Own Number</span>
+                                  </button>
+                                  <!-- End -->
+                                </div>
+                                <!-- Beneficiary -->
+                                <div class="">
+                                  <!-- Start -->
+                                  <button
+                                    class="btn bg-yellow-300/30 dark:bg-gray-800 border-gray-200 dark:border-gray-700/60 hover:border-gray-300 dark:hover:border-gray-600 text-yellow-500 dark:text-gray-300"
+                                  >
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      fill="none"
+                                      viewBox="0 0 24 24"
+                                      stroke-width="1.5"
+                                      stroke="currentColor"
+                                      class="size-6 fill-current text-yellow-400 dark:text-gray-500 shrink-0"
+                                    >
+                                      <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
+                                      />
+                                    </svg>
+
+                                    <span class="ml-2">Beneficiary</span>
+                                  </button>
+                                  <!-- End -->
+                                </div>
+                              </div>
+                            </div>
+
+                            <!-- Inputs -->
+
+                            <div class="space-y-4">
+                              <!-- Phone Number -->
+                              <div class="mt-5">
+                                <label
+                                  for="number"
+                                  class="relative block rounded-md border-none border-gray-200 bg-gray-100 dark:bg-gray-800 dark:border-gray-600"
+                                >
                                   <input
                                     type="number"
                                     id="number"
-                                    class="peer border-none bg-transparent placeholder-transparent focus:border-transparent focus:ring-0 focus:outline-hidden"
-                                    placeholder="Username"
+                                    class="peer w-full form-input"
                                   />
-
                                   <span
-                                    class="pointer-events-none absolute start-2.5 top-0 -translate-y-1/2 bg-gray-100 p-0.5 text-xs text-gray-700 transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm peer-focus:top-0 peer-focus:text-xs"
+                                    class="absolute left-2.5 top-1/2 bg-gray-100 dark:bg-gray-800  transform -translate-y-1/2 text-sm text-gray-700 transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-base peer-focus:top-0 peer-focus:text-xs dark:text-gray-400"
                                   >
                                     Phone Number
                                   </span>
-                                  </label>
-                                </div>
-
-                                <!--  -->
-                                <div class="relative w-full" x-data="{ open: false, selected: '' }">
-                                  <label for="HeadlineAct" class="block text-sm font-medium text-gray-900">Select Data Plan</label>
-                                  <div 
-                                    @click="open = !open" 
-                                    class="mt-1.5 w-full rounded-lg border border-gray-300 bg-white p-2 cursor-pointer flex justify-between items-center sm:text-sm"
-                                  >
-                                    <span x-text="selected || 'Please select'" class="text-gray-700"></span>
-                                    <svg class="w-5 h-5 text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                      <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 011.06 1.06l-4 4a.75.75 0 01-1.06 0l-4-4a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
-                                    </svg>
-                                  </div>
-                                
-                                  <!-- Dropdown Options -->
-                                  <div 
-                                    x-show="open" 
-                                    @click.away="open = false"
-                                    class="absolute z-10 mt-2 w-full bg-white border border-gray-300 rounded-lg shadow-lg overflow-hidden"
-                                    x-transition
-                                  >
-                                    <ul class="max-h-40 overflow-y-auto">
-                                      <li @click="selected = 'John Mayer'; open = false" class="px-4 py-2 hover:bg-gray-100 cursor-pointer">John Mayer</li>
-                                      <li @click="selected = 'Stevie Ray Vaughn'; open = false" class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Stevie Ray Vaughn</li>
-                                      <li @click="selected = 'Jimi Hendrix'; open = false" class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Jimi Hendrix</li>
-                                      <li @click="selected = 'B.B King'; open = false" class="px-4 py-2 hover:bg-gray-100 cursor-pointer">B.B King</li>
-                                      <li @click="selected = 'Albert King'; open = false" class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Albert King</li>
-                                      <li @click="selected = 'Buddy Guy'; open = false" class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Buddy Guy</li>
-                                      <li @click="selected = 'Eric Clapton'; open = false" class="px-4 py-2 hover:bg-gray-100 cursor-pointer">Eric Clapton</li>
-                                    </ul>
-                                  </div>
-                                </div>
-                                
+                                </label>
                               </div>
+                              
+                              
+
+                              <!-- Select Data Plan -->
+                              <div class="relative w-full" x-data="{ open: false, selected: '' }">
+                                <label
+                                  for="HeadlineAct"
+                                  class="block text-sm font-medium text-gray-900 dark:text-gray-200"
+                                >
+                                  Select Data Plan
+                                </label>
+                                <div
+                                  @click="open = !open"
+                                  class="mt-1.5 w-full rounded-lg border border-gray-300 bg-white p-2 cursor-pointer flex justify-between items-center sm:text-sm dark:bg-gray-800 dark:border-gray-600"
+                                >
+                                  <span x-text="selected || 'Please select'" class="text-gray-700 dark:text-gray-300"></span>
+                                  <svg
+                                    class="w-5 h-5 text-gray-500 dark:text-gray-400"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20"
+                                    fill="currentColor"
+                                  >
+                                    <path
+                                      fill-rule="evenodd"
+                                      d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 011.06 1.06l-4 4a.75.75 0 01-1.06 0l-4-4a.75.75 0 01.02-1.06z"
+                                      clip-rule="evenodd"
+                                    />
+                                  </svg>
+                                </div>
+                              
+                                <!-- Dropdown Options -->
+                                <div
+                                  x-show="open"
+                                  @click.away="open = false"
+                                  class="absolute z-10 mt-2 w-full bg-white border border-gray-300 rounded-lg shadow-lg overflow-hidden dark:bg-gray-800 dark:border-gray-600"
+                                  x-transition
+                                >
+                                  <ul class="max-h-40 overflow-y-auto">
+                                    <li
+                                      @click="selected = 'John Mayer'; open = false"
+                                      class="px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer text-gray-700 dark:text-gray-300"
+                                    >
+                                      John Mayer
+                                    </li>
+                                    <li
+                                      @click="selected = 'Stevie Ray Vaughn'; open = false"
+                                      class="px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer text-gray-700 dark:text-gray-300"
+                                    >
+                                      Stevie Ray Vaughn
+                                    </li>
+                                    <li
+                                      @click="selected = 'Jimi Hendrix'; open = false"
+                                      class="px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer text-gray-700 dark:text-gray-300"
+                                    >
+                                      Jimi Hendrix
+                                    </li>
+                                    <li
+                                      @click="selected = 'B.B King'; open = false"
+                                      class="px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer text-gray-700 dark:text-gray-300"
+                                    >
+                                      B.B King
+                                    </li>
+                                    <li
+                                      @click="selected = 'Albert King'; open = false"
+                                      class="px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer text-gray-700 dark:text-gray-300"
+                                    >
+                                      Albert King
+                                    </li>
+                                    <li
+                                      @click="selected = 'Buddy Guy'; open = false"
+                                      class="px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer text-gray-700 dark:text-gray-300"
+                                    >
+                                      Buddy Guy
+                                    </li>
+                                    <li
+                                      @click="selected = 'Eric Clapton'; open = false"
+                                      class="px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer text-gray-700 dark:text-gray-300"
+                                    >
+                                      Eric Clapton
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                              
+                              <!-- Fee -->
+                              <div>
+                                <label
+                                  class="block text-sm font-medium mb-1"
+                                  for="prefix"
+                                  >Fee</label
+                                >
+                                <div class="relative">
+                                  <input
+                                    id="prefix"
+                                    class="form-input w-full pl-6"
+                                    type="text"
+                                  />
+                                  <div
+                                    class="absolute inset-0 right-auto flex items-center pointer-events-none"
+                                  >
+                                    <span
+                                      class="text-sm text-gray-400 dark:text-gray-500 font-bold px-3"
+                                      >₦</span
+                                    >
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- Pin -->
+                              <div>
+                                <div class="relative">
+                                  <input
+                                    id="prefix"
+                                    class="form-input w-full pl-6"
+                                    
+                                    placeholder="Enter Pin"
+                                    type="password"
+                                  />
+                                </div>
+                              </div>
+
+                              <div class="mt-1.5">
+                                <!-- Start -->
+                                <button class="py-3 rounded-lg bg-primary px-5 text-gray-100 hover:bg-primary/70 dark:bg-gray-100 dark:text-gray-800 dark:hover:bg-white">Submit</button>
+                                <!-- End -->
                             </div>
+                            </div>
+                          </div>
+                          <!-- Form footer -->
+                        </div>
+
+                        <!-- International Transactions -->
+                        <div x-show="!card" x-cloak>
+                          <div class=""></div>
+                        </div>
                       </div>
-                    
+                     </div>
+
+                     <div class="order-1 md:order-2">
+                      <div
+                      class="flex text-black dark:text-white bg-blue-700 rounded-xl p-5"
+                    >
+                      <div class="flex items-center gap-4">
+                        <span
+                          class="shrink-0 text-center text-primary rounded-full p-6 w-6 h-6 flex justify-center items-center bg-gray-100 dark:bg-purple-100"
+                        >
+                          <i
+                            class="fa fa-bell text-center text-base lg:text-lg"
+                            aria-hidden="true"
+                          ></i>
+                        </span>
+
+                        <div>
+                          <h3 class="font-medium text-lg capitalize">
+                            Fund tips
+                          </h3>
+
+                          <p class="text-lg">
+                            Transfer to the account number below to fund
+                            your wallet
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                     </div>
                     </div>
                   </div>
                 </div>
@@ -1723,7 +1863,11 @@
                 <div class="mt-6">
                   <h2 class="text-center">Join the Billpoint Family</h2>
 
-                  <img src="./images/family-bg.png" class="w-auto mx-auto" alt="" />
+                  <img
+                    src="./images/family-bg.png"
+                    class="w-auto mx-auto"
+                    alt=""
+                  />
 
                   <div
                     class="flex items-center gap-4 my-3 w-full mx-auto justify-center"
