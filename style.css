@@ -7086,6 +7086,10 @@ body #singleP-search2 input:focus {
     padding-left: 0.75rem;
   }
 
+  .lg\:pr-2{
+    padding-right: 0.5rem;
+  }
+
   .lg\:text-left{
     text-align: left;
   }
@@ -7360,6 +7364,10 @@ body #singleP-search2 input:focus {
 
   .xl\:pt-2{
     padding-top: 0.5rem;
+  }
+
+  .xl\:pr-5{
+    padding-right: 1.25rem;
   }
 
   .xl\:text-left{
