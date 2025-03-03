@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+
+    <link rel="stylesheet" href="./css/vendors/owl.carousel.min.css" />
+    <link rel="stylesheet" href="./css/vendors/owl.theme.default.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://rawcdn.githack.com/hung1001/font-awesome-pro/4cac1a6/css/all.css"
+    />
+
+    <script>
+      let isCollapsed;
+      if (
+        localStorage.getItem("dark-mode") === "false" ||
+        !("dark-mode" in localStorage)
+      ) {
+        document.querySelector("html").classList.remove("dark");
+        document.querySelector("html").style.colorScheme = "light";
+      } else {
+        document.querySelector("html").classList.add("dark");
+        document.querySelector("html").style.colorScheme = "dark";
+      }
+    </script>
+    <title>User Dashboard - Home</title>
+  </head>
+  <body class="border-2 min-h-screen" id="">
+    <div
+      class="grid grid-cols-10 grid-rows-8 gap-5 max-w-screen-2xl mx-auto border-4 p-2"
+    >
+      <!-- Header -->
+
+      <!-- Greetings and right menu buttons -->
+      <div
+        class="header grid grid-cols-10 col-span-10 p-2 gap-5 border-2 border-red-900"
+      >
+        <!-- Greetings  -->
+        <div class="top-nav-left col-span-5 border-blue-950 border-3 p-3">
+          greetings
+        </div>
+
+        <!--  right menu buttons -->
+        <div class="top-nav-right col-span-5 p-2 border-blue-950 border-3">
+          right menu buttons
+        </div>
+      </div>
+
+      <div class="balance col-span-10 grid grid-cols-10 xl:col-span-5 border-red-950 border-3 p-2 gap-2">
+        <div class="Card balance col-span-10 border-blue-950 border-3">
+          card balance
+        </div>
+
+        <div class="Card balance col-span-10 border-blue-950 border-3">
+          Header Advertisement
+        </div>
+      </div>
+      <div class="col-span-10 xl:row-start-3 xl:row-end-7 xl:col-start-1 xl:col-end-6 border-green-900 border-2">
+        Service
+      </div>
+      <div class="col-span-10 xl:col-span-5 xl:row-start-2 xl:row-end-7 border-blue-900 border-2">
+        Footer
+      </div>
+    </div>
+
+    <script src="./js/vendors/jquery.min.js"></script>
+    <script src="./js/vendors/owl.carousel.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/vendors/alpinejs.min.js" defer></script>
+  </body>
+</html>
