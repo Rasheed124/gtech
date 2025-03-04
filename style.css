@@ -3855,6 +3855,10 @@ span.flatpickr-weekday:is(.dark *){
   --tw-bg-opacity: 0.4;
 }
 
+.bg-opacity-0{
+  --tw-bg-opacity: 0;
+}
+
 .bg-\[linear-gradient\(135deg\2c var\(--tw-gradient-stops\)\)\]{
   background-image: linear-gradient(135deg,var(--tw-gradient-stops));
 }
@@ -5985,6 +5989,10 @@ body #singleP-search2 input:focus {
 .dark\:placeholder-gray-500:is(.dark *)::placeholder{
   --tw-placeholder-opacity: 1;
   color: rgb(107 114 128 / var(--tw-placeholder-opacity));
+}
+
+.dark\:opacity-5:is(.dark *){
+  opacity: 0.05;
 }
 
 .dark\:before\:bg-\[\#151D2C\]\/90:is(.dark *)::before{
