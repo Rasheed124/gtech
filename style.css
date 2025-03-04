@@ -3561,14 +3561,14 @@ span.flatpickr-weekday:is(.dark *){
   background-color: rgb(38 96 84 / var(--tw-bg-opacity));
 }
 
-.bg-\[\#9a6a6e\]{
-  --tw-bg-opacity: 1;
-  background-color: rgb(154 106 110 / var(--tw-bg-opacity));
-}
-
 .bg-\[\#EA4335\]{
   --tw-bg-opacity: 1;
   background-color: rgb(234 67 53 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#fbf1f1\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(251 241 241 / var(--tw-bg-opacity));
 }
 
 .bg-black{
@@ -3812,19 +3812,9 @@ span.flatpickr-weekday:is(.dark *){
   background-color: rgb(129 99 22 / var(--tw-bg-opacity));
 }
 
-.bg-\[\#a08688\]{
+.bg-\[\#F1F4FB\]{
   --tw-bg-opacity: 1;
-  background-color: rgb(160 134 136 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#a65259\]{
-  --tw-bg-opacity: 1;
-  background-color: rgb(166 82 89 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#C02634\]{
-  --tw-bg-opacity: 1;
-  background-color: rgb(192 38 52 / var(--tw-bg-opacity));
+  background-color: rgb(241 244 251 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-25{
@@ -3847,16 +3837,12 @@ span.flatpickr-weekday:is(.dark *){
   --tw-bg-opacity: 0.8;
 }
 
-.bg-opacity-20{
-  --tw-bg-opacity: 0.2;
+.bg-opacity-10{
+  --tw-bg-opacity: 0.1;
 }
 
-.bg-opacity-40{
-  --tw-bg-opacity: 0.4;
-}
-
-.bg-opacity-0{
-  --tw-bg-opacity: 0;
+.bg-opacity-100{
+  --tw-bg-opacity: 1;
 }
 
 .bg-\[linear-gradient\(135deg\2c var\(--tw-gradient-stops\)\)\]{
@@ -4756,6 +4742,25 @@ span.flatpickr-weekday:is(.dark *){
 .text-yellow-700{
   --tw-text-opacity: 1;
   color: rgb(188 144 33 / var(--tw-text-opacity));
+}
+
+.text-\[\#c02634\]{
+  --tw-text-opacity: 1;
+  color: rgb(192 38 52 / var(--tw-text-opacity));
+}
+
+.text-\[\#00687d\]{
+  --tw-text-opacity: 1;
+  color: rgb(0 104 125 / var(--tw-text-opacity));
+}
+
+.text-\[\#0F452F\]{
+  --tw-text-opacity: 1;
+  color: rgb(15 69 47 / var(--tw-text-opacity));
+}
+
+.text-opacity-100{
+  --tw-text-opacity: 1;
 }
 
 .underline{
@@ -5989,10 +5994,6 @@ body #singleP-search2 input:focus {
 .dark\:placeholder-gray-500:is(.dark *)::placeholder{
   --tw-placeholder-opacity: 1;
   color: rgb(107 114 128 / var(--tw-placeholder-opacity));
-}
-
-.dark\:opacity-5:is(.dark *){
-  opacity: 0.05;
 }
 
 .dark\:before\:bg-\[\#151D2C\]\/90:is(.dark *)::before{
