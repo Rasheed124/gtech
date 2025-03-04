@@ -3566,6 +3566,11 @@ span.flatpickr-weekday:is(.dark *){
   background-color: rgb(234 67 53 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#e9fbff\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(233 251 255 / var(--tw-bg-opacity));
+}
+
 .bg-\[\#f1f4fb\]{
   --tw-bg-opacity: 1;
   background-color: rgb(241 244 251 / var(--tw-bg-opacity));
@@ -3830,15 +3835,6 @@ span.flatpickr-weekday:is(.dark *){
 .bg-yellow-800{
   --tw-bg-opacity: 1;
   background-color: rgb(129 99 22 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#\#f7f6fc\]{
-  background-color: ##f7f6fc;
-}
-
-.bg-\[\#e9fbff\]{
-  --tw-bg-opacity: 1;
-  background-color: rgb(233 251 255 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-100{
@@ -4539,6 +4535,11 @@ span.flatpickr-weekday:is(.dark *){
   color: rgb(0 104 125 / var(--tw-text-opacity));
 }
 
+.text-\[\#045263\]{
+  --tw-text-opacity: 1;
+  color: rgb(4 82 99 / var(--tw-text-opacity));
+}
+
 .text-\[\#0f452f\]{
   --tw-text-opacity: 1;
   color: rgb(15 69 47 / var(--tw-text-opacity));
@@ -4787,16 +4788,6 @@ span.flatpickr-weekday:is(.dark *){
 .text-yellow-700{
   --tw-text-opacity: 1;
   color: rgb(188 144 33 / var(--tw-text-opacity));
-}
-
-.text-\[\#045263\]{
-  --tw-text-opacity: 1;
-  color: rgb(4 82 99 / var(--tw-text-opacity));
-}
-
-.text-\[black\]{
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
 .text-opacity-100{
@@ -5088,8 +5079,7 @@ span.flatpickr-weekday:is(.dark *){
 
 /* ============================ USER DAHSBOARD ============================== */
 
-body#user-dashboard .dashboard-col-1.scrollbar::-webkit-scrollbar,
-body#user-dashboard .dashboard-col-2.scrollbar::-webkit-scrollbar {
+body#user-dashboard .dashboard-col-1.scrollbar::-webkit-scrollbar{
   width: 5px;
   height: 5px;
   background: transparent;
@@ -5097,8 +5087,7 @@ body#user-dashboard .dashboard-col-2.scrollbar::-webkit-scrollbar {
   transition: background 0.5s;
 }
 
-body#user-dashboard .dashboard-col-1:hover.scrollbar::-webkit-scrollbar,
-body#user-dashboard .dashboard-col-2:hover.scrollbar::-webkit-scrollbar,
+body#user-dashboard .dashboard-col-1:hover.scrollbar::-webkit-scrollbar
 .scrollbar::-webkit-scrollbar {
   width: 5px;
   height: 5px;
@@ -5109,8 +5098,7 @@ body#user-dashboard .dashboard-col-2:hover.scrollbar::-webkit-scrollbar,
   background: transparent;
 }
 
-body#user-dashboard .dashboard-col-1:hover.scrollbar::-webkit-scrollbar-track,
-body#user-dashboard .dashboard-col-2:hover.scrollbar::-webkit-scrollbar-track {
+body#user-dashboard .dashboard-col-1:hover.scrollbar::-webkit-scrollbar-track {
   background: #888;
 }
 
@@ -5121,8 +5109,7 @@ body#user-dashboard .dashboard-col-2:hover.scrollbar::-webkit-scrollbar-track {
   transition: background 0.5s;
 }
 
-body#user-dashboard .dashboard-col-1:hover.scrollbar::-webkit-scrollbar-thumb,
-body#user-dashboard .dashboard-col-2:hover.scrollbar::-webkit-scrollbar-thumb {
+body#user-dashboard .dashboard-col-1:hover.scrollbar::-webkit-scrollbar-thumb {
   background: #004437;
 }
 

@@ -13,15 +13,13 @@
 /* ============================ USER DAHSBOARD ============================== */
 
 
-body#user-dashboard .dashboard-col-1.scrollbar::-webkit-scrollbar,
-body#user-dashboard .dashboard-col-2.scrollbar::-webkit-scrollbar {
+body#user-dashboard .dashboard-col-1.scrollbar::-webkit-scrollbar{
   width: 5px;
   height: 5px;
   background: transparent;
   transition: background 0.5s;
 }
-body#user-dashboard .dashboard-col-1:hover.scrollbar::-webkit-scrollbar,
-body#user-dashboard .dashboard-col-2:hover.scrollbar::-webkit-scrollbar,
+body#user-dashboard .dashboard-col-1:hover.scrollbar::-webkit-scrollbar
 .scrollbar::-webkit-scrollbar {
   width: 5px;
   height: 5px;
@@ -32,8 +30,7 @@ body#user-dashboard .dashboard-col-2:hover.scrollbar::-webkit-scrollbar,
   background: transparent;
 }
 
-body#user-dashboard .dashboard-col-1:hover.scrollbar::-webkit-scrollbar-track,
-body#user-dashboard .dashboard-col-2:hover.scrollbar::-webkit-scrollbar-track {
+body#user-dashboard .dashboard-col-1:hover.scrollbar::-webkit-scrollbar-track {
   background: #888;
 }
 
@@ -43,8 +40,7 @@ body#user-dashboard .dashboard-col-2:hover.scrollbar::-webkit-scrollbar-track {
   transition: background 0.5s;
 }
 
-body#user-dashboard .dashboard-col-1:hover.scrollbar::-webkit-scrollbar-thumb,
-body#user-dashboard .dashboard-col-2:hover.scrollbar::-webkit-scrollbar-thumb {
+body#user-dashboard .dashboard-col-1:hover.scrollbar::-webkit-scrollbar-thumb {
   background: #004437;
 }
 
