@@ -69,9 +69,7 @@ body#user-dashboard #left-dashboard-area {
   scrollbar-color: #888  transparent;
   padding-bottom: 16px;
 }
-/* #left-dashboard-area.scrollbar::-webkit-scrollbar-thumb{
-  background: #4a5553;
-} */
+
 
 body#user-dashboard #left-dashboard-area::-webkit-scrollbar {
   height: 8px;
