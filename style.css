@@ -4154,9 +4154,9 @@ span.flatpickr-weekday:is(.dark *){
   padding-bottom: 2rem;
 }
 
-.px-10{
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
+.px-7{
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
 }
 
 .pb-1{

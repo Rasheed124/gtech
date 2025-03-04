@@ -987,10 +987,11 @@
                     localStorage.setItem('isBalanceVisible', JSON.stringify(this.isBalanceVisible));
                   }
                 }"
-                        class="min-w-[355px] lg:min-w-[340px] md:min-w-full flex justify-between flex-col p-5 text-left text-white w-full  rounded-xl col-span-6 bg-primary  dark:bg-opacity-80"
+                x-cloak
+                        class="min-w-[355px] lg:min-w-[340px] md:min-w-full flex justify-between flex-col p-4 text-left text-white w-full  rounded-xl col-span-6 bg-primary  dark:bg-opacity-80"
                       >
                         <!-- Left Side: Balance Area -->
-                        <div x-cloak class="flex flex-row justify-between">
+                        <div  class="flex flex-row justify-between">
                           <div>
                             <p class="text-sm">Total Balance</p>
                             <div class="flex">
@@ -1045,7 +1046,7 @@
                           </div>
 
                           <!-- Right Side: Currency Dropdown -->
-                          <div class="relative mt-4" x-data="{ isOpen: false }">
+                          <div class="relative mt-4"   x-data="{ isOpen: false }">
                             <button
                               class="py-2 px-2 bg-white text-primary rounded-lg flex items-center gap-2 cursor-pointer"
                               @click="isOpen = !isOpen"
@@ -1108,7 +1109,7 @@
                         <!-- Add Funds -->
                         <div class="mt-10 flex gap-3 self-center lg:gap-1 xl:gap-3 ">
                           <a
-                            class="inline-flex items-center gap-2 rounded bg-[#266054] px-6 py-3 text-white focus:outline-none"
+                            class="inline-flex items-center gap-2 rounded bg-[#266054] px-7 py-3 text-white focus:outline-none"
                             href="#"
                           >
                             <svg
@@ -1131,7 +1132,7 @@
                             >
                           </a>
                           <a
-                            class="inline-flex items-center gap-2 rounded bg-[#266054] px-6 py-3 text-white focus:outline-none"
+                            class="inline-flex items-center gap-2 rounded bg-[#266054] px-7 py-3 text-white focus:outline-none"
                             href="#"
                           >
                             <svg
@@ -1180,7 +1181,7 @@
 
                       <!-- Transaction Limit -->
                       <div
-                        class="w-full h-[178px] bg-secondary dark:bg-gray-800 dark:text-white text-black p-5 rounded-xl relative col-span-4 min-w-[270px] md:min-w-full"
+                        class="w-full h-[178px] bg-secondary dark:bg-gray-800 dark:text-white text-black p-4 rounded-xl relative col-span-4 min-w-[270px] md:min-w-full"
                       >
                         <p
                           class="pb-3 border-b-white/40 dark:border-b-secondary border-b-2 text-sm font-medium"
