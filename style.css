@@ -2746,10 +2746,6 @@ span.flatpickr-weekday:is(.dark *){
   max-width: 48rem;
 }
 
-.max-w-40{
-  max-width: 10rem;
-}
-
 .max-w-4xl{
   max-width: 56rem;
 }
@@ -2804,14 +2800,6 @@ span.flatpickr-weekday:is(.dark *){
 
 .max-w-xs{
   max-width: 20rem;
-}
-
-.max-w-\[400px\]{
-  max-width: 400px;
-}
-
-.max-w-\[300px\]{
-  max-width: 300px;
 }
 
 .flex-1{
@@ -3098,6 +3086,14 @@ span.flatpickr-weekday:is(.dark *){
 
 .gap-px{
   gap: 1px;
+}
+
+.gap-1{
+  gap: 0.25rem;
+}
+
+.gap-1\.5{
+  gap: 0.375rem;
 }
 
 .gap-x-2{
@@ -3503,11 +3499,6 @@ span.flatpickr-weekday:is(.dark *){
   border-color: rgb(255 148 148 / var(--tw-border-opacity));
 }
 
-.border-red-700{
-  --tw-border-opacity: 1;
-  border-color: rgb(230 57 57 / var(--tw-border-opacity));
-}
-
 .border-transparent{
   border-color: transparent;
 }
@@ -3543,6 +3534,11 @@ span.flatpickr-weekday:is(.dark *){
 .bg-\[\#24292E\]{
   --tw-bg-opacity: 1;
   background-color: rgb(36 41 46 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#266054\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(38 96 84 / var(--tw-bg-opacity));
 }
 
 .bg-\[\#EA4335\]{
@@ -3791,43 +3787,6 @@ span.flatpickr-weekday:is(.dark *){
   background-color: rgb(129 99 22 / var(--tw-bg-opacity));
 }
 
-.bg-primary\/40{
-  background-color: rgb(0 68 55 / 0.4);
-}
-
-.bg-\[\#007060\]{
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 112 96 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#\#66A39A\]{
-  background-color: ##66A39A;
-}
-
-.bg-\[\#66A39A\]{
-  --tw-bg-opacity: 1;
-  background-color: rgb(102 163 154 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#33887D\]{
-  --tw-bg-opacity: 1;
-  background-color: rgb(51 136 125 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#006452\]{
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 100 82 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#\#266054\]{
-  background-color: ##266054;
-}
-
-.bg-\[\#266054\]{
-  --tw-bg-opacity: 1;
-  background-color: rgb(38 96 84 / var(--tw-bg-opacity));
-}
-
 .bg-opacity-25{
   --tw-bg-opacity: 0.25;
 }
@@ -3846,22 +3805,6 @@ span.flatpickr-weekday:is(.dark *){
 
 .bg-opacity-80{
   --tw-bg-opacity: 0.8;
-}
-
-.bg-opacity-20{
-  --tw-bg-opacity: 0.2;
-}
-
-.bg-opacity-40{
-  --tw-bg-opacity: 0.4;
-}
-
-.bg-opacity-70{
-  --tw-bg-opacity: 0.7;
-}
-
-.bg-opacity-90{
-  --tw-bg-opacity: 0.9;
 }
 
 .bg-\[linear-gradient\(135deg\2c var\(--tw-gradient-stops\)\)\]{
@@ -7412,21 +7355,15 @@ body #singleP-search2 input:focus {
     letter-spacing: -0.01em;
   }
 
+  .xl\:text-sm{
+    font-size: 0.875rem;
+    line-height: 1.5715;
+  }
+
   .xl\:text-xl{
     font-size: 1.25rem;
     line-height: 1.5;
     letter-spacing: -0.01em;
-  }
-
-  .xl\:text-base{
-    font-size: 1rem;
-    line-height: 1.5;
-    letter-spacing: -0.01em;
-  }
-
-  .xl\:text-sm{
-    font-size: 0.875rem;
-    line-height: 1.5715;
   }
 
   .xl\:leading-7{
