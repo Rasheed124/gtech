@@ -1928,6 +1928,10 @@ span.flatpickr-weekday:is(.dark *){
   grid-column-end: 8;
 }
 
+.col-end-9{
+  grid-column-end: 9;
+}
+
 .row-start-2{
   grid-row-start: 2;
 }
@@ -2427,6 +2431,11 @@ span.flatpickr-weekday:is(.dark *){
 .size-7{
   width: 1.75rem;
   height: 1.75rem;
+}
+
+.size-10{
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
 .h-0{
@@ -3026,6 +3035,10 @@ span.flatpickr-weekday:is(.dark *){
 
 .grid-cols-7{
   grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+.grid-cols-8{
+  grid-template-columns: repeat(8, minmax(0, 1fr));
 }
 
 .flex-row{
