@@ -1262,11 +1262,11 @@
                             class="fixed z-50 w-full bottom-0  right-0 lg:bottom-2 mt-2 lg:mr-3 overflow-x-hidden"
                           >
                             <div
-                              class="max-w-[450px] xl:max-w-[550px]  bg-white rounded-t-2xl  shadow-lg relative pt-4  lg:mx-0 md:ml-auto lg:ml-auto  rounded-lg border border-gray-200"
+                              class="max-w-[450px] xl:max-w-[550px] dark:bg-gray-900 dark:text-white bg-white rounded-t-2xl  shadow-lg relative pt-4  lg:mx-0 md:ml-auto lg:ml-auto  rounded-lg  "
                             >
                             <!-- CLose form -->
                               <button
-                                class="absolute top-2 left-4 text-xl opacity-60 dark:text-black"
+                                class="absolute top-2 left-4 text-xl  dark:text-white"
                                 @click="open = false"
                               >
                                 <i class="fa fa-times" aria-hidden="true"></i>
@@ -1275,7 +1275,7 @@
                                 <!-- Email Input -->
 
                                 <div class="w-full flex justify-center mb-3">
-                                  <p class="text-xs text-black text-lg pt-10">
+                                  <p class="text-xs text-black dark:text-white text-lg pt-10">
                                     Enter Payment Pin
                                   </p>
                                 </div>
@@ -1288,7 +1288,7 @@
                                   <input
                                     type="password"
                                     maxlength="1"
-                                    class="outline-none border-none focus:ring-[#f65d06]  caret-transparent text-2xl  font-bold  w-10 h-10  rounded-md text-black text-center payment-input  bg-[#f3f4f6]"
+                                    class="outline-none border-none focus:ring-yellow-500  caret-transparent text-2xl  font-bold  w-10 h-10  rounded-md text-black text-center payment-input  bg-[#f3f4f6]"
                                     data-index="0"
                                     required
                                     readonly
@@ -1296,7 +1296,7 @@
                                   <input
                                     type="password"
                                     maxlength="1"
-                                    class="outline-none border-none focus:ring-[#f65d06]  caret-transparent text-2xl  font-bold  w-10 h-10  rounded-md text-black text-center payment-input  bg-[#f3f4f6]"
+                                    class="outline-none border-none focus:ring-yellow-500  caret-transparent text-2xl  font-bold  w-10 h-10  rounded-md text-black text-center payment-input  bg-[#f3f4f6]"
                                     data-index="0"
                                     required
                                     readonly
@@ -1304,7 +1304,7 @@
                                   <input
                                     type="password"
                                     maxlength="1"
-                                    class="outline-none border-none focus:ring-[#f65d06]  caret-transparent text-2xl  font-bold  w-10 h-10  rounded-md text-black text-center payment-input  bg-[#f3f4f6]"
+                                    class="outline-none border-none focus:ring-yellow-500  caret-transparent text-2xl  font-bold  w-10 h-10  rounded-md text-black text-center payment-input  bg-[#f3f4f6]"
                                     data-index="0"
                                     required
                                     readonly
@@ -1312,7 +1312,7 @@
                                   <input
                                     type="password"
                                     maxlength="1"
-                                    class="outline-none border-none focus:ring-[#f65d06]  caret-transparent text-2xl  font-bold  w-10 h-10  rounded-md text-black text-center payment-input pb-5 bg-[#f3f4f6]"
+                                    class="outline-none border-none focus:ring-yellow-500  caret-transparent text-2xl  font-bold  w-10 h-10  rounded-md text-black text-center payment-input pb-5 bg-[#f3f4f6]"
                                     data-index="0"
                                     required
                                     readonly
@@ -1323,7 +1323,7 @@
                                 <div class="w-full flex justify-center mt-3">
                                   <a
                                     href="#"
-                                    class="text-xs text-[#f65d06] text-lg"
+                                    class="text-xs text-yellow-500 text-lg"
                                   >
                                     Forget Payment Pin
                                   </a>
@@ -1331,87 +1331,87 @@
 
                                 <!-- Buttons for PIN Input -->
                                 <div
-                                  class="grid grid-cols-3 dark:text-black p-2 bg-[#f9fafb] font-semibold text-xl gap-2 mt-6"
+                                  class="grid grid-cols-3  p-2 bg-[#f9fafb] dark:bg-gray-800 dark:text-white  font-semibold text-xl gap-2 mt-6"
                                   id="payment-buttons"
                                 >
                                   <button
                                     type="button"
-                                    class="payment-btn bg-white p-3"
+                                    class="payment-btn bg-white dark:bg-gray-900 p-3"
                                     data-value="1"
                                   >
                                     1
                                   </button>
                                   <button
                                     type="button"
-                                    class="payment-btn bg-white p-3"
+                                    class="payment-btn bg-white dark:bg-gray-900  p-3"
                                     data-value="2"
                                   >
                                     2
                                   </button>
                                   <button
                                     type="button"
-                                    class="payment-btn bg-white p-3"
+                                    class="payment-btn bg-white p-3 dark:bg-gray-900 "
                                     data-value="3"
                                   >
                                     3
                                   </button>
                                   <button
                                     type="button"
-                                       class="payment-btn bg-white p-3"
+                                       class="payment-btn bg-white p-3 dark:bg-gray-900 "
                                     data-value="4"
                                   >
                                     4
                                   </button>
                                   <button
                                     type="button"
-                                       class="payment-btn bg-white p-3"
+                                       class="payment-btn bg-white p-3 dark:bg-gray-900 "
                                     data-value="5"
                                   >
                                     5
                                   </button>
                                   <button
                                     type="button"
-                                       class="payment-btn bg-white p-3"
+                                       class="payment-btn bg-white p-3 dark:bg-gray-900 "
                                     data-value="6"
                                   >
                                     6
                                   </button>
                                   <button
                                     type="button"
-                                       class="payment-btn bg-white p-3"
+                                       class="payment-btn bg-white p-3 dark:bg-gray-900 "
                                     data-value="7"
                                   >
                                     7
                                   </button>
                                   <button
                                     type="button"
-                                       class="payment-btn bg-white p-3"
+                                       class="payment-btn bg-white p-3 dark:bg-gray-900 "
                                     data-value="8"
                                   >
                                     8
                                   </button>
                                   <button
                                     type="button"
-                                       class="payment-btn bg-white p-3"
+                                       class="payment-btn bg-white p-3 dark:bg-gray-900 "
                                     data-value="9"
                                   >
                                     9
                                   </button>
                                   <button
                                     type="button"
-                                       class="payment-btn bg-white p-3"
+                                       class="payment-btn bg-white p-3 dark:bg-gray-900 "
                                     data-value="1"
                                   ></button>
                                   <button
                                     type="button"
-                                       class="payment-btn bg-white p-3"
+                                       class="payment-btn bg-white p-3 dark:bg-gray-900 "
                                     data-value="0"
                                   >
                                     0
                                   </button>
                                   <button
                                     type="button"
-                                    class="payment-btn flex items-center justify-center"
+                                    class="payment-btn flex items-center justify-center dark:bg-gray-900 "
                                     data-value="BACKSPACE"
                                   >
                                     <svg

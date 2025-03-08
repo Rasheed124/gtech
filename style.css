@@ -4625,11 +4625,6 @@ span.flatpickr-weekday:is(.dark *){
   color: rgb(192 38 52 / var(--tw-text-opacity));
 }
 
-.text-\[\#f65d06\]{
-  --tw-text-opacity: 1;
-  color: rgb(246 93 6 / var(--tw-text-opacity));
-}
-
 .text-black{
   --tw-text-opacity: 1;
   color: rgb(5 5 5 / var(--tw-text-opacity));
@@ -5224,7 +5219,7 @@ body #singleP-search2 input:focus {
   box-shadow: none;
 }
 
-/*  */
+/* On Show Form Input */
 
 .no-scroll-in-view-formInput {
   overflow: hidden;
@@ -5705,6 +5700,11 @@ body #singleP-search2 input:focus {
 
 .focus\:ring-transparent:focus{
   --tw-ring-color: transparent;
+}
+
+.focus\:ring-yellow-500:focus{
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(240 187 51 / var(--tw-ring-opacity));
 }
 
 .focus\:ring-opacity-50:focus{
