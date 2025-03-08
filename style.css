@@ -1756,10 +1756,6 @@ span.flatpickr-weekday:is(.dark *){
   bottom: 0px;
 }
 
-.bottom-3{
-  bottom: 0.75rem;
-}
-
 .bottom-4{
   bottom: 1rem;
 }
@@ -2802,6 +2798,10 @@ span.flatpickr-weekday:is(.dark *){
   max-width: 100px;
 }
 
+.max-w-\[200px\]{
+  max-width: 200px;
+}
+
 .max-w-\[250px\]{
   max-width: 250px;
 }
@@ -3427,6 +3427,11 @@ span.flatpickr-weekday:is(.dark *){
   border-bottom-right-radius: 0.5rem;
 }
 
+.rounded-t-2xl{
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
 .rounded-t-xl{
   border-top-left-radius: 0.75rem;
   border-top-right-radius: 0.75rem;
@@ -3446,6 +3451,10 @@ span.flatpickr-weekday:is(.dark *){
 
 .border-2{
   border-width: 2px;
+}
+
+.border-3{
+  border-width: 3px;
 }
 
 .border-4{
@@ -3543,6 +3552,11 @@ span.flatpickr-weekday:is(.dark *){
   border-color: rgb(255 148 148 / var(--tw-border-opacity));
 }
 
+.border-red-700{
+  --tw-border-opacity: 1;
+  border-color: rgb(230 57 57 / var(--tw-border-opacity));
+}
+
 .border-transparent{
   border-color: transparent;
 }
@@ -3564,6 +3578,16 @@ span.flatpickr-weekday:is(.dark *){
 .border-white{
   --tw-border-opacity: 1;
   border-color: rgb(252 255 255 / var(--tw-border-opacity));
+}
+
+.border-\[\#f3f4f6\]{
+  --tw-border-opacity: 1;
+  border-color: rgb(243 244 246 / var(--tw-border-opacity));
+}
+
+.border-\[\#f9fafb\]{
+  --tw-border-opacity: 1;
+  border-color: rgb(249 250 251 / var(--tw-border-opacity));
 }
 
 .border-b-primary{
@@ -3600,6 +3624,11 @@ span.flatpickr-weekday:is(.dark *){
   background-color: rgb(241 244 251 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#f3f4f6\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+}
+
 .bg-\[\#f6faf9\]{
   --tw-bg-opacity: 1;
   background-color: rgb(246 250 249 / var(--tw-bg-opacity));
@@ -3608,6 +3637,11 @@ span.flatpickr-weekday:is(.dark *){
 .bg-\[\#f7f6fc\]{
   --tw-bg-opacity: 1;
   background-color: rgb(247 246 252 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#f9fafb\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 250 251 / var(--tw-bg-opacity));
 }
 
 .bg-\[\#fbf1f1\]{
@@ -4610,6 +4644,11 @@ span.flatpickr-weekday:is(.dark *){
   color: rgb(192 38 52 / var(--tw-text-opacity));
 }
 
+.text-\[\#f65d06\]{
+  --tw-text-opacity: 1;
+  color: rgb(246 93 6 / var(--tw-text-opacity));
+}
+
 .text-black{
   --tw-text-opacity: 1;
   color: rgb(5 5 5 / var(--tw-text-opacity));
@@ -4977,6 +5016,12 @@ span.flatpickr-weekday:is(.dark *){
 
 .backdrop-blur-sm{
   --tw-backdrop-blur: blur(4px);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+
+.backdrop-blur-xl{
+  --tw-backdrop-blur: blur(24px);
   -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
           backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
@@ -5667,6 +5712,20 @@ body #singleP-search2 input:focus {
 
 .focus\:ring-transparent:focus{
   --tw-ring-color: transparent;
+}
+
+.focus\:ring-gray-100:focus{
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(243 244 246 / var(--tw-ring-opacity));
+}
+
+.focus\:ring-\[gray-100\]:focus{
+  --tw-ring-color: gray-100;
+}
+
+.focus\:ring-\[\#f65d06\]:focus{
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(246 93 6 / var(--tw-ring-opacity));
 }
 
 .focus\:ring-opacity-50:focus{
@@ -6892,6 +6951,10 @@ body #singleP-search2 input:focus {
 
   .lg\:sticky{
     position: sticky;
+  }
+
+  .lg\:bottom-3{
+    bottom: 0.75rem;
   }
 
   .lg\:left-auto{
