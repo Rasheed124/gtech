@@ -1848,6 +1848,10 @@ span.flatpickr-weekday:is(.dark *){
   top: 4rem;
 }
 
+.top-2{
+  top: 0.5rem;
+}
+
 .top-20{
   top: 5rem;
 }
@@ -1862,10 +1866,6 @@ span.flatpickr-weekday:is(.dark *){
 
 .top-full{
   top: 100%;
-}
-
-.top-2{
-  top: 0.5rem;
 }
 
 .z-10{
@@ -2810,6 +2810,10 @@ span.flatpickr-weekday:is(.dark *){
   max-width: 40px;
 }
 
+.max-w-\[450px\]{
+  max-width: 450px;
+}
+
 .max-w-\[500px\]{
   max-width: 500px;
 }
@@ -2840,14 +2844,6 @@ span.flatpickr-weekday:is(.dark *){
 
 .max-w-xs{
   max-width: 20rem;
-}
-
-.max-w-\[900px\]{
-  max-width: 900px;
-}
-
-.max-w-\[600px\]{
-  max-width: 600px;
 }
 
 .flex-1{
@@ -4451,6 +4447,12 @@ span.flatpickr-weekday:is(.dark *){
   letter-spacing: -0.02em;
 }
 
+.text-6xl{
+  font-size: 3.75rem;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
 .text-7xl{
   font-size: 4.5rem;
   line-height: 1;
@@ -4486,18 +4488,6 @@ span.flatpickr-weekday:is(.dark *){
 .text-xs{
   font-size: 0.75rem;
   line-height: 1.5;
-}
-
-.text-5xl{
-  font-size: 3rem;
-  line-height: 1.25;
-  letter-spacing: -0.02em;
-}
-
-.text-6xl{
-  font-size: 3.75rem;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
 }
 
 .font-\[700\]{
@@ -7226,6 +7216,11 @@ body #singleP-search2 input:focus {
     letter-spacing: -0.01em;
   }
 
+  .lg\:text-7xl{
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+
   .lg\:text-base{
     font-size: 1rem;
     line-height: 1.5;
@@ -7241,11 +7236,6 @@ body #singleP-search2 input:focus {
   .lg\:text-sm{
     font-size: 0.875rem;
     line-height: 1.5715;
-  }
-
-  .lg\:text-7xl{
-    font-size: 4.5rem;
-    line-height: 1;
   }
 
   .lg\:font-normal{
@@ -7407,6 +7397,10 @@ body #singleP-search2 input:focus {
 
   .xl\:min-w-56{
     min-width: 14rem;
+  }
+
+  .xl\:max-w-\[600px\]{
+    max-width: 600px;
   }
 
   .xl\:-translate-x-16{
