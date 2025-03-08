@@ -4909,10 +4909,6 @@ span.flatpickr-weekday:is(.dark *){
   opacity: 0.8;
 }
 
-.opacity-25{
-  opacity: 0.25;
-}
-
 .bg-blend-overlay{
   background-blend-mode: overlay;
 }
@@ -6601,6 +6597,11 @@ body #singleP-search2 input:focus {
     margin-bottom: auto;
   }
 
+  .md\:mx-auto{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .md\:-mr-px{
     margin-right: -1px;
   }
@@ -6929,10 +6930,6 @@ body #singleP-search2 input:focus {
     position: sticky;
   }
 
-  .lg\:bottom-3{
-    bottom: 0.75rem;
-  }
-
   .lg\:left-auto{
     left: auto;
   }
@@ -6980,16 +6977,20 @@ body #singleP-search2 input:focus {
     margin-bottom: 0px;
   }
 
-  .lg\:ml-auto{
-    margin-left: auto;
-  }
-
   .lg\:mr-10{
     margin-right: 2.5rem;
   }
 
   .lg\:mt-0{
     margin-top: 0px;
+  }
+
+  .lg\:ml-auto{
+    margin-left: auto;
+  }
+
+  .lg\:mr-6{
+    margin-right: 1.5rem;
   }
 
   .lg\:block{
