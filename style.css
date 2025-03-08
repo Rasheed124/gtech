@@ -5224,6 +5224,13 @@ body #singleP-search2 input:focus {
   box-shadow: none;
 }
 
+/*  */
+
+.no-scroll-in-view-formInput {
+  overflow: hidden;
+  height: 100vh;
+}
+
 .before\:absolute::before{
   content: var(--tw-content);
   position: absolute;
@@ -6597,11 +6604,6 @@ body #singleP-search2 input:focus {
     margin-bottom: auto;
   }
 
-  .md\:mx-auto{
-    margin-left: auto;
-    margin-right: auto;
-  }
-
   .md\:-mr-px{
     margin-right: -1px;
   }
@@ -6930,6 +6932,10 @@ body #singleP-search2 input:focus {
     position: sticky;
   }
 
+  .lg\:bottom-2{
+    bottom: 0.5rem;
+  }
+
   .lg\:left-auto{
     left: auto;
   }
@@ -6977,24 +6983,16 @@ body #singleP-search2 input:focus {
     margin-bottom: 0px;
   }
 
-  .lg\:mr-10{
-    margin-right: 2.5rem;
-  }
-
-  .lg\:mt-0{
-    margin-top: 0px;
-  }
-
   .lg\:ml-auto{
     margin-left: auto;
   }
 
-  .lg\:mr-6{
-    margin-right: 1.5rem;
-  }
-
   .lg\:mr-3{
     margin-right: 0.75rem;
+  }
+
+  .lg\:mt-0{
+    margin-top: 0px;
   }
 
   .lg\:block{
@@ -7443,20 +7441,8 @@ body #singleP-search2 input:focus {
     min-width: 14rem;
   }
 
-  .xl\:max-w-\[600px\]{
-    max-width: 600px;
-  }
-
-  .xl\:max-w-\[50px\]{
-    max-width: 50px;
-  }
-
   .xl\:max-w-\[550px\]{
     max-width: 550px;
-  }
-
-  .xl\:max-w-\[500px\]{
-    max-width: 500px;
   }
 
   .xl\:-translate-x-16{
@@ -7646,4 +7632,3 @@ body #singleP-search2 input:focus {
 .\[\&_\*\]\:\!transition-none *{
   transition-property: none !important;
 }
-
