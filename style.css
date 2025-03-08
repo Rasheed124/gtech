@@ -6993,6 +6993,10 @@ body #singleP-search2 input:focus {
     margin-right: 1.5rem;
   }
 
+  .lg\:mr-3{
+    margin-right: 0.75rem;
+  }
+
   .lg\:block{
     display: block;
   }
@@ -7441,6 +7445,18 @@ body #singleP-search2 input:focus {
 
   .xl\:max-w-\[600px\]{
     max-width: 600px;
+  }
+
+  .xl\:max-w-\[50px\]{
+    max-width: 50px;
+  }
+
+  .xl\:max-w-\[550px\]{
+    max-width: 550px;
+  }
+
+  .xl\:max-w-\[500px\]{
+    max-width: 500px;
   }
 
   .xl\:-translate-x-16{
