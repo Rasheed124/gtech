@@ -1259,18 +1259,22 @@
                             x-transition:leave="transition ease-in duration-200"
                             x-transition:leave-start="transform translate-y-0 opacity-100"
                             x-transition:leave-end="transform translate-y-full opacity-0"
-                            class="fixed z-50 w-full  bottom-3 right-0  mt-2 "
+                            class="fixed z-50 w-full  bottom-3 right-0  mt-2 lg:mr-10 "
                           >
-                            <div class="max-w-[500px]  p-4 mx-2 bg-white shadow-lg rounded-lg border border-gray-200">
+                            <div class="max-w-[600px] relative p-4 mx-2 lg:mx-0 lg:ml-auto   bg-white shadow-lg rounded-lg border border-gray-200">
+                                <div class="absolute top-2">
+                                <i class="fa fa-times" aria-hidden="true"></i>
+
+                                </div>
                               <form class="p-4 sm:p-6 lg:p-8" id="payment-form">
                                 <!-- Email Input -->
-                                <div>
-                                  <div class="relative">
-                                    <p class="text-xs text-red-500 mt-1 hidden">
-                                      Please enter a valid email address.
+                               
+                                <div class="w-full flex justify-center mb-3">
+                                    <p class="text-xs text-black  text-lg ">
+                                        Enter Payment Pin
                                     </p>
-                                  </div>
                                 </div>
+                               
                                 <!-- PIN Input -->
                                 <div
                                   class="flex justify-around gap-2 mt-2 max-w-xs mx-auto"
@@ -1279,7 +1283,7 @@
                                   <input
                                     type="password"
                                     maxlength="1"
-                                    class="outline-none border caret-transparent text-7xl font-bold border-black w-12 h-12 md:w-14 md:h-14 rounded-xl text-black text-center payment-input pb-5"
+                                    class="outline-none border caret-transparent text-6xl lg:text-7xl font-bold border-black w-12 h-12 md:w-14 md:h-14 rounded-xl text-black text-center payment-input pb-5"
                                     data-index="0"
                                     required
                                     readonly
@@ -1287,28 +1291,35 @@
                                   <input
                                     type="password"
                                     maxlength="1"
-                                    class="outline-none border caret-transparent text-7xl font-bold border-black w-12 h-12 md:w-14 md:h-14 rounded-xl text-black text-center payment-input pb-4"
-                                    data-index="1"
+                                    class="outline-none border caret-transparent text-6xl lg:text-7xl font-bold border-black w-12 h-12 md:w-14 md:h-14 rounded-xl text-black text-center payment-input pb-5"
+                                    data-index="0"
                                     required
                                     readonly
                                   />
                                   <input
                                     type="password"
                                     maxlength="1"
-                                    class="outline-none border caret-transparent text-7xl font-bold border-black w-12 h-12 md:w-14 md:h-14 rounded-xl text-black text-center pb-4 payment-input"
-                                    data-index="2"
+                                    class="outline-none border caret-transparent text-6xl lg:text-7xl font-bold border-black w-12 h-12 md:w-14 md:h-14 rounded-xl text-black text-center payment-input pb-5"
+                                    data-index="0"
                                     required
                                     readonly
                                   />
                                   <input
                                     type="password"
                                     maxlength="1"
-                                    class="outline-none border caret-transparent text-7xl font-bold border-black w-12 h-12 md:w-14 md:h-14 rounded-xl text-black text-center pb-4 payment-input"
-                                    data-index="3"
+                                    class="outline-none border caret-transparent text-6xl lg:text-7xl font-bold border-black w-12 h-12 md:w-14 md:h-14 rounded-xl text-black text-center payment-input pb-5"
+                                    data-index="0"
                                     required
                                     readonly
                                   />
+                              
                                 </div>
+
+                                <div class="w-full flex justify-center mt-3 ">
+                                    <a href="#" class="text-xs text-yellow-500 text-lg ">
+                                        Forget Payment Pin
+                                    </a>
+                                  </div>
 
                                 <!-- Buttons for PIN Input -->
                                 <div
