@@ -1860,6 +1860,10 @@ span.flatpickr-weekday:is(.dark *){
   top: 100%;
 }
 
+.bottom-3{
+  bottom: 0.75rem;
+}
+
 .z-10{
   z-index: 10;
 }
@@ -2064,6 +2068,11 @@ span.flatpickr-weekday:is(.dark *){
 .my-8{
   margin-top: 2rem;
   margin-bottom: 2rem;
+}
+
+.mx-5{
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
 }
 
 .-mb-3{

@@ -13,6 +13,7 @@
     />
 
     <script>
+      let isCollapsed;
       if (
         localStorage.getItem("dark-mode") === "false" ||
         !("dark-mode" in localStorage)
@@ -24,19 +25,13 @@
         document.querySelector("html").style.colorScheme = "dark";
       }
     </script>
-    <script
-      src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
-      type="module"
-    ></script>
     <title>User Dashboard - Home</title>
   </head>
   <body
-    :class="open ? 'h-screen z-10' : 'h-auto'"
-    class="bg-gray-100 dark:bg-gray-900 bg-no-repeat bg-center bg-blend-overlay w-full overflow-x-hidden"
+    class="bg-gray-100 dark:bg-gray-900 bg-no-repeat bg-center bg-blend-overlay w-full overflow-x-hidden relative"
     id="user-dashboard"
-    x-data="{ open: false, showSuccess: false }"
   >
-    <div class="w-full relative">
+    <div class="w-full">
       <main
         class="h-screen max-w-screen-lg md:max-w-screen-xl lg:max-w-screen-2xl mx-auto xl:px-20 font-medium"
       >
@@ -44,7 +39,7 @@
           <!-- Side Desktop Menu  -->
           <header
             x-data="{ isCollapsed: true }"
-            :class="isCollapsed ? 'lg:max-w-[100px]' : 'lg:max-w-[270px]'"
+            :class="isCollapsed ? 'lg:max-w-[100px]' : 'lg:max-w-[200px]'"
             x-init="$el.classList.remove('opacity-0', 'w-0')"
             x-cloak
             class="fixed top-0 lg:relative opacity-0 w-0 lg:w-full lg:opacity-100 transition-all duration-300"
@@ -739,158 +734,77 @@
           <!-- Dashboard Area -->
 
           <!-- Main Page -->
-          <div class="mt-8">
-            <section class="grid grid-cols-1 lg:grid lg:grid-cols-12">
-              <!-- MAIN HEADER  -->
-
-              <header
-                class="lg:col-span-12 lg:border-l-2 lg:border-r-2 dark:border-gray-700"
-              >
-                <!-- Top Header Content -->
-                <div class="grid grid-cols-2">
-                  <div class="px-3">
-                    <button
-                      id="openMenuButton"
-                      class="border p-2 rounded-lg mb-2 lg:hidden"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        class="w-6 h-6 icon"
-                      >
-                        <path
-                          d="M21 4.1V10.9C21 11.5934 20.8501 11.9494 20.6386 12.1483C20.4196 12.3544 20.0215 12.5 19.27 12.5H15.23C14.4785 12.5 14.0804 12.3544 13.8614 12.1483C13.6499 11.9494 13.5 11.5934 13.5 10.9V4.1C13.5 3.40657 13.6499 3.05057 13.8614 2.85167C14.0804 2.64556 14.4785 2.5 15.23 2.5H19.27C20.0215 2.5 20.4196 2.64556 20.6386 2.85167C20.8501 3.05057 21 3.40657 21 4.1Z"
-                          fill="#311503"
-                          stroke="#311503"
-                        ></path>
-                        <path
-                          d="M10.5 13.1V19.9C10.5 20.5934 10.3501 20.9494 10.1386 21.1483C9.91956 21.3544 9.52146 21.5 8.77 21.5H4.73C3.97854 21.5 3.58044 21.3544 3.36135 21.1483C3.14993 20.9494 3 20.5934 3 19.9V13.1C3 12.4066 3.14993 12.0506 3.36135 11.8517C3.58044 11.6456 3.97854 11.5 4.73 11.5H8.77C9.52146 11.5 9.91956 11.6456 10.1386 11.8517C10.3501 12.0506 10.5 12.4066 10.5 13.1Z"
-                          fill="#311503"
-                          stroke="#311503"
-                        ></path>
-                        <path
-                          d="M21.5 19.9V17.1C21.5 15.6 20.86 15 19.27 15H15.23C13.64 15 13 15.6 13 17.1V19.9C13 21.4 13.64 22 15.23 22H19.27C20.86 22 21.5 21.4 21.5 19.9Z"
-                          fill="#F66B03"
-                        ></path>
-                        <path
-                          d="M11 6.9V4.1C11 2.6 10.36 2 8.77 2H4.73C3.14 2 2.5 2.6 2.5 4.1V6.9C2.5 8.4 3.14 9 4.73 9H8.77C10.36 9 11 8.4 11 6.9Z"
-                          fill="#F66B03"
-                        ></path>
-                      </svg>
-                    </button>
-
-                    <div class="lg:max-w-max">
-                      <h2 class="text-black dark:text-gray-100 text-2xl mb-1">
-                        Hello, James 👋
-                      </h2>
-                      <p class="text-xs text-gray-500 dark:text-gray-400">
-                        Good afternoon, Glutizen! Got bills? Handle them with
-                        GlutPay and enjoy your day!
-                      </p>
-                    </div>
-                  </div>
-
-                  <!-- Profile and Notifications -->
-                  <div
-                    class="flex self-start gap-2 place-self-end items-center relative pr-5"
+          <div class="mt-8 flex-1">
+            <!-- MAIN HEADER  -->
+            <header
+              class="lg:col-span-12 grid grid-cols-12 lg:border-l-2 lg:border-r-2 dark:border-gray-700 px-5"
+            >
+              <!-- Greetings  -->
+              <div class="top-nav-left col-span-6">
+                <div class="">
+                  <button
+                    id="openMenuButton"
+                    class="border p-2 rounded-lg mb-2 lg:hidden"
                   >
-                    <img
-                      class="w-10 h-10"
-                      src="./images/auth-login-pin-profile.png"
-                      alt=""
-                    />
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      class="w-6 h-6 icon"
+                    >
+                      <path
+                        d="M21 4.1V10.9C21 11.5934 20.8501 11.9494 20.6386 12.1483C20.4196 12.3544 20.0215 12.5 19.27 12.5H15.23C14.4785 12.5 14.0804 12.3544 13.8614 12.1483C13.6499 11.9494 13.5 11.5934 13.5 10.9V4.1C13.5 3.40657 13.6499 3.05057 13.8614 2.85167C14.0804 2.64556 14.4785 2.5 15.23 2.5H19.27C20.0215 2.5 20.4196 2.64556 20.6386 2.85167C20.8501 3.05057 21 3.40657 21 4.1Z"
+                        fill="#311503"
+                        stroke="#311503"
+                      ></path>
+                      <path
+                        d="M10.5 13.1V19.9C10.5 20.5934 10.3501 20.9494 10.1386 21.1483C9.91956 21.3544 9.52146 21.5 8.77 21.5H4.73C3.97854 21.5 3.58044 21.3544 3.36135 21.1483C3.14993 20.9494 3 20.5934 3 19.9V13.1C3 12.4066 3.14993 12.0506 3.36135 11.8517C3.58044 11.6456 3.97854 11.5 4.73 11.5H8.77C9.52146 11.5 9.91956 11.6456 10.1386 11.8517C10.3501 12.0506 10.5 12.4066 10.5 13.1Z"
+                        fill="#311503"
+                        stroke="#311503"
+                      ></path>
+                      <path
+                        d="M21.5 19.9V17.1C21.5 15.6 20.86 15 19.27 15H15.23C13.64 15 13 15.6 13 17.1V19.9C13 21.4 13.64 22 15.23 22H19.27C20.86 22 21.5 21.4 21.5 19.9Z"
+                        fill="#F66B03"
+                      ></path>
+                      <path
+                        d="M11 6.9V4.1C11 2.6 10.36 2 8.77 2H4.73C3.14 2 2.5 2.6 2.5 4.1V6.9C2.5 8.4 3.14 9 4.73 9H8.77C10.36 9 11 8.4 11 6.9Z"
+                        fill="#F66B03"
+                      ></path>
+                    </svg>
+                  </button>
 
-                    <!-- Notifications -->
-                    <div class=" ">
-                      <button
-                        id="notification-btn"
-                        class="border border-gray-300 block p-2 rounded-lg relative"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke-width="1.5"
-                          stroke="currentColor"
-                          class="size-5 text-deep-purple"
-                        >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0"
-                          />
-                        </svg>
-                        <!-- Notification badge -->
-                        <span
-                          id="notification-badge"
-                          class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center"
-                        >
-                          3
-                        </span>
-                      </button>
+                  <div class="lg:max-w-max">
+                    <h2 class="text-black dark:text-gray-100 text-2xl mb-1">
+                      Hello, James 👋
+                    </h2>
+                    <p class="text-xs text-gray-500 dark:text-gray-400">
+                      Good afternoon, Glutizen! Got bills? Handle them with
+                      GlutPay and enjoy your day!
+                    </p>
+                  </div>
+                </div>
+              </div>
 
-                      <!-- Notification Dropdown -->
-                      <div
-                        id="notification-dropdown"
-                        class="hidden z-30 absolute right-0 mt-2 ml-10 bg-white dark:bg-gray-700 shadow-lg border border-gray-200 dark:border-gray-600 rounded-lg w-72 text-sm mr-2"
-                      >
-                        <div class="p-4 border-b dark:border-gray-600">
-                          <h3
-                            class="font-semibold text-gray-700 dark:text-gray-300"
-                          >
-                            Notifications
-                          </h3>
-                        </div>
-                        <ul class="max-h-60 overflow-y-auto scrollbar-none">
-                          <li
-                            class="p-3 hover:bg-gray-100 dark:hover:bg-gray-600 border-b dark:border-gray-600"
-                          >
-                            <span class="font-medium">Payment Received</span>
-                            <p class="text-gray-500 dark:text-gray-400 text-xs">
-                              Your payment of $250 was successful.
-                            </p>
-                          </li>
-                          <li
-                            class="p-3 hover:bg-gray-100 dark:hover:bg-gray-600 border-b dark:border-gray-600"
-                          >
-                            <span class="font-medium">Payment Received</span>
-                            <p class="text-gray-500 dark:text-gray-400 text-xs">
-                              Your payment of $250 was successful.
-                            </p>
-                          </li>
-                          <li
-                            class="p-3 hover:bg-gray-100 dark:hover:bg-gray-600 border-b dark:border-gray-600"
-                          >
-                            <span class="font-medium">Payment Received</span>
-                            <p class="text-gray-500 dark:text-gray-400 text-xs">
-                              Your payment of $250 was successful.
-                            </p>
-                          </li>
-                          <li
-                            class="p-3 hover:bg-gray-100 dark:hover:bg-gray-600 border-b dark:border-gray-600"
-                          >
-                            <span class="font-medium">New Invoice</span>
-                            <p class="text-gray-500 dark:text-gray-400 text-xs">
-                              Invoice #12345 is ready to view.
-                            </p>
-                          </li>
-                          <li
-                            class="p-3 hover:bg-gray-100 dark:hover:bg-gray-600"
-                          >
-                            <span class="font-medium">System Update</span>
-                            <p class="text-gray-500 dark:text-gray-400 text-xs">
-                              The system will undergo maintenance at 3 AM.
-                            </p>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
+              <!--  right menu buttons -->
+              <div class="top-nav-right col-span-6">
+                <!-- Profile and Notifications -->
+                <div
+                  class="flex self-start gap-2 place-self-end items-center relative"
+                >
+                  <img
+                    class="w-10 h-10"
+                    src="./images/auth-login-pin-profile.png"
+                    alt=""
+                  />
 
-                    <!-- Other buttons and profile -->
-                    <button class="border border-gray-300 block p-2 rounded-lg">
+                  <!-- Notifications -->
+                  <div class=" ">
+                    <button
+                      id="notification-btn"
+                      class="border border-gray-300 block p-2 rounded-lg relative"
+                    >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -902,537 +816,366 @@
                         <path
                           stroke-linecap="round"
                           stroke-linejoin="round"
-                          d="M10.34 15.84c-.688-.06-1.386-.09-2.09-.09H7.5a4.5 4.5 0 1 1 0-9h.75c.704 0 1.402-.03 2.09-.09m0 9.18c.253.962.584 1.892.985 2.783.247.55.06 1.21-.463 1.511l-.657.38c-.551.318-1.26.117-1.527-.461a20.845 20.845 0 0 1-1.44-4.282m3.102.069a18.03 18.03 0 0 1-.59-4.59c0-1.586.205-3.124.59-4.59m0 9.18a23.848 23.848 0 0 1 8.835 2.535M10.34 6.66a23.847 23.847 0 0 0 8.835-2.535m0 0A23.74 23.74 0 0 0 18.795 3m.38 1.125a23.91 23.91 0 0 1 1.014 5.395m-1.014 8.855c-.118.38-.245.754-.38 1.125m.38-1.125a23.91 23.91 0 0 0 1.014-5.395m0-3.46c.495.413.811 1.035.811 1.73 0 .695-.316 1.317-.811 1.73m0-3.46a24.347 24.347 0 0 1 0 3.46"
+                          d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0"
                         />
                       </svg>
+                      <!-- Notification badge -->
+                      <span
+                        id="notification-badge"
+                        class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center"
+                      >
+                        3
+                      </span>
                     </button>
 
-                    <button class="text-black block">
-                      <input
-                        type="checkbox"
-                        name="light-switch"
-                        id="light-switch"
-                        class="light-switch sr-only"
+                    <!-- Notification Dropdown -->
+                    <div
+                      id="notification-dropdown"
+                      class="hidden z-30 absolute right-0 mt-2 ml-10 bg-white dark:bg-gray-700 shadow-lg border border-gray-200 dark:border-gray-600 rounded-lg w-72 text-sm mr-2"
+                    >
+                      <div class="p-4 border-b dark:border-gray-600">
+                        <h3
+                          class="font-semibold text-gray-700 dark:text-gray-300"
+                        >
+                          Notifications
+                        </h3>
+                      </div>
+                      <ul class="max-h-60 overflow-y-auto scrollbar-none">
+                        <li
+                          class="p-3 hover:bg-gray-100 dark:hover:bg-gray-600 border-b dark:border-gray-600"
+                        >
+                          <span class="font-medium">Payment Received</span>
+                          <p class="text-gray-500 dark:text-gray-400 text-xs">
+                            Your payment of $250 was successful.
+                          </p>
+                        </li>
+                        <li
+                          class="p-3 hover:bg-gray-100 dark:hover:bg-gray-600 border-b dark:border-gray-600"
+                        >
+                          <span class="font-medium">Payment Received</span>
+                          <p class="text-gray-500 dark:text-gray-400 text-xs">
+                            Your payment of $250 was successful.
+                          </p>
+                        </li>
+                        <li
+                          class="p-3 hover:bg-gray-100 dark:hover:bg-gray-600 border-b dark:border-gray-600"
+                        >
+                          <span class="font-medium">Payment Received</span>
+                          <p class="text-gray-500 dark:text-gray-400 text-xs">
+                            Your payment of $250 was successful.
+                          </p>
+                        </li>
+                        <li
+                          class="p-3 hover:bg-gray-100 dark:hover:bg-gray-600 border-b dark:border-gray-600"
+                        >
+                          <span class="font-medium">New Invoice</span>
+                          <p class="text-gray-500 dark:text-gray-400 text-xs">
+                            Invoice #12345 is ready to view.
+                          </p>
+                        </li>
+                        <li
+                          class="p-3 hover:bg-gray-100 dark:hover:bg-gray-600"
+                        >
+                          <span class="font-medium">System Update</span>
+                          <p class="text-gray-500 dark:text-gray-400 text-xs">
+                            The system will undergo maintenance at 3 AM.
+                          </p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <!-- Other buttons and profile -->
+                  <button class="border border-gray-300 block p-2 rounded-lg">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-5 text-deep-purple"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M10.34 15.84c-.688-.06-1.386-.09-2.09-.09H7.5a4.5 4.5 0 1 1 0-9h.75c.704 0 1.402-.03 2.09-.09m0 9.18c.253.962.584 1.892.985 2.783.247.55.06 1.21-.463 1.511l-.657.38c-.551.318-1.26.117-1.527-.461a20.845 20.845 0 0 1-1.44-4.282m3.102.069a18.03 18.03 0 0 1-.59-4.59c0-1.586.205-3.124.59-4.59m0 9.18a23.848 23.848 0 0 1 8.835 2.535M10.34 6.66a23.847 23.847 0 0 0 8.835-2.535m0 0A23.74 23.74 0 0 0 18.795 3m.38 1.125a23.91 23.91 0 0 1 1.014 5.395m-1.014 8.855c-.118.38-.245.754-.38 1.125m.38-1.125a23.91 23.91 0 0 0 1.014-5.395m0-3.46c.495.413.811 1.035.811 1.73 0 .695-.316 1.317-.811 1.73m0-3.46a24.347 24.347 0 0 1 0 3.46"
                       />
-                      <label
-                        class="flex items-center justify-center cursor-pointer w-9 h-9 p-2.5 hover:bg-gray-100 lg:hover:bg-gray-200 dark:hover:bg-gray-700/50 dark:lg:hover:bg-gray-800 rounded-md"
-                        for="light-switch"
-                      >
-                        <svg
-                          class="dark:hidden fill-current text-black dark:text-gray-400/80"
-                          class="size-7"
-                          viewBox="0 0 16 16"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M8 0a1 1 0 0 1 1 1v.5a1 1 0 1 1-2 0V1a1 1 0 0 1 1-1Z"
-                          />
-                          <path
-                            d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0Zm-4 2a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"
-                          />
-                          <path
-                            d="M13.657 3.757a1 1 0 0 0-1.414-1.414l-.354.354a1 1 0 0 0 1.414 1.414l.354-.354ZM13.5 8a1 1 0 0 1 1-1h.5a1 1 0 1 1 0 2h-.5a1 1 0 0 1-1-1ZM13.303 11.889a1 1 0 0 0-1.414 1.414l.354.354a1 1 0 0 0 1.414-1.414l-.354-.354ZM8 13.5a1 1 0 0 1 1 1v.5a1 1 0 1 1-2 0v-.5a1 1 0 0 1 1-1ZM4.111 13.303a1 1 0 1 0-1.414-1.414l-.354.354a1 1 0 1 0 1.414 1.414l.354-.354ZM0 8a1 1 0 0 1 1-1h.5a1 1 0 0 1 0 2H1a1 1 0 0 1-1-1ZM3.757 2.343a1 1 0 1 0-1.414 1.414l.354.354A1 1 0 1 0 4.11 2.697l-.354-.354Z"
-                          />
-                        </svg>
-                        <svg
-                          class="hidden dark:block fill-current text-gray-500/80 dark:text-gray-400/80"
-                          width="16"
-                          height="16"
-                          viewBox="0 0 16 16"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M11.875 4.375a.625.625 0 1 0 1.25 0c.001-.69.56-1.249 1.25-1.25a.625.625 0 1 0 0-1.25 1.252 1.252 0 0 1-1.25-1.25.625.625 0 1 0-1.25 0 1.252 1.252 0 0 1-1.25 1.25.625.625 0 1 0 0 1.25c.69.001 1.249.56 1.25 1.25Z"
-                          />
-                          <path
-                            d="M7.019 1.985a1.55 1.55 0 0 0-.483-1.36 1.44 1.44 0 0 0-1.53-.277C2.056 1.553 0 4.5 0 7.9 0 12.352 3.648 16 8.1 16c3.407 0 6.246-2.058 7.51-4.963a1.446 1.446 0 0 0-.25-1.55 1.554 1.554 0 0 0-1.372-.502c-4.01.552-7.539-2.987-6.97-7ZM2 7.9C2 5.64 3.193 3.664 4.961 2.6 4.82 7.245 8.72 11.158 13.36 11.04 12.265 12.822 10.341 14 8.1 14 4.752 14 2 11.248 2 7.9Z"
-                          />
-                        </svg>
-                        <span class="sr-only"
-                          >Switch to light / dark version</span
-                        >
-                      </label>
-                    </button>
-                  </div>
-                </div>
+                    </svg>
+                  </button>
 
-                <!-- Second Header Bar -->
-                <div class="lg:hidden px-3 mt-10">
-                  <!-- Balance Cards -->
-                  <div
-                    id="left-dashboard-area"
-                    class="gap-4 flex md:grid grid-cols-10 w-full overflow-x-auto mb-5 text-white"
-                  >
-                    <!-- Slider -->
-                    <div
-                      x-data="{
-                      isBalanceVisible: true, // Default visibility
-                      init() {
-                        // Load balance visibility state from localStorage
-                        const storedVisibility = localStorage.getItem('isBalanceVisible');
-                        this.isBalanceVisible = storedVisibility !== null
-                          ? JSON.parse(storedVisibility)
-                          : true; // Default to visible if no stored value
-                      },
-                      toggleBalanceVisibility() {
-                        // Toggle visibility state
-                        this.isBalanceVisible = !this.isBalanceVisible;
-                        // Save the updated state to localStorage
-                        localStorage.setItem('isBalanceVisible', JSON.stringify(this.isBalanceVisible));
-                      }
-                    }"
-                      class="min-w-[355px] lg:min-w-[390px] md:min-w-full flex justify-between flex-col p-5 text-left text-white w-full bg-black rounded-xl col-span-6 bg-no-repeat bg-top bg-blend-overlay bg-cover bg-[url('./images/dash-bg.png')] bg-opacity-60"
-                    >
-                      <!-- Left Side: Balance Area -->
-                      <div x-cloak class="flex flex-row justify-between">
-                        <div>
-                          <p class="text-sm">Total Balance</p>
-                          <div class="flex">
-                            <h1 class="text-4xl font-semibold">
-                              <span x-show="isBalanceVisible">₦0.00</span>
-                              <span x-show="!isBalanceVisible">****</span>
-                            </h1>
-                            <button
-                              class="ml-3"
-                              @click="toggleBalanceVisibility()"
-                            >
-                              <!-- Toggle Button for Showing/ Hiding Balance -->
-                              <svg
-                                x-show="isBalanceVisible"
-                                xmlns="http://www.w3.org/2000/svg"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke-width="1.5"
-                                stroke="currentColor"
-                                class="w-6 h-6"
-                                style="display: none"
-                              >
-                                <path
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"
-                                ></path>
-                                <path
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-                                ></path>
-                              </svg>
-
-                              <svg
-                                x-show="!isBalanceVisible"
-                                xmlns="http://www.w3.org/2000/svg"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke-width="1.5"
-                                stroke="currentColor"
-                                class="w-6 h-6"
-                              >
-                                <path
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  d="M3.98 8.223A10.477 10.477 0 0 0 1.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.451 10.451 0 0 1 12 4.5c4.756 0 8.773 3.162 10.065 7.498a10.522 10.522 0 0 1-4.293 5.774M6.228 6.228 3 3m3.228 3.228 3.65 3.65m7.894 7.894L21 21m-3.228-3.228-3.65-3.65m0 0a3 3 0 1 0-4.243-4.243m4.242 4.242L9.88 9.88"
-                                ></path>
-                              </svg>
-                            </button>
-                          </div>
-                        </div>
-
-                        <!-- Right Side: Currency Dropdown -->
-                        <div class="relative mt-4" x-data="{ isOpen: false }">
-                          <button
-                            class="py-2 px-2 bg-white text-primary rounded-lg flex items-center gap-2 cursor-pointer"
-                            @click="isOpen = !isOpen"
-                            @click.outside="isOpen = false"
-                            x-cloak
-                          >
-                            <img
-                              src="./images/ng-flag.png"
-                              alt=""
-                              class="w-4 h-4 rounded-full"
-                            />
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              class="w-5 h-5"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              stroke="currentColor"
-                            >
-                              <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M19 9l-7 7-7-7"
-                              />
-                            </svg>
-                          </button>
-
-                          <!-- Dropdown Menu -->
-                          <ul
-                            x-show="isOpen"
-                            class="absolute flex-col text-xs top-10 left-0 bg-white text-primary rounded-md shadow-xl overflow-hidden z-10 w-full"
-                            @click.away="isOpen = false"
-                          >
-                            <li class="relative">
-                              <button
-                                class="w-full px-2 py-2 text-base text-left hover:bg-gray-200 flex items-center justify-center"
-                              >
-                                <img
-                                  src="./images/ng-flag.png"
-                                  alt="Nigeria Flag"
-                                  class="w-5 h-5 rounded-full"
-                                />
-                              </button>
-                            </li>
-                            <li class="relative">
-                              <button
-                                class="w-full px-2 py-2 text-base text-left hover:bg-gray-200 flex items-center justify-center"
-                              >
-                                <img
-                                  src="./images/dollar.jpeg"
-                                  alt="Another Country Flag"
-                                  class="w-5 h-5 rounded-full"
-                                />
-                              </button>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-
-                      <!-- Add Funds -->
-                      <div class="mt-10 flex gap-3 lg:gap-1 xl:gap-3">
-                        <a
-                          class="inline-flex items-center gap-2 rounded bg-white px-3 py-2 text-black focus:outline-none"
-                          href="#"
-                        >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke-width="1.5"
-                            stroke="currentColor"
-                            class="size-2.5"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              d="M16.5 8.25V6a2.25 2.25 0 0 0-2.25-2.25H6A2.25 2.25 0 0 0 3.75 6v8.25A2.25 2.25 0 0 0 6 16.5h2.25m8.25-8.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-7.5A2.25 2.25 0 0 1 8.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 0 0-2.25 2.25v6"
-                            />
-                          </svg>
-
-                          <span class="text-xs font-medium whitespace-nowrap"
-                            >Top Up</span
-                          >
-                        </a>
-                        <a
-                          class="inline-flex items-center gap-2 rounded bg-white px-3 py-2 text-black focus:outline-none"
-                          href="#"
-                        >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke-width="1.5"
-                            stroke="currentColor"
-                            class="size-2.5"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              d="M16.5 8.25V6a2.25 2.25 0 0 0-2.25-2.25H6A2.25 2.25 0 0 0 3.75 6v8.25A2.25 2.25 0 0 0 6 16.5h2.25m8.25-8.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-7.5A2.25 2.25 0 0 1 8.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 0 0-2.25 2.25v6"
-                            />
-                          </svg>
-
-                          <span
-                            class="text-xs font-medium white whitespace-nowrap"
-                            >Transfer</span
-                          >
-                        </a>
-                        <a
-                          class="inline-flex items-center gap-2 rounded bg-white px-3 py-2 text-black focus:outline-none"
-                          href="#"
-                        >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke-width="1.5"
-                            stroke="currentColor"
-                            class="size-2.5"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              d="M16.5 8.25V6a2.25 2.25 0 0 0-2.25-2.25H6A2.25 2.25 0 0 0 3.75 6v8.25A2.25 2.25 0 0 0 6 16.5h2.25m8.25-8.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-7.5A2.25 2.25 0 0 1 8.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 0 0-2.25 2.25v6"
-                            />
-                          </svg>
-
-                          <span class="text-xs font-medium whitespace-nowrap"
-                            >Convert</span
-                          >
-                        </a>
-                      </div>
-                    </div>
-
-                    <!-- Transaction Limit -->
-                    <div
-                      class="w-full h-[178px] bg-secondary dark:bg-gray-800 dark:text-white text-black p-5 rounded-xl relative col-span-4 min-w-[270px] md:min-w-full"
-                    >
-                      <p
-                        class="pb-3 border-b-white/40 dark:border-b-secondary border-b-2 text-sm font-medium"
-                      >
-                        Total Transaction: <span class="text-base">3.</span>
-                      </p>
-
-                      <div class="mt-3 pb-3">
-                        <p class="text-sm font-medium">
-                          Daily Limit: <br />
-                          <span class="text-base">₦0 / ₦20,000</span>
-                        </p>
-                      </div>
-
-                      <div>
-                        <span id="ProgressLabel" class="sr-only">Loading</span>
-
-                        <span
-                          role="progressbar"
-                          aria-labelledby="ProgressLabel"
-                          aria-valuenow="50"
-                          class="block rounded-full bg-white/40 dark:bg-secondary"
-                        >
-                          <span
-                            class="block h-1 rounded-full bg-primary text-center"
-                            style="width: 50%"
-                          >
-                          </span>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Tob Banner Advertisement -->
-                  <div class="w-full relative h-32">
-                    <img
-                      src="./images/annouc-bg.png"
-                      class="w-full h-32 rounded-lg object-cover m-auto"
-                      alt=""
+                  <div class=" ">
+                    <input
+                      type="checkbox"
+                      name="light-switch"
+                      id="light-switch"
+                      class="light-switch sr-only"
                     />
+                    <label
+                      class="flex border border-gray-300 items-center justify-center cursor-pointer w-9 h-9 p-2.5 hover:bg-gray-100 lg:hover:bg-gray-200 dark:hover:bg-gray-700/50 dark:lg:hover:bg-gray-800 rounded-lg"
+                      for="light-switch"
+                    >
+                      <svg
+                        class="dark:hidden fill-current text-black/80 dark:text-black/80"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8 0a1 1 0 0 1 1 1v.5a1 1 0 1 1-2 0V1a1 1 0 0 1 1-1Z"
+                        />
+                        <path
+                          d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0Zm-4 2a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"
+                        />
+                        <path
+                          d="M13.657 3.757a1 1 0 0 0-1.414-1.414l-.354.354a1 1 0 0 0 1.414 1.414l.354-.354ZM13.5 8a1 1 0 0 1 1-1h.5a1 1 0 1 1 0 2h-.5a1 1 0 0 1-1-1ZM13.303 11.889a1 1 0 0 0-1.414 1.414l.354.354a1 1 0 0 0 1.414-1.414l-.354-.354ZM8 13.5a1 1 0 0 1 1 1v.5a1 1 0 1 1-2 0v-.5a1 1 0 0 1 1-1ZM4.111 13.303a1 1 0 1 0-1.414-1.414l-.354.354a1 1 0 1 0 1.414 1.414l.354-.354ZM0 8a1 1 0 0 1 1-1h.5a1 1 0 0 1 0 2H1a1 1 0 0 1-1-1ZM3.757 2.343a1 1 0 1 0-1.414 1.414l.354.354A1 1 0 1 0 4.11 2.697l-.354-.354Z"
+                        />
+                      </svg>
+                      <svg
+                        class="hidden dark:block fill-current text-white/50 dark:text-white"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M11.875 4.375a.625.625 0 1 0 1.25 0c.001-.69.56-1.249 1.25-1.25a.625.625 0 1 0 0-1.25 1.252 1.252 0 0 1-1.25-1.25.625.625 0 1 0-1.25 0 1.252 1.252 0 0 1-1.25 1.25.625.625 0 1 0 0 1.25c.69.001 1.249.56 1.25 1.25Z"
+                        />
+                        <path
+                          d="M7.019 1.985a1.55 1.55 0 0 0-.483-1.36 1.44 1.44 0 0 0-1.53-.277C2.056 1.553 0 4.5 0 7.9 0 12.352 3.648 16 8.1 16c3.407 0 6.246-2.058 7.51-4.963a1.446 1.446 0 0 0-.25-1.55 1.554 1.554 0 0 0-1.372-.502c-4.01.552-7.539-2.987-6.97-7ZM2 7.9C2 5.64 3.193 3.664 4.961 2.6 4.82 7.245 8.72 11.158 13.36 11.04 12.265 12.822 10.341 14 8.1 14 4.752 14 2 11.248 2 7.9Z"
+                        />
+                      </svg>
+                      <span class="sr-only"
+                        >Switch to light / dark version</span
+                      >
+                    </label>
                   </div>
                 </div>
-              </header>
+              </div>
+            </header>
 
-              <!-- Content area -->
+            <!-- =================== MAIN DASHBOARD AREA -->
+            <section class="grid grid-cols-1 lg:grid lg:grid-cols-12">
               <div
-                class="lg:border-l-2 dark:border-gray-700 dashboard-col-1 lg:col-span-8 md:pr-5 px-3 lg:h-screen lg:overflow-y-auto scrollbar md:max-h-[84vh] w-full"
+                class="dashboard-col-1 lg:pr-2 lg:dark:border-gray-700 lg:border-l-2 col-span-12 lg:col-span-8 lg:h-screen overflow-y-auto scrollbar md:max-h-[84vh] w-full"
               >
-           
-                <div>
-                  <!-- Header Part on Desktop -->
-                  <div class="hidden lg:block px-3 mt-10">
-                    <!-- Balance Cards -->
-
+                <!-- HEADER BALANCE AREA -->
+                <div
+                  class="card-header-balance col-span-12 grid grid-cols-12 lg:col-span-8 mt-5 px-5"
+                >
+                  <!-- BALANCE AREA -->
+                  <div class="card-balance col-span-12">
                     <div
                       id="left-dashboard-area"
-                      class="gap-4 flex md:grid scrollbar grid-cols-10 w-full overflow-x-auto mb-5 text-white"
+                      class="gap-4 flex md:grid grid-cols-10 w-full overflow-x-auto mb-5 text-white"
                     >
                       <!-- Slider -->
                       <div
                         x-data="{
-                            isBalanceVisible: true, // Default visibility
-                            init() {
-                              // Load balance visibility state from localStorage
-                              const storedVisibility = localStorage.getItem('isBalanceVisible');
-                              this.isBalanceVisible = storedVisibility !== null
-                                ? JSON.parse(storedVisibility)
-                                : true; // Default to visible if no stored value
-                            },
-                            toggleBalanceVisibility() {
-                              // Toggle visibility state
-                              this.isBalanceVisible = !this.isBalanceVisible;
-                              // Save the updated state to localStorage
-                              localStorage.setItem('isBalanceVisible', JSON.stringify(this.isBalanceVisible));
-                            }
-                          }"
-                        class="min-w-[390px] md:min-w-full flex justify-between p-5 text-left text-white w-full bg-black rounded-xl col-span-6 bg-no-repeat bg-top bg-blend-overlay bg-cover bg-[url('./images/dash-bg.png')] bg-opacity-60"
+                  isBalanceVisible: true, // Default visibility
+                  init() {
+                    // Load balance visibility state from localStorage
+                    const storedVisibility = localStorage.getItem('isBalanceVisible');
+                    this.isBalanceVisible = storedVisibility !== null
+                      ? JSON.parse(storedVisibility)
+                      : true; // Default to visible if no stored value
+                  },
+                  toggleBalanceVisibility() {
+                    // Toggle visibility state
+                    this.isBalanceVisible = !this.isBalanceVisible;
+                    // Save the updated state to localStorage
+                    localStorage.setItem('isBalanceVisible', JSON.stringify(this.isBalanceVisible));
+                  }
+                }"
+                        class="min-w-[355px] lg:min-w-[340px] md:min-w-full flex justify-between flex-col p-5 text-left text-white w-full rounded-xl col-span-6 bg-primary dark:bg-opacity-80"
                       >
                         <!-- Left Side: Balance Area -->
-                        <div class="flex flex-col">
-                          <p class="text-sm">Total Balance</p>
-                          <div class="flex">
-                            <h1 class="text-4xl font-semibold">
-                              <span x-show="isBalanceVisible">₦0.00</span>
-                              <span x-show="!isBalanceVisible">****</span>
-                            </h1>
-                            <button
-                              class="ml-3"
-                              @click="toggleBalanceVisibility()"
-                            >
-                              <!-- Toggle Button for Showing/ Hiding Balance -->
-                              <svg
-                                x-show="isBalanceVisible"
-                                xmlns="http://www.w3.org/2000/svg"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke-width="1.5"
-                                stroke="currentColor"
-                                class="w-6 h-6"
-                                style="display: none"
+                        <div class="flex flex-row justify-between">
+                          <div x-cloak>
+                            <p class="text-sm">Total Balance</p>
+                            <div class="flex">
+                              <h1 class="text-4xl font-semibold">
+                                <span x-show="isBalanceVisible">₦0.00</span>
+                                <span x-show="!isBalanceVisible">****</span>
+                              </h1>
+                              <button
+                                class="ml-3"
+                                @click="toggleBalanceVisibility()"
                               >
-                                <path
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"
-                                ></path>
-                                <path
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-                                ></path>
-                              </svg>
+                                <!-- Toggle Button for Showing/ Hiding Balance -->
+                                <svg
+                                  x-show="isBalanceVisible"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  fill="none"
+                                  viewBox="0 0 24 24"
+                                  stroke-width="1.5"
+                                  stroke="currentColor"
+                                  class="w-6 h-6"
+                                  style="display: none"
+                                >
+                                  <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"
+                                  ></path>
+                                  <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                                  ></path>
+                                </svg>
 
+                                <svg
+                                  x-show="!isBalanceVisible"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  fill="none"
+                                  viewBox="0 0 24 24"
+                                  stroke-width="1.5"
+                                  stroke="currentColor"
+                                  class="w-6 h-6"
+                                >
+                                  <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M3.98 8.223A10.477 10.477 0 0 0 1.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.451 10.451 0 0 1 12 4.5c4.756 0 8.773 3.162 10.065 7.498a10.522 10.522 0 0 1-4.293 5.774M6.228 6.228 3 3m3.228 3.228 3.65 3.65m7.894 7.894L21 21m-3.228-3.228-3.65-3.65m0 0a3 3 0 1 0-4.243-4.243m4.242 4.242L9.88 9.88"
+                                  ></path>
+                                </svg>
+                              </button>
+                            </div>
+                          </div>
+
+                          <!-- Right Side: Currency Dropdown -->
+                          <div class="relative mt-4" x-data="{ isOpen: false }">
+                            <button
+                              class="py-2 px-2 bg-white text-primary rounded-lg flex items-center gap-2 cursor-pointer"
+                              @click="isOpen = !isOpen"
+                              @click.outside="isOpen = false"
+                              x-cloak
+                            >
+                              <img
+                                src="./images/ng-flag.png"
+                                alt=""
+                                class="w-4 h-4 rounded-full"
+                              />
                               <svg
-                                x-show="!isBalanceVisible"
                                 xmlns="http://www.w3.org/2000/svg"
+                                class="w-5 h-5"
                                 fill="none"
                                 viewBox="0 0 24 24"
-                                stroke-width="1.5"
                                 stroke="currentColor"
-                                class="w-6 h-6"
                               >
                                 <path
                                   stroke-linecap="round"
                                   stroke-linejoin="round"
-                                  d="M3.98 8.223A10.477 10.477 0 0 0 1.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.451 10.451 0 0 1 12 4.5c4.756 0 8.773 3.162 10.065 7.498a10.522 10.522 0 0 1-4.293 5.774M6.228 6.228 3 3m3.228 3.228 3.65 3.65m7.894 7.894L21 21m-3.228-3.228-3.65-3.65m0 0a3 3 0 1 0-4.243-4.243m4.242 4.242L9.88 9.88"
-                                ></path>
+                                  stroke-width="2"
+                                  d="M19 9l-7 7-7-7"
+                                />
                               </svg>
                             </button>
-                          </div>
-                          <!-- Add Funds -->
-                          <div class="mt-10 flex gap-3 lg:gap-1 xl:gap-3">
-                            <a
-                              class="inline-flex items-center gap-2 rounded bg-white px-3 py-2 text-black focus:outline-none"
-                              href="#"
-                            >
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke-width="1.5"
-                                stroke="currentColor"
-                                class="size-3"
-                              >
-                                <path
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  d="M16.5 8.25V6a2.25 2.25 0 0 0-2.25-2.25H6A2.25 2.25 0 0 0 3.75 6v8.25A2.25 2.25 0 0 0 6 16.5h2.25m8.25-8.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-7.5A2.25 2.25 0 0 1 8.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 0 0-2.25 2.25v6"
-                                />
-                              </svg>
 
-                              <span class="text-xs font-medium">Top Up</span>
-                            </a>
-                            <a
-                              class="inline-flex items-center gap-2 rounded bg-white px-3 py-2 text-black focus:outline-none"
-                              href="#"
+                            <!-- Dropdown Menu -->
+                            <ul
+                              x-show="isOpen"
+                              class="absolute flex-col text-xs top-10 left-0 bg-white text-primary rounded-md shadow-xl overflow-hidden z-10 w-full"
+                              @click.away="isOpen = false"
                             >
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke-width="1.5"
-                                stroke="currentColor"
-                                class="size-3"
-                              >
-                                <path
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  d="M16.5 8.25V6a2.25 2.25 0 0 0-2.25-2.25H6A2.25 2.25 0 0 0 3.75 6v8.25A2.25 2.25 0 0 0 6 16.5h2.25m8.25-8.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-7.5A2.25 2.25 0 0 1 8.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 0 0-2.25 2.25v6"
-                                />
-                              </svg>
-
-                              <span class="text-xs font-medium">Transfer</span>
-                            </a>
-                            <a
-                              class="inline-flex items-center gap-2 rounded bg-white px-3 py-2 text-black focus:outline-none"
-                              href="#"
-                            >
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke-width="1.5"
-                                stroke="currentColor"
-                                class="size-3"
-                              >
-                                <path
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"
-                                  d="M16.5 8.25V6a2.25 2.25 0 0 0-2.25-2.25H6A2.25 2.25 0 0 0 3.75 6v8.25A2.25 2.25 0 0 0 6 16.5h2.25m8.25-8.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-7.5A2.25 2.25 0 0 1 8.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 0 0-2.25 2.25v6"
-                                />
-                              </svg>
-
-                              <span class="text-xs font-medium">Convert</span>
-                            </a>
+                              <li class="relative">
+                                <button
+                                  class="w-full px-2 py-2 text-base text-left hover:bg-gray-200 flex items-center justify-center"
+                                >
+                                  <img
+                                    src="./images/ng-flag.png"
+                                    alt="Nigeria Flag"
+                                    class="w-5 h-5 rounded-full"
+                                  />
+                                </button>
+                              </li>
+                              <li class="relative">
+                                <button
+                                  class="w-full px-2 py-2 text-base text-left hover:bg-gray-200 flex items-center justify-center"
+                                >
+                                  <img
+                                    src="./images/dollar.jpeg"
+                                    alt="Another Country Flag"
+                                    class="w-5 h-5 rounded-full"
+                                  />
+                                </button>
+                              </li>
+                            </ul>
                           </div>
                         </div>
 
-                        <!-- Right Side: Currency Dropdown -->
-                        <div class="relative mt-4" x-data="{ isOpen: false }">
-                          <button
-                            class="py-2 px-2 bg-white text-primary rounded-lg flex items-center gap-2 cursor-pointer"
-                            @click="isOpen = !isOpen"
-                            @click.outside="isOpen = false"
-                            x-cloak
+                        <!-- Add Funds -->
+                        <div
+                          class="mt-10 grid grid-cols-7 gap-3 lg:gap-1 xl:gap-3"
+                        >
+                          <a
+                            class="flex justify-center col-start-1 col-end-4 items-center gap-2 rounded bg-[#266054] px-7 py-3 text-white focus:outline-none"
+                            href="#"
                           >
-                            <img
-                              src="./images/ng-flag.png"
-                              alt=""
-                              class="w-4 h-4 rounded-full"
-                            />
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
-                              class="w-5 h-5"
                               fill="none"
                               viewBox="0 0 24 24"
+                              stroke-width="1.5"
                               stroke="currentColor"
+                              class="size-5"
                             >
                               <path
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M19 9l-7 7-7-7"
+                                d="M16.5 8.25V6a2.25 2.25 0 0 0-2.25-2.25H6A2.25 2.25 0 0 0 3.75 6v8.25A2.25 2.25 0 0 0 6 16.5h2.25m8.25-8.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-7.5A2.25 2.25 0 0 1 8.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 0 0-2.25 2.25v6"
                               />
                             </svg>
-                          </button>
 
-                          <!-- Dropdown Menu -->
-                          <ul
-                            x-show="isOpen"
-                            class="absolute flex-col text-xs top-10 left-0 bg-white text-primary rounded-md shadow-xl overflow-hidden z-10 w-full"
-                            @click.away="isOpen = false"
+                            <span
+                              class="text-xs xl:text-sm font-medium whitespace-nowrap"
+                              >Top Up</span
+                            >
+                          </a>
+                          <a
+                            class="flex justify-center col-start-4 col-end-7 items-center gap-2 rounded bg-[#266054] px-7 py-3 text-white focus:outline-none"
+                            href="#"
                           >
-                            <li class="relative">
-                              <button
-                                class="w-full px-2 py-2 text-base text-left hover:bg-gray-200 flex items-center justify-center"
-                              >
-                                <img
-                                  src="./images/ng-flag.png"
-                                  alt="Nigeria Flag"
-                                  class="w-5 h-5 rounded-full"
-                                />
-                              </button>
-                            </li>
-                            <li class="relative">
-                              <button
-                                class="w-full px-2 py-2 text-base text-left hover:bg-gray-200 flex items-center justify-center"
-                              >
-                                <img
-                                  src="./images/dollar.jpeg"
-                                  alt="Another Country Flag"
-                                  class="w-5 h-5 rounded-full"
-                                />
-                              </button>
-                            </li>
-                          </ul>
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              class="size-5"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M16.5 8.25V6a2.25 2.25 0 0 0-2.25-2.25H6A2.25 2.25 0 0 0 3.75 6v8.25A2.25 2.25 0 0 0 6 16.5h2.25m8.25-8.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-7.5A2.25 2.25 0 0 1 8.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 0 0-2.25 2.25v6"
+                              />
+                            </svg>
+
+                            <span
+                              class="text-xs xl:text-sm font-medium white whitespace-nowrap"
+                              >Transfer</span
+                            >
+                          </a>
+                          <a
+                            class="flex justify-center items-center gap-1 col-start-7 col-end-8 rounded bg-[#266054] text-white focus:outline-none"
+                            href="#"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke-width="1.5"
+                              stroke="currentColor"
+                              class="size-5"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M16.5 8.25V6a2.25 2.25 0 0 0-2.25-2.25H6A2.25 2.25 0 0 0 3.75 6v8.25A2.25 2.25 0 0 0 6 16.5h2.25m8.25-8.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-7.5A2.25 2.25 0 0 1 8.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 0 0-2.25 2.25v6"
+                              />
+                            </svg>
+                          </a>
                         </div>
                       </div>
 
@@ -1473,8 +1216,9 @@
                         </div>
                       </div>
                     </div>
-
-                    <!-- Tob Banner Advertisement -->
+                  </div>
+                  <!-- BANNER AREA -->
+                  <div class="header-banner col-span-12">
                     <div class="w-full relative h-32">
                       <img
                         src="./images/annouc-bg.png"
@@ -1483,299 +1227,273 @@
                       />
                     </div>
                   </div>
+                </div>
 
-                  <!-- ============================ CONTENTS -->
-                  <div class="content-area my-10" x-data="{ open: false }">
-                    <!-- Quick Actions -->
-
-                    <div class="w-full">
-                      <!-- Card content -->
-
-                      <div class="flex flex-col relative z-50">
-                        <div class="">
-                          <input
-                            type="number"
-                            class="w-full bg-gray-100 shadow-sm border border-gray-200 outline-none focus:outline-none focus:ring-0 focus:border-transparent p-4 text-sm"
-                            placeholder="Enter amount"
-                          />
-
+                <!-- CONTENT AREA -->
+                <div
+                  class="col-span-12 row-start-2 row-end-4 lg:col-span-8 px-5"
+                >
+                  <div class="content-area">
+                    <!--  -->
+                    <div x-data="{ open: false }">
+                      <div class="w-full">
+                        <div class="flex flex-col z-50">
                           <!-- PAY Button -->
-                          <span
-                            class="absolute inset-y-0 end-0 grid place-content-center px-4"
-                          >
-                            <a
+                          <div class="mt-10">
+                            <button
                               @click.prevent="open = !open"
-                              class="inline-block text-white bg-primary p-3 rounded-full cursor-pointer"
+                              class="inline-block text-white bg-primary p-3 rounded-full py-5 px-4 w-full cursor-pointer"
                             >
                               Pay
-                            </a>
-                          </span>
-                          <span
-                            class="absolute left-0 ml-1 grid place-content-center inset-y-0"
-                          >
-                            ₦
-                          </span>
-
-                          <!-- Blur Overlay
-                                <div 
-                                     x-cloak
-                                x-show="open"
-                                class="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm z-10"
-                                x-transition:enter="transition ease-out duration-300"
-                                x-transition:enter-start="opacity-0"
-                                x-transition:enter-end="opacity-100"
-                                x-transition:leave="transition ease-in duration-200"
-                                x-transition:leave-start="opacity-100"
-                                x-transition:leave-end="opacity-0"
-                              ></div> -->
-                        </div>
-
-                        <!-- Slide-in PIN form -->
-                        <div
-                          x-cloak
-                          x-show="open"
-                          @click.outside="open = false"
-                          x-transition:enter="transition ease-out duration-300"
-                          x-transition:enter-start="transform translate-y-full opacity-0"
-                          x-transition:enter-end="transform translate-y-0 opacity-100"
-                          x-transition:leave="transition ease-in duration-200"
-                          x-transition:leave-start="transform translate-y-0 opacity-100"
-                          x-transition:leave-end="transform translate-y-full opacity-0"
-                          class="absolute z-50 top-full left-0 mt-2 w-full p-4 bg-white shadow-lg rounded-lg border border-gray-200"
-                        >
-                          <form class="p-4 sm:p-6 lg:p-8" id="payment-form">
-                            <!-- Email Input -->
-                            <div>
-                              <div class="relative">
-                                <p class="text-xs text-red-500 mt-1 hidden">
-                                  Please enter a valid email address.
-                                </p>
-                              </div>
-                            </div>
-                            <!-- PIN Input -->
-                            <div
-                              class="flex justify-around gap-2 mt-2 max-w-xs mx-auto"
-                              id="payment-inputs"
-                            >
-                              <input
-                                type="password"
-                                maxlength="1"
-                                class="outline-none border caret-transparent text-7xl font-bold border-black w-12 h-12 md:w-14 md:h-14 rounded-xl text-black text-center payment-input pb-5"
-                                data-index="0"
-                                required
-                                readonly
-                              />
-                              <input
-                                type="password"
-                                maxlength="1"
-                                class="outline-none border caret-transparent text-7xl font-bold border-black w-12 h-12 md:w-14 md:h-14 rounded-xl text-black text-center payment-input pb-4"
-                                data-index="1"
-                                required
-                                readonly
-                              />
-                              <input
-                                type="password"
-                                maxlength="1"
-                                class="outline-none border caret-transparent text-7xl font-bold border-black w-12 h-12 md:w-14 md:h-14 rounded-xl text-black text-center pb-4 payment-input"
-                                data-index="2"
-                                required
-                                readonly
-                              />
-                              <input
-                                type="password"
-                                maxlength="1"
-                                class="outline-none border caret-transparent text-7xl font-bold border-black w-12 h-12 md:w-14 md:h-14 rounded-xl text-black text-center pb-4 payment-input"
-                                data-index="3"
-                                required
-                                readonly
-                              />
-                            </div>
-
-                            <!-- Buttons for PIN Input -->
-                            <div
-                              class="grid grid-cols-3 font-semibold text-xl gap-4 my-6"
-                              id="payment-buttons"
-                            >
-                              <button
-                                type="button"
-                                class="payment-btn"
-                                data-value="1"
-                              >
-                                1
-                              </button>
-                              <button
-                                type="button"
-                                class="payment-btn"
-                                data-value="2"
-                              >
-                                2
-                              </button>
-                              <button
-                                type="button"
-                                class="payment-btn"
-                                data-value="3"
-                              >
-                                3
-                              </button>
-                              <button
-                                type="button"
-                                class="payment-btn"
-                                data-value="4"
-                              >
-                                4
-                              </button>
-                              <button
-                                type="button"
-                                class="payment-btn"
-                                data-value="5"
-                              >
-                                5
-                              </button>
-                              <button
-                                type="button"
-                                class="payment-btn"
-                                data-value="6"
-                              >
-                                6
-                              </button>
-                              <button
-                                type="button"
-                                class="payment-btn"
-                                data-value="7"
-                              >
-                                7
-                              </button>
-                              <button
-                                type="button"
-                                class="payment-btn"
-                                data-value="8"
-                              >
-                                8
-                              </button>
-                              <button
-                                type="button"
-                                class="payment-btn"
-                                data-value="9"
-                              >
-                                9
-                              </button>
-                              <button
-                                type="button"
-                                class="payment-btn"
-                                data-value="1"
-                              ></button>
-                              <button
-                                type="button"
-                                class="payment-btn"
-                                data-value="0"
-                              >
-                                0
-                              </button>
-                              <button
-                                type="button"
-                                class="payment-btn flex items-center justify-center"
-                                data-value="BACKSPACE"
-                              >
-                                <svg
-                                  width="24"
-                                  height="22"
-                                  fill="none"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path
-                                    d="M10.28 18.514h6.72c2.76 0 5-1.958 5-4.371v-5.682c0-2.413-2.24-4.371-5-4.371h-6.72c-1.41 0-2.75.516-3.7 1.434l-3.53 3.392c-1.41 1.355-1.41 3.418 0 4.773l3.53 3.392c.95.918 2.29 1.434 3.7 1.434z"
-                                    stroke="currentColor"
-                                    stroke-width="1.5"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                  ></path>
-                                  <path
-                                    d="M16 13.461l-4.94-4.319"
-                                    stroke="currentColor"
-                                    stroke-width="1.5"
-                                    stroke-linecap="round"
-                                  ></path>
-                                  <path
-                                    d="M11.06 13.461L16 9.143"
-                                    stroke="currentColor"
-                                    stroke-width="1.5"
-                                    stroke-linecap="round"
-                                  ></path>
-                                </svg>
-                              </button>
-
-                             
-                            </div>
-
-                            <div class="flex w-full justify-center items-center ">
-                              <button
-                              @click="open = false; showSuccess = true; setTimeout(() => showSuccess = false, 3000)"
-                              class="w-full mt-4 bg-green-600 text-white p-2 rounded"
-                            >
-                              Submit
                             </button>
-                            </div>
-                          </form>
-                        </div>
+                          </div>
 
-                        <!-- Success Animation -->
-                        <div
-                          x-cloak
-                          x-show="showSuccess"
-                          class="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex items-center justify-center z-30 transition-all duration-300"
-                          x-transition:enter="transition ease-out duration-300"
-                          x-transition:leave="transition ease-in duration-200"
-                        >
+                          <!-- Slide-in PIN form -->
                           <div
-                            class="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center"
+                            x-cloak
+                            x-show="open"
+                            @click.outside="open = false"
+                            x-transition:enter="transition ease-out duration-300"
+                            x-transition:enter-start="transform translate-y-full opacity-0"
+                            x-transition:enter-end="transform translate-y-0 opacity-100"
+                            x-transition:leave="transition ease-in duration-200"
+                            x-transition:leave-start="transform translate-y-0 opacity-100"
+                            x-transition:leave-end="transform translate-y-full opacity-0"
+                            class="fixed z-50 w-full  bottom-3 right-0  mt-2 "
                           >
-                            <dotlottie-player
-                              src="https://lottie.host/b857bcf1-ac0f-4445-8a51-780a11b0e59e/Bx3pc6xhZD.lottie"
-                              background="transparent"
-                              speed="1"
-                              style="width: 300px; height: 150px"
-                              loop
-                              autoplay
-                            ></dotlottie-player>
-                            <p
-                              class="mt-4 text-lg font-semibold text-green-700"
-                            >
-                              Payment Successful!
-                            </p>
+                            <div class="max-w-[500px]  p-4 mx-2 bg-white shadow-lg rounded-lg border border-gray-200">
+                              <form class="p-4 sm:p-6 lg:p-8" id="payment-form">
+                                <!-- Email Input -->
+                                <div>
+                                  <div class="relative">
+                                    <p class="text-xs text-red-500 mt-1 hidden">
+                                      Please enter a valid email address.
+                                    </p>
+                                  </div>
+                                </div>
+                                <!-- PIN Input -->
+                                <div
+                                  class="flex justify-around gap-2 mt-2 max-w-xs mx-auto"
+                                  id="payment-inputs"
+                                >
+                                  <input
+                                    type="password"
+                                    maxlength="1"
+                                    class="outline-none border caret-transparent text-7xl font-bold border-black w-12 h-12 md:w-14 md:h-14 rounded-xl text-black text-center payment-input pb-5"
+                                    data-index="0"
+                                    required
+                                    readonly
+                                  />
+                                  <input
+                                    type="password"
+                                    maxlength="1"
+                                    class="outline-none border caret-transparent text-7xl font-bold border-black w-12 h-12 md:w-14 md:h-14 rounded-xl text-black text-center payment-input pb-4"
+                                    data-index="1"
+                                    required
+                                    readonly
+                                  />
+                                  <input
+                                    type="password"
+                                    maxlength="1"
+                                    class="outline-none border caret-transparent text-7xl font-bold border-black w-12 h-12 md:w-14 md:h-14 rounded-xl text-black text-center pb-4 payment-input"
+                                    data-index="2"
+                                    required
+                                    readonly
+                                  />
+                                  <input
+                                    type="password"
+                                    maxlength="1"
+                                    class="outline-none border caret-transparent text-7xl font-bold border-black w-12 h-12 md:w-14 md:h-14 rounded-xl text-black text-center pb-4 payment-input"
+                                    data-index="3"
+                                    required
+                                    readonly
+                                  />
+                                </div>
 
-                            <a
-                              href="./user-dashboard.html"
-                              class="w-full mt-4 border text-green-700 text-center border-green-700 p-2 rounded"
+                                <!-- Buttons for PIN Input -->
+                                <div
+                                  class="grid grid-cols-3 font-semibold text-xl gap-4 my-6"
+                                  id="payment-buttons"
+                                >
+                                  <button
+                                    type="button"
+                                    class="payment-btn"
+                                    data-value="1"
+                                  >
+                                    1
+                                  </button>
+                                  <button
+                                    type="button"
+                                    class="payment-btn"
+                                    data-value="2"
+                                  >
+                                    2
+                                  </button>
+                                  <button
+                                    type="button"
+                                    class="payment-btn"
+                                    data-value="3"
+                                  >
+                                    3
+                                  </button>
+                                  <button
+                                    type="button"
+                                    class="payment-btn"
+                                    data-value="4"
+                                  >
+                                    4
+                                  </button>
+                                  <button
+                                    type="button"
+                                    class="payment-btn"
+                                    data-value="5"
+                                  >
+                                    5
+                                  </button>
+                                  <button
+                                    type="button"
+                                    class="payment-btn"
+                                    data-value="6"
+                                  >
+                                    6
+                                  </button>
+                                  <button
+                                    type="button"
+                                    class="payment-btn"
+                                    data-value="7"
+                                  >
+                                    7
+                                  </button>
+                                  <button
+                                    type="button"
+                                    class="payment-btn"
+                                    data-value="8"
+                                  >
+                                    8
+                                  </button>
+                                  <button
+                                    type="button"
+                                    class="payment-btn"
+                                    data-value="9"
+                                  >
+                                    9
+                                  </button>
+                                  <button
+                                    type="button"
+                                    class="payment-btn"
+                                    data-value="1"
+                                  ></button>
+                                  <button
+                                    type="button"
+                                    class="payment-btn"
+                                    data-value="0"
+                                  >
+                                    0
+                                  </button>
+                                  <button
+                                    type="button"
+                                    class="payment-btn flex items-center justify-center"
+                                    data-value="BACKSPACE"
+                                  >
+                                    <svg
+                                      width="24"
+                                      height="22"
+                                      fill="none"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                      <path
+                                        d="M10.28 18.514h6.72c2.76 0 5-1.958 5-4.371v-5.682c0-2.413-2.24-4.371-5-4.371h-6.72c-1.41 0-2.75.516-3.7 1.434l-3.53 3.392c-1.41 1.355-1.41 3.418 0 4.773l3.53 3.392c.95.918 2.29 1.434 3.7 1.434z"
+                                        stroke="currentColor"
+                                        stroke-width="1.5"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                      ></path>
+                                      <path
+                                        d="M16 13.461l-4.94-4.319"
+                                        stroke="currentColor"
+                                        stroke-width="1.5"
+                                        stroke-linecap="round"
+                                      ></path>
+                                      <path
+                                        d="M11.06 13.461L16 9.143"
+                                        stroke="currentColor"
+                                        stroke-width="1.5"
+                                        stroke-linecap="round"
+                                      ></path>
+                                    </svg>
+                                  </button>
+                                </div>
+
+                                <div
+                                  class="flex w-full justify-center items-center"
+                                >
+                                  <button
+                                    @click="open = false; showSuccess = true; setTimeout(() => showSuccess = false, 3000)"
+                                    class="w-full mt-4 bg-green-600 text-white p-2 rounded"
+                                  >
+                                    Submit
+                                  </button>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+
+                          <!-- Success Animation -->
+                          <div
+                            x-cloak
+                            x-show="showSuccess"
+                            class="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex items-center justify-center z-30 transition-all duration-300"
+                            x-transition:enter="transition ease-out duration-300"
+                            x-transition:leave="transition ease-in duration-200"
+                          >
+                            <div
+                              class="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center"
                             >
-                              Go back
-                            </a>
+                              <dotlottie-player
+                                src="https://lottie.host/b857bcf1-ac0f-4445-8a51-780a11b0e59e/Bx3pc6xhZD.lottie"
+                                background="transparent"
+                                speed="1"
+                                style="width: 300px; height: 150px"
+                                loop
+                                autoplay
+                              ></dotlottie-player>
+                              <p
+                                class="mt-4 text-lg font-semibold text-green-700"
+                              >
+                                Payment Successful!
+                              </p>
+
+                              <a
+                                href="./user-dashboard.html"
+                                class="w-full mt-4 border text-green-700 text-center border-green-700 p-2 rounded"
+                              >
+                                Go back
+                              </a>
+                            </div>
                           </div>
                         </div>
                       </div>
+                      <!-- Blur Overlay -->
+                      <div
+                        x-cloak
+                        x-show="open"
+                        class="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm z-10"
+                        x-transition:enter="transition ease-out duration-300"
+                        x-transition:enter-start="opacity-0"
+                        x-transition:enter-end="opacity-100"
+                        x-transition:leave="transition ease-in duration-200"
+                        x-transition:leave-start="opacity-100"
+                        x-transition:leave-end="opacity-0"
+                      ></div>
                     </div>
-
-                    <!-- Blur Overlay -->
-                    <div
-                      x-cloak
-                      x-show="open"
-                      class="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm z-10"
-                      x-transition:enter="transition ease-out duration-300"
-                      x-transition:enter-start="opacity-0"
-                      x-transition:enter-end="opacity-100"
-                      x-transition:leave="transition ease-in duration-200"
-                      x-transition:leave-start="opacity-100"
-                      x-transition:leave-end="opacity-0"
-                    ></div>
                   </div>
                 </div>
               </div>
 
-              <!-- Footer Area  -->
+              <!-- FOOTER AREA -->
               <div
-                class="dashboard-col-2 lg:col-span-4 lg:h-screen overflow-y-auto scrollbar md:max-h-[84vh] pl-2 pr-5 lg:border-r-2 lg:dark:border-gray-700"
+                class="col-span-12 lg:px-3 lg:col-span-4 w-full xl:overflow-x-hidden overflow-x-scroll lg:dark:border-gray-700 lg:border-r-2 px-5"
               >
-                <!-- Annoucement Adds -->
-
                 <section id="announcement-banner">
                   <div class="owl-carousel owl-theme">
                     <div
