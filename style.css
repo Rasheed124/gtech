@@ -5678,11 +5678,6 @@ body #singleP-search2 input:focus {
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }
 
-.focus\:ring-\[\#f65d06\]:focus{
-  --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(246 93 6 / var(--tw-ring-opacity));
-}
-
 .focus\:ring-black:focus{
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(5 5 5 / var(--tw-ring-opacity));
@@ -6948,6 +6943,10 @@ body #singleP-search2 input:focus {
     top: auto;
   }
 
+  .lg\:bottom-5{
+    bottom: 1.25rem;
+  }
+
   .lg\:z-auto{
     z-index: auto;
   }
@@ -7161,6 +7160,11 @@ body #singleP-search2 input:focus {
 
   .lg\:overflow-x-hidden{
     overflow-x: hidden;
+  }
+
+  .lg\:rounded-b-2xl{
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
   }
 
   .lg\:border-b{
