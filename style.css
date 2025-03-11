@@ -2589,8 +2589,16 @@ span.flatpickr-weekday:is(.dark *){
   min-height: 100dvh;
 }
 
+.min-h-\[50vh\]{
+  min-height: 50vh;
+}
+
 .min-h-screen{
   min-height: 100vh;
+}
+
+.min-h-\[80vh\]{
+  min-height: 80vh;
 }
 
 .w-0{
@@ -2697,6 +2705,10 @@ span.flatpickr-weekday:is(.dark *){
   width: 50px;
 }
 
+.w-\[80\%\]{
+  width: 80%;
+}
+
 .w-\[90\%\]{
   width: 90%;
 }
@@ -2715,6 +2727,10 @@ span.flatpickr-weekday:is(.dark *){
 
 .w-px{
   width: 1px;
+}
+
+.w-\[85\%\]{
+  width: 85%;
 }
 
 .min-w-0{
@@ -6416,6 +6432,10 @@ body #singleP-search2 input:focus {
 
   .sm\:auto-cols-max{
     grid-auto-columns: max-content;
+  }
+
+  .sm\:grid-cols-2{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .sm\:flex-row{
