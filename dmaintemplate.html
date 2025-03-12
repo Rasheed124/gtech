@@ -1106,7 +1106,7 @@
                         </div>
 
                         <!-- Add Funds -->
-                        <div x-data="{ isModalOpen: false }">
+                        <div x-data="{ isModalOpen: false }"  x-effect="document.body.classList.toggle('no-scroll-in-view-formInput', isModalOpen)">
                           <div
                             class="mt-10 grid grid-cols-7 gap-3 lg:gap-1 xl:gap-3"
                           >
@@ -1202,11 +1202,11 @@
                               x-transition:leave="transition ease-in duration-200"
                               x-transition:leave-start="transform translate-y-0 opacity-100"
                               x-transition:leave-end="transform translate-y-full opacity-0"
-                              class="fixed z-50 w-full flex justify-center   right-0 top-0 h-full overflow-x-hidden"
+                              class="fixed z-50 w-full flex justify-center   right-0 top-0 h-full overflow-y-auto"
                             >
-                              <div class=" w-full flex justify-center  ">
+                              <div class=" w-full flex justify-center p-4 my-6 ">
                                 <div
-                                  class="relative lg:w-[40%] bg-gray-50 overflow-y-auto my-16  p-3 text-black dark:text-white dark:bg-gray-900"
+                                  class="relative w-full sm:w-[520px] rounded-md mx-auto  bg-gray-50 overflow-y-auto   p-3 text-black dark:text-white dark:bg-gray-900"
                                 >
                                     <button
                                     class="absolute top-2 left-4 text-xl  dark:text-white"

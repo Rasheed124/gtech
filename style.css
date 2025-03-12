@@ -2040,6 +2040,11 @@ span.flatpickr-weekday:is(.dark *){
   margin-bottom: 2.5rem;
 }
 
+.my-16{
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
 .my-2{
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
@@ -2068,11 +2073,6 @@ span.flatpickr-weekday:is(.dark *){
 .my-8{
   margin-top: 2rem;
   margin-bottom: 2rem;
-}
-
-.my-16{
-  margin-top: 4rem;
-  margin-bottom: 4rem;
 }
 
 .-mb-3{
@@ -2594,6 +2594,10 @@ span.flatpickr-weekday:is(.dark *){
   min-height: 100dvh;
 }
 
+.min-h-full{
+  min-height: 100%;
+}
+
 .min-h-screen{
   min-height: 100vh;
 }
@@ -2698,10 +2702,6 @@ span.flatpickr-weekday:is(.dark *){
   width: 15.5rem;
 }
 
-.w-\[50\%\]{
-  width: 50%;
-}
-
 .w-\[50px\]{
   width: 50px;
 }
@@ -2724,10 +2724,6 @@ span.flatpickr-weekday:is(.dark *){
 
 .w-px{
   width: 1px;
-}
-
-.w-\[40\%\]{
-  width: 40%;
 }
 
 .min-w-0{
@@ -2777,10 +2773,6 @@ span.flatpickr-weekday:is(.dark *){
 .min-w-fit{
   min-width: -moz-fit-content;
   min-width: fit-content;
-}
-
-.min-w-full{
-  min-width: 100%;
 }
 
 .max-w-0{
@@ -3334,6 +3326,10 @@ span.flatpickr-weekday:is(.dark *){
   overflow: hidden;
 }
 
+.overflow-scroll{
+  overflow: scroll;
+}
+
 .overflow-x-auto{
   overflow-x: auto;
 }
@@ -3563,6 +3559,11 @@ span.flatpickr-weekday:is(.dark *){
 .border-red-300{
   --tw-border-opacity: 1;
   border-color: rgb(255 148 148 / var(--tw-border-opacity));
+}
+
+.border-red-800{
+  --tw-border-opacity: 1;
+  border-color: rgb(197 39 39 / var(--tw-border-opacity));
 }
 
 .border-transparent{
@@ -6427,6 +6428,10 @@ body #singleP-search2 input:focus {
     width: 390px;
   }
 
+  .sm\:w-\[520px\]{
+    width: 520px;
+  }
+
   .sm\:grow{
     flex-grow: 1;
   }
@@ -7426,10 +7431,6 @@ body #singleP-search2 input:focus {
     display: flex;
   }
 
-  .xl\:grid{
-    display: grid;
-  }
-
   .xl\:hidden{
     display: none;
   }
@@ -7468,10 +7469,6 @@ body #singleP-search2 input:focus {
 
   .xl\:min-w-56{
     min-width: 14rem;
-  }
-
-  .xl\:min-w-full{
-    min-width: 100%;
   }
 
   .xl\:min-w-\[340px\]{
