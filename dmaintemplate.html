@@ -987,7 +987,7 @@
                     localStorage.setItem('isBalanceVisible', JSON.stringify(this.isBalanceVisible));
                   }
                 }"
-                        class="min-w-[355px] lg:min-w-[340px] md:min-w-full flex justify-between flex-col p-5 text-left text-white w-full rounded-xl col-span-6 bg-primary dark:bg-opacity-80"
+                        class="min-w-[355px] xl:min-w-[340px] md:min-w-full flex justify-between flex-col p-5 text-left text-white w-full rounded-xl col-span-6 bg-primary dark:bg-opacity-80"
                       >
                         <!-- Left Side: Balance Area -->
                         <div class="flex flex-row justify-between">
@@ -1204,9 +1204,9 @@
                               x-transition:leave-end="transform translate-y-full opacity-0"
                               class="fixed z-50 w-full flex justify-center   right-0 top-0 h-full overflow-x-hidden"
                             >
-                              <div class="w-[85%] flex justify-center ">
+                              <div class=" w-full flex justify-center  ">
                                 <div
-                                  class="relative bg-gray-50 overflow-y-auto min-h-screen p-3 text-black dark:text-white dark:bg-gray-900"
+                                  class="relative lg:w-[40%] bg-gray-50 overflow-y-auto my-16  p-3 text-black dark:text-white dark:bg-gray-900"
                                 >
                                     <button
                                     class="absolute top-2 left-4 text-xl  dark:text-white"
@@ -1215,253 +1215,226 @@
                                     <i class="fa fa-times" aria-hidden="true"></i>
                                 </button>
                                   <!-- Card content -->
-                                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 w-full mt-10">
+                                  <div class="grid grid-cols-1  gap-5 w-full mt-10">
                                     <!-- Card content -->
               
-                                    <div class="flex flex-col order-2 md:order-1">
+                                    <div class="flex flex-col ">
+                                      <!-- Card Header -->
+                                      <header class="justify-between flex px-5 py-2 w-full">
+                                        <button class="text-3xl font-light">
+                                          <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+                                        </button>
+                                        <div
+                                          class="self-center w-full justify-center items-center flex"
+                                        >
+                                          <h4 class="text-xl font-bold capitalize">exchange money</h4>
+                                        </div>
+                                      </header>
+                        
                                       <!-- Card content -->
                                       <div class="space-y-4">
-                                        <article
-                                          class="flex justify-between items-center bg-gray-100 shadow-sm border dark:border-0 dark:bg-gray-800 p-5 rounded-xl"
-                                        >
-                                          <div class="flex items-center gap-4 max-w-sm">
-                                            <span
-                                              class="shrink-0 text-center text-white rounded-full p-6 w-6 h-6 flex justify-center items-center bg-yellow-500"
-                                            >
+                                        <!-- First Currency Switcher -->
+                                        <article>
+                                          <div
+                                            class="flex justify-between bg-gray-100 shadow-sm border dark:border-0 dark:bg-gray-800 p-5 pb-14 rounded-xl"
+                                          >
+                                            <!-- Currency Button -->
+                                            <div class="relative mt-4 flex justify-between w-full">
+                                              <button
+                                                class="py-2 pl-3 min-w-28 bg-white text-primary rounded-full gap-2 cursor-pointer"
+                                              >
+                                                <div class="flex">
+                                                  <img
+                                                    src="./images/ng-flag.png"
+                                                    class="w-7 h-7 rounded-full"
+                                                  />
+                                                  <span class="text-xl ml-3">₦</span>
+                                                </div>
+                                              </button>
+                        
+                                              <p class="capitalize font-semibold text-lg ml-12">
+                                                you pay
+                                              </p>
+                                            </div>
+                        
+                                            <div class="self-end w-full justify-between flex">
+                                              <div></div>
                                               <i
-                                                class="fa fa-circle text-center text-2xl"
+                                                class="fa fa-clock text-yellow-300 text-3xl"
                                                 aria-hidden="true"
                                               ></i>
-                                            </span>
-                        
-                                            <div>
-                                              <h3 class="font-bold text-xl mb-3 capitalize">Tier</h3>
-                                              <div class="flex flex-col gap-2">
-                                                <p class="text-lg">
-                                                  Daily Transaction Limit
-                                                  <span class="block font-bold">₦20,0000</span>
-                                                </p>
-                                                <p class="text-lg">
-                                                  Maximuun account balance
-                                                  <span class="block font-bold">₦20,0000</span>
-                                                </p>
-                                              </div>
                                             </div>
                                           </div>
                         
-                                          <!-- <p class="font-bold">$2.00</p> -->
-                                        </article>
-                                        <article
-                                          class="flex justify-between items-center bg-gray-100 shadow-sm border dark:border-0 dark:bg-gray-800 p-5 rounded-xl"
-                                        >
-                                          <div class="flex items-center gap-4 max-w-sm">
-                                            <span
-                                              class="shrink-0 text-center text-white rounded-full p-6 w-6 h-6 flex justify-center items-center bg-yellow-500"
-                                            >
-                                              <i
-                                                class="fa fa-circle text-center text-2xl"
-                                                aria-hidden="true"
-                                              ></i>
-                                            </span>
-                        
-                                            <div>
-                                              <h3 class="font-bold text-xl mb-3 capitalize">Tier</h3>
-                                              <div class="flex flex-col gap-2">
-                                                <p class="text-lg">
-                                                  Daily Transaction Limit
-                                                  <span class="block font-bold">₦20,0000</span>
-                                                </p>
-                                                <p class="text-lg">
-                                                  Maximuun account balance
-                                                  <span class="block font-bold">₦20,0000</span>
-                                                </p>
-                                              </div>
-                                            </div>
-                                          </div>
-                        
-                                          <div class="">
-                                            <a
-                                              class="inline-block rounded-full bg-lightgreen w-full text-center px-4 py-2 text-white transition hover:bg-lightgreen/60 active:text-white mt-6 font-semibold text-lg"
-                                              href="#"
-                                            >
-                                              Continue
-                                            </a>
-                                          </div>
+                                          <p class="text-lg mt-2">
+                                            Balance:
+                                            <span class="font-bold"> ₦0.00</span>
+                                          </p>
                                         </article>
                         
-                                        <article
-                                          class="flex justify-between items-center bg-gray-100 shadow-sm border dark:border-0 dark:bg-gray-800 p-5 rounded-xl"
-                                        >
-                                          <div class="flex items-center gap-4 max-w-sm">
-                                            <span
-                                              class="shrink-0 text-center text-white rounded-full p-6 w-6 h-6 flex justify-center items-center bg-yellow-500"
-                                            >
-                                              <i
-                                                class="fa fa-circle text-center text-2xl"
-                                                aria-hidden="true"
-                                              ></i>
-                                            </span>
-                        
-                                            <div>
-                                              <h3 class="font-bold text-xl mb-3 capitalize">Tier</h3>
-                                              <div class="flex flex-col gap-2">
-                                                <p class="text-lg">
-                                                  Daily Transaction Limit
-                                                  <span class="block font-bold">₦20,0000</span>
-                                                </p>
-                                                <p class="text-lg">
-                                                  Maximuun account balance
-                                                  <span class="block font-bold">₦20,0000</span>
-                                                </p>
-                                              </div>
-                                            </div>
-                                          </div>
-                        
-                                          <div class="">
-                                            <a
-                                              class="inline-block rounded-full bg-black w-full text-center px-4 py-2 text-white transition hover:bg-black/60 active:text-white mt-6 font-semibold text-lg"
-                                              href="#"
-                                            >
-                                              Upgrade
-                                            </a>
-                                          </div>
-                                        </article>
-                                        <article
-                                          class="flex justify-between items-center bg-gray-100 shadow-sm border dark:border-0 dark:bg-gray-800 p-5 rounded-xl"
-                                        >
-                                          <div class="flex items-center gap-4 max-w-sm">
-                                            <span
-                                              class="shrink-0 text-center text-white rounded-full p-6 w-6 h-6 flex justify-center items-center bg-yellow-500"
-                                            >
-                                              <i
-                                                class="fa fa-circle text-center text-2xl"
-                                                aria-hidden="true"
-                                              ></i>
-                                            </span>
-                        
-                                            <div>
-                                              <h3 class="font-bold text-xl mb-3 capitalize">Tier</h3>
-                                              <div class="flex flex-col gap-2">
-                                                <p class="text-lg">
-                                                  Daily Transaction Limit
-                                                  <span class="block font-bold">₦20,0000</span>
-                                                </p>
-                                                <p class="text-lg">
-                                                  Maximuun account balance
-                                                  <span class="block font-bold">₦20,0000</span>
-                                                </p>
-                                              </div>
-                                            </div>
-                                          </div>
-                        
-                                          <!-- <p class="font-bold">$2.00</p> -->
-                                        </article>
-                                        <article
-                                          class="flex justify-between items-center bg-gray-100 shadow-sm border dark:border-0 dark:bg-gray-800 p-5 rounded-xl"
-                                        >
-                                          <div class="flex items-center gap-4 max-w-sm">
-                                            <span
-                                              class="shrink-0 text-center text-white rounded-full p-6 w-6 h-6 flex justify-center items-center bg-yellow-500"
-                                            >
-                                              <i
-                                                class="fa fa-circle text-center text-2xl"
-                                                aria-hidden="true"
-                                              ></i>
-                                            </span>
-                        
-                                            <div>
-                                              <h3 class="font-bold text-xl mb-3 capitalize">Tier</h3>
-                                              <div class="flex flex-col gap-2">
-                                                <p class="text-lg">
-                                                  Daily Transaction Limit
-                                                  <span class="block font-bold">₦20,0000</span>
-                                                </p>
-                                                <p class="text-lg">
-                                                  Maximuun account balance
-                                                  <span class="block font-bold">₦20,0000</span>
-                                                </p>
-                                              </div>
-                                            </div>
-                                          </div>
-                        
-                                          <div class="">
-                                            <a
-                                              class="inline-block rounded-full bg-lightgreen w-full text-center px-4 py-2 text-white transition hover:bg-lightgreen/60 active:text-white mt-6 font-semibold text-lg"
-                                              href="#"
-                                            >
-                                              Continue
-                                            </a>
-                                          </div>
-                                        </article>
-                        
-                                        <article
-                                          class="flex justify-between items-center bg-gray-100 shadow-sm border dark:border-0 dark:bg-gray-800 p-5 rounded-xl"
-                                        >
-                                          <div class="flex items-center gap-4 max-w-sm">
-                                            <span
-                                              class="shrink-0 text-center text-white rounded-full p-6 w-6 h-6 flex justify-center items-center bg-yellow-500"
-                                            >
-                                              <i
-                                                class="fa fa-circle text-center text-2xl"
-                                                aria-hidden="true"
-                                              ></i>
-                                            </span>
-                        
-                                            <div>
-                                              <h3 class="font-bold text-xl mb-3 capitalize">Tier</h3>
-                                              <div class="flex flex-col gap-2">
-                                                <p class="text-lg">
-                                                  Daily Transaction Limit
-                                                  <span class="block font-bold">₦20,0000</span>
-                                                </p>
-                                                <p class="text-lg">
-                                                  Maximuun account balance
-                                                  <span class="block font-bold">₦20,0000</span>
-                                                </p>
-                                              </div>
-                                            </div>
-                                          </div>
-                        
-                                          <div class="">
-                                            <a
-                                              class="inline-block rounded-full bg-black w-full text-center px-4 py-2 text-white transition hover:bg-black/60 active:text-white mt-6 font-semibold text-lg"
-                                              href="#"
-                                            >
-                                              Upgrade
-                                            </a>
-                                          </div>
-                                        </article>
-                                      </div>
-                                    </div>
-              
-                                  
-                                    <div class="order-1 md:order-2 ">
-                                      <div
-                                        class="flex text-black dark:text-white bg-blue-700 rounded-xl p-5"
-                                      >
-                                        <div class="flex items-center gap-4">
+                                        <div class="w-full py-10 flex justify-center items-center">
                                           <span
-                                            class="shrink-0 text-center text-primary rounded-full p-6 w-6 h-6 flex justify-center items-center bg-gray-100 dark:bg-purple-100"
+                                            class="p-5 bg-yellow-100/40 dark:bg-gray-800 font-bold text-3xl text-yellow-600 rounded-full"
                                           >
                                             <i
-                                              class="fa fa-bell text-center text-base lg:text-lg"
+                                              class="fa fa-exchange transform rotate-90"
                                               aria-hidden="true"
                                             ></i>
                                           </span>
-              
-                                          <div>
-                                            <h3 class="font-medium text-lg capitalize">
-                                              Fund tips
-                                            </h3>
-              
-                                            <p class="text-lg">
-                                              Transfer to the account number below to fund
-                                              your wallet
-                                            </p>
-                                          </div>
                                         </div>
+                        
+                                        <!-- Second Currency Switcher -->
+                                        <article>
+                                          <div
+                                            class="flex justify-between bg-gray-100 shadow-sm border dark:border-0 dark:bg-gray-800 p-5 pb-14 rounded-xl"
+                                          >
+                                            <!-- Currency Button -->
+                                            <div class="relative mt-4 flex justify-between w-full">
+                                              <button
+                                                class="py-2 pl-3 min-w-28 bg-white text-primary rounded-full gap-2 cursor-pointer"
+                                              >
+                                                <div class="flex">
+                                                  <img
+                                                    src="./images/dollar.jpeg"
+                                                    class="w-7 h-7 rounded-full"
+                                                  />
+                                                  <span class="text-xl ml-3">$</span>
+                                                </div>
+                                              </button>
+                        
+                                              <p class="capitalize font-semibold text-lg ml-12">
+                                                you pay
+                                              </p>
+                                            </div>
+                        
+                                            <div class="self-end w-full justify-between flex">
+                                              <div></div>
+                                              <i
+                                                class="fa fa-clock text-yellow-300 text-3xl"
+                                                aria-hidden="true"
+                                              ></i>
+                                            </div>
+                                          </div>
+                        
+                                          <p
+                                            class="text-lg mt-3 dark:text-white bg-lightgreen/20 font-semibold bg-opacity-5 text-green-900 text inline-flex py-4 gap-3 rounded-full px-3"
+                                          >
+                                            <span class="">FX Rate: $1 = ₦16789 </span>
+                                          </p>
+                                        </article>
                                       </div>
                                     </div>
+              
+                                    <div class="flex flex-col ">
+                                      <!-- Card Header -->
+                                      <header class="justify-between flex px-5 py-2 w-full">
+                                        <button class="text-3xl font-light">
+                                          <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+                                        </button>
+                                        <div
+                                          class="self-center w-full justify-center items-center flex"
+                                        >
+                                          <h4 class="text-xl font-bold capitalize">exchange money</h4>
+                                        </div>
+                                      </header>
+                        
+                                      <!-- Card content -->
+                                      <div class="space-y-4">
+                                        <!-- First Currency Switcher -->
+                                        <article>
+                                          <div
+                                            class="flex justify-between bg-gray-100 shadow-sm border dark:border-0 dark:bg-gray-800 p-5 pb-14 rounded-xl"
+                                          >
+                                            <!-- Currency Button -->
+                                            <div class="relative mt-4 flex justify-between w-full">
+                                              <button
+                                                class="py-2 pl-3 min-w-28 bg-white text-primary rounded-full gap-2 cursor-pointer"
+                                              >
+                                                <div class="flex">
+                                                  <img
+                                                    src="./images/ng-flag.png"
+                                                    class="w-7 h-7 rounded-full"
+                                                  />
+                                                  <span class="text-xl ml-3">₦</span>
+                                                </div>
+                                              </button>
+                        
+                                              <p class="capitalize font-semibold text-lg ml-12">
+                                                you pay
+                                              </p>
+                                            </div>
+                        
+                                            <div class="self-end w-full justify-between flex">
+                                              <div></div>
+                                              <i
+                                                class="fa fa-clock text-yellow-300 text-3xl"
+                                                aria-hidden="true"
+                                              ></i>
+                                            </div>
+                                          </div>
+                        
+                                          <p class="text-lg mt-2">
+                                            Balance:
+                                            <span class="font-bold"> ₦0.00</span>
+                                          </p>
+                                        </article>
+                        
+                                        <div class="w-full py-10 flex justify-center items-center">
+                                          <span
+                                            class="p-5 bg-yellow-100/40 dark:bg-gray-800 font-bold text-3xl text-yellow-600 rounded-full"
+                                          >
+                                            <i
+                                              class="fa fa-exchange transform rotate-90"
+                                              aria-hidden="true"
+                                            ></i>
+                                          </span>
+                                        </div>
+                        
+                                        <!-- Second Currency Switcher -->
+                                        <article>
+                                          <div
+                                            class="flex justify-between bg-gray-100 shadow-sm border dark:border-0 dark:bg-gray-800 p-5 pb-14 rounded-xl"
+                                          >
+                                            <!-- Currency Button -->
+                                            <div class="relative mt-4 flex justify-between w-full">
+                                              <button
+                                                class="py-2 pl-3 min-w-28 bg-white text-primary rounded-full gap-2 cursor-pointer"
+                                              >
+                                                <div class="flex">
+                                                  <img
+                                                    src="./images/dollar.jpeg"
+                                                    class="w-7 h-7 rounded-full"
+                                                  />
+                                                  <span class="text-xl ml-3">$</span>
+                                                </div>
+                                              </button>
+                        
+                                              <p class="capitalize font-semibold text-lg ml-12">
+                                                you pay
+                                              </p>
+                                            </div>
+                        
+                                            <div class="self-end w-full justify-between flex">
+                                              <div></div>
+                                              <i
+                                                class="fa fa-clock text-yellow-300 text-3xl"
+                                                aria-hidden="true"
+                                              ></i>
+                                            </div>
+                                          </div>
+                        
+                                          <p
+                                            class="text-lg mt-3 dark:text-white bg-lightgreen/20 font-semibold bg-opacity-5 text-green-900 text inline-flex py-4 gap-3 rounded-full px-3"
+                                          >
+                                            <span class="">FX Rate: $1 = ₦16789 </span>
+                                          </p>
+                                        </article>
+                                      </div>
+                                    </div>
+              
+              
+                                  
+                                 
                                   </div>
                              
                                 </div>
@@ -1486,7 +1459,7 @@
 
                       <!-- Transaction Limit -->
                       <div
-                        class="w-full h-[178px] bg-secondary dark:bg-gray-800 dark:text-white text-black p-5 rounded-xl relative col-span-4 min-w-[270px] md:min-w-full"
+                        class="w-full h-[178px] bg-secondary dark:bg-gray-800 dark:text-white text-black p-5 rounded-xl relative col-span-4 min-w-[270px] lg:min-w-full"
                       >
                         <p
                           class="pb-3 border-b-white/40 dark:border-b-secondary border-b-2 text-sm font-medium"
