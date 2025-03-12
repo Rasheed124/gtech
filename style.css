@@ -2040,11 +2040,6 @@ span.flatpickr-weekday:is(.dark *){
   margin-bottom: 2.5rem;
 }
 
-.my-16{
-  margin-top: 4rem;
-  margin-bottom: 4rem;
-}
-
 .my-2{
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
@@ -2592,10 +2587,6 @@ span.flatpickr-weekday:is(.dark *){
 
 .min-h-\[100dvh\]{
   min-height: 100dvh;
-}
-
-.min-h-full{
-  min-height: 100%;
 }
 
 .min-h-screen{
@@ -3168,6 +3159,10 @@ span.flatpickr-weekday:is(.dark *){
   row-gap: 0.5rem;
 }
 
+.gap-y-5{
+  row-gap: 1.25rem;
+}
+
 .gap-y-8{
   row-gap: 2rem;
 }
@@ -3324,10 +3319,6 @@ span.flatpickr-weekday:is(.dark *){
 
 .overflow-hidden{
   overflow: hidden;
-}
-
-.overflow-scroll{
-  overflow: scroll;
 }
 
 .overflow-x-auto{
@@ -3559,11 +3550,6 @@ span.flatpickr-weekday:is(.dark *){
 .border-red-300{
   --tw-border-opacity: 1;
   border-color: rgb(255 148 148 / var(--tw-border-opacity));
-}
-
-.border-red-800{
-  --tw-border-opacity: 1;
-  border-color: rgb(197 39 39 / var(--tw-border-opacity));
 }
 
 .border-transparent{
@@ -4244,6 +4230,11 @@ span.flatpickr-weekday:is(.dark *){
   padding-bottom: 0.5rem;
 }
 
+.py-24{
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
 .py-3{
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
@@ -4272,6 +4263,11 @@ span.flatpickr-weekday:is(.dark *){
 .py-8{
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+
+.px-10{
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
 }
 
 .pb-1{
@@ -7062,10 +7058,6 @@ body #singleP-search2 input:focus {
 
   .lg\:w-full{
     width: 100%;
-  }
-
-  .lg\:w-\[40\%\]{
-    width: 40%;
   }
 
   .lg\:min-w-\[340px\]{
