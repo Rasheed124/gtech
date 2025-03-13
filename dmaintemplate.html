@@ -1106,7 +1106,10 @@
                         </div>
 
                         <!-- Add Funds -->
-                        <div x-data="{ isModalOpen: false }"  x-effect="document.body.classList.toggle('no-scroll-in-view-formInput', isModalOpen)">
+                        <div
+                          x-data="{ isModalOpen: false }"
+                          x-effect="document.body.classList.toggle('no-scroll-in-view-formInput', isModalOpen)"
+                        >
                           <div
                             class="mt-10 grid grid-cols-7 gap-3 lg:gap-1 xl:gap-3"
                           >
@@ -1202,241 +1205,309 @@
                               x-transition:leave="transition ease-in duration-200"
                               x-transition:leave-start="transform translate-y-0 opacity-100"
                               x-transition:leave-end="transform translate-y-full opacity-0"
-                              class="fixed z-50 w-full flex justify-center   right-0 top-0 h-full overflow-y-auto"
+                              class="fixed z-50 w-full flex justify-center right-0 top-0 h-full overflow-y-auto"
                             >
-                              <div class=" w-full flex justify-center p-4 my-28 ">
+                              <div class="w-full flex justify-center p-4 my-28">
                                 <div
-                                  class="relative w-full sm:w-[520px] rounded-md mx-auto  bg-gray-50 overflow-y-auto   p-3 text-black dark:text-white dark:bg-gray-900"
+                                  class="relative w-full sm:w-[520px] rounded-md mx-auto bg-gray-50 overflow-y-auto px-3 text-black dark:text-white dark:bg-gray-900"
                                 >
+                                  <div
+                                    class="sticky top-0 z-50 bg-gray-50 flex justify-between py-4"
+                                  >
+                                    <h2 class="text-lg">Customer</h2>
+
                                     <button
-                                    class="sticky top-2 z-50 left-4 text-xl  dark:text-white"
-                                    @click="isModalOpen = false"
-                                >
-                                    <i class="fa fa-times" aria-hidden="true"></i>
-                                </button>
-                                  <!-- Card content -->
-                                  <div class="grid grid-cols-1  gap-5 w-full mt-10">
-                                    <!-- Card content -->
-              
-                                    <div class="flex flex-col ">
-                                      <!-- Card Header -->
-                                      <header class="justify-between flex px-5 py-2 w-full">
-                                        <button class="text-3xl font-light">
-                                          <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
-                                        </button>
-                                        <div
-                                          class="self-center w-full justify-center items-center flex"
-                                        >
-                                          <h4 class="text-xl font-bold capitalize">exchange money</h4>
-                                        </div>
-                                      </header>
-                        
-                                      <!-- Card content -->
-                                      <div class="space-y-4">
-                                        <!-- First Currency Switcher -->
-                                        <article>
-                                          <div
-                                            class="flex justify-between bg-gray-100 shadow-sm border dark:border-0 dark:bg-gray-800 p-5 pb-14 rounded-xl"
-                                          >
-                                            <!-- Currency Button -->
-                                            <div class="relative mt-4 flex justify-between w-full">
-                                              <button
-                                                class="py-2 pl-3 min-w-28 bg-white text-primary rounded-full gap-2 cursor-pointer"
-                                              >
-                                                <div class="flex">
-                                                  <img
-                                                    src="./images/ng-flag.png"
-                                                    class="w-7 h-7 rounded-full"
-                                                  />
-                                                  <span class="text-xl ml-3">₦</span>
-                                                </div>
-                                              </button>
-                        
-                                              <p class="capitalize font-semibold text-lg ml-12">
-                                                you pay
-                                              </p>
-                                            </div>
-                        
-                                            <div class="self-end w-full justify-between flex">
-                                              <div></div>
-                                              <i
-                                                class="fa fa-clock text-yellow-300 text-3xl"
-                                                aria-hidden="true"
-                                              ></i>
-                                            </div>
-                                          </div>
-                        
-                                          <p class="text-lg mt-2">
-                                            Balance:
-                                            <span class="font-bold"> ₦0.00</span>
-                                          </p>
-                                        </article>
-                        
-                                        <div class="w-full py-10 flex justify-center items-center">
-                                          <span
-                                            class="p-5 bg-yellow-100/40 dark:bg-gray-800 font-bold text-3xl text-yellow-600 rounded-full"
-                                          >
-                                            <i
-                                              class="fa fa-exchange transform rotate-90"
-                                              aria-hidden="true"
-                                            ></i>
-                                          </span>
-                                        </div>
-                        
-                                        <!-- Second Currency Switcher -->
-                                        <article>
-                                          <div
-                                            class="flex justify-between bg-gray-100 shadow-sm border dark:border-0 dark:bg-gray-800 p-5 pb-14 rounded-xl"
-                                          >
-                                            <!-- Currency Button -->
-                                            <div class="relative mt-4 flex justify-between w-full">
-                                              <button
-                                                class="py-2 pl-3 min-w-28 bg-white text-primary rounded-full gap-2 cursor-pointer"
-                                              >
-                                                <div class="flex">
-                                                  <img
-                                                    src="./images/dollar.jpeg"
-                                                    class="w-7 h-7 rounded-full"
-                                                  />
-                                                  <span class="text-xl ml-3">$</span>
-                                                </div>
-                                              </button>
-                        
-                                              <p class="capitalize font-semibold text-lg ml-12">
-                                                you pay
-                                              </p>
-                                            </div>
-                        
-                                            <div class="self-end w-full justify-between flex">
-                                              <div></div>
-                                              <i
-                                                class="fa fa-clock text-yellow-300 text-3xl"
-                                                aria-hidden="true"
-                                              ></i>
-                                            </div>
-                                          </div>
-                        
-                                          <p
-                                            class="text-lg mt-3 dark:text-white bg-lightgreen/20 font-semibold bg-opacity-5 text-green-900 text inline-flex py-4 gap-3 rounded-full px-3"
-                                          >
-                                            <span class="">FX Rate: $1 = ₦16789 </span>
-                                          </p>
-                                        </article>
-                                      </div>
-                                    </div>
-              
-                                    <div class="flex flex-col ">
-                                      <!-- Card Header -->
-                                      <header class="justify-between flex px-5 py-2 w-full">
-                                        <button class="text-3xl font-light">
-                                          <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
-                                        </button>
-                                        <div
-                                          class="self-center w-full justify-center items-center flex"
-                                        >
-                                          <h4 class="text-xl font-bold capitalize">exchange money</h4>
-                                        </div>
-                                      </header>
-                        
-                                      <!-- Card content -->
-                                      <div class="space-y-4">
-                                        <!-- First Currency Switcher -->
-                                        <article>
-                                          <div
-                                            class="flex justify-between bg-gray-100 shadow-sm border dark:border-0 dark:bg-gray-800 p-5 pb-14 rounded-xl"
-                                          >
-                                            <!-- Currency Button -->
-                                            <div class="relative mt-4 flex justify-between w-full">
-                                              <button
-                                                class="py-2 pl-3 min-w-28 bg-white text-primary rounded-full gap-2 cursor-pointer"
-                                              >
-                                                <div class="flex">
-                                                  <img
-                                                    src="./images/ng-flag.png"
-                                                    class="w-7 h-7 rounded-full"
-                                                  />
-                                                  <span class="text-xl ml-3">₦</span>
-                                                </div>
-                                              </button>
-                        
-                                              <p class="capitalize font-semibold text-lg ml-12">
-                                                you pay
-                                              </p>
-                                            </div>
-                        
-                                            <div class="self-end w-full justify-between flex">
-                                              <div></div>
-                                              <i
-                                                class="fa fa-clock text-yellow-300 text-3xl"
-                                                aria-hidden="true"
-                                              ></i>
-                                            </div>
-                                          </div>
-                        
-                                          <p class="text-lg mt-2">
-                                            Balance:
-                                            <span class="font-bold"> ₦0.00</span>
-                                          </p>
-                                        </article>
-                        
-                                        <div class="w-full py-10 flex justify-center items-center">
-                                          <span
-                                            class="p-5 bg-yellow-100/40 dark:bg-gray-800 font-bold text-3xl text-yellow-600 rounded-full"
-                                          >
-                                            <i
-                                              class="fa fa-exchange transform rotate-90"
-                                              aria-hidden="true"
-                                            ></i>
-                                          </span>
-                                        </div>
-                        
-                                        <!-- Second Currency Switcher -->
-                                        <article>
-                                          <div
-                                            class="flex justify-between bg-gray-100 shadow-sm border dark:border-0 dark:bg-gray-800 p-5 pb-14 rounded-xl"
-                                          >
-                                            <!-- Currency Button -->
-                                            <div class="relative mt-4 flex justify-between w-full">
-                                              <button
-                                                class="py-2 pl-3 min-w-28 bg-white text-primary rounded-full gap-2 cursor-pointer"
-                                              >
-                                                <div class="flex">
-                                                  <img
-                                                    src="./images/dollar.jpeg"
-                                                    class="w-7 h-7 rounded-full"
-                                                  />
-                                                  <span class="text-xl ml-3">$</span>
-                                                </div>
-                                              </button>
-                        
-                                              <p class="capitalize font-semibold text-lg ml-12">
-                                                you pay
-                                              </p>
-                                            </div>
-                        
-                                            <div class="self-end w-full justify-between flex">
-                                              <div></div>
-                                              <i
-                                                class="fa fa-clock text-yellow-300 text-3xl"
-                                                aria-hidden="true"
-                                              ></i>
-                                            </div>
-                                          </div>
-                        
-                                          <p
-                                            class="text-lg mt-3 dark:text-white bg-lightgreen/20 font-semibold bg-opacity-5 text-green-900 text inline-flex py-4 gap-3 rounded-full px-3"
-                                          >
-                                            <span class="">FX Rate: $1 = ₦16789 </span>
-                                          </p>
-                                        </article>
-                                      </div>
-                                    </div>
-              
-              
-                                  
-                                 
+                                      class="  text-xl dark:text-white"
+                                      @click="isModalOpen = false"
+                                    >
+                                      <i
+                                        class="fa fa-times"
+                                        aria-hidden="true"
+                                      ></i>
+                                    </button>
                                   </div>
-                             
+                                  <!-- Card content -->
+                                  <div
+                                    class="grid grid-cols-1 gap-5 w-full mt-10"
+                                  >
+                                    <!-- Card content -->
+
+                                    <div class="flex flex-col">
+                                      <!-- Card Header -->
+                                      <header
+                                        class="justify-between flex px-5 py-2 w-full"
+                                      >
+                                        <button class="text-3xl font-light">
+                                          <i
+                                            class="fa fa-long-arrow-left"
+                                            aria-hidden="true"
+                                          ></i>
+                                        </button>
+                                        <div
+                                          class="self-center w-full justify-center items-center flex"
+                                        >
+                                          <h4
+                                            class="text-xl font-bold capitalize"
+                                          >
+                                            exchange money
+                                          </h4>
+                                        </div>
+                                      </header>
+
+                                      <!-- Card content -->
+                                      <div class="space-y-4">
+                                        <!-- First Currency Switcher -->
+                                        <article>
+                                          <div
+                                            class="flex justify-between bg-gray-100 shadow-sm border dark:border-0 dark:bg-gray-800 p-5 pb-14 rounded-xl"
+                                          >
+                                            <!-- Currency Button -->
+                                            <div
+                                              class="relative mt-4 flex justify-between w-full"
+                                            >
+                                              <button
+                                                class="py-2 pl-3 min-w-28 bg-white text-primary rounded-full gap-2 cursor-pointer"
+                                              >
+                                                <div class="flex">
+                                                  <img
+                                                    src="./images/ng-flag.png"
+                                                    class="w-7 h-7 rounded-full"
+                                                  />
+                                                  <span class="text-xl ml-3"
+                                                    >₦</span
+                                                  >
+                                                </div>
+                                              </button>
+
+                                              <p
+                                                class="capitalize font-semibold text-lg ml-12"
+                                              >
+                                                you pay
+                                              </p>
+                                            </div>
+
+                                            <div
+                                              class="self-end w-full justify-between flex"
+                                            >
+                                              <div></div>
+                                              <i
+                                                class="fa fa-clock text-yellow-300 text-3xl"
+                                                aria-hidden="true"
+                                              ></i>
+                                            </div>
+                                          </div>
+
+                                          <p class="text-lg mt-2">
+                                            Balance:
+                                            <span class="font-bold">
+                                              ₦0.00</span
+                                            >
+                                          </p>
+                                        </article>
+
+                                        <div
+                                          class="w-full py-10 flex justify-center items-center"
+                                        >
+                                          <span
+                                            class="p-5 bg-yellow-100/40 dark:bg-gray-800 font-bold text-3xl text-yellow-600 rounded-full"
+                                          >
+                                            <i
+                                              class="fa fa-exchange transform rotate-90"
+                                              aria-hidden="true"
+                                            ></i>
+                                          </span>
+                                        </div>
+
+                                        <!-- Second Currency Switcher -->
+                                        <article>
+                                          <div
+                                            class="flex justify-between bg-gray-100 shadow-sm border dark:border-0 dark:bg-gray-800 p-5 pb-14 rounded-xl"
+                                          >
+                                            <!-- Currency Button -->
+                                            <div
+                                              class="relative mt-4 flex justify-between w-full"
+                                            >
+                                              <button
+                                                class="py-2 pl-3 min-w-28 bg-white text-primary rounded-full gap-2 cursor-pointer"
+                                              >
+                                                <div class="flex">
+                                                  <img
+                                                    src="./images/dollar.jpeg"
+                                                    class="w-7 h-7 rounded-full"
+                                                  />
+                                                  <span class="text-xl ml-3"
+                                                    >$</span
+                                                  >
+                                                </div>
+                                              </button>
+
+                                              <p
+                                                class="capitalize font-semibold text-lg ml-12"
+                                              >
+                                                you pay
+                                              </p>
+                                            </div>
+
+                                            <div
+                                              class="self-end w-full justify-between flex"
+                                            >
+                                              <div></div>
+                                              <i
+                                                class="fa fa-clock text-yellow-300 text-3xl"
+                                                aria-hidden="true"
+                                              ></i>
+                                            </div>
+                                          </div>
+
+                                          <p
+                                            class="text-lg mt-3 dark:text-white bg-lightgreen/20 font-semibold bg-opacity-5 text-green-900 text inline-flex py-4 gap-3 rounded-full px-3"
+                                          >
+                                            <span class=""
+                                              >FX Rate: $1 = ₦16789
+                                            </span>
+                                          </p>
+                                        </article>
+                                      </div>
+                                    </div>
+
+                                    <div class="flex flex-col">
+                                      <!-- Card Header -->
+                                      <header
+                                        class="justify-between flex px-5 py-2 w-full"
+                                      >
+                                        <button class="text-3xl font-light">
+                                          <i
+                                            class="fa fa-long-arrow-left"
+                                            aria-hidden="true"
+                                          ></i>
+                                        </button>
+                                        <div
+                                          class="self-center w-full justify-center items-center flex"
+                                        >
+                                          <h4
+                                            class="text-xl font-bold capitalize"
+                                          >
+                                            exchange money
+                                          </h4>
+                                        </div>
+                                      </header>
+
+                                      <!-- Card content -->
+                                      <div class="space-y-4">
+                                        <!-- First Currency Switcher -->
+                                        <article>
+                                          <div
+                                            class="flex justify-between bg-gray-100 shadow-sm border dark:border-0 dark:bg-gray-800 p-5 pb-14 rounded-xl"
+                                          >
+                                            <!-- Currency Button -->
+                                            <div
+                                              class="relative mt-4 flex justify-between w-full"
+                                            >
+                                              <button
+                                                class="py-2 pl-3 min-w-28 bg-white text-primary rounded-full gap-2 cursor-pointer"
+                                              >
+                                                <div class="flex">
+                                                  <img
+                                                    src="./images/ng-flag.png"
+                                                    class="w-7 h-7 rounded-full"
+                                                  />
+                                                  <span class="text-xl ml-3"
+                                                    >₦</span
+                                                  >
+                                                </div>
+                                              </button>
+
+                                              <p
+                                                class="capitalize font-semibold text-lg ml-12"
+                                              >
+                                                you pay
+                                              </p>
+                                            </div>
+
+                                            <div
+                                              class="self-end w-full justify-between flex"
+                                            >
+                                              <div></div>
+                                              <i
+                                                class="fa fa-clock text-yellow-300 text-3xl"
+                                                aria-hidden="true"
+                                              ></i>
+                                            </div>
+                                          </div>
+
+                                          <p class="text-lg mt-2">
+                                            Balance:
+                                            <span class="font-bold">
+                                              ₦0.00</span
+                                            >
+                                          </p>
+                                        </article>
+
+                                        <div
+                                          class="w-full py-10 flex justify-center items-center"
+                                        >
+                                          <span
+                                            class="p-5 bg-yellow-100/40 dark:bg-gray-800 font-bold text-3xl text-yellow-600 rounded-full"
+                                          >
+                                            <i
+                                              class="fa fa-exchange transform rotate-90"
+                                              aria-hidden="true"
+                                            ></i>
+                                          </span>
+                                        </div>
+
+                                        <!-- Second Currency Switcher -->
+                                        <article>
+                                          <div
+                                            class="flex justify-between bg-gray-100 shadow-sm border dark:border-0 dark:bg-gray-800 p-5 pb-14 rounded-xl"
+                                          >
+                                            <!-- Currency Button -->
+                                            <div
+                                              class="relative mt-4 flex justify-between w-full"
+                                            >
+                                              <button
+                                                class="py-2 pl-3 min-w-28 bg-white text-primary rounded-full gap-2 cursor-pointer"
+                                              >
+                                                <div class="flex">
+                                                  <img
+                                                    src="./images/dollar.jpeg"
+                                                    class="w-7 h-7 rounded-full"
+                                                  />
+                                                  <span class="text-xl ml-3"
+                                                    >$</span
+                                                  >
+                                                </div>
+                                              </button>
+
+                                              <p
+                                                class="capitalize font-semibold text-lg ml-12"
+                                              >
+                                                you pay
+                                              </p>
+                                            </div>
+
+                                            <div
+                                              class="self-end w-full justify-between flex"
+                                            >
+                                              <div></div>
+                                              <i
+                                                class="fa fa-clock text-yellow-300 text-3xl"
+                                                aria-hidden="true"
+                                              ></i>
+                                            </div>
+                                          </div>
+
+                                          <p
+                                            class="text-lg mt-3 dark:text-white bg-lightgreen/20 font-semibold bg-opacity-5 text-green-900 text inline-flex py-4 gap-3 rounded-full px-3"
+                                          >
+                                            <span class=""
+                                              >FX Rate: $1 = ₦16789
+                                            </span>
+                                          </p>
+                                        </article>
+                                      </div>
+                                    </div>
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -1511,10 +1582,7 @@
                 <div
                   class="col-span-12 row-start-2 row-end-4 lg:col-span-8 px-5"
                 >
-                  <div class="content-area">
-                   
-                   
-                  </div>
+                  <div class="content-area"></div>
                 </div>
               </div>
 

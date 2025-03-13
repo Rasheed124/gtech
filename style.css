@@ -3557,11 +3557,6 @@ span.flatpickr-weekday:is(.dark *){
   border-color: rgb(255 148 148 / var(--tw-border-opacity));
 }
 
-.border-red-900{
-  --tw-border-opacity: 1;
-  border-color: rgb(148 24 24 / var(--tw-border-opacity));
-}
-
 .border-transparent{
   border-color: transparent;
 }
