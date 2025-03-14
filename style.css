@@ -1980,10 +1980,6 @@ span.flatpickr-weekday:is(.dark *){
   margin: auto;
 }
 
-.m-10{
-  margin: 2.5rem;
-}
-
 .\!my-4{
   margin-top: 1rem !important;
   margin-bottom: 1rem !important;
@@ -2042,6 +2038,11 @@ span.flatpickr-weekday:is(.dark *){
 .my-10{
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
+}
+
+.my-14{
+  margin-top: 3.5rem;
+  margin-bottom: 3.5rem;
 }
 
 .my-2{
@@ -2241,6 +2242,10 @@ span.flatpickr-weekday:is(.dark *){
 
 .ml-4{
   margin-left: 1rem;
+}
+
+.ml-5{
+  margin-left: 1.25rem;
 }
 
 .ml-auto{
@@ -2730,6 +2735,10 @@ span.flatpickr-weekday:is(.dark *){
   min-width: 0px;
 }
 
+.min-w-20{
+  min-width: 5rem;
+}
+
 .min-w-28{
   min-width: 7rem;
 }
@@ -3003,6 +3012,10 @@ span.flatpickr-weekday:is(.dark *){
   cursor: move;
 }
 
+.cursor-not-allowed{
+  cursor: not-allowed;
+}
+
 .cursor-pointer{
   cursor: pointer;
 }
@@ -3079,6 +3092,10 @@ span.flatpickr-weekday:is(.dark *){
 
 .place-content-center{
   place-content: center;
+}
+
+.place-items-center{
+  place-items: center;
 }
 
 .items-start{
@@ -3559,6 +3576,11 @@ span.flatpickr-weekday:is(.dark *){
 .border-red-300{
   --tw-border-opacity: 1;
   border-color: rgb(255 148 148 / var(--tw-border-opacity));
+}
+
+.border-red-700{
+  --tw-border-opacity: 1;
+  border-color: rgb(230 57 57 / var(--tw-border-opacity));
 }
 
 .border-transparent{
@@ -4336,6 +4358,10 @@ span.flatpickr-weekday:is(.dark *){
 
 .pl-3{
   padding-left: 0.75rem;
+}
+
+.pl-3\.5{
+  padding-left: 0.875rem;
 }
 
 .pl-4{
@@ -6721,6 +6747,10 @@ body #singleP-search2 input:focus {
     width: 100%;
   }
 
+  .md\:min-w-28{
+    min-width: 7rem;
+  }
+
   .md\:min-w-full{
     min-width: 100%;
   }
@@ -6905,6 +6935,10 @@ body #singleP-search2 input:focus {
 
   .md\:pl-0{
     padding-left: 0px;
+  }
+
+  .md\:pl-3{
+    padding-left: 0.75rem;
   }
 
   .md\:pl-8{
