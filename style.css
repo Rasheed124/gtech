@@ -6961,6 +6961,18 @@ body #singleP-search2 input:focus {
     top: auto;
   }
 
+  .lg\:bottom-10{
+    bottom: 2.5rem;
+  }
+
+  .lg\:bottom-16{
+    bottom: 4rem;
+  }
+
+  .lg\:bottom-6{
+    bottom: 1.5rem;
+  }
+
   .lg\:z-auto{
     z-index: auto;
   }
