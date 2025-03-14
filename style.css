@@ -1980,6 +1980,10 @@ span.flatpickr-weekday:is(.dark *){
   margin: auto;
 }
 
+.m-10{
+  margin: 2.5rem;
+}
+
 .\!my-4{
   margin-top: 1rem !important;
   margin-bottom: 1rem !important;
