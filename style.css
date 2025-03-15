@@ -2598,6 +2598,10 @@ span.flatpickr-weekday:is(.dark *){
   min-height: 100dvh;
 }
 
+.min-h-full{
+  min-height: 100%;
+}
+
 .min-h-screen{
   min-height: 100vh;
 }
