@@ -2566,6 +2566,10 @@ span.flatpickr-weekday:is(.dark *){
   height: 100vh;
 }
 
+.h-14{
+  height: 3.5rem;
+}
+
 .max-h-40{
   max-height: 10rem;
 }
@@ -2728,6 +2732,10 @@ span.flatpickr-weekday:is(.dark *){
 
 .w-px{
   width: 1px;
+}
+
+.w-14{
+  width: 3.5rem;
 }
 
 .min-w-0{
