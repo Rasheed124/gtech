@@ -1780,14 +1780,6 @@ span.flatpickr-weekday:is(.dark *){
   left: 50%;
 }
 
-.left-2{
-  left: 0.5rem;
-}
-
-.left-2\.5{
-  left: 0.625rem;
-}
-
 .left-4{
   left: 1rem;
 }
@@ -3502,6 +3494,10 @@ span.flatpickr-weekday:is(.dark *){
   border-bottom-width: 2px;
 }
 
+.border-b-4{
+  border-bottom-width: 4px;
+}
+
 .border-l{
   border-left-width: 1px;
 }
@@ -3512,10 +3508,6 @@ span.flatpickr-weekday:is(.dark *){
 
 .border-t{
   border-top-width: 1px;
-}
-
-.border-b-4{
-  border-bottom-width: 4px;
 }
 
 .border-dashed{
@@ -3612,11 +3604,6 @@ span.flatpickr-weekday:is(.dark *){
   border-color: rgb(252 255 255 / var(--tw-border-opacity));
 }
 
-.border-gray-950{
-  --tw-border-opacity: 1;
-  border-color: rgb(3 7 18 / var(--tw-border-opacity));
-}
-
 .border-b-primary{
   --tw-border-opacity: 1;
   border-bottom-color: rgb(0 68 55 / var(--tw-border-opacity));
@@ -3624,6 +3611,10 @@ span.flatpickr-weekday:is(.dark *){
 
 .border-b-white\/40{
   border-bottom-color: rgb(252 255 255 / 0.4);
+}
+
+.\!bg-transparent{
+  background-color: transparent !important;
 }
 
 .bg-\[\#24292E\]{
@@ -5495,35 +5486,6 @@ body #singleP-search2 input:focus {
   text-decoration-line: line-through;
 }
 
-.peer:-moz-placeholder-shown ~ .peer-placeholder-shown\:top-1\/2{
-  top: 50%;
-}
-
-.peer:placeholder-shown ~ .peer-placeholder-shown\:top-1\/2{
-  top: 50%;
-}
-
-.peer:-moz-placeholder-shown ~ .peer-placeholder-shown\:text-base{
-  font-size: 1rem;
-  line-height: 1.5;
-  letter-spacing: -0.01em;
-}
-
-.peer:placeholder-shown ~ .peer-placeholder-shown\:text-base{
-  font-size: 1rem;
-  line-height: 1.5;
-  letter-spacing: -0.01em;
-}
-
-.peer:focus ~ .peer-focus\:top-0{
-  top: 0px;
-}
-
-.peer:focus ~ .peer-focus\:text-xs{
-  font-size: 0.75rem;
-  line-height: 1.5;
-}
-
 .hover\:translate-x-1:hover{
   --tw-translate-x: 0.25rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -5593,6 +5555,11 @@ body #singleP-search2 input:focus {
 .hover\:bg-white:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(252 255 255 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-gray-300:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(191 196 205 / var(--tw-bg-opacity));
 }
 
 .hover\:text-gray-200:hover{
@@ -5698,6 +5665,11 @@ body #singleP-search2 input:focus {
 
 .focus\:border-transparent:focus{
   border-color: transparent;
+}
+
+.focus\:border-blue-500:focus{
+  --tw-border-opacity: 1;
+  border-color: rgb(59 130 246 / var(--tw-border-opacity));
 }
 
 .focus\:bg-gray-200:focus{
@@ -6044,11 +6016,6 @@ body #singleP-search2 input:focus {
 
 .dark\:fill-violet-500\/30:is(.dark *){
   fill: rgb(37 155 150 / 0.3);
-}
-
-.dark\:text-black:is(.dark *){
-  --tw-text-opacity: 1;
-  color: rgb(5 5 5 / var(--tw-text-opacity));
 }
 
 .dark\:text-black\/80:is(.dark *){
