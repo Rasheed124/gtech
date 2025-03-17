@@ -1687,46 +1687,46 @@
                                   class="absolute z-10 mt-2 w-full  bg-gray-100 border border-gray-300 rounded-lg shadow-lg overflow-hidden dark:bg-gray-900 dark:border-gray-600"
                                   x-transition
                                 >
-                                  <ul class="max-h-40 mx-2 overflow-y-auto scrollbar-none">
+                                  <ul class="max-h-40 m-2 overflow-y-auto scrollbar-none">
                                     <li
                                       @click="selected = 'John Mayer'; open = false"
-                                      class="px-4 py-2 hover:bg-gray-200  dark:hover:bg-gray-700 cursor-pointer text-gray-700 dark:text-gray-300"
+                                      class="px-4 py-2 hover:bg-gray-200 rounded-lg  dark:hover:bg-gray-700 cursor-pointer text-gray-700 dark:text-gray-300"
                                     >
                                       John Mayer
                                     </li>
                                     <li
                                       @click="selected = 'Stevie Ray Vaughn'; open = false"
-                                      class="px-4 py-2 hover:bg-gray-200 dark:hover:bg-gray-700 cursor-pointer text-gray-700 dark:text-gray-300"
+                                      class="px-4 py-2 hover:bg-gray-200 rounded-lg dark:hover:bg-gray-700 cursor-pointer text-gray-700 dark:text-gray-300"
                                     >
                                       Stevie Ray Vaughn
                                     </li>
                                     <li
                                       @click="selected = 'Jimi Hendrix'; open = false"
-                                      class="px-4 py-2 hover:bg-gray-200 dark:hover:bg-gray-700 cursor-pointer text-gray-700 dark:text-gray-300"
+                                      class="px-4 py-2 hover:bg-gray-200 rounded-lg dark:hover:bg-gray-700 cursor-pointer text-gray-700 dark:text-gray-300"
                                     >
                                       Jimi Hendrix
                                     </li>
                                     <li
                                       @click="selected = 'B.B King'; open = false"
-                                      class="px-4 py-2 hover:bg-gray-200 dark:hover:bg-gray-700 cursor-pointer text-gray-700 dark:text-gray-300"
+                                      class="px-4 py-2 hover:bg-gray-200 rounded-lg dark:hover:bg-gray-700 cursor-pointer text-gray-700 dark:text-gray-300"
                                     >
                                       B.B King
                                     </li>
                                     <li
                                       @click="selected = 'Albert King'; open = false"
-                                      class="px-4 py-2 hover:bg-gray-200 dark:hover:bg-gray-700 cursor-pointer text-gray-700 dark:text-gray-300"
+                                      class="px-4 py-2 hover:bg-gray-200 rounded-lg dark:hover:bg-gray-700 cursor-pointer text-gray-700 dark:text-gray-300"
                                     >
                                       Albert King
                                     </li>
                                     <li
                                       @click="selected = 'Buddy Guy'; open = false"
-                                      class="px-4 py-2 hover:bg-gray-200 dark:hover:bg-gray-700 cursor-pointer text-gray-700 dark:text-gray-300"
+                                      class="px-4 py-2 hover:bg-gray-200 rounded-lg dark:hover:bg-gray-700 cursor-pointer text-gray-700 dark:text-gray-300"
                                     >
                                       Buddy Guy
                                     </li>
                                     <li
                                       @click="selected = 'Eric Clapton'; open = false"
-                                      class="px-4 py-2 hover:bg-gray-200 dark:hover:bg-gray-700 cursor-pointer text-gray-700 dark:text-gray-300"
+                                      class="px-4 py-2 hover:bg-gray-200 rounded-lg dark:hover:bg-gray-700 cursor-pointer text-gray-700 dark:text-gray-300"
                                     >
                                       Eric Clapton
                                     </li>
@@ -1790,7 +1790,7 @@
                                   <template x-for="option in options.filter(o => o.toLowerCase().includes(search.toLowerCase()))" :key="option">
                                     <li 
                                       @click="selected = option; open = false; search = ''"
-                                      class="px-4 py-2 mx-2 hover:bg-gray-200 dark:hover:bg-gray-700 cursor-pointer text-gray-700 dark:text-gray-300"
+                                      class="px-4 py-2 m-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 cursor-pointer text-gray-700 dark:text-gray-300"
                                       x-text="option"
                                     ></li>
                                   </template>
