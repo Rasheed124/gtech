@@ -1690,7 +1690,7 @@
                                   <ul class="max-h-40 overflow-y-auto scrollbar-none">
                                     <li
                                       @click="selected = 'John Mayer'; open = false"
-                                      class="px-4 py-2 hover:bg-gray-200 dark:hover:bg-gray-700 cursor-pointer text-gray-700 dark:text-gray-300"
+                                      class="px-4 py-2 hover:bg-gray-200  dark:hover:bg-gray-700 cursor-pointer text-gray-700 dark:text-gray-300"
                                     >
                                       John Mayer
                                     </li>
@@ -1790,7 +1790,7 @@
                                   <template x-for="option in options.filter(o => o.toLowerCase().includes(search.toLowerCase()))" :key="option">
                                     <li 
                                       @click="selected = option; open = false; search = ''"
-                                      class="px-4 py-2 hover:bg-gray-200 dark:hover:bg-gray-700 cursor-pointer text-gray-700 dark:text-gray-300"
+                                      class="px-4 py-2 mx-2 hover:bg-gray-200 dark:hover:bg-gray-700 cursor-pointer text-gray-700 dark:text-gray-300"
                                       x-text="option"
                                     ></li>
                                   </template>
