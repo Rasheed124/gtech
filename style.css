@@ -5557,11 +5557,6 @@ body #singleP-search2 input:focus {
   background-color: rgb(252 255 255 / var(--tw-bg-opacity));
 }
 
-.hover\:bg-gray-300:hover{
-  --tw-bg-opacity: 1;
-  background-color: rgb(191 196 205 / var(--tw-bg-opacity));
-}
-
 .hover\:text-gray-200:hover{
   --tw-text-opacity: 1;
   color: rgb(229 231 235 / var(--tw-text-opacity));
@@ -5665,11 +5660,6 @@ body #singleP-search2 input:focus {
 
 .focus\:border-transparent:focus{
   border-color: transparent;
-}
-
-.focus\:border-blue-500:focus{
-  --tw-border-opacity: 1;
-  border-color: rgb(59 130 246 / var(--tw-border-opacity));
 }
 
 .focus\:bg-gray-200:focus{
