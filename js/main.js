@@ -167,3 +167,13 @@ document.getElementById("payment-form").addEventListener("submit", (e) => {
     .join("");
   console.log(pin);
 });
+
+
+
+
+
+
+
+
+
+

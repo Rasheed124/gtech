@@ -11,6 +11,11 @@
       rel="stylesheet"
       href="https://rawcdn.githack.com/hung1001/font-awesome-pro/4cac1a6/css/all.css"
     />
+    <!--  Choices.js CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"
+    />
 
     <script>
       let isCollapsed;
@@ -24,6 +29,11 @@
         document.querySelector("html").classList.add("dark");
         document.querySelector("html").style.colorScheme = "dark";
       }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        new Choices("#selectDataPlan", { searchEnabled: false });
+        new Choices("#selectSearch", { searchEnabled: true });
+      });
     </script>
     <title>User Dashboard - Home</title>
   </head>
@@ -1454,7 +1464,9 @@
                   class="col-span-12 row-start-2 row-end-4 lg:col-span-8 px-5"
                 >
                   <div class="content-area">
-                    <div class="w-full grid grid-cols-1 xl:grid-cols-2 gap-5 my-10">
+                    <div
+                      class="w-full grid grid-cols-1 xl:grid-cols-2 gap-5 my-10"
+                    >
                       <!-- Left Side Content -->
                       <div class="order-2 xl:order-1">
                         <div class="" x-data="{ card: true }">
@@ -1610,7 +1622,7 @@
                                 <!-- Phone Number -->
                                 <div class="mt-5">
                                   <label
-                                    for="selectDataPlan"
+                                    for="number"
                                     class="block text-sm mb-1 font-medium text-gray-900 dark:text-white"
                                   >
                                     Phone Number
@@ -1623,188 +1635,81 @@
                                 </div>
 
                                 <!-- Select Data Plan -->
-                                <div
-                                  class="relative w-full"
-                                  x-data="{ open: false, selected: '' }"
-                                >
+                                <div class="relative w-full">
                                   <label
                                     for="selectDataPlan"
                                     class="block text-sm font-medium text-gray-900 dark:text-white"
                                   >
                                     Select Data Plan
                                   </label>
-                                  <div
-                                    @click="open = !open"
-                                    class="mt-1.5 w-full rounded-lg border !bg-transparent py-3 bg-white dark:bg-gray-900 border-gray-300 p-2 cursor-pointer flex justify-between items-center sm:text-sm dark:border-gray-600"
+                                  <select
+                                    id="selectDataPlan"
+                                    class="choices w-full border border-gray-300 dark:border-gray-600 py-3"
                                   >
-                                    <span
-                                      x-text="selected || 'Please select'"
-                                      class="text-gray-700 dark:text-gray-300"
-                                    ></span>
-                                    <svg
-                                      class="w-5 h-5 text-gray-500 dark:text-gray-400"
-                                      :class="open ? 'rotate-180' : 'rotate-0'"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      viewBox="0 0 20 20"
-                                      fill="currentColor"
-                                    >
-                                      <path
-                                        fill-rule="evenodd"
-                                        d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 011.06 1.06l-4 4a.75.75 0 01-1.06 0l-4-4a.75.75 0 01.02-1.06z"
-                                        clip-rule="evenodd"
-                                      />
-                                    </svg>
-                                  </div>
-
-                                  <!-- Dropdown Options -->
-                                  <div
-                                    x-show="open"
-                                    @click.away="open = false"
-                                    class="absolute z-10 mt-2 w-full bg-gray-100 border border-gray-300 rounded-lg shadow-lg overflow-hidden dark:bg-gray-900 dark:border-gray-600"
-                                    x-transition
-                                  >
-                                    <ul
-                                      class="max-h-40 m-2 overflow-y-auto scrollbar-none"
-                                    >
-                                      <li
-                                        @click="selected = 'John Mayer'; open = false"
-                                        class="px-4 py-2 hover:bg-gray-200 rounded-lg dark:hover:bg-gray-700 cursor-pointer text-gray-700 dark:text-gray-300"
-                                      >
-                                        John Mayer
-                                      </li>
-                                      <li
-                                        @click="selected = 'Stevie Ray Vaughn'; open = false"
-                                        class="px-4 py-2 hover:bg-gray-200 rounded-lg dark:hover:bg-gray-700 cursor-pointer text-gray-700 dark:text-gray-300"
-                                      >
-                                        Stevie Ray Vaughn
-                                      </li>
-                                      <li
-                                        @click="selected = 'Jimi Hendrix'; open = false"
-                                        class="px-4 py-2 hover:bg-gray-200 rounded-lg dark:hover:bg-gray-700 cursor-pointer text-gray-700 dark:text-gray-300"
-                                      >
-                                        Jimi Hendrix
-                                      </li>
-                                      <li
-                                        @click="selected = 'B.B King'; open = false"
-                                        class="px-4 py-2 hover:bg-gray-200 rounded-lg dark:hover:bg-gray-700 cursor-pointer text-gray-700 dark:text-gray-300"
-                                      >
-                                        B.B King
-                                      </li>
-                                      <li
-                                        @click="selected = 'Albert King'; open = false"
-                                        class="px-4 py-2 hover:bg-gray-200 rounded-lg dark:hover:bg-gray-700 cursor-pointer text-gray-700 dark:text-gray-300"
-                                      >
-                                        Albert King
-                                      </li>
-                                      <li
-                                        @click="selected = 'Buddy Guy'; open = false"
-                                        class="px-4 py-2 hover:bg-gray-200 rounded-lg dark:hover:bg-gray-700 cursor-pointer text-gray-700 dark:text-gray-300"
-                                      >
-                                        Buddy Guy
-                                      </li>
-                                      <li
-                                        @click="selected = 'Eric Clapton'; open = false"
-                                        class="px-4 py-2 hover:bg-gray-200 rounded-lg dark:hover:bg-gray-700 cursor-pointer text-gray-700 dark:text-gray-300"
-                                      >
-                                        Eric Clapton
-                                      </li>
-                                    </ul>
-                                  </div>
+                                    <option value="">Please select</option>
+                                    <option value="John Mayer">
+                                      John Mayer
+                                    </option>
+                                    <option value="Stevie Ray Vaughn">
+                                      Stevie Ray Vaughn
+                                    </option>
+                                    <option value="Jimi Hendrix">
+                                      Jimi Hendrix
+                                    </option>
+                                    <option value="B.B King">B.B King</option>
+                                    <option value="Albert King">
+                                      Albert King
+                                    </option>
+                                    <option value="Buddy Guy">Buddy Guy</option>
+                                    <option value="Eric Clapton">
+                                      Eric Clapton
+                                    </option>
+                                  </select>
                                 </div>
 
                                 <!-- Select Search -->
-                                <div
-                                  class="relative w-full"
-                                  x-data="{ 
-                                 open: false, 
-                                 selected: '', 
-                                 search: '', 
-                                 options: ['John Mayer', 'Stevie Ray Vaughn', 'Jimi Hendrix', 'B.B King', 'Albert King', 'Buddy Guy', 'Eric Clapton'] 
-                               }"
-                                >
+                                <div class="relative w-full">
                                   <label
-                                    for="selectDataPlan"
+                                    for="selectSearch"
                                     class="block text-sm font-medium text-gray-900 dark:text-white"
                                   >
                                     Select Data Plan
                                   </label>
-
-                                  <!-- Selected Option Display -->
-                                  <div
-                                    @click="open = !open"
-                                    class="mt-1.5 w-full rounded-lg border !bg-transparent py-3 bg-white dark:bg-gray-900 border-gray-300 p-2 cursor-pointer flex justify-between items-center sm:text-sm dark:border-gray-600"
+                                  <select
+                                    id="selectSearch"
+                                    class="choices w-full border border-gray-300 dark:border-gray-600 py-3"
                                   >
-                                    <span
-                                      x-text="selected || 'Please select'"
-                                      class="text-gray-700 dark:text-gray-300"
-                                    ></span>
-                                    <svg
-                                      class="w-5 h-5 text-gray-500 dark:text-gray-400"
-                                      :class="open ? 'rotate-180' : 'rotate-0'"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      viewBox="0 0 20 20"
-                                      fill="currentColor"
-                                    >
-                                      <path
-                                        fill-rule="evenodd"
-                                        d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 011.06 1.06l-4 4a.75.75 0 01-1.06 0l-4-4a.75.75 0 01.02-1.06z"
-                                        clip-rule="evenodd"
-                                      />
-                                    </svg>
-                                  </div>
-
-                                  <!-- Dropdown Options -->
-                                  <div
-                                    x-show="open"
-                                    @click.away="open = false"
-                                    class="absolute z-10 mt-2 w-full bg-gray-100 border border-gray-300 rounded-lg shadow-lg overflow-hidden dark:bg-gray-900 dark:border-gray-600"
-                                    x-transition
-                                  >
-                                    <!-- Search Input -->
-                                    <div class="p-2">
-                                      <input
-                                        type="text"
-                                        class="w-full px-3 py-2 form-input !bg-transparent"
-                                        placeholder="Search..."
-                                        x-model="search"
-                                      />
-                                    </div>
-
-                                    <ul
-                                      class="max-h-40 overflow-y-auto scrollbar-none"
-                                    >
-                                      <template
-                                        x-for="option in options.filter(o => o.toLowerCase().includes(search.toLowerCase()))"
-                                        :key="option"
-                                      >
-                                        <li
-                                          @click="selected = option; open = false; search = ''"
-                                          class="px-4 py-2 m-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 cursor-pointer text-gray-700 dark:text-gray-300"
-                                          x-text="option"
-                                        ></li>
-                                      </template>
-
-                                      <!-- No Results Message -->
-                                      <li
-                                        x-show="options.filter(o => o.toLowerCase().includes(search.toLowerCase())).length === 0"
-                                        class="px-4 py-2 text-gray-500 dark:text-gray-400"
-                                      >
-                                        No results found
-                                      </li>
-                                    </ul>
-                                  </div>
+                                    <option value="">Please select</option>
+                                    <option value="John Mayer">
+                                      John Mayer
+                                    </option>
+                                    <option value="Stevie Ray Vaughn">
+                                      Stevie Ray Vaughn
+                                    </option>
+                                    <option value="Jimi Hendrix">
+                                      Jimi Hendrix
+                                    </option>
+                                    <option value="B.B King">B.B King</option>
+                                    <option value="Albert King">
+                                      Albert King
+                                    </option>
+                                    <option value="Buddy Guy">Buddy Guy</option>
+                                    <option value="Eric Clapton">
+                                      Eric Clapton
+                                    </option>
+                                  </select>
                                 </div>
 
                                 <!-- Fee -->
                                 <div>
                                   <label
                                     class="block text-sm font-medium mb-1 text-gray-900 dark:text-white"
-                                    for="fee "
+                                    for="fee"
                                     >Fee</label
                                   >
                                   <div class="relative">
                                     <input
-                                      id="prefix"
+                                      id="fee"
                                       class="border border-gray-300 dark:border-gray-600 form-input w-full pl-6 py-3 !bg-transparent"
                                       type="text"
                                     />
@@ -1818,12 +1723,13 @@
                                     </div>
                                   </div>
                                 </div>
+
                                 <!-- Pin -->
                                 <div>
                                   <div class="relative">
                                     <label
                                       class="block text-sm font-medium mb-1 text-gray-900 dark:text-white"
-                                      for="fee "
+                                      for="pin"
                                       >Enter Pin</label
                                     >
                                     <input
@@ -1835,13 +1741,11 @@
                                 </div>
 
                                 <div class="mt-1.5">
-                                  <!-- Start -->
                                   <button
                                     class="py-3 rounded-lg bg-primary px-5 text-gray-100 hover:bg-primary/70 dark:bg-primary dark:text-white"
                                   >
                                     Submit
                                   </button>
-                                  <!-- End -->
                                 </div>
                               </div>
                             </div>
@@ -2115,5 +2019,8 @@
     <script src="./js/vendors/owl.carousel.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/vendors/alpinejs.min.js" defer></script>
+
+    <!--  Choices.js js  -->
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
   </body>
 </html>

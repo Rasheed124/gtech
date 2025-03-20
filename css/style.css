@@ -105,3 +105,82 @@ body #singleP-search2 input:focus {
   overflow: hidden;
   height: 100vh;
 }
+
+
+
+
+
+
+
+/* CHOICES JS INPUT */
+
+body .choices .choices__inner , body .choices .choices__list--dropdown.is-active {
+  border-radius: 0.5rem;
+}
+
+
+/* Light Mode */
+
+.light .choices__inner {
+  background-color: transparent;
+  color: #F3F4F6;
+}
+
+.light .choices .choices__list--dropdown {
+  background-color: #F3F4F6;
+}
+
+.light .choices .choices__inner  , .light .choices .choices__list--dropdown.is-active{
+  border-color: #BFC4CD;
+  }
+
+/* Dark Mode */
+.dark .choices .choices__inner {
+  background-color: transparent;
+  color: #fff;
+}
+
+.dark .choices .choices__list--dropdown, .dark  .choices .choices__list--dropdown input.choices__input{
+  background-color: #111827;
+  color: #fff;
+}
+
+.dark .choices .choices__inner  , .dark .choices .choices__list--dropdown.is-active{
+  border-color: #4B5563;
+  }
+
+
+
+
+/*============================= Change hover background */
+/* Default background for items */
+.choices__list--dropdown .choices__item--selectable {
+  background-color: white; /* Light mode default */
+  color: black;
+}
+.choices .choices__list--dropdown .choices__item--selectable:hover {
+  background-color: #f3f4f6; /* Tailwind gray-200 */
+  color: black;
+}
+
+/* Dark Mode Support */
+.dark .choices .choices__list--dropdown .choices__item--selectable {
+  background-color: #111827; /* Tailwind gray-800 */
+  color: white;
+}
+
+.dark .choices .choices__list--dropdown .choices__item--selectable:hover {
+  background-color: #fff; /* Tailwind gray-700 */
+  color: black;
+}
+
+/*============================================== Remove Scrollbar */
+.choices__list{
+  overflow-y: auto;
+  scrollbar-width: none; /* Firefox */
+}
+
+.choices__list::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
