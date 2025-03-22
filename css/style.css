@@ -130,7 +130,7 @@ body #singleP-search2 input:focus {
   background-color: transparent  !important;
   border-radius: 8px !important;
   border: 1px solid #d1d5db !important;
-  padding: 0px 12px !important;
+  padding: 10px 12px !important;
   cursor: pointer !important;
   transition: all 0.2s ease-in-out;
   display: flex !important;
