@@ -31,8 +31,27 @@
       }
 
       document.addEventListener("DOMContentLoaded", function () {
-        new Choices("#selectDataPlan", { searchEnabled: false });
-        new Choices("#selectSearch", { searchEnabled: true });
+        const searchableSelect = document.getElementById("selectSearch");
+        const standardSelect = document.getElementById("selectStandard");
+
+        new Choices(searchableSelect, {
+          removeItemButton: false,
+          searchEnabled: true,
+          searchPlaceholderValue: "Search...",
+          itemSelectText: "",
+          shouldSort: false,
+          placeholder: true,
+          placeholderValue: "Please select",
+        });
+
+        new Choices(standardSelect, {
+          removeItemButton: false,
+          searchEnabled: false, // No search for standard select
+          itemSelectText: "",
+          shouldSort: false,
+          placeholder: true,
+          placeholderValue: "Please select",
+        });
       });
     </script>
     <title>User Dashboard - Home</title>
@@ -1518,12 +1537,6 @@
                                       class="h-16"
                                       alt=""
                                     />
-                                    <!-- Badge with checkmark -->
-                                    <!-- <span
-                                     class="absolute top-0 right-0 bg-red-500 rounded-b-md rounded-l-md text-white p-0.5 shadow-md"
-                                   >
-                                     <i class="fas fa-solid fa-check text-sm"></i>
-                                   </span> -->
                                   </div>
                                   <div
                                     class="relative min-h-16 rounded-lg p-2 flex justify-center items-center"
@@ -1634,50 +1647,45 @@
                                   />
                                 </div>
 
-                                <!-- Select Data Plan -->
+                                <!--  Select Plan -->
                                 <div class="relative w-full">
                                   <label
-                                    for="selectDataPlan"
+                                    for="selectStandard"
                                     class="block text-sm font-medium text-gray-900 dark:text-white"
                                   >
-                                    Select Data Plan
+                                    Select Data Plan (Standard)
                                   </label>
                                   <select
-                                    id="selectDataPlan"
-                                    class="choices w-full border border-gray-300 dark:border-gray-600 py-3"
+                                    id="selectStandard"
+                                    class="choices w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 px-2 py-3 cursor-pointer text-gray-700 dark:text-gray-300"
                                   >
                                     <option value="">Please select</option>
-                                    <option value="John Mayer">
-                                      John Mayer
+                                    <option value="Small Plan">
+                                      Small Plan
                                     </option>
-                                    <option value="Stevie Ray Vaughn">
-                                      Stevie Ray Vaughn
+                                    <option value="Medium Plan">
+                                      Medium Plan
                                     </option>
-                                    <option value="Jimi Hendrix">
-                                      Jimi Hendrix
+                                    <option value="Large Plan">
+                                      Large Plan
                                     </option>
-                                    <option value="B.B King">B.B King</option>
-                                    <option value="Albert King">
-                                      Albert King
-                                    </option>
-                                    <option value="Buddy Guy">Buddy Guy</option>
-                                    <option value="Eric Clapton">
-                                      Eric Clapton
+                                    <option value="Unlimited Plan">
+                                      Unlimited Plan
                                     </option>
                                   </select>
                                 </div>
 
-                                <!-- Select Search -->
+                                <!-- Search Plan  Select -->
                                 <div class="relative w-full">
                                   <label
                                     for="selectSearch"
                                     class="block text-sm font-medium text-gray-900 dark:text-white"
                                   >
-                                    Select Data Plan
+                                    Search Data Plan
                                   </label>
                                   <select
                                     id="selectSearch"
-                                    class="choices w-full border border-gray-300 dark:border-gray-600 py-3"
+                                    class="choices w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 px-2 py-3 cursor-pointer text-gray-700 dark:text-gray-300"
                                   >
                                     <option value="">Please select</option>
                                     <option value="John Mayer">

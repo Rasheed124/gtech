@@ -5169,6 +5169,8 @@ span.flatpickr-weekday:is(.dark *){
   display: none;
 }
 
+/* @import "choices.js/public/assets/styles/choices.css"; */
+
 /* ============================ USER DAHSBOARD ============================== */
 
 body#user-dashboard .dashboard-col-1.scrollbar::-webkit-scrollbar{
@@ -5269,82 +5271,118 @@ body #singleP-search2 input:focus {
 
 /* CHOICES JS INPUT */
 
-body .choices .choices__inner , body .choices .choices__list--dropdown.is-active {
-  border-radius: 0.5rem;
+/* Remove default Choices.js styles */
+
+.choices {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
 }
 
-/* Light Mode */
+/* Dropdown field */
 
-.light .choices__inner {
-  background-color: transparent;
-  color: #F3F4F6;
+.choices__inner {
+  background-color: transparent  !important;
+  border-radius: 8px !important;
+  border: 1px solid #d1d5db !important;
+  padding: 0px 12px !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease-in-out;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
 }
 
-.light .choices .choices__list--dropdown {
-  background-color: #F3F4F6;
+.dark .choices__inner {
+  background-color: #111827 !important;
+  border: 1px solid #374151 !important;
 }
 
-.light .choices .choices__inner  , .light .choices .choices__list--dropdown.is-active{
-  border-color: #BFC4CD;
+/* Dropdown menu with max-height and transition */
+
+.choices__list--dropdown {
+  background-color: white !important;
+  border-radius: 8px !important;
+  border: 1px solid #d1d5db !important;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1) !important;
+  opacity: 0;
+  transform: scale(0.95);
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out, max-height 0.3s ease-out;
 }
 
-/* Dark Mode */
-
-.dark .choices .choices__inner {
-  background-color: transparent;
-  color: #fff;
+.dark .choices__list--dropdown {
+  background-color: #111827 !important;
+  border: 1px solid #374151 !important;
 }
 
-.dark .choices .choices__list--dropdown, .dark  .choices .choices__list--dropdown input.choices__input{
-  background-color: #111827;
-  color: #fff;
+/* Show dropdown smoothly */
+
+.choices__list--dropdown.is-active {
+  opacity: 1;
+  transform: scale(1);
+  max-height: 250px;
+  /* Adjust as needed */
+  overflow-y: auto;
 }
 
-.dark .choices .choices__inner  , .dark .choices .choices__list--dropdown.is-active{
-  border-color: #4B5563;
+body .choices  input {
+  border: none !important;
 }
 
-/*============================= Change hover background */
+/* Sticky search input */
 
-/* Default background for items */
+.choices__input {
+  background-color: white !important;
+  padding: 10px !important;
+  width: 100% !important;
+  position: sticky;
+  border: none !important;
+  top: 0;
+  z-index: 10;
+}
+
+.dark .choices .choices__input {
+  background-color: #1f2937 !important;
+  border: none !important;
+}
+
+/* Dropdown items */
 
 .choices__list--dropdown .choices__item--selectable {
-  background-color: white;
-  /* Light mode default */
-  color: black;
+  padding: 10px 16px !important;
+  border-radius: 6px !important;
+  color: #374151 !important;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
-.choices .choices__list--dropdown .choices__item--selectable:hover {
-  background-color: #f3f4f6;
-  /* Tailwind gray-200 */
-  color: black;
+.dark .choices__list--dropdown .choices__item--selectable{
+  color: #BFC4CD !important;
 }
 
-/* Dark Mode Support */
+/* Hover effect */
 
-.dark .choices .choices__list--dropdown .choices__item--selectable {
-  background-color: #111827;
-  /* Tailwind gray-800 */
-  color: white;
+.choices__list--dropdown .choices__item--selectable:hover {
+  background-color: #f3f4f6 !important;
+  color: black !important;
 }
 
-.dark .choices .choices__list--dropdown .choices__item--selectable:hover {
-  background-color: #fff;
-  /* Tailwind gray-700 */
-  color: black;
+.dark .choices__list--dropdown .choices__item--selectable:hover {
+  background-color: #374151 !important;
+  color: white !important;
 }
 
-/*============================================== Remove Scrollbar */
+/* Hide scrollbar */
 
-.choices__list{
-  overflow-y: auto;
-  scrollbar-width: none;
-  /* Firefox */
+.choices__list {
+  overflow-y: auto !important;
+  scrollbar-width: none !important;
 }
 
 .choices__list::-webkit-scrollbar {
-  display: none;
-  /* Chrome, Safari */
+  display: none !important;
 }
 
 .before\:absolute::before{
@@ -7743,4 +7781,3 @@ body .choices .choices__inner , body .choices .choices__list--dropdown.is-active
 .\[\&_\*\]\:\!transition-none *{
   transition-property: none !important;
 }
-

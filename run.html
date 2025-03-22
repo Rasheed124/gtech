@@ -1,0 +1,173 @@
+<div class="relative w-full">
+    <label
+      for="selectDataPlan"
+      class="block text-sm font-medium text-gray-900 dark:text-white"
+    >
+      Select Data Plan
+    </label>
+    <select
+      id="selectDataPlan"
+      class="choices w-full border border-gray-300 dark:border-gray-600 py-3"
+    >
+      <option value="">Please select</option>
+      <option value="John Mayer">
+        John Mayer
+      </option>
+      <option value="Stevie Ray Vaughn">
+        Stevie Ray Vaughn
+      </option>
+      <option value="Jimi Hendrix">
+        Jimi Hendrix
+      </option>
+      <option value="B.B King">B.B King</option>
+      <option value="Albert King">
+        Albert King
+      </option>
+      <option value="Buddy Guy">Buddy Guy</option>
+      <option value="Eric Clapton">
+        Eric Clapton
+      </option>
+    </select>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="relative w-full">
+    <label
+      for="selectSearch"
+      class="block text-sm font-medium text-gray-900 dark:text-white"
+    >
+      Select Data Plan
+    </label>
+    <select
+      id="selectSearch"
+      class="choices w-full border border-gray-300 dark:border-gray-600 py-3"
+    >
+      <option value="">Please select</option>
+      <option value="John Mayer">
+        John Mayer
+      </option>
+      <option value="Stevie Ray Vaughn">
+        Stevie Ray Vaughn
+      </option>
+      <option value="Jimi Hendrix">
+        Jimi Hendrix
+      </option>
+      <option value="B.B King">B.B King</option>
+      <option value="Albert King">
+        Albert King
+      </option>
+      <option value="Buddy Guy">Buddy Guy</option>
+      <option value="Eric Clapton">
+        Eric Clapton
+      </option>
+    </select>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+body .choices .choices__inner , body .choices .choices__list--dropdown.is-active {
+    border-radius: 0.5rem;
+  }
+  
+  
+  /* Light Mode */
+  
+  .light .choices__inner {
+    background-color: transparent;
+    color: #F3F4F6;
+  }
+  
+  .light .choices .choices__list--dropdown {
+    background-color: #F3F4F6;
+  }
+  
+  .light .choices .choices__inner  , .light .choices .choices__list--dropdown.is-active{
+    border-color: #BFC4CD;
+    }
+  
+  /* Dark Mode */
+  .dark .choices .choices__inner {
+    background-color: transparent;
+    color: #fff;
+  }
+  
+  .dark .choices .choices__list--dropdown, .dark  .choices .choices__list--dropdown input.choices__input{
+    background-color: #111827;
+    color: #fff;
+  }
+  
+  .dark .choices .choices__inner  , .dark .choices .choices__list--dropdown.is-active{
+    border-color: #4B5563;
+    }
+  
+  
+  
+  
+  /*============================= Change hover background */
+  /* Default background for items */
+  .choices__list--dropdown .choices__item--selectable {
+    background-color: white; /* Light mode default */
+    color: black;
+  }
+  .choices .choices__list--dropdown .choices__item--selectable:hover {
+    background-color: #f3f4f6; /* Tailwind gray-200 */
+    color: black;
+  }
+  
+  /* Dark Mode Support */
+  .dark .choices .choices__list--dropdown .choices__item--selectable {
+    background-color: #111827; /* Tailwind gray-800 */
+    color: white;
+  }
+  
+  .dark .choices .choices__list--dropdown .choices__item--selectable:hover {
+    background-color: #fff; /* Tailwind gray-700 */
+    color: black;
+  }
+  
+  /*============================================== Remove Scrollbar */
+  .choices__list{
+    overflow-y: auto;
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  .choices__list::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+  }
+  
+  

@@ -1,3 +1,9 @@
+
+
+
+
+
+
 // Light switcher
 const lightSwitches = document.querySelectorAll(".light-switch");
 if (lightSwitches.length > 0) {
@@ -37,10 +43,6 @@ if (lightSwitches.length > 0) {
   });
 }
 
-
-
-
-
 // ==================================USERDASHBOARD=================
 // Select buttons and menu
 const openMenuButton = document.getElementById("openMenuButton");
@@ -79,13 +81,6 @@ document.addEventListener("click", (e) => {
   }
 });
 
-
-
-
-
-
-
-
 // Announcement Ad Banner
 
 $(document).ready(function () {
@@ -97,12 +92,11 @@ $(document).ready(function () {
     autoplayTimeout: 6000,
     responsive: {
       0: {
-        items: 1
-      }
-    }
+        items: 1,
+      },
+    },
   });
 });
-
 
 // PAYMENT INPUT PAGE
 
@@ -172,8 +166,27 @@ document.getElementById("payment-form").addEventListener("submit", (e) => {
 
 
 
+// Initialize Alpine.js for the select component
+document.addEventListener("DOMContentLoaded", () => {
+  const selectBox = document.querySelector("#selectDataPlan .select-box");
+  const dropdown = document.querySelector("#selectDataPlan .dropdown");
+  const selectedOption = document.querySelector("#selectDataPlan .selected-option");
+  const options = document.querySelectorAll("#selectDataPlan .option");
 
+  selectBox.addEventListener("click", () => {
+      dropdown.classList.toggle("hidden");
+  });
 
+  options.forEach(option => {
+      option.addEventListener("click", () => {
+          selectedOption.textContent = option.dataset.value;
+          dropdown.classList.add("hidden");
+      });
+  });
 
-
-
+  document.addEventListener("click", (event) => {
+      if (!selectBox.contains(event.target) && !dropdown.contains(event.target)) {
+          dropdown.classList.add("hidden");
+      }
+  });
+});
