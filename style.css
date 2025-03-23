@@ -5328,8 +5328,17 @@ body #singleP-search2 input:focus {
   overflow-y: auto;
 }
 
-body .choices  input {
-  border: none !important;
+.choices__input:focus,
+.choices__input:active {
+  outline: none !important;
+  border-bottom: 1px solid #d1d5db !important;
+  /* Reapply normal border */
+  box-shadow: none !important;
+}
+
+.dark .choices__input:focus,
+.dark .choices__input:active {
+  border-bottom: 1px solid #374151 !important;
 }
 
 /* Sticky search input */
@@ -5340,7 +5349,12 @@ body .choices  input {
   width: 100% !important;
   position: sticky;
   border: none !important;
-  top: 0;
+  width: calc(100% - 20px) !important;
+  /* Adjust width to fit inside margin */
+  margin: 10px !important;
+  /* Add margin */
+  border-radius: 8px !important;
+  top: 5px;
   z-index: 10;
 }
 
@@ -5355,23 +5369,23 @@ body .choices  input {
   padding: 10px 16px !important;
   border-radius: 6px !important;
   color: #374151 !important;
+  margin: 6px !important;
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
 .dark .choices__list--dropdown .choices__item--selectable{
-  color: #BFC4CD !important;
+  color: #fff !important;
+}
+
+.dark .choices__list--dropdown .choices__item--selectable.is-highlighted{
+  background-color: #f3f4f6  !important;
+  color: #111827 !important;
 }
 
 /* Hover effect */
 
-.choices__list--dropdown .choices__item--selectable:hover {
-  background-color: #f3f4f6 !important;
-  color: black !important;
-}
-
 .dark .choices__list--dropdown .choices__item--selectable:hover {
-  background-color: #374151 !important;
-  color: white !important;
+  color: #000 !important;
 }
 
 /* Hide scrollbar */
