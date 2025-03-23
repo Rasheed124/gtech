@@ -208,7 +208,7 @@ body #singleP-search2 input:focus {
   padding: 10px 16px !important;
   border-radius: 6px !important;
   color: #374151 !important;
-  margin: 6px !important;
+  margin: 6px 10px !important;
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
