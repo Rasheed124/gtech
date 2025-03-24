@@ -31,6 +31,26 @@
       }
 
       document.addEventListener("DOMContentLoaded", function () {
+        const choicesDropdown = document.querySelector(
+          ".choices__list--dropdown"
+        );
+        let lastScrollTop = 0;
+
+        // Store scroll position before closing
+        document.addEventListener("click", function (e) {
+          if (!choicesDropdown.contains(e.target)) {
+            lastScrollTop = choicesDropdown.scrollTop;
+          }
+        });
+
+        // Restore scroll position when dropdown opens
+        document
+          .querySelector(".choices")
+          .addEventListener("click", function () {
+            setTimeout(() => {
+              choicesDropdown.scrollTop = lastScrollTop;
+            }, 10);
+          });
         const searchableSelect = document.getElementById("selectSearch");
         const standardSelect = document.getElementById("selectStandard");
 
