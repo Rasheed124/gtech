@@ -4293,6 +4293,11 @@ span.flatpickr-weekday:is(.dark *){
   padding-bottom: 2rem;
 }
 
+.py-3\.5{
+  padding-top: 0.875rem;
+  padding-bottom: 0.875rem;
+}
+
 .pb-1{
   padding-bottom: 0.25rem;
 }
