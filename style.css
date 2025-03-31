@@ -4577,6 +4577,14 @@ span.flatpickr-weekday:is(.dark *){
   line-height: 1.5;
 }
 
+.text-\[35px\]{
+  font-size: 35px;
+}
+
+.text-\[2rem\]{
+  font-size: 2rem;
+}
+
 .font-\[700\]{
   font-weight: 700;
 }
@@ -4905,6 +4913,14 @@ span.flatpickr-weekday:is(.dark *){
 .text-yellow-700{
   --tw-text-opacity: 1;
   color: rgb(188 144 33 / var(--tw-text-opacity));
+}
+
+.text-\[\]{
+  color: ;
+}
+
+.text-\[2\]{
+  color: 2;
 }
 
 .text-opacity-100{
