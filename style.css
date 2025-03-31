@@ -2705,6 +2705,10 @@ span.flatpickr-weekday:is(.dark *){
   width: 50px;
 }
 
+.w-\[60px\]{
+  width: 60px;
+}
+
 .w-\[90\%\]{
   width: 90%;
 }
@@ -3850,6 +3854,11 @@ span.flatpickr-weekday:is(.dark *){
   background-color: rgb(226 232 240 / var(--tw-bg-opacity));
 }
 
+.bg-slate-500{
+  --tw-bg-opacity: 1;
+  background-color: rgb(100 116 139 / var(--tw-bg-opacity));
+}
+
 .bg-transparent{
   background-color: transparent;
 }
@@ -3911,6 +3920,14 @@ span.flatpickr-weekday:is(.dark *){
 .bg-yellow-800{
   --tw-bg-opacity: 1;
   background-color: rgb(129 99 22 / var(--tw-bg-opacity));
+}
+
+.bg-slate-500\/45{
+  background-color: rgb(100 116 139 / 0.45);
+}
+
+.bg-slate-500\/20{
+  background-color: rgb(100 116 139 / 0.2);
 }
 
 .bg-opacity-100{
@@ -4339,6 +4356,10 @@ span.flatpickr-weekday:is(.dark *){
   padding-bottom: 1.5rem;
 }
 
+.pb-7{
+  padding-bottom: 1.75rem;
+}
+
 .pb-8{
   padding-bottom: 2rem;
 }
@@ -4473,10 +4494,6 @@ span.flatpickr-weekday:is(.dark *){
 
 .pt-8{
   padding-top: 2rem;
-}
-
-.pb-7{
-  padding-bottom: 1.75rem;
 }
 
 .text-left{
