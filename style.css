@@ -1760,6 +1760,10 @@ span.flatpickr-weekday:is(.dark *){
   bottom: 1rem;
 }
 
+.bottom-\[20px\]{
+  bottom: 20px;
+}
+
 .bottom-full{
   bottom: 100%;
 }
@@ -1786,6 +1790,10 @@ span.flatpickr-weekday:is(.dark *){
 
 .left-\[0px\]{
   left: 0px;
+}
+
+.left-\[80px\]{
+  left: 80px;
 }
 
 .left-auto{
@@ -2545,6 +2553,10 @@ span.flatpickr-weekday:is(.dark *){
   height: 178px;
 }
 
+.h-\[25px\]{
+  height: 25px;
+}
+
 .h-\[40px\]{
   height: 40px;
 }
@@ -2713,6 +2725,10 @@ span.flatpickr-weekday:is(.dark *){
   width: 15.5rem;
 }
 
+.w-\[25px\]{
+  width: 25px;
+}
+
 .w-\[40px\]{
   width: 40px;
 }
@@ -2739,14 +2755,6 @@ span.flatpickr-weekday:is(.dark *){
 
 .w-px{
   width: 1px;
-}
-
-.w-\[\]{
-  width: ;
-}
-
-.w-\[90\]{
-  width: 90;
 }
 
 .min-w-0{
@@ -2832,6 +2840,10 @@ span.flatpickr-weekday:is(.dark *){
 
 .max-w-\[100px\]{
   max-width: 100px;
+}
+
+.max-w-\[150px\]{
+  max-width: 150px;
 }
 
 .max-w-\[200px\]{
@@ -3365,6 +3377,10 @@ span.flatpickr-weekday:is(.dark *){
   overflow: hidden;
 }
 
+.overflow-scroll{
+  overflow: scroll;
+}
+
 .overflow-x-auto{
   overflow-x: auto;
 }
@@ -3571,6 +3587,11 @@ span.flatpickr-weekday:is(.dark *){
   border-color: rgb(156 163 175 / var(--tw-border-opacity));
 }
 
+.border-gray-500{
+  --tw-border-opacity: 1;
+  border-color: rgb(107 114 128 / var(--tw-border-opacity));
+}
+
 .border-gray-700\/60{
   border-color: rgb(55 65 81 / 0.6);
 }
@@ -3598,11 +3619,6 @@ span.flatpickr-weekday:is(.dark *){
 .border-red-300{
   --tw-border-opacity: 1;
   border-color: rgb(255 148 148 / var(--tw-border-opacity));
-}
-
-.border-red-950{
-  --tw-border-opacity: 1;
-  border-color: rgb(96 15 15 / var(--tw-border-opacity));
 }
 
 .border-transparent{
@@ -6868,28 +6884,16 @@ body #singleP-search2 input:focus {
     width: 18rem;
   }
 
+  .md\:w-\[30\%\]{
+    width: 30%;
+  }
+
   .md\:w-auto{
     width: auto;
   }
 
   .md\:w-full{
     width: 100%;
-  }
-
-  .md\:w-\[90\%\]{
-    width: 90%;
-  }
-
-  .md\:w-\[50\%\]{
-    width: 50%;
-  }
-
-  .md\:w-\[40\%\]{
-    width: 40%;
-  }
-
-  .md\:w-\[30\%\]{
-    width: 30%;
   }
 
   .md\:min-w-28{
@@ -6999,10 +7003,6 @@ body #singleP-search2 input:focus {
 
   .md\:self-end{
     align-self: flex-end;
-  }
-
-  .md\:self-center{
-    align-self: center;
   }
 
   .md\:overflow-auto{
@@ -7443,6 +7443,10 @@ body #singleP-search2 input:focus {
     padding-bottom: 2.5rem;
   }
 
+  .lg\:pb-5{
+    padding-bottom: 1.25rem;
+  }
+
   .lg\:pl-5{
     padding-left: 1.25rem;
   }
@@ -7699,10 +7703,6 @@ body #singleP-search2 input:focus {
     justify-content: space-between;
   }
 
-  .xl\:gap-0{
-    gap: 0px;
-  }
-
   .xl\:gap-3{
     gap: 0.75rem;
   }
@@ -7737,16 +7737,6 @@ body #singleP-search2 input:focus {
   .xl\:px-4{
     padding-left: 1rem;
     padding-right: 1rem;
-  }
-
-  .xl\:px-5{
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-  }
-
-  .xl\:py-0{
-    padding-top: 0px;
-    padding-bottom: 0px;
   }
 
   .xl\:pb-0{

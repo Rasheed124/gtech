@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="scrollbar-none overflow-scroll" lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
     <title>Login - Pin</title>
   </head>
-  <body>
+  <body class="">
     <div>
       <main
-        class="min-h-screen bg-cover bg-black/70 bg-blend-overlay bg-no-repeat bg-[40%] lg:bg-top w-full  bg-[url('./images/auth-bg.png')] "
+        class="min-h-screen bg-cover bg-black/70 bg-blend-overlay bg-no-repeat bg-[40%] lg:bg-top w-full bg-[url('./images/auth-bg.png')]"
       >
-        <section class="w-full px-5  mx-auto ">
+        <section class="w-full px-5 lg:pb-5 container mx-auto">
           <div
-            class="flex flex-row justify-center  min-h-screen  w-full pb-5 md:justify-between"
+            class="flex relative flex-row justify-center min-h-screen w-full pb-5 md:justify-between"
           >
             <!-- Right Sided Form -->
             <div
-              class="md:flex-col gap-2 hidden md:flex mt-auto max-w-xs lg:max-w-sm text-white "
+              class="md:flex-col gap-2 fixed bottom-[20px] left-[80px] hidden md:flex mt-auto max-w-xs lg:max-w-sm text-white"
             >
               <h2 class="text-lg md:text-2xl lg:text-3xl font-bold">
                 Trust and security are at the heart of BillPoint
@@ -29,9 +29,11 @@
             </div>
 
             <!-- Left Sided Form -->
-            <div class="self-end w-full md:ml-auto  md:self-end md:w-[30%] ">
+            <div
+              class="self-end w-full md:ml-auto md:self-end md:w-[30%] overflow-y-auto scrollbar-none max-h-screen"
+            >
               <div
-                class="md:flex bg-white flex-col rounded-2xl w-full  p-4 md:p-8 "
+                class="md:flex bg-white flex-col rounded-2xl w-full p-4 md:p-8"
               >
                 <div
                   class="gap-4 flex flex-col justify-center items-center text-center"
@@ -49,56 +51,56 @@
                   </p>
                 </div>
 
-                <form class="p-4 sm:p-6 lg:px-8" id="pin-form">
+                <form class="p-4 sm:p-6 lg:px-8 " id="pin-form">
                   <!-- PIN Input -->
 
                   <div
-                    class="grid grid-cols-4 gap-2 max-w-[250px] mx-auto"
+                    class="grid grid-cols-4 gap-2 max-w-[150px] mx-auto"
                     id="pin-inputs"
                   >
                     <div
-                      class="relative w-[40px] h-[40px] bg-gray-200 flex justify-center items-center rounded-full"
+                      class="relative w-[25px] h-[25px] border-2 border-gray-500 flex  justify-center items-center rounded-full"
                     >
                       <input
                         type="password"
                         maxlength="1"
-                        class="w-full h-full text-center caret-transparent p-0 relative top-[-10px] left-[0px] bg-transparent border-none font-bold text-7xl rounded-full otp-input"
+                        class="w-auto h-auto text-center caret-transparent p-0 relative top-[-10px] left-[0px] bg-transparent border-none font-bold text-7xl rounded-full otp-input"
                         data-index="1"
                         required
                         readonly
                       />
                     </div>
                     <div
-                      class="relative w-[40px] h-[40px] bg-gray-200 flex justify-center items-center rounded-full"
+                      class="relative w-[25px] h-[25px] border-2 border-gray-500 flex justify-center items-center rounded-full"
                     >
                       <input
                         type="password"
                         maxlength="1"
-                        class="w-full h-full text-center caret-transparent p-0 relative top-[-10px] left-[0px] bg-transparent border-none font-bold text-7xl rounded-full otp-input"
+                        class="w-auto h-auto text-center caret-transparent p-0 relative top-[-10px] left-[0px] bg-transparent border-none font-bold text-7xl rounded-full otp-input"
                         data-index="1"
                         required
                         readonly
                       />
                     </div>
                     <div
-                      class="relative w-[40px] h-[40px] bg-gray-200 flex justify-center items-center rounded-full"
+                      class="relative w-[25px] h-[25px] border-2 border-gray-500 flex justify-center items-center rounded-full"
                     >
                       <input
                         type="password"
                         maxlength="1"
-                        class="w-full h-full text-center caret-transparent p-0 relative top-[-10px] left-[0px] bg-transparent border-none font-bold text-7xl rounded-full otp-input"
+                        class="w-auto h-auto text-center caret-transparent p-0 relative top-[-10px] left-[0px] bg-transparent border-none font-bold text-7xl rounded-full otp-input"
                         data-index="1"
                         required
                         readonly
                       />
                     </div>
                     <div
-                      class="relative w-[40px] h-[40px] bg-gray-200 flex justify-center items-center rounded-full"
+                      class="relative w-[25px] h-[25px] border-2 border-gray-500 flex justify-center items-center rounded-full"
                     >
                       <input
                         type="password"
                         maxlength="1"
-                        class="w-full h-full text-center caret-transparent p-0 relative top-[-10px] left-[0px] bg-transparent border-none font-bold text-7xl rounded-full otp-input"
+                        class="w-auto h-auto text-center caret-transparent p-0 relative top-[-10px] left-[0px] bg-transparent border-none font-bold text-7xl rounded-full otp-input"
                         data-index="1"
                         required
                         readonly
@@ -199,8 +201,6 @@
                   </div>
                 </form>
               </div>
-           
-         
             </div>
           </div>
         </section>
