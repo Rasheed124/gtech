@@ -2741,6 +2741,14 @@ span.flatpickr-weekday:is(.dark *){
   width: 1px;
 }
 
+.w-\[\]{
+  width: ;
+}
+
+.w-\[90\]{
+  width: 90;
+}
+
 .min-w-0{
   min-width: 0px;
 }
@@ -3592,9 +3600,9 @@ span.flatpickr-weekday:is(.dark *){
   border-color: rgb(255 148 148 / var(--tw-border-opacity));
 }
 
-.border-red-900{
+.border-red-950{
   --tw-border-opacity: 1;
-  border-color: rgb(148 24 24 / var(--tw-border-opacity));
+  border-color: rgb(96 15 15 / var(--tw-border-opacity));
 }
 
 .border-transparent{
@@ -6868,6 +6876,22 @@ body #singleP-search2 input:focus {
     width: 100%;
   }
 
+  .md\:w-\[90\%\]{
+    width: 90%;
+  }
+
+  .md\:w-\[50\%\]{
+    width: 50%;
+  }
+
+  .md\:w-\[40\%\]{
+    width: 40%;
+  }
+
+  .md\:w-\[30\%\]{
+    width: 30%;
+  }
+
   .md\:min-w-28{
     min-width: 7rem;
   }
@@ -6975,6 +6999,10 @@ body #singleP-search2 input:focus {
 
   .md\:self-end{
     align-self: flex-end;
+  }
+
+  .md\:self-center{
+    align-self: center;
   }
 
   .md\:overflow-auto{
@@ -7671,6 +7699,10 @@ body #singleP-search2 input:focus {
     justify-content: space-between;
   }
 
+  .xl\:gap-0{
+    gap: 0px;
+  }
+
   .xl\:gap-3{
     gap: 0.75rem;
   }
@@ -7710,6 +7742,11 @@ body #singleP-search2 input:focus {
   .xl\:px-5{
     padding-left: 1.25rem;
     padding-right: 1.25rem;
+  }
+
+  .xl\:py-0{
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
 
   .xl\:pb-0{
