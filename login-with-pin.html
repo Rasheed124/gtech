@@ -15,6 +15,8 @@
           <div
             class="flex relative flex-row justify-center min-h-screen w-full pb-5 md:justify-between"
           >
+
+
             <!-- Right Sided Form -->
             <div
               class="md:flex-col gap-2 fixed bottom-[20px] left-[80px] hidden md:flex mt-auto max-w-xs lg:max-w-sm text-white"
@@ -46,67 +48,94 @@
                   <h2 class="text-black font-[700] text-2xl leading-[1]">
                     Welcome back
                   </h2>
-                  <p class="text-[#757575] text-sm">
+                  <!-- <p class="text-[#757575] text-sm">
                     Sign in with your security PIN
-                  </p>
+                  </p> -->
+
+
+                  
                 </div>
 
-                <form class="p-4 sm:p-6 lg:px-8 " id="pin-form">
+                <form class="p-4 sm:p-6 lg:px-8" id="pin-form">
                   <!-- PIN Input -->
-
+                  <!-- 
                   <div
-                    class="grid grid-cols-4 gap-3 max-w-[180px] mx-auto"
+                    class="grid grid-cols-4 gap-2 max-w-[150px] mx-auto"
                     id="pin-inputs"
                   >
                     <div
-                      class="relative w-[40px] h-[40px] overflow-hidden    border-2 border-gray-300  rounded-full"
+                      class="relative w-[25px] h-[25px] border-2 border-gray-500 flex  justify-center items-center rounded-full"
                     >
                       <input
                         type="password"
                         maxlength="1"
-                        class="w-full h-full text-center caret-transparent p-0 absolute -top-2  bg-transparent border-none font-bold text-6xl rounded-full otp-input"
+                        class="w-auto h-auto text-center caret-transparent p-0 relative top-[-10px] left-[0px] bg-transparent border-none font-bold text-7xl rounded-full otp-input"
                         data-index="1"
-                        required  
+                        required
                         readonly
                       />
                     </div>
                     <div
-                      class="relative w-[40px] h-[40px] overflow-hidden    border-2 border-gray-300  rounded-full"
+                      class="relative w-[25px] h-[25px] border-2 border-gray-500 flex justify-center items-center rounded-full"
                     >
                       <input
                         type="password"
                         maxlength="1"
-                        class="w-full h-full text-center caret-transparent p-0 absolute -top-2  bg-transparent border-none font-bold text-6xl rounded-full otp-input"
+                        class="w-auto h-auto text-center caret-transparent p-0 relative top-[-10px] left-[0px] bg-transparent border-none font-bold text-7xl rounded-full otp-input"
                         data-index="1"
-                        required  
+                        required
                         readonly
                       />
                     </div>
                     <div
-                      class="relative w-[40px] h-[40px] overflow-hidden    border-2 border-gray-300  rounded-full"
+                      class="relative w-[25px] h-[25px] border-2 border-gray-500 flex justify-center items-center rounded-full"
                     >
                       <input
                         type="password"
                         maxlength="1"
-                        class="w-full h-full text-center caret-transparent p-0 absolute -top-2  bg-transparent border-none font-bold text-6xl rounded-full otp-input"
+                        class="w-auto h-auto text-center caret-transparent p-0 relative top-[-10px] left-[0px] bg-transparent border-none font-bold text-7xl rounded-full otp-input"
                         data-index="1"
-                        required  
+                        required
                         readonly
                       />
                     </div>
-                      <div
-                        class="relative w-[40px] h-[40px] overflow-hidden    border-2 border-gray-300  rounded-full"
-                      >
-                        <input
-                          type="password"
-                          maxlength="1"
-                          class="w-full h-full text-center caret-transparent p-0 absolute -top-2  bg-transparent border-none font-bold text-6xl rounded-full otp-input"
-                          data-index="1"
-                          required  
-                          readonly
-                        />
-                      </div>
-               
+                    <div
+                      class="relative w-[25px] h-[25px] border-2 border-gray-500 flex justify-center items-center rounded-full"
+                    >
+                      <input
+                        type="password"
+                        maxlength="1"
+                        class="w-auto h-auto text-center caret-transparent p-0 relative top-[-10px] left-[0px] bg-transparent border-none font-bold text-7xl rounded-full otp-input"
+                        data-index="1"
+                        required
+                        readonly
+                      />
+                    </div>
+                  </div> -->
+
+                  <div class="text-center">
+                    <div class="flex justify-center gap-4 mb-6" id="pin-inputs">
+                      <input
+                        type="password"
+                        maxlength="1"
+                        class="otp-input caret-transparent w-12 h-12 rounded-full text-center text-xl shadow focus:outline-none focus:ring-2 ring-blue-400"
+                      />
+                      <input
+                        type="password"
+                        maxlength="1"
+                        class="otp-input caret-transparent w-12 h-12 rounded-full text-center text-xl shadow focus:outline-none focus:ring-2 ring-blue-400"
+                      />
+                      <input
+                        type="password"
+                        maxlength="1"
+                        class="otp-input caret-transparent w-12 h-12 rounded-full text-center text-xl shadow focus:outline-none focus:ring-2 ring-blue-400"
+                      />
+                      <input
+                        type="password"
+                        maxlength="1"
+                        class="otp-input caret-transparent w-12 h-12 rounded-full text-center text-xl shadow focus:outline-none focus:ring-2 ring-blue-400"
+                      />
+                    </div>
                   </div>
 
                   <!-- Buttons for PIN Input -->
@@ -203,6 +232,8 @@
                 </form>
               </div>
             </div>
+
+
           </div>
         </section>
       </main>
