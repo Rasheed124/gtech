@@ -2557,10 +2557,6 @@ span.flatpickr-weekday:is(.dark *){
   height: 178px;
 }
 
-.h-\[35px\]{
-  height: 35px;
-}
-
 .h-\[40px\]{
   height: 40px;
 }
@@ -2727,10 +2723,6 @@ span.flatpickr-weekday:is(.dark *){
 
 .w-\[15\.5rem\]{
   width: 15.5rem;
-}
-
-.w-\[35px\]{
-  width: 35px;
 }
 
 .w-\[40px\]{
@@ -5049,6 +5041,11 @@ span.flatpickr-weekday:is(.dark *){
   outline-offset: 2px;
 }
 
+.ring-blue-400{
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(96 165 250 / var(--tw-ring-opacity));
+}
+
 .blur{
   --tw-blur: blur(8px);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
@@ -5868,6 +5865,12 @@ body #singleP-search2 input:focus {
 .focus\:ring-1:focus{
   --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
+.focus\:ring-2:focus{
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }
 
