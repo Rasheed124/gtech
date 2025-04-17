@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PIN Input</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex items-center justify-center h-screen bg-gray-100">
+
+  <div class="text-center">
+    <div class="flex justify-center gap-4 mb-6">
+      <input type="password" maxlength="1" class="pin-input w-12 h-12 rounded-full text-center text-xl shadow focus:outline-none focus:ring-2 ring-blue-400" />
+      <input type="password" maxlength="1" class="pin-input w-12 h-12 rounded-full text-center text-xl shadow focus:outline-none focus:ring-2 ring-blue-400" />
+      <input type="password" maxlength="1" class="pin-input w-12 h-12 rounded-full text-center text-xl shadow focus:outline-none focus:ring-2 ring-blue-400" />
+      <input type="password" maxlength="1" class="pin-input w-12 h-12 rounded-full text-center text-xl shadow focus:outline-none focus:ring-2 ring-blue-400" />
+    </div>
+    <p class="text-gray-700 text-lg">Use your PIN code to open the app</p>
+  </div>
+
+  <script>
+    const inputs = document.querySelectorAll('.pin-input');
+
+    inputs.forEach((input, index) => {
+      input.addEventListener('input', () => {
+        if (input.value.length === 1 && index < inputs.length - 1) {
+          inputs[index + 1].focus();
+        }
+      });
+
+      input.addEventListener('keydown', (e) => {
+        if (e.key === 'Backspace' && input.value === '' && index > 0) {
+          inputs[index - 1].focus();
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
