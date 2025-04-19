@@ -4521,6 +4521,10 @@ span.flatpickr-weekday:is(.dark *){
   font-size: 10px;
 }
 
+.text-\[18px\]{
+  font-size: 18px;
+}
+
 .text-base{
   font-size: 1rem;
   line-height: 1.5;
@@ -4547,6 +4551,14 @@ span.flatpickr-weekday:is(.dark *){
 .text-xs{
   font-size: 0.75rem;
   line-height: 1.5;
+}
+
+.text-\[20px\]{
+  font-size: 20px;
+}
+
+.text-\[19px\]{
+  font-size: 19px;
 }
 
 .font-\[700\]{
