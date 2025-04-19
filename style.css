@@ -4549,6 +4549,12 @@ span.flatpickr-weekday:is(.dark *){
   line-height: 1.5;
 }
 
+.text-5xl{
+  font-size: 3rem;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
 .font-\[700\]{
   font-weight: 700;
 }
