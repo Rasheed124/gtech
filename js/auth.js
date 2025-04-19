@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const otpForm = document.getElementById("login-pin-form");
 
   otpInputs.forEach((input, index) => {
-    input.type = "password";
+    input.type = "tel";
 
     // Restrict input to numbers only
     input.addEventListener("input", (e) => {
