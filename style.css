@@ -4506,6 +4506,12 @@ span.flatpickr-weekday:is(.dark *){
   letter-spacing: -0.02em;
 }
 
+.text-5xl{
+  font-size: 3rem;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
 .text-6xl{
   font-size: 3.75rem;
   line-height: 1.2;
@@ -4547,12 +4553,6 @@ span.flatpickr-weekday:is(.dark *){
 .text-xs{
   font-size: 0.75rem;
   line-height: 1.5;
-}
-
-.text-5xl{
-  font-size: 3rem;
-  line-height: 1.25;
-  letter-spacing: -0.02em;
 }
 
 .font-\[700\]{
