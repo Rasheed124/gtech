@@ -3068,16 +3068,16 @@ span.flatpickr-weekday:is(.dark *){
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+.grid-cols-6{
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
 .grid-cols-7{
   grid-template-columns: repeat(7, minmax(0, 1fr));
 }
 
 .grid-cols-8{
   grid-template-columns: repeat(8, minmax(0, 1fr));
-}
-
-.grid-cols-6{
-  grid-template-columns: repeat(6, minmax(0, 1fr));
 }
 
 .flex-row{
@@ -6849,20 +6849,16 @@ body #singleP-search2 input:focus {
     width: 30%;
   }
 
+  .md\:w-\[35\%\]{
+    width: 35%;
+  }
+
   .md\:w-auto{
     width: auto;
   }
 
   .md\:w-full{
     width: 100%;
-  }
-
-  .md\:w-\[40\%\]{
-    width: 40%;
-  }
-
-  .md\:w-\[35\%\]{
-    width: 35%;
   }
 
   .md\:min-w-28{
@@ -7672,10 +7668,6 @@ body #singleP-search2 input:focus {
     gap: 0.75rem;
   }
 
-  .xl\:gap-10{
-    gap: 2.5rem;
-  }
-
   .xl\:gap-6{
     gap: 1.5rem;
   }
@@ -7700,14 +7692,6 @@ body #singleP-search2 input:focus {
 
   .xl\:overflow-x-hidden{
     overflow-x: hidden;
-  }
-
-  .xl\:p-2{
-    padding: 0.5rem;
-  }
-
-  .xl\:p-3{
-    padding: 0.75rem;
   }
 
   .xl\:p-5{
