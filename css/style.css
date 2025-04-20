@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=fallback");
 
-
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 
@@ -12,19 +11,31 @@
 
 /* @import "choices.js/public/assets/styles/choices.css"; */
 
-
-
 /* ============================ USER DAHSBOARD ============================== */
 
+body#login .login.scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  background: transparent;
+  transition: background 0.5s;
+  border-radius: 30px;
+}
 
-body#user-dashboard .dashboard-col-1.scrollbar::-webkit-scrollbar{
+
+body#login .login.scrollbar:hover.scrollbar::-webkit-scrollbar-track {
+  background: #888;
+}
+
+
+body#user-dashboard .dashboard-col-1.scrollbar::-webkit-scrollbar {
   width: 5px;
   height: 5px;
   background: transparent;
   transition: background 0.5s;
 }
-body#user-dashboard .dashboard-col-1:hover.scrollbar::-webkit-scrollbar
-.scrollbar::-webkit-scrollbar {
+body#user-dashboard
+  .dashboard-col-1:hover.scrollbar::-webkit-scrollbar
+  .scrollbar::-webkit-scrollbar {
   width: 5px;
   height: 5px;
 }
@@ -48,12 +59,29 @@ body#user-dashboard .dashboard-col-1:hover.scrollbar::-webkit-scrollbar-thumb {
   background: #004437;
 }
 
+body#login .login.scrollbar:hover.scrollbar::-webkit-scrollbar-thumb{
+  background: #004437;
+  border-radius: 30px;
+
+}
+
+
 /* Carousel dots */
-body#user-dashboard #announcement-banner > div > div.owl-dots > button.owl-dot span {
+body#user-dashboard
+  #announcement-banner
+  > div
+  > div.owl-dots
+  > button.owl-dot
+  span {
   background: #c3c3c3;
   opacity: 0.7;
 }
-body#user-dashboard #announcement-banner > div > div.owl-dots > button.owl-dot.active span {
+body#user-dashboard
+  #announcement-banner
+  > div
+  > div.owl-dots
+  > button.owl-dot.active
+  span {
   background: #004437;
   padding: 0px 15px;
   opacity: 0.7;
@@ -64,10 +92,9 @@ body#user-dashboard #announcement-banner > div > div.owl-dots > button.owl-dot.a
 /* Custom Scrollbar Styles */
 body#user-dashboard #left-dashboard-area {
   scrollbar-width: thin;
-  scrollbar-color: #888  transparent;
+  scrollbar-color: #888 transparent;
   padding-bottom: 16px;
 }
-
 
 body#user-dashboard #left-dashboard-area::-webkit-scrollbar {
   height: 8px;
@@ -76,8 +103,6 @@ body#user-dashboard #left-dashboard-area::-webkit-scrollbar {
 body#user-dashboard #left-dashboard-area::-webkit-scrollbar-track {
   background: transparent;
 }
-
-
 
 /* See Alpine.js: https://github.com/alpinejs/alpine#x-cloak */
 [x-cloak=""] {
@@ -102,19 +127,11 @@ body #singleP-search2 input:focus {
   box-shadow: none;
 }
 
-
-
 /* On Show Form Input */
 .no-scroll-in-view-formInput {
   overflow: hidden;
   height: 100vh;
 }
-
-
-
-
-
-
 
 /* CHOICES JS INPUT */
 /* Remove default Choices.js styles */
@@ -127,7 +144,7 @@ body #singleP-search2 input:focus {
 
 /* Dropdown field */
 .choices__inner {
-  background-color: transparent  !important;
+  background-color: transparent !important;
   border-radius: 8px !important;
   border: 1px solid #d1d5db !important;
   padding: 10px 12px !important;
@@ -153,7 +170,8 @@ body #singleP-search2 input:focus {
   transform: scale(0.95);
   max-height: 0;
   overflow: hidden;
-  transition: opacity 0.3s ease-out, transform 0.3s ease-out, max-height 0.3s ease-out;
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out,
+    max-height 0.3s ease-out;
 }
 
 .dark .choices__list--dropdown {
@@ -195,12 +213,10 @@ body #singleP-search2 input:focus {
   z-index: 10;
 }
 
-
 .dark .choices .choices__input {
   background-color: #1f2937 !important;
   border: none !important;
 }
-
 
 /* Dropdown items */
 
@@ -212,23 +228,20 @@ body #singleP-search2 input:focus {
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
-.dark .choices__list--dropdown .choices__item--selectable{
+.dark .choices__list--dropdown .choices__item--selectable {
   color: #fff !important;
 }
 
-.dark .choices__list--dropdown .choices__item--selectable.is-highlighted{
-  background-color: #f3f4f6  !important;
+.dark .choices__list--dropdown .choices__item--selectable.is-highlighted {
+  background-color: #f3f4f6 !important;
   color: #111827 !important;
 }
-
 
 /* Hover effect */
 
 .dark .choices__list--dropdown .choices__item--selectable:hover {
   color: #000 !important;
 }
-
-
 
 /* Hide scrollbar */
 .choices__list {

@@ -2573,6 +2573,10 @@ span.flatpickr-weekday:is(.dark *){
   max-height: 100px;
 }
 
+.max-h-\[30vh\]{
+  max-height: 30vh;
+}
+
 .max-h-\[400px\]{
   max-height: 400px;
 }
@@ -2587,6 +2591,10 @@ span.flatpickr-weekday:is(.dark *){
 
 .max-h-screen{
   max-height: 100vh;
+}
+
+.max-h-\[35vh\]{
+  max-height: 35vh;
 }
 
 .min-h-16{
@@ -5171,6 +5179,56 @@ span.flatpickr-weekday:is(.dark *){
   height: var(--scrollbar-height, 16px);
 }
 
+.scrollbar-thin::-webkit-scrollbar-track{
+  background-color: var(--scrollbar-track);
+  border-radius: var(--scrollbar-track-radius);
+}
+
+.scrollbar-thin::-webkit-scrollbar-track:hover{
+  background-color: var(--scrollbar-track-hover, var(--scrollbar-track));
+}
+
+.scrollbar-thin::-webkit-scrollbar-track:active{
+  background-color: var(--scrollbar-track-active, var(--scrollbar-track-hover, var(--scrollbar-track)));
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb{
+  background-color: var(--scrollbar-thumb);
+  border-radius: var(--scrollbar-thumb-radius);
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover{
+  background-color: var(--scrollbar-thumb-hover, var(--scrollbar-thumb));
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:active{
+  background-color: var(--scrollbar-thumb-active, var(--scrollbar-thumb-hover, var(--scrollbar-thumb)));
+}
+
+.scrollbar-thin::-webkit-scrollbar-corner{
+  background-color: var(--scrollbar-corner);
+  border-radius: var(--scrollbar-corner-radius);
+}
+
+.scrollbar-thin::-webkit-scrollbar-corner:hover{
+  background-color: var(--scrollbar-corner-hover, var(--scrollbar-corner));
+}
+
+.scrollbar-thin::-webkit-scrollbar-corner:active{
+  background-color: var(--scrollbar-corner-active, var(--scrollbar-corner-hover, var(--scrollbar-corner)));
+}
+
+.scrollbar-thin{
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb, initial) var(--scrollbar-track, initial);
+}
+
+.scrollbar-thin::-webkit-scrollbar{
+  display: block;
+  width: 8px;
+  height: 8px;
+}
+
 .scrollbar-none{
   scrollbar-width: none;
 }
@@ -5183,7 +5241,20 @@ span.flatpickr-weekday:is(.dark *){
 
 /* ============================ USER DAHSBOARD ============================== */
 
-body#user-dashboard .dashboard-col-1.scrollbar::-webkit-scrollbar{
+body#login .login.scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  background: transparent;
+  -webkit-transition: background 0.5s;
+  transition: background 0.5s;
+  border-radius: 30px;
+}
+
+body#login .login.scrollbar:hover.scrollbar::-webkit-scrollbar-track {
+  background: #888;
+}
+
+body#user-dashboard .dashboard-col-1.scrollbar::-webkit-scrollbar {
   width: 5px;
   height: 5px;
   background: transparent;
@@ -5191,8 +5262,9 @@ body#user-dashboard .dashboard-col-1.scrollbar::-webkit-scrollbar{
   transition: background 0.5s;
 }
 
-body#user-dashboard .dashboard-col-1:hover.scrollbar::-webkit-scrollbar
-.scrollbar::-webkit-scrollbar {
+body#user-dashboard
+  .dashboard-col-1:hover.scrollbar::-webkit-scrollbar
+  .scrollbar::-webkit-scrollbar {
   width: 5px;
   height: 5px;
 }
@@ -5217,14 +5289,29 @@ body#user-dashboard .dashboard-col-1:hover.scrollbar::-webkit-scrollbar-thumb {
   background: #004437;
 }
 
+body#login .login.scrollbar:hover.scrollbar::-webkit-scrollbar-thumb{
+  background: #004437;
+  border-radius: 30px;
+}
+
 /* Carousel dots */
 
-body#user-dashboard #announcement-banner > div > div.owl-dots > button.owl-dot span {
+body#user-dashboard
+  #announcement-banner
+  > div
+  > div.owl-dots
+  > button.owl-dot
+  span {
   background: #c3c3c3;
   opacity: 0.7;
 }
 
-body#user-dashboard #announcement-banner > div > div.owl-dots > button.owl-dot.active span {
+body#user-dashboard
+  #announcement-banner
+  > div
+  > div.owl-dots
+  > button.owl-dot.active
+  span {
   background: #004437;
   padding: 0px 15px;
   opacity: 0.7;
@@ -5236,7 +5323,7 @@ body#user-dashboard #announcement-banner > div > div.owl-dots > button.owl-dot.a
 
 body#user-dashboard #left-dashboard-area {
   scrollbar-width: thin;
-  scrollbar-color: #888  transparent;
+  scrollbar-color: #888 transparent;
   padding-bottom: 16px;
 }
 
@@ -5293,7 +5380,7 @@ body #singleP-search2 input:focus {
 /* Dropdown field */
 
 .choices__inner {
-  background-color: transparent  !important;
+  background-color: transparent !important;
   border-radius: 8px !important;
   border: 1px solid #d1d5db !important;
   padding: 10px 12px !important;
@@ -5320,7 +5407,8 @@ body #singleP-search2 input:focus {
   transform: scale(0.95);
   max-height: 0;
   overflow: hidden;
-  transition: opacity 0.3s ease-out, transform 0.3s ease-out, max-height 0.3s ease-out;
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out,
+    max-height 0.3s ease-out;
 }
 
 .dark .choices__list--dropdown {
@@ -5383,12 +5471,12 @@ body #singleP-search2 input:focus {
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
-.dark .choices__list--dropdown .choices__item--selectable{
+.dark .choices__list--dropdown .choices__item--selectable {
   color: #fff !important;
 }
 
-.dark .choices__list--dropdown .choices__item--selectable.is-highlighted{
-  background-color: #f3f4f6  !important;
+.dark .choices__list--dropdown .choices__item--selectable.is-highlighted {
+  background-color: #f3f4f6 !important;
   color: #111827 !important;
 }
 
@@ -7194,6 +7282,18 @@ body #singleP-search2 input:focus {
 
   .lg\:h-screen{
     height: 100vh;
+  }
+
+  .lg\:max-h-\[\]{
+    max-height: ;
+  }
+
+  .lg\:max-h-\[55\]{
+    max-height: 55;
+  }
+
+  .lg\:max-h-\[55vh\]{
+    max-height: 55vh;
   }
 
   .lg\:w-20{
