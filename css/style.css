@@ -14,16 +14,22 @@
 /* ============================ USER DAHSBOARD ============================== */
 
 body#login .login.scrollbar::-webkit-scrollbar {
-  width: 5px;
-  height: 5px;
-  background: transparent;
-  transition: background 0.5s;
-  border-radius: 30px;
+  width: 10px;
+  height: 10px;
+  background: #888 ;
+  border-radius: 1rem;
 }
 
 
-body#login .login.scrollbar:hover.scrollbar::-webkit-scrollbar-track {
+
+
+/* body#login .login.scrollbar::-webkit-scrollbar-track {
   background: #888;
+} */
+
+body#login .login.scrollbar::-webkit-scrollbar-thumb {
+  background: #004437;
+
 }
 
 
@@ -59,11 +65,11 @@ body#user-dashboard .dashboard-col-1:hover.scrollbar::-webkit-scrollbar-thumb {
   background: #004437;
 }
 
-body#login .login.scrollbar:hover.scrollbar::-webkit-scrollbar-thumb{
+/* body#login .login.scrollbar:hover.scrollbar::-webkit-scrollbar-thumb{
   background: #004437;
   border-radius: 30px;
 
-}
+} */
 
 
 /* Carousel dots */
