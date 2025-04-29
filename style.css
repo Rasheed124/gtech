@@ -5194,10 +5194,6 @@ body#login .login.scrollbar::-webkit-scrollbar {
   border-radius: 1rem;
 }
 
-/* body#login .login.scrollbar::-webkit-scrollbar-track {
-  background: #888;
-} */
-
 body#login .login.scrollbar::-webkit-scrollbar-thumb {
   background: #004437;
 }
