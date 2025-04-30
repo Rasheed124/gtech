@@ -25,6 +25,8 @@ body#login .login.scrollbar::-webkit-scrollbar {
 
 body#login .login.scrollbar::-webkit-scrollbar-thumb {
   background: #004437;
+  margin-right: 10px;
+
 
 }
 
