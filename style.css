@@ -3751,6 +3751,11 @@ span.flatpickr-weekday:is(.dark *){
   background-color: rgb(17 24 39 / 0.6);
 }
 
+.bg-gray-950{
+  --tw-bg-opacity: 1;
+  background-color: rgb(3 7 18 / var(--tw-bg-opacity));
+}
+
 .bg-green-100{
   --tw-bg-opacity: 1;
   background-color: rgb(177 253 205 / var(--tw-bg-opacity));
@@ -3962,6 +3967,14 @@ span.flatpickr-weekday:is(.dark *){
   background-image: url('./images/dash-bg.png');
 }
 
+.bg-\[url\(\.\/images\/banner-card\.png\)\]{
+  background-image: url(./images/banner-card.png);
+}
+
+.bg-\[url\(\/img\/mountains\.jpg\)\]{
+  background-image: url(/img/mountains.jpg);
+}
+
 .bg-gradient-to-b{
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
 }
@@ -3976,18 +3989,6 @@ span.flatpickr-weekday:is(.dark *){
 
 .bg-gradient-to-tr{
   background-image: linear-gradient(to top right, var(--tw-gradient-stops));
-}
-
-.bg-\[url\(\/img\/mountains\.jpg\)\]{
-  background-image: url(/img/mountains.jpg);
-}
-
-.bg-\[url\(\/images\/banner-card\.png\)\]{
-  background-image: url(/images/banner-card.png);
-}
-
-.bg-\[url\(\.\/images\/banner-card\.png\)\]{
-  background-image: url(./images/banner-card.png);
 }
 
 .from-gray-100{
@@ -4972,20 +4973,16 @@ span.flatpickr-weekday:is(.dark *){
   opacity: 0.8;
 }
 
-.opacity-30{
-  opacity: 0.3;
-}
-
-.opacity-75{
-  opacity: 0.75;
+.opacity-20{
+  opacity: 0.2;
 }
 
 .opacity-70{
   opacity: 0.7;
 }
 
-.opacity-65{
-  opacity: 0.65;
+.opacity-75{
+  opacity: 0.75;
 }
 
 .bg-blend-overlay{
