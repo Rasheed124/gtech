@@ -3978,6 +3978,18 @@ span.flatpickr-weekday:is(.dark *){
   background-image: linear-gradient(to top right, var(--tw-gradient-stops));
 }
 
+.bg-\[url\(\/img\/mountains\.jpg\)\]{
+  background-image: url(/img/mountains.jpg);
+}
+
+.bg-\[url\(\/images\/banner-card\.png\)\]{
+  background-image: url(/images/banner-card.png);
+}
+
+.bg-\[url\(\.\/images\/banner-card\.png\)\]{
+  background-image: url(./images/banner-card.png);
+}
+
 .from-gray-100{
   --tw-gradient-from: #F3F4F6 var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(243 244 246 / 0) var(--tw-gradient-to-position);
@@ -4958,6 +4970,22 @@ span.flatpickr-weekday:is(.dark *){
 
 .opacity-80{
   opacity: 0.8;
+}
+
+.opacity-30{
+  opacity: 0.3;
+}
+
+.opacity-75{
+  opacity: 0.75;
+}
+
+.opacity-70{
+  opacity: 0.7;
+}
+
+.opacity-65{
+  opacity: 0.65;
 }
 
 .bg-blend-overlay{
