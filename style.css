@@ -3609,6 +3609,11 @@ span.flatpickr-weekday:is(.dark *){
   border-color: rgb(252 255 255 / var(--tw-border-opacity));
 }
 
+.border-red-950{
+  --tw-border-opacity: 1;
+  border-color: rgb(96 15 15 / var(--tw-border-opacity));
+}
+
 .border-b-primary{
   --tw-border-opacity: 1;
   border-bottom-color: rgb(0 68 55 / var(--tw-border-opacity));
@@ -3749,11 +3754,6 @@ span.flatpickr-weekday:is(.dark *){
 
 .bg-gray-900\/60{
   background-color: rgb(17 24 39 / 0.6);
-}
-
-.bg-gray-950{
-  --tw-bg-opacity: 1;
-  background-color: rgb(3 7 18 / var(--tw-bg-opacity));
 }
 
 .bg-green-100{
@@ -4971,18 +4971,6 @@ span.flatpickr-weekday:is(.dark *){
 
 .opacity-80{
   opacity: 0.8;
-}
-
-.opacity-20{
-  opacity: 0.2;
-}
-
-.opacity-70{
-  opacity: 0.7;
-}
-
-.opacity-75{
-  opacity: 0.75;
 }
 
 .bg-blend-overlay{
@@ -7259,6 +7247,18 @@ body #singleP-search2 input:focus {
     max-height: 55vh;
   }
 
+  .lg\:min-h-\[\]{
+    min-height: ;
+  }
+
+  .lg\:min-h-\[60\]{
+    min-height: 60;
+  }
+
+  .lg\:min-h-\[70vh\]{
+    min-height: 70vh;
+  }
+
   .lg\:w-20{
     width: 5rem;
   }
@@ -7654,8 +7654,20 @@ body #singleP-search2 input:focus {
     display: none;
   }
 
+  .xl\:h-full{
+    height: 100%;
+  }
+
   .xl\:max-h-\[128px\]{
     max-height: 128px;
+  }
+
+  .xl\:min-h-\[70vh\]{
+    min-height: 70vh;
+  }
+
+  .xl\:min-h-screen{
+    min-height: 100vh;
   }
 
   .xl\:w-20{
@@ -7723,6 +7735,10 @@ body #singleP-search2 input:focus {
     align-items: center;
   }
 
+  .xl\:justify-center{
+    justify-content: center;
+  }
+
   .xl\:justify-between{
     justify-content: space-between;
   }
@@ -7773,6 +7789,10 @@ body #singleP-search2 input:focus {
 
   .xl\:pb-0{
     padding-bottom: 0px;
+  }
+
+  .xl\:pb-10{
+    padding-bottom: 2.5rem;
   }
 
   .xl\:pl-32{
