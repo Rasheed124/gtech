@@ -13,11 +13,17 @@
 
 /* ============================ USER DAHSBOARD ============================== */
 
-body#login .login.scrollbar::-webkit-scrollbar {
-  width: 2px;
-  height: 2px;
-  background: #d2d2d2;
-  border-radius: 1rem;
+body#login .login-with-pin.scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+body#login .login-with-pin.scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+body#login .login-with-pin.scrollbar::-webkit-scrollbar-thumb {
+  background: #c4c4c4;
+  border-radius: none;
 }
 
 @media (min-width: 1024px) {
@@ -28,6 +34,18 @@ body#login .login.scrollbar::-webkit-scrollbar {
     border-radius: 1rem;
   }
   body#login .login.scrollbar::-webkit-scrollbar-thumb {
+    background: #004437;
+    margin-right: 10px;
+    width: 10px;
+    height: 10px;
+  }
+  body#login .login-with-pin.scrollbar::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background: #888;
+    border-radius: 1rem;
+  }
+  body#login .login-with-pin.scrollbar::-webkit-scrollbar-thumb {
     background: #004437;
     margin-right: 10px;
     width: 10px;
