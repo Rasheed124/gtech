@@ -957,7 +957,7 @@
             <!-- =================== MAIN DASHBOARD AREA -->
             <section class="relative grid grid-cols-1 lg:grid lg:grid-cols-12">
               <div
-                class="dashboard-col-1 lg:pr-2  lg:dark:border-gray-700 lg:border-l-2 col-span-12 lg:col-span-8 lg:h-screen overflow-y-auto scrollbar md:max-h-[84vh] w-full"
+                class="dashboard-col-1 lg:pr-2 lg:dark:border-gray-700 lg:border-l-2 col-span-12 lg:col-span-8 lg:h-screen overflow-y-auto scrollbar md:max-h-[84vh] w-full"
               >
                 <!-- HEADER BALANCE AREA -->
                 <div
@@ -967,7 +967,7 @@
                   <div class="card-balance col-span-12">
                     <div
                       id="left-dashboard-area"
-                      class="gap-4 flex md:grid grid-cols-10 w-full overflow-x-auto mb-5 text-white"
+                      class="owl-carousel owl-theme gap-4 flex md:grid grid-cols-10 w-full overflow-x-auto mb-5 text-white"
                     >
                       <!-- Slider -->
                       <div
@@ -987,16 +987,14 @@
                     localStorage.setItem('isBalanceVisible', JSON.stringify(this.isBalanceVisible));
                   }
                 }"
-             
-                        class="min-w-[355px] lg:min-w-[340px] md:min-w-full flex justify-between flex-col p-5 text-left text-white w-full bg-primary rounded-xl col-span-6 dark:bg-primary  dark:bg-opacity-80 bg-[url(./images/banner-card.png)] opacity-80   "
-                        
+                        class="item min-w-[355px] lg:min-w-[340px] md:min-w-full flex justify-between flex-col p-5 text-left text-white w-full bg-primary rounded-xl col-span-6 dark:bg-primary dark:bg-opacity-80 bg-[url(./images/banner-card.png)] opacity-80"
                       >
-                      <!-- <img src="./images/banner-card.png" alt=""> -->
+                        <!-- <img src="./images/banner-card.png" alt=""> -->
 
-                      <!-- bg-[url(/img/mountains.jpg)] -->
+                        <!-- bg-[url(/img/mountains.jpg)] -->
                         <!-- Left Side: Balance Area -->
-                        <div  class="flex flex-row justify-between">
-                          <div    x-cloak>
+                        <div class="flex flex-row justify-between">
+                          <div x-cloak>
                             <p class="text-sm">Total Balance</p>
                             <div class="flex">
                               <h1 class="text-4xl font-semibold">
@@ -1050,7 +1048,7 @@
                           </div>
 
                           <!-- Right Side: Currency Dropdown -->
-                          <div class="relative mt-4"   x-data="{ isOpen: false }">
+                          <div class="relative mt-4" x-data="{ isOpen: false }">
                             <button
                               class="py-2 px-2 bg-white text-primary rounded-lg flex items-center gap-2 cursor-pointer"
                               @click="isOpen = !isOpen"
@@ -1111,34 +1109,32 @@
                         </div>
 
                         <!-- Add Funds -->
-                        <div class="mt-10  grid grid-cols-8 gap-3  lg:gap-1 xl:gap-3 ">
+                        <div
+                          class="mt-10 grid grid-cols-8 gap-3 lg:gap-1 xl:gap-3"
+                        >
                           <a
-                            class="flex justify-center  col-start-1 col-end-4  items-center gap-2 rounded bg-[#266054] px-7 py-3 text-white focus:outline-none"
+                            class="flex justify-center col-start-1 col-end-4 items-center gap-2 rounded bg-[#266054] px-7 py-3 text-white focus:outline-none"
                             href="#"
                           >
-
-                             <span class="block">
-
+                            <span class="block">
                               <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              stroke-width="1.5"
-                              stroke="currentColor"
-                              class="size-5"
-                            >
-                              <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="M16.5 8.25V6a2.25 2.25 0 0 0-2.25-2.25H6A2.25 2.25 0 0 0 3.75 6v8.25A2.25 2.25 0 0 0 6 16.5h2.25m8.25-8.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-7.5A2.25 2.25 0 0 1 8.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 0 0-2.25 2.25v6"
-                              />
-                            </svg>
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                class="size-5"
+                              >
+                                <path
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  d="M16.5 8.25V6a2.25 2.25 0 0 0-2.25-2.25H6A2.25 2.25 0 0 0 3.75 6v8.25A2.25 2.25 0 0 0 6 16.5h2.25m8.25-8.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-7.5A2.25 2.25 0 0 1 8.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 0 0-2.25 2.25v6"
+                                />
+                              </svg>
+                            </span>
 
-                             </span>
-
-                           
-
-                            <span class="text-xs xl:text-sm  font-medium whitespace-nowrap"
+                            <span
+                              class="text-xs xl:text-sm font-medium whitespace-nowrap"
                               >Top Up</span
                             >
                           </a>
@@ -1146,24 +1142,22 @@
                             class="flex justify-center col-start-4 col-end-7 items-center gap-2 rounded bg-[#266054] px-7 py-3 text-white focus:outline-none"
                             href="#"
                           >
-                          <span class="block">
-
-                            <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke-width="1.5"
-                            stroke="currentColor"
-                            class="size-5"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              d="M16.5 8.25V6a2.25 2.25 0 0 0-2.25-2.25H6A2.25 2.25 0 0 0 3.75 6v8.25A2.25 2.25 0 0 0 6 16.5h2.25m8.25-8.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-7.5A2.25 2.25 0 0 1 8.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 0 0-2.25 2.25v6"
-                            />
-                          </svg>
-
-                           </span>
+                            <span class="block">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                class="size-5"
+                              >
+                                <path
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  d="M16.5 8.25V6a2.25 2.25 0 0 0-2.25-2.25H6A2.25 2.25 0 0 0 3.75 6v8.25A2.25 2.25 0 0 0 6 16.5h2.25m8.25-8.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-7.5A2.25 2.25 0 0 1 8.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 0 0-2.25 2.25v6"
+                                />
+                              </svg>
+                            </span>
 
                             <span
                               class="text-xs xl:text-sm font-medium white whitespace-nowrap"
@@ -1171,36 +1165,32 @@
                             >
                           </a>
                           <a
-                            class="flex justify-center items-center gap-1 col-start-7 col-end-9 rounded bg-[#266054]  text-white focus:outline-none"
+                            class="flex justify-center items-center gap-1 col-start-7 col-end-9 rounded bg-[#266054] text-white focus:outline-none"
                             href="#"
                           >
-                          <span class="block">
-
-                            <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke-width="1.5"
-                            stroke="currentColor"
-                            class="size-5"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              d="M16.5 8.25V6a2.25 2.25 0 0 0-2.25-2.25H6A2.25 2.25 0 0 0 3.75 6v8.25A2.25 2.25 0 0 0 6 16.5h2.25m8.25-8.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-7.5A2.25 2.25 0 0 1 8.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 0 0-2.25 2.25v6"
-                            />
-                          </svg>
-
-                           </span>
-
-                       
+                            <span class="block">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                class="size-5"
+                              >
+                                <path
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  d="M16.5 8.25V6a2.25 2.25 0 0 0-2.25-2.25H6A2.25 2.25 0 0 0 3.75 6v8.25A2.25 2.25 0 0 0 6 16.5h2.25m8.25-8.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-7.5A2.25 2.25 0 0 1 8.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 0 0-2.25 2.25v6"
+                                />
+                              </svg>
+                            </span>
                           </a>
                         </div>
                       </div>
 
                       <!-- Transaction Limit -->
                       <div
-                        class="w-full h-[178px] bg-secondary dark:bg-gray-800 dark:text-white text-black p-5 rounded-xl relative col-span-4 min-w-[270px] md:min-w-full"
+                        class="item w-full h-[178px] bg-secondary dark:bg-gray-800 dark:text-white text-black p-5 rounded-xl relative col-span-4 min-w-[270px] md:min-w-full"
                       >
                         <p
                           class="pb-3 border-b-white/40 dark:border-b-secondary border-b-2 text-sm font-medium"
@@ -1254,13 +1244,11 @@
                 >
                   <div class="content-area">
                     <!-- Quick Actions -->
-                    <div
-                      class="mt-12 flex flex-col  overflow-x-hidden px-0 "
-                    >
+                    <div class="mt-12 flex flex-col overflow-x-hidden px-0">
                       <h2
                         class="mb-4 dark:text-white self-start font-semibold text-lg text-gray-900"
                       >
-                        What will you like to do?                                             
+                        What will you like to do?
                       </h2>
 
                       <div
@@ -1268,10 +1256,10 @@
                       >
                         <a href="#">
                           <div
-                            class="relative p-5 pb-6 max-h-[100px] dark:bg-gray-800 dark:text-white flex items-center justify-center overflow-hidden text-[#c02634] text-opacity-100 bg-[#fbf1f1] bg-opacity-100  border dark:border-0 shadow-sm   rounded-xl"
+                            class="relative p-5 pb-6 max-h-[100px] dark:bg-gray-800 dark:text-white flex items-center justify-center overflow-hidden text-[#c02634] text-opacity-100 bg-[#fbf1f1] bg-opacity-100 border dark:border-0 shadow-sm rounded-xl"
                           >
                             <div>
-                              <div class="font-medium ">
+                              <div class="font-medium">
                                 Airtime
                                 <span class="block">to cash</span>
                               </div>
@@ -1286,7 +1274,7 @@
                         </a>
                         <a href="#">
                           <div
-                            class="relative p-5 pb-6 max-h-[100px] dark:bg-gray-800 dark:text-white flex items-center justify-center overflow-hidden  border dark:border-0 shadow-sm  text-[#00687d] text-opacity-100 bg-[#f1f4fb] bg-opacity-100  rounded-xl"
+                            class="relative p-5 pb-6 max-h-[100px] dark:bg-gray-800 dark:text-white flex items-center justify-center overflow-hidden border dark:border-0 shadow-sm text-[#00687d] text-opacity-100 bg-[#f1f4fb] bg-opacity-100 rounded-xl"
                           >
                             <div>
                               <div class="font-medium lg:font-normal">
@@ -1304,7 +1292,7 @@
                         </a>
                         <a href="#">
                           <div
-                            class="relative p-5 pb-6 max-h-[100px] dark:bg-gray-800 dark:text-white flex items-center justify-center overflow-hidden text-[#864618] text-opacity-100 bg-[#fcf8ee] bg-opacity-100  border dark:border-0 shadow-sm  hover:bg-primary-50 rounded-xl"
+                            class="relative p-5 pb-6 max-h-[100px] dark:bg-gray-800 dark:text-white flex items-center justify-center overflow-hidden text-[#864618] text-opacity-100 bg-[#fcf8ee] bg-opacity-100 border dark:border-0 shadow-sm hover:bg-primary-50 rounded-xl"
                           >
                             <div>
                               <div class="font-medium lg:font-normal">
@@ -1322,10 +1310,10 @@
                         </a>
                         <a href="#">
                           <div
-                            class="relative p-5 pb-6 max-h-[100px] dark:bg-gray-800 dark:text-white flex items-center justify-center overflow-hidden text-[#0f452f] text-opacity-100 bg-[#f6faf9] bg-opacity-100  border dark:border-0 shadow-sm   rounded-xl"
+                            class="relative p-5 pb-6 max-h-[100px] dark:bg-gray-800 dark:text-white flex items-center justify-center overflow-hidden text-[#0f452f] text-opacity-100 bg-[#f6faf9] bg-opacity-100 border dark:border-0 shadow-sm rounded-xl"
                           >
                             <div>
-                              <div class="font-medium ">
+                              <div class="font-medium">
                                 Airtime
                                 <span class="block">to cash</span>
                               </div>
@@ -1340,7 +1328,7 @@
                         </a>
                         <a href="#">
                           <div
-                            class="relative p-5 pb-6 max-h-[100px] dark:bg-gray-800 dark:text-white flex items-center justify-center overflow-hidden  border dark:border-0 shadow-sm  text-[#2000c2] text-opacity-100 bg-[#f7f6fc] bg-opacity-100  rounded-xl"
+                            class="relative p-5 pb-6 max-h-[100px] dark:bg-gray-800 dark:text-white flex items-center justify-center overflow-hidden border dark:border-0 shadow-sm text-[#2000c2] text-opacity-100 bg-[#f7f6fc] bg-opacity-100 rounded-xl"
                           >
                             <div>
                               <div class="font-medium lg:font-normal">
@@ -1397,13 +1385,12 @@
                             </div>
                           </div>
                         </a> -->
-                 
                       </div>
                     </div>
 
                     <!-- Recent Activities -->
                     <div
-                      class="mt-6 pb-10 flex flex-col overflow-x-hidden px-0 "
+                      class="mt-6 pb-10 flex flex-col overflow-x-hidden px-0"
                     >
                       <div class="flex w-full justify-between">
                         <h2
