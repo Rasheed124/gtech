@@ -1,9 +1,3 @@
-
-
-
-
-
-
 // Light switcher
 const lightSwitches = document.querySelectorAll(".light-switch");
 if (lightSwitches.length > 0) {
@@ -96,19 +90,24 @@ $(document).ready(function () {
       },
     },
   });
-});
-$(document).ready(function () {
+
   $("#left-dashboard-area.owl-carousel").owlCarousel({
     loop: true,
-    margin: 20,
     dots: true,
-    autoplay: true,
     autoplayTimeout: 5000,
     responsive: {
       0: {
-        items: 1,
+        items: 2,
+        margin: 260,
       },
-      680: {
+      640: {
+        items: 2,
+        margin: 50,
+
+      },
+      1024: {
+        margin: 10,
+
         items: 2,
       },
     },
@@ -179,31 +178,29 @@ document.getElementById("payment-form").addEventListener("submit", (e) => {
   console.log(pin);
 });
 
-
-
-
-
 // Initialize Alpine.js for the select component
 document.addEventListener("DOMContentLoaded", () => {
   const selectBox = document.querySelector("#selectDataPlan .select-box");
   const dropdown = document.querySelector("#selectDataPlan .dropdown");
-  const selectedOption = document.querySelector("#selectDataPlan .selected-option");
+  const selectedOption = document.querySelector(
+    "#selectDataPlan .selected-option"
+  );
   const options = document.querySelectorAll("#selectDataPlan .option");
 
   selectBox.addEventListener("click", () => {
-      dropdown.classList.toggle("hidden");
+    dropdown.classList.toggle("hidden");
   });
 
-  options.forEach(option => {
-      option.addEventListener("click", () => {
-          selectedOption.textContent = option.dataset.value;
-          dropdown.classList.add("hidden");
-      });
+  options.forEach((option) => {
+    option.addEventListener("click", () => {
+      selectedOption.textContent = option.dataset.value;
+      dropdown.classList.add("hidden");
+    });
   });
 
   document.addEventListener("click", (event) => {
-      if (!selectBox.contains(event.target) && !dropdown.contains(event.target)) {
-          dropdown.classList.add("hidden");
-      }
+    if (!selectBox.contains(event.target) && !dropdown.contains(event.target)) {
+      dropdown.classList.add("hidden");
+    }
   });
 });

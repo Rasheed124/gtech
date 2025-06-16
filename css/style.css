@@ -112,6 +112,30 @@ body#user-dashboard
   opacity: 0.7;
 }
 
+body#user-dashboard #left-dashboard-area.owl-carousel .owl-dots.disabled {
+  display: block;
+}
+
+body#user-dashboard
+  #left-dashboard-area.owl-carousel
+  > div
+  > div.owl-dots
+  > button.owl-dot
+  span {
+  background: #c3c3c3;
+  opacity: 0.7;
+}
+body#user-dashboard
+  #left-dashboard-area.owl-carousel
+  div.owl-dots
+  > button.owl-dot.active
+  span {
+  /* background: #c3c3c3; */
+  background: #004437;
+  padding: 0px 15px;
+  opacity: 0.7;
+}
+
 /* Balance cards  */
 
 /* Custom Scrollbar Styles */

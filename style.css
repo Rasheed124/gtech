@@ -2541,6 +2541,10 @@ span.flatpickr-weekday:is(.dark *){
   height: 178px;
 }
 
+.h-\[185px\]{
+  height: 185px;
+}
+
 .h-\[50px\]{
   height: 50px;
 }
@@ -2771,6 +2775,10 @@ span.flatpickr-weekday:is(.dark *){
 
 .min-w-\[270px\]{
   min-width: 270px;
+}
+
+.min-w-\[300px\]{
+  min-width: 300px;
 }
 
 .min-w-\[355px\]{
@@ -5302,6 +5310,31 @@ body#user-dashboard
   opacity: 0.7;
 }
 
+body#user-dashboard #left-dashboard-area.owl-carousel .owl-dots.disabled {
+  display: block;
+}
+
+body#user-dashboard
+  #left-dashboard-area.owl-carousel
+  > div
+  > div.owl-dots
+  > button.owl-dot
+  span {
+  background: #c3c3c3;
+  opacity: 0.7;
+}
+
+body#user-dashboard
+  #left-dashboard-area.owl-carousel
+  div.owl-dots
+  > button.owl-dot.active
+  span {
+  /* background: #c3c3c3; */
+  background: #004437;
+  padding: 0px 15px;
+  opacity: 0.7;
+}
+
 /* Balance cards  */
 
 /* Custom Scrollbar Styles */
@@ -6810,6 +6843,10 @@ body #singleP-search2 input:focus {
 
   .md\:order-2{
     order: 2;
+  }
+
+  .md\:col-span-4{
+    grid-column: span 4 / span 4;
   }
 
   .md\:col-span-6{
